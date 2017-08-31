@@ -6,7 +6,7 @@ permalink: assignments/assignment-1/
 
 Due 9am Thursday 7 September.
 
-* Complete the [course entrance survey]() before class on Thursday. This counts towards your participation grade.
+* Complete the [course entrance survey](https://goo.gl/forms/JHSocQE14iEVBnHc2) before class on Thursday. This counts towards your participation grade.
 * Use [this link](https://join.slack.com/t/sd17fall/shared_invite/MjMzOTgyNjM5OTA5LTE1MDQxMDA3NDktYTQzMzg5OGUyZg) to join the <http://sd17fall.slack.com> Slack team.
 * Familiarize yourself with the [Course Policies]({% link policies.md %}).
 * Read [_Think Python_](http://greenteapress.com/wp/think-python-2e/) chapters 1-3. [**But first**](https://www.youtube.com/watch?v=UcaWQZlPXgQ) note what time you started reading, and what time you stopped. (Please do this for all the readings.) You will use this to avoid working longer than required by the course policy. Also, the reading journal notebook asks how long you spent on the readings and notebook questions – we will use this to callibrate the course work.
