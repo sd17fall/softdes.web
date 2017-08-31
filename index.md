@@ -13,6 +13,7 @@
 
 * [Think Python, by Allen Downey](http://greenteapress.com/wp/think-python-2e/) – the class text
 * [Slack team](http://sd17fall.slack.com)
+* [In-Class Activity Handouts](https://github.com/sd17fall/site/tree/master/files/activities/)
 * Optional books are [on reserve in the Olin Library](https://olin.tind.io/record/1512034?ln=en)
 
 ## Instructor
