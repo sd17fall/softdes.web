@@ -2,7 +2,7 @@
 
 ## 1. Install Python
 
-Visit the class web site <http://sd17fall.olin.build>. (Bookmark this while you're there.)
+Visit the class web site <http://softdes.olin.build>. (Bookmark this while you're there.)
 
 Find the “Set Up” page.
 
@@ -16,9 +16,9 @@ In this course you will make use of the **Terminal** program in Linux or macOS, 
 
 **macOS**: Open the Terminal application, in the Applications folder.
 
-**Windows**: Open the Command Prompt. If this is unfamiliar to you, ask a classmate or NINJA, or search the web for “windows 10 command prompt”.
+**Windows**: Open the Anaconda Command Prompt. If this is unfamiliar to you, ask a classmate or NINJA, or search the web for “windows 10 command prompt” – but open “Anaconda Command Prompt” instead of “Command Prompt”.
 
-Launching Terminal or Command Prompt is called “creating a terminal session”.
+Launching Terminal or (Anaconda) Command Prompt is called “creating a terminal session”.
 
 Typing into a terminal session is called “in a terminal session”, “in a terminal”, or “in the shell”
 
@@ -37,7 +37,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Details such as the date, and the material inside brackets `[…]` will differ. The first line should say `Python 3.6.x` where `x` is some digit; if it says `Python 2.x.y` check in with a NINJA.
+Details such as the date, and the material inside brackets `[…]` will differ. The first line should say `Python 3.5.x` or `3.6.x`, where `x` is some digit. If it says `Python 2.x.y` check in with a NINJA.
 
 The chevron's `>>>` are Python's **prompt**. Python is waiting for you to type something. Type `42` and press Enter. You should see something like:
 
