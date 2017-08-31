@@ -9,6 +9,12 @@
 * [Reading Journal Instructions]({% link reading-journal-instructions.md %})
 * [Course Policies]({% link policies.md %})
 
+## Course Materials
+
+* [Think Python, by Allen Downey](http://greenteapress.com/wp/think-python-2e/) – the class text
+* [Slack team](http://sd17fall.slack.com)
+* Optional books are [on reserve in the Olin Library](https://olin.tind.io/record/1512034?ln=en)
+
 ## Instructor
 
 Name: Oliver Steele
@@ -28,11 +34,6 @@ Hannah Twigg-Smith
 Matthew Ruehle
 
 Seungin-Lyu
-
-## Class Text
-
-* [Think Python, by Allen Downey](http://greenteapress.com/wp/think-python-2e/) – the class text
-* Optional readings are on reserve in the Olin Library
 
 ## Description
 
