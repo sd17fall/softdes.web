@@ -3,6 +3,7 @@
 * [Assignment 1]({% link assignment-1.md %}) (due next Thursday)
 * [Set Up a Development Machine]({% link setup.md %})
 * [Reading Journal Instructions]({% link reading-journal.md %})
+* [Resources]({% link resources.md %})
 * [Course Policies]({% link policies.md %})
 
 ## Course Materials
