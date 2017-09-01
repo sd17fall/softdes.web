@@ -2,8 +2,6 @@
 permalink: resources/
 ---
 
-# Resources
-
 This page lists web sites, PDF documents, Jupyter notebooks, and
 Python packages that have been mentioned during the course.
 

@@ -1,9 +1,7 @@
 ---
-title: Policies
+title: Course Policies
 permalink: policies/
 ---
-
-# Course Policies
 
 ## Course Communications
 

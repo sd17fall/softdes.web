@@ -1,8 +1,9 @@
 ---
+title: Assignment 1
 permalink: assignments/assignment-1/
 ---
 
-# Assignment 1
+## Required
 
 Due 9am Thursday 7 September.
 
@@ -13,7 +14,7 @@ Due 9am Thursday 7 September.
 * Read Think Python [chapter 5](http://greenteapress.com/thinkpython2/html/thinkpython2006.html): sections 5.2-5.7 and section 5.11.
 * Read [Holding a Program in One's Head](http://paulgraham.com/head.html), Paul Graham.
 * Post a question to the [Slack](http://sd17fall.slack.com) `general` channel; or, answer a question that someone has asked. This counts towards your participation grade.
-* Compete Reading Journal 1. Follow [these instructions]({% link reading-journal-instructions.md %}) to submit it.
+* Compete Reading Journal 1. Follow [these instructions]({% link reading-journal.md %}) to submit it.
 
 ## Optional (fun) reading
 

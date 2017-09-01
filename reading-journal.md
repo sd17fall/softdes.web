@@ -1,8 +1,7 @@
 ---
+title: Reading Journal
 permalink: reading-journal/
 ---
-
-# Reading Journals
 
 ## Submitting Completed Readings
 
