@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      {% if page.title == "Home" %}
+        {{ site.title }} &middot; {{ site.tagline }}
+      {% else %}
+        {{ page.title }} &middot; {{ site.title }}
+      {% endif %}
+    </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar ">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/" class="is-size-1" style="font-size: 2.5rem">
+          Software Design
+        </a>
+      </div>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        {% assign components = page.url | split: '/' %}
+        {% assign url = components[0] %}
+        {% for component in components %}
+          {% assign is_active_class = '' %}
+          {% assign url = url | append: '/' | append: components[forloop.index0] | replace: '//', '/' %}
+          {% assign title = component | capitalize | replace: '-', ' ' | default: 'Home' %}
+          {% if forloop.last %}
+            {% assign is_active_class = 'is-active' %}
+            {% assign title = page.title | default: title %}
+          {% endif %}
+          <li class="{{ is_active_class }}"><a href="{{ url }}">
+            {{ title }}
+          </a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="container content">
+      <h1 class="title">
+        {{ page.title }}
+      </h1>
+        {{ content }}
+    </div>
+
+  </body>
+</html>
