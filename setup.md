@@ -87,7 +87,7 @@ Since there’s reading due next class, you will need to perform the steps below
 4. ***Clone the repository*** by typing the following into your terminal program. Replace `myname` with your GitHub user id.
 
 ```
-$ git clone git@github.com:focs17fall/ReadingJournal-myname.git ReadingJournal
+$ git clone git@github.com:sd17fall/ReadingJournal-myname.git ReadingJournal
 ```
 
 Now you have a copy of the ReadingJournal folder (directory) on your drive. Use the terminal, macOS Finder, Windows Explorer, or Ubuntu File Manager to verify that it is present.
