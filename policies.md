@@ -36,7 +36,7 @@ Reading journals are primarily developmental, so they are not evaluated based on
 | 1     | submitted with serious deficiencies, exercises not attempted or very minimal effort |
 | 0     | not submitted                            |
 
-You are not expected to spend more than sixteen hours outside of class on all classwork – reading, reading journals, mini-projects, toolboxes, final project. With the exception of the first assignment, you should not spend more time than five hours on a reading journal. You should not spend more than ninety minutes on an assignment without asking an instructor, via Slack or by making use of office hours, for help. (Ask for help sooner if you are “stuck”. Banging your head against a wall is not a good use of your time.)
+You are not expected to spend more than eight hours per week outside of class on all classwork – reading, reading journals, mini-projects, toolboxes, final project. With the exception of the first assignment, you should not spend more time than five hours on a reading journal. You should not spend more than ninety minutes on an assignment without asking an instructor, via Slack or by making use of office hours, for help. (Ask for help sooner if you are “stuck”. Banging your head against a wall is not a good use of your time.)
 
 Reading journals must be submitted by pushing to GitHub before 9am on the day of the class in which they are due to be considered for credit. We will review work from journals in class on that day, so it is not practical to get behind. You are allowed one "free pass" missed submission with no questions asked.
 
