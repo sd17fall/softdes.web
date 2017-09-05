@@ -3,6 +3,15 @@ title: Course Policies
 permalink: policies/
 ---
 
+## Accessibility Statement
+
+Olin College of Engineering is committed to ensuring the full participation of all students in its programs.
+If you have a documented disability (or think you may have a disability) and, as a result, need a reasonable accommodation to participate in this class, complete course requirements, or benefit from the College’s programs or services, contact [Disability Services at Olin (DSO)](http://www.olin.edu/academic-life/student-affairs-and-resources/disability-services/) <mailto:disability.services@olin.edu> as soon as possible.
+ To receive any academic accommodation, you must be appropriately registered with DSO.
+ The DSO works with students confidentially and does not disclose any disability-related information without their permission.
+ The DSO serves as a clearinghouse on disability issues and works in partnership with faculty and all other student service offices.
+ For further information about services for students with disabilities, please contact the DSO.
+
 ## Course Communications
 
 We will use Slack as our communications channel for this class. You responsible for course announcements that are posted to Slack. (By default, Slack will forward announcements to the email address that you use for your Slack account, if you are not running the Slack client.)
