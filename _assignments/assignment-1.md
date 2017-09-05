@@ -12,8 +12,8 @@ Due 9am Thursday 7 September.
 * Read [_Think Python_](http://greenteapress.com/wp/think-python-2e/) chapters 1-3. [**But first**](https://www.youtube.com/watch?v=UcaWQZlPXgQ) note what time you started reading, and what time you stopped. (Please do this for all the readings.) You will use this to avoid working longer than required by the course policy. Also, the reading journal notebook asks how long you spent on the readings and notebook questions – we will use this to callibrate the course work.
 * Read Think Python [chapter 5](http://greenteapress.com/thinkpython2/html/thinkpython2006.html): sections 5.2-5.7 and section 5.11.
 * Read [Holding a Program in One's Head](http://paulgraham.com/head.html), Paul Graham.
-* Post to the `#general` channel of the [Slack](http://sd17fall.slack.com) team. This counts towards your participation grade. You can do any of the following:
-  * Post a question.
+* Send a message to the `#general` channel of the [Slack](http://sd17fall.slack.com) team. This counts towards your participation grade. You can do any of the following:
+  * Ask a question.
   * Answer a question that someone has asked.
   * Post a computing-related link or news item.
   * Say "Hi" or "Present".
