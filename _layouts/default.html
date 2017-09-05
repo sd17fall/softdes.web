@@ -18,7 +18,7 @@
 
   <body>
 
-    <nav class="navbar ">
+    <nav class="navbar">
       <div class="navbar-brand">
         <a class="navbar-item" href="/" class="is-size-1" style="font-size: 2.5rem">
           Software Design
@@ -45,14 +45,47 @@
       </ul>
     </nav>
 
-    <div class="container content">
-      {% if page.url != '/' %}
-        <h1 class="title">
-          {{ page.title }}
-        </h1>
-      {% endif %}
-      {{ content }}
-    </div>
+    <section class="main-content columns is-fullheight">
+
+        <aside class="menu column is-fullheight section">
+          <p class="menu-label">Assignment</p>
+          <ul class="menu-list">
+            <li><a href="{% link _assignments/assignment-1.md %}">Assignment 1</a></li>
+          </ul>
+
+          <p class="menu-label">Resources</p>
+          <ul class="menu-list">
+            <li><a href="{% link setup.md %}">Set Up</a></li>
+            <li><a href="http://greenteapress.com/wp/think-python-2e/">Think Python</a></li>
+            <li><a href="{% link resources.md %}">Links</a></li>
+          </ul>
+
+          <p class="menu-label">Course Materials</p>
+          <ul class="menu-list">
+            <li><a href="{% link reading-journal.md %}">Reading Journal</a></li>
+            <li><a href="http://sd17fall.slack.com">Slack</a></li>
+            <li><a href="https://github.com/sd17fall/site/tree/master/files/activities/">Handouts</a></li>
+            <li><a href="https://olin.tind.io/record/1512034?ln=en">Library reserves</a></li>
+          </ul>
+
+          <p class="menu-label">Course Pages</p>
+          <ul class="menu-list">
+            <li><a href="{% link description.md %})">Course Description</a></li>
+            <li><a href="{% link policies.md %})">Course Policies</a></li>
+          </ul>
+        </aside>
+
+
+        <div class="container column is-10 content">
+          {% if page.url != '/' %}
+            <h1 class="title">
+              {{ page.title }}
+            </h1>
+          {% endif %}
+          {{ content }}
+        </div>
+
+    </section>
 
   </body>
 </html>
