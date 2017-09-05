@@ -1,5 +1,18 @@
 title: Software Design | Fall 2017
 description: An introduction to software design.
 
+collections:
+  assignments:
+    output: true
+    layout: default
+    title: Assignments
+    permalink: assignments/:path/
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+
 plugins:
   - github-pages

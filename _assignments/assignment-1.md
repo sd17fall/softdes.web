@@ -1,6 +1,5 @@
 ---
 title: Assignment 1
-permalink: assignments/assignment-1/
 ---
 
 ## Required
