@@ -25,24 +25,24 @@ Notes:
 Terminology:
 
 * The **specification** is what the definition of what the code is supposed to do.
-* The **implementation** is the program (code, software) itself.
+* The **implementation** is the program (or code, or software) itself.
 
 Does the implementation of `is_triangle`, above, match its specification?
 
-Here's a tool for (more) systematically exploring this. The first line in the following table indicates that running the Python code `is_triangle(3, 4, 5)` is *expected* to print `"True"` (the "expected" column), and is *observed* to print `"True"` (the "actual" column.)
+Here's a tool for (more) systematically exploring this. The first line in the following table indicates that running the Python code `is_triangle(3, 4, 5)` is *expected* to print `"Yes"` (the "expected" column), and is *observed* to print `"Yes"` (the "actual" column.)
 
-| a      | b    | c    | expected | actual   |
-| ------ | ---- | ---- | -------- | -------- |
-| 3      | 4    | 5    | `"True"` | `"True"` |
-| &nbsp; |      |      |          |          |
-| &nbsp; |      |      |          |          |
-| &nbsp; |      |      |          |          |
-| &nbsp; |      |      |          |          |
+| a      | b    | c    | expected | actual  |
+| ------ | ---- | ---- | -------- | ------- |
+| 3      | 4    | 5    | `"Yes"`  | `"Yes"` |
+| &nbsp; |      |      |          |         |
+| &nbsp; |      |      |          |         |
+| &nbsp; |      |      |          |         |
+| &nbsp; |      |      |          |         |
 
 Without using your computer:
 
-* Add another row where the “expected” and “actual” are both `"True"`.
-* Add a row where the “expected” and “actual” are both `"False"`.
+* Add another row where the “expected” and “actual” are both `"Yes"`.
+* Add a row where the “expected” and “actual” are both `"No"`.
 * Add a row where the "expected" and "actual" entries *differ*.
 
 ## Q2. Running your tests
@@ -57,17 +57,30 @@ Without using your computer:
 ## Q3. Whitebox Testing
 
 ```python
-def is_triangle(a, b, c):
-	if a > b + c:
-		print "No"
-	if b > a + c:
-		print "No"
-	if c > a + b:
-		return "No"
-	return "Yes"
+def is_triangle(a, b, c):	# line 1
+	if a > b + c:			# line 2
+		print("No")			# line 3
+	elif b > a + c:			# line 4
+		print("No")			# line 5
+	elif c > a + b:			# line 6
+		print("No")			# line 7
+	else:					# line 8
+      	print("Yes")		# line 9
 ```
 
+`is_triangle(2, 6, 3)`  executes lines ##1, 2, 4, and 5. (You can use Python Tutor to verify this.)
 
+This is shown in the table below.
+
+Add additional rows such that every line number is mentioned somewhere in the table. For example, there are no values of (a, b, c) that will cause both lines ##3 and 5 to run, but you can find values that cause line #3 to run, and separate values that cause line #4 to run.
+
+| a      | b    | c    | expected | actual  | lines      |
+| ------ | ---- | ---- | -------- | ------- | ---------- |
+| 2      | 6    | 3    | `"Yes"`  | `"Yes"` | 1, 2, 4, 5 |
+| &nbsp; |      |      |          |         |            |
+| &nbsp; |      |      |          |         |            |
+| &nbsp; |      |      |          |         |            |
+| &nbsp; |      |      |          |         |            |
 
 ## Going Beyond
 
