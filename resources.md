@@ -21,6 +21,10 @@ to collect those resources that have already been mentioned into one place.
 * [Python Tutor](http://www.pythontutor.com) interactive visualization
 * [Spring 2014 NINJA tutorial: Python exercises](https://docs.google.com/document/d/1k-JU9cPokJ58ur4ubpbhLAxC26aAx9bCUcianobBLFE/edit)
 
+## Git
+
+* [Git Help]({% link git-help.md %}) on this site contains links and information.
+
 ## Jupyter
 
 * [How to use Jupyter Notebooks](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook##UseJupyter)
