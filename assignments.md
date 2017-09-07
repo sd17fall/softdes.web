@@ -3,5 +3,8 @@ permalink: assignments/
 ---
 
 <ul>
-  <li><a href="{% link _assignments/assignment-1.md %}">Assignment 1</a></li>
+  {% assign assignments = site.assignments | sort: due | reverse %}
+  {% for page in assignments %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a> – due {{ page.due | date: '%-H %P, %a %-d %b' }}</li>
+  {% endfor %}
 </ul>

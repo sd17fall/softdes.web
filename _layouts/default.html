@@ -48,9 +48,12 @@
     <section class="main-content container columns is-fullheight">
 
         <aside class="menu column is-fullheight section">
-          <p class="menu-label">Assignment</p>
+          <p class="menu-label"><a href="{% link assignments.md %}">Assignments</a></p>
           <ul class="menu-list">
-            <li><a href="{% link _assignments/assignment-1.md %}">Assignment 1</a></li>
+            {% assign assignments = site.assignments | sort: due | reverse %}
+            {% for page in assignments %}
+              <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
           </ul>
 
           <p class="menu-label">Resources</p>

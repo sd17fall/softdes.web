@@ -1,5 +1,6 @@
 ---
 title: Assignment 1
+due: 2017-09-07 09:00:00 -04:00
 ---
 
 ## Required
@@ -17,7 +18,7 @@ Due 9am Thursday 7 September.
   * Answer a question that someone has asked.
   * Post a computing-related link or news item.
   * Say "Hi" or "Present".
-* Compete Reading Journal 1. Follow [these instructions]({% link reading-journal.md %}) to submit it.
+* Complete Reading Journal 1. Follow [these instructions]({% link reading-journal.md %}) to submit it.
 
 ## Optional (fun) reading
 

@@ -1,6 +1,8 @@
 ## Next
 
-[Assignment 1]({% link _assignments/assignment-1.md %}) is due 9am Thursday 7 September.
+{% assign assignment = site.assignments | sort: due | reverse | first %}
+
+[{{ assignment.title }}]({{ assignment.url }}) is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
 
 ## Course Materials
 
