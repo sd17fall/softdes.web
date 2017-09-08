@@ -37,6 +37,29 @@ presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXB
 ## (Online) Book
 * [Pro Git](https://git-scm.com/book/en/v2)
 
+## Reading Journals
+
+When the instructors have uploaded new reading assignments, you can pull them into your repository.
+
+**One-time setup**
+
+In a terminal window in your ReadingJournal directory, run the following:
+
+```bash
+$ git remote add upstream https://github.com/sd17fall/ReadingJournal
+```
+
+**Each time a new journal notebook is released**
+
+1. In a terminal window in your ReadingJournal directory, run the following:
+  ```bash
+  $ git pull upstream master
+  ```
+2. Run `jupyter notebook`.
+3. You will see a list of files, that includes the new notebook file. Click on the new notebook file to open and edit it.
+4. When you are done editing the notebook, click the floppy disk icon <i class="fa fa-floppy-o" aria-hidden="true"></i>, or select the “File > Save and Checkpoint” menu item, to save your work to disk.
+5. Follow the instructions in the next section, “How to get the stuff from my computer to GitHub”, to commit your changes to the repo on your computer and then push them to GitHub.
+
 ## How to get the stuff from my computer to GitHub
 
 ```bash
@@ -53,22 +76,6 @@ vim so that you can enter a commit message there. To write your commit message
 in vim, first press “i”, then write your message, then type <kbd>:wq</kbd> for write-
 quit. Alternatively, if you just want to escape from vim's interface without
 saving a message, just enter “:q” for quit.
-
-{% comment %}
-## Pulling reading journal notebook files from class repository
-
-When the instructors have uploaded new reading assignments, you can pull them into your repository if the upstream repository is the one you originally forked from.
-
-```bash
-$ git remote add upstream data.course.urls.reading_journal_repo
-$ git fetch upstream
-$ git merge upstream
-```
-
-This will fetch files from the remote "upstream" which is set to the original
-course repository, and will merge the changes in upstream to your own
-repository.
-{% endcomment %}
 
 ## How to pull changes from GitHub
 

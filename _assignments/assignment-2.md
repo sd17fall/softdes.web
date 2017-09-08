@@ -8,7 +8,7 @@ due: 2017-09-11 09:00:00 -04:00
 Due 9 am Monday 11 Sep.
 
 * Read *Think Python* [Chapter 6.1-6.4](http://greenteapress.com/thinkpython2/html/thinkpython2007.html) and [Chapter 7.1-7.4](http://greenteapress.com/thinkpython2/html/thinkpython2008.html).
-* Complete *Reading Journal 2*. (RJ2 will be released Thursday evening.)
+* Complete *Reading Journal 2*. Follow the instructions in the [Reading Journal section]({% link git-help.md %}#reading-journals) of the Git Help resource page.
 * Complete the [2.2 Handout](https://github.com/sd17fall/site/blob/master/files/activities/day2/day2-activity2.md). Bring this to class on Monday. **Note:** The version distributed in class, and available on the web until 7:40pm Thursday, had the following issues. These are fixed in the version in the link.
   * *Q1 Testing* wrote `"True"` and `"False"` but the code uses `"Yes"` and `"No"`
   * *Q3 Whitebox Testing* was missing the problem text.
