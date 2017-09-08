@@ -16,3 +16,6 @@ defaults:
 
 plugins:
   - github-pages
+
+exclude:
+  - scripts
