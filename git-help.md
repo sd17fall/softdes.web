@@ -53,7 +53,7 @@ $ git remote add upstream https://github.com/sd17fall/ReadingJournal
 
 1. In a terminal window in your ReadingJournal directory, run the following:
   ```bash
-  $ git pull upstream
+  $ git pull upstream master
   ```
 2. Run `jupyter notebook`.
 3. You will see a list of files, that includes the new notebook file. Click on the new notebook file to open and edit it.
