@@ -10,11 +10,12 @@ bundle exec htmlproofer \
   --empty-alt-ignore \
   --report-missing-names \
   --report-script-embeds \
-  --url-ignore https://github.com/sd17fall/ReadingJournal-myname
+  --url-ignore https://github.com/sd17fall/ReadingJournal-myname \
+  "$@" \
   ./_site
 
 # External links are ignored for the following reasons:
 # - 127.0.0.1 is an example; it works when the student is following the setup instructions
 # - apps.twitter.com works when signed into Twitter
 # - wikis.olin.edu only works inside the Olin intranet
- - https://github.com/sd17fall/ReadingJournal-myname
+# - https://github.com/sd17fall/ReadingJournal-myname

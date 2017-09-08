@@ -13,9 +13,17 @@ defaults:
       path: ''
     values:
       layout: default
+  - scope:
+      path: files
+    values:
+      layout: null
 
 plugins:
   - github-pages
 
 exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
   - scripts
+  - vendor

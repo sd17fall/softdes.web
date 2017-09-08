@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# External checks on CI hit rate limits and IP blacklists
+./scripts/check-html --disable-external
