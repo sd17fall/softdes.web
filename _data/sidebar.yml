@@ -1,0 +1,34 @@
+- title: Resources
+  children:
+  - url: /activities/setup
+    title: Set Up
+  - url: http://greenteapress.com/wp/think-python-2e/
+    title: Think Python
+  - url: https://docs.python.org/3.5/
+    title: Python 3.5 Documentation
+  - url: https://docs.python.org/3.5/library/index.html
+    title: Python 3.5 Standard Library
+  - url: http://www.pythontutor.com
+    title: Python Tutor
+  - url: /resources/git/
+    title: Git Help
+  - url: /resources
+    title: Additional Links
+
+- title: Course Materials
+  children:
+  - url: /reading-journal
+    title: Reading Journal
+  - url: http://sd17fall.slack.com
+    title: Slack
+  - url: https://github.com/sd17fall/site/tree/master/files/activities/
+    title: Handouts
+  - url: https://olin.tind.io/record/1512034?ln=en
+    title: Library reserves
+
+- title: Course Pages
+  children:
+  - url: /description
+    title: Course Description
+  - url: /policies
+    title: Course Policies

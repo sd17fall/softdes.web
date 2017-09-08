@@ -20,7 +20,7 @@
 
     <nav class="navbar">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/" class="is-size-1" style="font-size: 2.5rem">
+        <a class="navbar-item is-size-1" href="/" style="font-size: 2.5rem">
           Software Design
         </a>
       </div>
@@ -56,30 +56,21 @@
             {% endfor %}
           </ul>
 
-          <p class="menu-label">Resources</p>
-          <ul class="menu-list">
-            <li><a href="{% link setup.md %}">Set Up</a></li>
-            <li><a href="http://greenteapress.com/wp/think-python-2e/">Think Python</a></li>
-            <li><a href="https://docs.python.org/3.5/">Python 3.5 Documentation</a></li>
-            <li><a href="https://docs.python.org/3.5/library/index.html">Python 3.5 Standard Library</a></li>
-            <li><a href="http://www.pythontutor.com">Python Tutor</a></li>
-            <li><a href="{% link git-help.md %}">Git Help</a></li>
-            <li><a href="{% link resources.md %}">Additional Links</a></li>
-          </ul>
+          {% for section in site.data.sidebar %}
+            <p class="menu-label">Resources</p>
+            <ul class="menu-list">
+              {% for p in section.children %}
+                {% if p.path %}
+                  <li>search {{ p.path }}</li>
+                  {% assign p = site.pages | where: 'path', p.path | first %}
+                  <li>found = {{ p.path }}, {{ p.url }}</li>
+                  <li>keys = {% for k in p %}{{k[0]}}.{% endfor %}</li>
+                {% endif %}
+                <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
 
-          <p class="menu-label">Course Materials</p>
-          <ul class="menu-list">
-            <li><a href="{% link reading-journal.md %}">Reading Journal</a></li>
-            <li><a href="http://sd17fall.slack.com">Slack</a></li>
-            <li><a href="https://github.com/sd17fall/site/tree/master/files/activities/">Handouts</a></li>
-            <li><a href="https://olin.tind.io/record/1512034?ln=en">Library reserves</a></li>
-          </ul>
-
-          <p class="menu-label">Course Pages</p>
-          <ul class="menu-list">
-            <li><a href="{% link description.md %}">Course Description</a></li>
-            <li><a href="{% link policies.md %}">Course Policies</a></li>
-          </ul>
         </aside>
 
 
