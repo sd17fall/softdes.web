@@ -32,6 +32,8 @@ origin	git@github.com://sd17fall/ReadingJournal-myname.git (fetch)
 origin	git@github.com://sd17fall/ReadingJournal-myname.git (push)
 ```
 
+(Depending on how you set up your reading journal, you may see `https://github.com/sd17fall/ReadingJournal-myname.git` instead of `git@github.com://sd17fall/ReadingJournal-myname.git`. Either is acceptable.)
+
 We want to keep `origin` (the cloned copy in your GitHub account) for you to push completed work to, but we also want to add the original upstream class master repository for you to pull new assignments from. We can add this additional remote by running:
 
 ```bash
