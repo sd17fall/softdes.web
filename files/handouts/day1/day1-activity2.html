@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="activity-1.2-jupyter">Activity 1.2 – Jupyter</h1>
+<h2 id="create-a-new-directory">1. Create a new directory</h2>
+<p>In a terminal window, create a new directory: <code>mkdir notebooks</code>.</p>
+<p>Set the <strong>terminal session</strong> to use that directory: <code>cd notebooks</code>.</p>
+<p>Now this terminal session is “in” the <code>notebooks</code> directory.</p>
+<ul>
+<li>Enter <code>pwd</code> (Linux, macOS) or <code>cd</code> (Windows) into a shell to find out the current directory for that terminal session. Try this now.</li>
+<li>Enter <code>ls</code> (Linux, macOS) or <code>dir</code> (Windows) to see a list of files in the current directory. Try this now – there should be no files, because you are in a newly-created, empty, directory.</li>
+</ul>
+<h2 id="launch-jupyter">2. Launch Jupyter</h2>
+<p>In the same terminal window, enter <code>jupyter notebook</code>. This should open a new window or tab in your web browser. The page in this window or tab will show a list of files in the directory. Since the <code>notebooks</code> directory is empty, it should show an empty list.</p>
+<h2 id="create-a-notebook">3. Create a Notebook</h2>
+<p>In the New menu, select <code>Python 3</code>. (Your Python may have a slightly different name, such as <code>Python [default]</code> or <code>Python [conda root]</code>.)</p>
+<p>Type <code>40 + 2</code> into the cell.</p>
+<p>Using the icons and the “cell type” popup menu (<code>Code</code>, to the right of the icons) at the top of the page to do the following:</p>
+<ul>
+<li>Run the Python code (the “Play”, or right triangle, icon). You should see a line <code>Out[1]: 42</code>.</li>
+<li>Modify the text to read <code>40 * 2</code>, and run it again.</li>
+<li>Create a new cell. Enter <code>40 - 2</code> into this cell, and run it.</li>
+<li>Create a new cell. Use the cell type menu to change its type to “Markdown”. Enter the text <code>Some *italic* and **bold**</code>. What does running this cell do?</li>
+<li>Create a new cell. <em>Leave it as a “Code” cell.</em> Enter the text <code>Some *italic* and **bold**</code> into this cell too. What does running this cell do?</li>
+</ul>
+<h2 id="quit-jupyter">4. Quit Jupyter</h2>
+<p>Press the Save icon (the leftmost icon, that looks like a floppy disk from the 90's) to save your Jupyter notebook. Close the tab or window.</p>
+<p>Find the terminal session that is running <code>jupyter notebook</code>. Press control-c. (Hold the control key down, and while it is down press <code>c</code>. Then release them in either order.)</p>
+<p>You will see some messages, including <code>Shutdown this notebook server (y/[n])?</code>. This is another <em>prompt</em>. Answer it by typing <code>y</code>, and then return.</p>
+<p>(Control-c requests that a program that you have started from the terminal, stop. It works on more programs than just <code>jupyter</code>.)</p>
+<p>In the terminal, enter <code>ls</code> (Linux or macOS) or <code>dir</code> (Windows). You now see a file named <code>Untitled.ipynb</code>. The file suffix <code>.ipynb</code> standards for &quot;iPython Notebook&quot; (“iPython” was the original name for “Jupyter”). It means that the file is a Jupyter notebook.</p>
+<h2 id="going-beyond">Going Beyond</h2>
+<ul>
+<li>Take the Jupyter tour. Select “User Interface Tour” from the Jupyter “Help” menu.</li>
+<li>Rename your notebook. Verify that the file name changed.</li>
+<li>Select “Keyboard Shortcuts” from the Jupyter “Help” menu. These are alternatives to using the icons and popup menu. Repeat the steps in “Make a notebook” using the keyboard instead of the icons and the cell type menu.</li>
+<li>Read the Markdown cheatsheet (linked to from the course site). Try out different Markdown features.</li>
+<li>Create a new Markdown cell. Try entering <code>$a^2$</code>,<code>$$a^2$$</code>, and <code>$a^2+b^2=c^2$</code>. What happens if you include these in a paragraph of text?</li>
+</ul>
+</body>
+</html>

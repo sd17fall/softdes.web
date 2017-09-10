@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 id="activity-2.1-types-and-variables">Activity 2.1 – Types and Variables</h1>
+<h2 id="exploring-types">1. Exploring Types</h2>
+<ol style="list-style-type: decimal">
+<li>Run <code>python</code> in a terminal widow. Use the <code>type</code> function – <em>e.g.</em> <code>type(1)</code> – to find the types of the following values. (One of them will produce an error.)</li>
+</ol>
+<pre><code>1
+1.0
+&quot;1&quot;
+1 + 2
+1 + 2.0
+1.0 + 2
+1.0 + 2.0
+&quot;1&quot; + 2</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Typing <em>e.g.</em> <code>type(1.0)</code> is cumbersome. Based on what you've seen so far, can you tell the type of a value just by looking at the way it's printed?</li>
+</ol>
+<h2 id="exploring-variables">2. Exploring Variables</h2>
+<ol style="list-style-type: decimal">
+<li><p>Without using a computer, what do you expect Python to print during the following session?</p></li>
+<li><p><code>&gt;&gt;&gt; x = 10   &gt;&gt;&gt; x   [what goes here?]   &gt;&gt;&gt; y = x   &gt;&gt;&gt; y   [what goes here?]   &gt;&gt;&gt; x = 20   &gt;&gt;&gt; x   [what goes here?]   &gt;&gt;&gt; y   [what goes here?]</code></p></li>
+<li><p>Now use Python to test your work. If what you see isn't what you expect, now is an excellent time to talk it over with a classmate or instructor.</p></li>
+<li><p>Draw a <em>state diagram</em> of the program in 2. (State diagrams are defined in <em>Think Python</em> 2.1. A state diagram is a map of variables to values, drawn as a table of variables and their current values.)</p></li>
+</ol>
+<h2 id="optional-going-beyond">[Optional] Going Beyond</h2>
+<p>If your mind is at capacity with new concepts, I recommend <em>not</em> doing the following exercises today. These are intended for students with prior exposure to programming.</p>
+<h3 id="gb1.-turtles-all-the-way-down">GB1. Turtles all the way down</h3>
+<pre><code>type(1)
+type(1.0)
+type(&quot;1&quot;)
+type(type(1))
+type(type(1.0))
+type(type(&quot;1&quot;))
+type(type(type(1)))</code></pre>
+<p>Use this to draw a diagram of what values have what types.</p>
+<h3 id="gb2.-function-types">GB2. Function types</h3>
+<ol style="list-style-type: decimal">
+<li>Try the following. (One of these will error.)</li>
+</ol>
+<pre><code>import math
+type(math.sqrt)
+type(math.pow)
+type(+)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Add your own function (<em>e.g.</em> <code>is_triangle</code>) . [This is possible in the Python command-line program, but you may wish to switch to a Jupyter notebook at this point.] Does it have the same type as <code>math.sqrt</code>?</li>
+<li>Does <code>math.sqrt</code> takes one argument (<code>math.sqrt(4))</code>. <code>math.pow</code> takes two arguments (<code>math.pow(2, 3)</code>). Do you agree with Python that these are the same type?</li>
+</ol>
+<h3 id="gb3.-function-values">GB3. Function values</h3>
+<p>What do you expect the following to do? Test your hypothesis. How does this compare with another language you know?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> add(a, b):
+    <span class="cf">return</span> a <span class="op">+</span> b
+
+plus <span class="op">=</span> add
+<span class="bu">print</span>(plus(<span class="dv">1</span>, <span class="dv">2</span>))</code></pre></div>
+<h3 id="gb4.-closures">GB4. Closures</h3>
+<p>See if you can figure out what the following is doing. Is there a similar mechanism in other languages you know?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> adder(n):
+    <span class="kw">def</span> add(a):
+        <span class="cf">return</span> a <span class="op">+</span> n
+    <span class="cf">return</span> add
+
+add1 <span class="op">=</span> adder(<span class="dv">1</span>)
+<span class="bu">print</span>(add1(<span class="dv">10</span>))
+
+add2 <span class="op">=</span> adder(<span class="dv">2</span>)
+<span class="bu">print</span>(add2(<span class="dv">10</span>))</code></pre></div>
+</body>
+</html>
