@@ -16,7 +16,7 @@ defaults:
   - scope:
       path: files
     values:
-      layout: null
+      layout: handout
 
 plugins:
   - github-pages
