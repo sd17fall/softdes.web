@@ -1,0 +1,186 @@
+<h1 id="activity-2.2-testing">Activity 2.2 – Testing</h1>
+<p>Here's my solution to exercise 5.3: Write a function named <code>is_triangle</code> that takes three integers as arguments, and that prints either “Yes” or “No,” depending on whether you can or cannot form a triangle from sticks with the given lengths.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_triangle(a, b, c):
+    <span class="co">&quot;&quot;&quot;Print &quot;Yes&quot; or &quot;No&quot;, depending on whether the side lengths can form a triangle.&quot;&quot;&quot;</span>
+    <span class="co"># If each of the three sides is less or equal to the sum of the other two,</span>
+    <span class="co"># they can form a triangle.</span>
+    <span class="cf">if</span> a <span class="op">&gt;</span> b <span class="op">+</span> c:
+        <span class="bu">print</span> <span class="st">&quot;No&quot;</span>
+    <span class="cf">else</span>:
+        <span class="bu">print</span> <span class="st">&quot;Yes&quot;</span></code></pre></div>
+<p>Notes:</p>
+<ul>
+<li>A string that appears by itself at the top of a function body is special. It's a <strong>documentation string</strong>, or <strong>doc string</strong> (or <strong>docstring</strong>). A doc string is supposed to tell the <em>human reader</em> what the function does or how to use it.</li>
+<li>A string literal that begins and ends with three quotes <code>&quot;&quot;&quot;like this&quot;&quot;&quot;</code>, is similar to a string literal that begins and ends with one quote <code>&quot;like this&quot;</code>. A triple-quoted string differs in that (1) it can include <code>&quot;</code> without that ending it the string; and (2) it can span more than one line. Both of these features are useful for doc strings.</li>
+<li>The text after a <code>#</code> is a <strong>comment</strong>. A comment is supposed to tell the human reader how the code works. Python ignores everything after a <code>#</code>. (In the case of <code>is_triangle</code>, this is the whole line.)</li>
+<li>Pretend, for now, that <code>print &quot;No&quot;</code> means the same thing as <code>print(&quot;no&quot;)</code>. We'll re-visit this below.</li>
+</ul>
+<h2 id="q1.-testing">Q1. Testing</h2>
+<p>Terminology:</p>
+<ul>
+<li>The <strong>specification</strong> is what the definition of what the code is supposed to do.</li>
+<li>The <strong>implementation</strong> is the program (or code, or software) itself.</li>
+</ul>
+<p>Does the implementation of <code>is_triangle</code>, above, match its specification?</p>
+<p>Here's a tool for (more) systematically exploring this. The first line in the following table indicates that running the Python code <code>is_triangle(3, 4, 5)</code> is <em>expected</em> to print <code>&quot;Yes&quot;</code> (the &quot;expected&quot; column), and is <em>observed</em> to print <code>&quot;Yes&quot;</code> (the &quot;actual&quot; column.)</p>
+<table>
+<thead>
+<tr class="header">
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>expected</th>
+<th>actual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td><code>&quot;Yes&quot;</code></td>
+<td><code>&quot;Yes&quot;</code></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Without using your computer:</p>
+<ul>
+<li>Add another row where the “expected” and “actual” are both <code>&quot;Yes&quot;</code>.</li>
+<li>Add a row where the “expected” and “actual” are both <code>&quot;No&quot;</code>.</li>
+<li>Add a row where the &quot;expected&quot; and &quot;actual&quot; entries <em>differ</em>.</li>
+</ul>
+<h2 id="q2.-running-your-tests">Q2. Running your tests</h2>
+<ol style="list-style-type: decimal">
+<li>Create a new Jupyter Notebook.</li>
+<li>Enter the definition of <code>is_triangle</code> into a code cell, and run it.</li>
+<li>You should get a syntax error:</li>
+</ol>
+<ul>
+<li>If you <em>do not</em> get a syntax error, this means that you are running Python 2 instead of Python 3, and will run into issues later in the semester.</li>
+<li>If you <em>do</em> get a syntax error, change <code>print &quot;No&quot;</code> to <code>print(&quot;No&quot;)</code>, and similarly modify <code>print &quot;Yes&quot;</code>.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Test whether your predictions about the “actual” values are correct.</li>
+</ol>
+<h2 id="q3.-whitebox-testing">Q3. Whitebox Testing</h2>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_triangle(a, b, c):   <span class="co"># line 1</span>
+    <span class="cf">if</span> a <span class="op">&gt;</span> b <span class="op">+</span> c:           <span class="co"># line 2</span>
+        <span class="bu">print</span>(<span class="st">&quot;No&quot;</span>)         <span class="co"># line 3</span>
+    <span class="cf">elif</span> b <span class="op">&gt;</span> a <span class="op">+</span> c:         <span class="co"># line 4</span>
+        <span class="bu">print</span>(<span class="st">&quot;No&quot;</span>)         <span class="co"># line 5</span>
+    <span class="cf">elif</span> c <span class="op">&gt;</span> a <span class="op">+</span> b:         <span class="co"># line 6</span>
+        <span class="bu">print</span>(<span class="st">&quot;No&quot;</span>)         <span class="co"># line 7</span>
+    <span class="cf">else</span>:                   <span class="co"># line 8</span>
+        <span class="bu">print</span>(<span class="st">&quot;Yes&quot;</span>)        <span class="co"># line 9</span></code></pre></div>
+<p><code>is_triangle(2, 6, 3)</code> executes lines ##1, 2, 4, and 5. (You can use Python Tutor to verify this.)</p>
+<p>This is shown in the table below.</p>
+<p>Add additional rows such that every line number is mentioned somewhere in the table. For example, there are no values of (a, b, c) that will cause both lines ##3 and 5 to run, but you can find values that cause line #3 to run, and separate values that cause line #4 to run.</p>
+<table>
+<thead>
+<tr class="header">
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>expected</th>
+<th>actual</th>
+<th>lines</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>6</td>
+<td>3</td>
+<td><code>&quot;Yes&quot;</code></td>
+<td><code>&quot;Yes&quot;</code></td>
+<td>1, 2, 4, 5</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="going-beyond">Going Beyond</h2>
+<p>This section uses material that has not been covered in class. You are <em>not</em> expected to be able to work this problems at this point in the semester if this is your first exposure to Python. We will cover these topics later in the semester.</p>
+<h3 id="gb1.-fruitful-functions">GB1. Fruitful functions</h3>
+<p>Modify <code>is_triangle</code> to <em>return</em> <code>&quot;Yes&quot;</code> and <code>&quot;No&quot;</code>, instead of <em>printing</em> these values.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_triangle(a, b, c):
+    <span class="co">&quot;&quot;&quot;Return &quot;Yes&quot; or &quot;No&quot;, depending on whether the side lengths can form a triangle.&quot;&quot;&quot;</span>
+    …</code></pre></div>
+<h3 id="gb2.-boolean-values-versus-strings">GB2. Boolean values versus strings</h3>
+<p>Modify <code>is_triangle</code> to return boolean values <code>True</code> and <code>False</code> instead of string values <code>&quot;Yes&quot;</code> and <code>&quot;No&quot;</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_triangle(a, b, c):
+    <span class="co">&quot;&quot;&quot;Return True or False, depending on whether the side lengths can form a triangle.&quot;&quot;&quot;</span>
+    …</code></pre></div>
+<h3 id="gb2.-is_not_triangle">GB2. <code>is_not_triangle</code></h3>
+<p>Write <code>is_not_triangle</code>, that returns <code>True</code> iff (if and only if) the sides can <em>not</em> form a triangle. Write this in two different ways:</p>
+<ol style="list-style-type: decimal">
+<li>Copy the source of <code>is_triangle</code>, and modify it.</li>
+<li>Write a function that calls <code>is_triangle</code>.</li>
+</ol>
+<h3 id="gb3.-is_right_triangle">GB3. <code>is_right_triangle</code></h3>
+<p>Write a function that returns <code>True</code> iff the sides can form a right triangle: <span class="math inline"><em>a</em><sup>2</sup> + <em>b</em><sup>2</sup> = <em>c</em><sup>2</sup></span>, <span class="math inline"><em>a</em><sup>2</sup> + <em>c</em><sup>2</sup> = <em>b</em><sup>2</sup></span>, or <span class="math inline"><em>b</em><sup>2</sup> + <em>c</em><sup>2</sup> = <em>a</em><sup>2</sup></span>.</p>
+<h3 id="gb4.-is_right_triangle-bonus">GB4. <code>is_right_triangle</code> bonus</h3>
+<p>Is there a way to implement <code>is_right_triangle</code> without using an <code>if</code> statement?</p>
+<p>This is more a math problem than a programming problem, but the solution can be expressed as code.</p>
+<h3 id="gb5.-doctest">GB5. doctest</h3>
+<p>On Monday we will introduce doctest. You can get started now. Turn your answer to Q1 into docstring examples, and run doctest on them.</p>
+<h3 id="gb5.-unit-testing">GB5+. unit testing</h3>
+<p>This semester we will (probably) not go over <code>unittest</code>. Unit testing is an import part of software engineering (which this course intersects with, but is not about) – our use of doctest is an introduction to that. Read about unittest, and turn your answer to Q1 into a separate set of unit tests.</p>

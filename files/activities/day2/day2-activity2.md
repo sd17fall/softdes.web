@@ -117,16 +117,16 @@ Write `is_not_triangle`, that returns `True` iff (if and only if) the sides can 
 
 Write a function that returns `True` iff the sides can form a right triangle: $a^2+b^2=c^2$, $a^2+c^2=b^2$, or $b^2+c^2=a^2$.
 
-### GB4 `is_right_triangle` bonus
+### GB4. `is_right_triangle` bonus
 
 Is there a way to implement `is_right_triangle` without using an `if` statement?
 
 This is more a math problem than a programming problem, but the solution can be expressed as code.
 
-### GB5 doctest
+### GB5. doctest
 
 On Monday we will introduce doctest. You can get started now. Turn your answer to Q1 into docstring examples, and run doctest on them.
 
-### GB5 unit testing
+### GB5+. unit testing
 
 This semester we will (probably) not go over `unittest`. Unit testing is an import part of software engineering (which this course intersects with, but is not about) – our use of doctest is an introduction to that. Read about unittest, and turn your answer to Q1 into a separate set of unit tests.
