@@ -57,7 +57,7 @@
           </ul>
 
           {% for section in site.data.sidebar %}
-            <p class="menu-label">Resources</p>
+            <p class="menu-label">{{ section.title }}</p>
             <ul class="menu-list">
               {% for p in section.children %}
                 {% if p.path %}
