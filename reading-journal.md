@@ -35,7 +35,7 @@ origin	git@github.com://sd17fall/ReadingJournal-myname.git (push)
 We want to keep `origin` (the cloned copy in your GitHub account) for you to push completed work to, but we also want to add the original upstream class master repository for you to pull new assignments from. We can add this additional remote by running:
 
 ```bash
-$ git remote add upstream	https://github.com/sd17fall/ReadingJournal.git
+$ git remote add upstream https://github.com/sd17fall/ReadingJournal.git
 ```
 
 If you run `git remote -v` now, you should see both `origin` and `upstream` listed.
