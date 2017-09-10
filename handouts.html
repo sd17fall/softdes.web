@@ -1,0 +1,16 @@
+---
+permalink: handouts
+---
+
+<ul>
+  {% for file in site.static_files %}
+    {% assign trimmed = file.path | replace: '/files/handouts/', '' %}
+    {% assign added = trimmed | prepend: '/files/handouts/' %}
+    {% assign ext = file.path | split: '.' | last %}
+    {% if file.path == added and ext == 'pdf' %}
+      {% assign day = trimmed | split: '/' | first | replace: 'day', '' %}
+      {% assign hand = trimmed | split: '/' | last | split: '.' | first | split: 'activity' | last %}
+      <li><a href="{{ file.path }}">Day {{ day }} Handout {{ hand }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
