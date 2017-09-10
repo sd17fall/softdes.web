@@ -24,6 +24,8 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Rakefile
   - README.md
+  - config
   - scripts
   - vendor

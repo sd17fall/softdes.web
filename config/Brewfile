@@ -1,0 +1,4 @@
+tap 'caskroom/cask'
+
+brew 'pandoc'
+cask 'mactex'
