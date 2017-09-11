@@ -100,3 +100,23 @@ $ jupyter notebook reading-journal-1.ipynb
 ```
 
 If all goes well, this should bring up a web-browser with the reading questions.
+
+## Install Atom
+
+1. [Download and install](http://flight-manual.atom.io/getting-started/sections/installing-atom/) the [Atom text editor](https://atom.io) onto your computer.
+2. Follow the [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/) instructions to create a text file and save it.
+3. Follow the [Atom Packages](http://flight-manual.atom.io/using-atom/sections/atom-packages/) instructions to find and install the following packages: `python-tools`, `trailing-spaces`, `Hydrogen`.
+
+On Windows, if you see an error like this:
+
+![](/images/setup/error_python-tools_480.jpg)
+
+Then do the following:
+
+1. In a terminal, enter where atom`. This should report a *path* such as  `\Users\MYNAME\AppData\Local\Continuum\Anaconda3\python.exe`, where MYNAME is your Windows login.
+2. In Atom:
+  - Use <kbd>Cmd+,</kbd> to open the Settings
+  - Click on Packages in the sidebar
+  - Find the python-tools package
+  - Click Settings.
+  - In the PATH setting, paste the path from 1., *without* the final `python.exe`: for example, `\Users\MYNAME\AppData\Local\Continuum\Anaconda3\python.exe`
