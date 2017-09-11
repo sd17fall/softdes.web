@@ -3,6 +3,8 @@ title: Reading Journal
 permalink: reading-journal/
 ---
 
+{% include toc %}
+
 ## Submitting Completed Readings
 
 Once you have completed your reading journal (not just the reading exercises, but also your notes as well as any comments you want to give to us), you can turn in your work by running the following commands. First, make sure you have saved the notebook by clicking "Save and checkpoint" in the browser window. Then, run the following. (Change “reading journal 1” to the day that you have completed.)
@@ -51,3 +53,15 @@ $ git pull upstream master
 ```
 
 This should pull in the latest assignment notebook, which you can then complete and push to your `origin` repository by following the usual submission instructions above.
+
+## Checking that you've submitted your homework
+
+Here’s how you can check your that you've submitted your Reading Journal:
+
+* In a terminal in the `ReadingJournal` directory, type `git remote -v`. This reports the URL of your repository; for example: `https://github.com/sd17fall/ReadingJournal-myname`.
+
+* Open `https://github.com/sd17fall/ReadingJournal-myname` in a browser. Now there’s several places you can verify that you’ve uploaded your work:
+  * Right above the list of files, it says “{your name} Completed reading journal 1” and “Latest commit f080636 7 hours ago”
+  * Next to `reading-journal-1.ipynb`, it says “7 hours ago”.
+  * Click on `reading-journal-1.ipynb`, and you will see a (non-interactive) display of the notebook itself. This is verifies both that `git push` works, and that the file you pushed has the content you intended.
+  * Above the list of files and above “{your name} Completed reading journal 1", there’s a row of icons “3 commits  1 branch  0 releases  1 contributor”. Click “3 commits”, and you’ll see a list of commits, most recent first.
