@@ -64,10 +64,10 @@ title: Lecture Notes
 
 * DNA -> RNA -> nucleotides -> proteins. DNA and RNA are themselves proteins, and the machinery that implements the arrows is made of proteins. This is how DNA can code for organisms that copy themselves and transcribe the DNA.
 * People mentioned:
-  * Mendelson
+  * Gregor Mendel (not Mendelson) figured out that traits of an organism or inherited in a less linear way than just mixing their quantiites
   * [Rosalind Franklin](https://en.wikipedia.org/wiki/Rosalind_Franklin) lead the work that provided the evidence for the structure of DNA; died too young to collect the Nobel prize.
   * Watson and Crick used this data to discover the structure of DNA.
-  * Sydney
+  * Sydney Brenner figured out that nucleotide triples make codons.
 * Genetics is another *domain* – that is built (partly) on strings, instead of numbers.
 * Everything else covered in class is on the assignment page or pages it links to.
 
