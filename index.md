@@ -2,7 +2,17 @@
 
 {% assign assignments = site.assignments | sort: due %}
 {% for assignment in assignments %}
-{% if assignment.due > site.time %}
+{% assign announce = assignment.announce | default: site.time %}
+{% if announce <= site.time and assignment.due >= site.time %}
+[{{ assignment.title }}]({{ assignment.url }}) is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
+{% endif %}
+{% endfor %}
+
+## Recent
+
+{% assign assignments = site.assignments | sort: due %}
+{% for assignment in assignments %}
+{% if assignment.due < site.time %}
 [{{ assignment.title }}]({{ assignment.url }}) is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
 {% endif %}
 {% endfor %}
