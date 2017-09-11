@@ -1,14 +1,15 @@
 ---
 title: Project Toolboxes
 permalink: toolboxes
-due_date: 2017-02-06
+due: 2017-11-02 09:00:00 -04:00
+announce: 2017-09-13 09:00:00 -04:00
 parts:
 - name: Three Toolboxes
   tag: three-toolboxes
-  due_date: 2017-11-02
+  due: 2017-11-02 09:00:00 -04:00
 - name: Five Toolboxes
   tag: five-toolboxes
-  due_date: 2017-11-27
+  due: 2017-11-27 09:00:00 -04:00
 ---
 
 Software Design and Python are wide worlds, and we'll only explore part of them in class this semester.
@@ -39,15 +40,15 @@ them for a lifetime!
 
 ## Three Toolboxes
 
-**Due {{ page.parts[0].due_date | date: '%a, %b %-d' }}**
+**Due {{ page.parts[0].due | date: '%a, %b %-d' }}**
 
-The first three toolboxes are due {{ page.parts[0].due_date | date: '%a, %b %-d' }}.
+The first three toolboxes are due {{ page.parts[0].due | date: '%a, %b %-d' }}.
 
 ## Five Toolboxes
 
-**Due {{ page.parts[0].due_date | date: '%a, %b %-d' }}**
+**Due {{ page.parts[0].due | date: '%a, %b %-d' }}**
 
-The final two toolboxes (for a total of five) are due {{ page.parts[0].due_date | date: '%a, %b %-d' }}.
+The final two toolboxes (for a total of five) are due {{ page.parts[0].due | date: '%a, %b %-d' }}.
 
 If you get through the Project Toolbox exercises and you have a great idea for
 a new one you'd like to create, get in touch with the teaching team!

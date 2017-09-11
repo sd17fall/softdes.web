@@ -4,15 +4,14 @@ description: 'In this assignment you will be writing a Python program that analy
   a DNA sequence and outputs snippets of DNA that are likely to be protein-coding
   genes. You will then use your program to find genes in a sequence of DNA from the
   bacterium Salmonella Enterica.'
-start_date: 2017-09-11
-due_date: 2017-09-18
+due: 2017-09-18 09:00:00 -04:00
 parts:
 - name: Week 1
   tag: week-1
-  due_date: 2017-09-18
+  due: 2017-09-18 09:00:00 -04:00
 - name: Week 2
   tag: week-2
-  due_date: 2017-09-25
+  due: 2017-09-25 09:00:00 -04:00
 ---
 
 {% include toc %}
@@ -157,7 +156,7 @@ The next section explains the purpose of each of these files.
 
 ## Week 1
 
-**Due {{ page.parts[0].due_date | date: '%a, %b %-d' }}**
+**Due {{ page.parts[0].due | date: '%a, %b %-d' }}**
 
 ### Getting the Lay of the Land
 
@@ -328,7 +327,7 @@ The check in will be worth 20% of the final grade for this assignment.
 
 ## Week 2
 
-**Due {{ page.parts[1].due_date | date: '%a, %b %-d' }}**
+**Due {{ page.parts[1].due | date: '%a, %b %-d' }}**
 
 This week you will be implementing the rest of the functions necessary to
 create your gene finder. Once you have done that, you will be using your code
