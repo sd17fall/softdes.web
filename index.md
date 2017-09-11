@@ -1,8 +1,11 @@
-## Next
+## Coming Up
 
-{% assign assignment = site.assignments | sort: due | reverse | first %}
-
+{% assign assignments = site.assignments | sort: due %}
+{% for assignment in assignments %}
+{% if assignment.due > site.time %}
 [{{ assignment.title }}]({{ assignment.url }}) is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
+{% endif %}
+{% endfor %}
 
 ## Course Materials
 
