@@ -144,11 +144,21 @@ reading journal. For your reference, here are the steps again:
 5. You should now be at the page that shows your fork of the SoftDes repository. Copy the URL in the box labeled "HTTPS Clone URL".
 6. Open up a terminal and execute the following commands (note: these commands will clone your `GeneFinder` repository in your home directory, please modify the first line to cd to a different directory if you'd rather clone somewhere else).
 
+Linux and macOS:
+
 ```bash
 $ cd ~
-$ git clone https://github.com/yourgithubusernamehere/GeneFinder.git #the https URL will be the URL copied in step 5)
+$ git clone https://github.com/yourgithubusernamehere/GeneFinder.git # the https URL will be the URL copied in step 5)
 $ cd GeneFinder
 $ ls *
+```
+
+Windows:
+
+```
+$ git clone https://github.com/yourgithubusernamehere/GeneFinder.git # the https URL will be the URL copied in step 5)
+$ cd GeneFinder
+$ dir
 ```
 
 The last command will show you all of the files in the `GeneFinder` repository.
