@@ -4,14 +4,16 @@
 {% for assignment in assignments %}
 {% assign announce = assignment.announce | default: site.time %}
 {% if announce <= site.time and assignment.due >= site.time %}
-[{{ assignment.title }}]({{ assignment.url }}) is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
+[{{ assignment.title }}]({{ assignment.url }})
+{%- if assignment.parts %} ({{ assignment.parts[0].name }}){% endif -%}
+&nbsp;is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
 {% endif %}
 {% endfor %}
 
 ## Recent
 
 {% assign assignments = site.assignments | sort: due %}
-{% for assignment in assignments %}
+{% for assignment in assignments reversed %}
 {% if assignment.due < site.time %}
 [{{ assignment.title }}]({{ assignment.url }}) is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
 {% endif %}
