@@ -149,14 +149,11 @@ reading journal. For your reference, here are the steps again:
 $ cd ~
 $ git clone https://github.com/yourgithubusernamehere/GeneFinder.git #the https URL will be the URL copied in step 5)
 $ cd GeneFinder
-$ git remote add upstream https://github.com//{{site.github.owner_name}}/GeneFinder.git
 $ ls *
 ```
 
-The `git remote` line is needed in case you need to grab any changes to the
-`{{site.github.owner_name}}/GeneFinder.git` repository after your initial fork. The last
-command will show you all of the files in the `GeneFinder` repository. The
-next section explains the purpose of each of these files.
+The last command will show you all of the files in the `GeneFinder` repository.
+The next section explains the purpose of each of these files.
 
 ## Week 1
 
