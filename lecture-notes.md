@@ -71,7 +71,7 @@ title: Lecture Notes
 * Genetics is another *domain* – that is built (partly) on strings, instead of numbers.
 * Everything else covered in class is on the assignment page or pages it links to.
 
-#### Other
+### Other
 
 * Now we have four ways to run code: Jupyter, `python` prompt, Python Tutor web site, `python` + filename
 * concept -> syntax -> action, vs. syntax -> action.
@@ -81,7 +81,7 @@ title: Lecture Notes
 Top answers from reading prompt:
 
 | Already Doing     | Would Like        | Don't Believe In |
-|-------------------|-------------------|------------------|
+| ----------------- | ----------------- | ---------------- |
 | Stretches         | Stretches         | Stretches        |
 | Avoid distraction | Avoid distraction |                  |
 | Work in groups    | Work in groups    |                  |
@@ -118,25 +118,12 @@ Programming isn't math, but it starts out very math-y
 
 ## Day 1
 
-Some languages some of us in class know include C, C++, C#, Haskell, MATLAB, Java, and Swift.
-
-### Why Python?
-
-- It's at the intersection of teachable and useful.
-- It's useful both within software engineering (popular for tools, system adminstration, web servers, and big data), and as a tool within the sciences.
-
-On the other hand, Python is slower than most of these (although including its libraries makes this comparison harder),
-doesn't run on mobile, doesn't run on resource-constrained devices (such as the Arduino), and doesn't run in the browser.
-
-Deciding which language to use is an example of a tradeoff, given a context and constraints.
-This is an engineering idea.
-
 ### Course Themes
 
 Some other course themes, some illustrated (advertently or inadvertently) in class:
 
 * Software design includes the study and manipulation (recording, replay, debugging, improvement) of processes.
-Some of the ideas and techniques are therefore applicable outside of software.
+  Some of the ideas and techniques are therefore applicable outside of software.
 
 * Many things you do in your life are processes.
 
@@ -147,12 +134,49 @@ Some of the ideas and techniques are therefore applicable outside of software.
 * A workflow is a process. You can debug and optimize this.
 
 * Make for easier debugging by making one change at a time.
-(We made two – working in Windows, and using Anaconda.)
+  (We made two – working in Windows, and using Anaconda.)
 
 * Ask for help. Don't waste too much of your time on being stuck.
 
+### Programming Languages
+
+Some languages some of us in class know include C, C++, C#, Haskell, MATLAB, Java, and Swift.
+
+Learning a programming language is like learning a (non-native) natural language. The first one is difficult. Each new one is easier, with a speed bump if it's not in the same family as the ones you know. (Going from French to Spanish to Italian is easier than going from French to German to Russian to Japanese.)
+
+### Why Python?
+
+* It's at the intersection of teachable and useful.
+* It's useful both within software engineering (popular for tools, system adminstration, web servers, and big data), and as a tool within the sciences.
+
+On the other hand, Python is slower than most of these (although including its libraries makes this comparison harder),
+doesn't run on mobile, doesn't run on resource-constrained devices (such as the Arduino), and doesn't run in the browser.
+
+Deciding which language to use is an example of a tradeoff, given a context and constraints.
+This is an engineering idea.
+
+### Theory and Practice
+
 This course teaches several levels:
 
-- *Tools* such as the `git`, the Atom text editor, how to use the command line.
-- *Practices*
-- *Concepts*
+- *Tools* such as `git`, GitHub, the **Atom** text editor, the command line.
+- *Concepts* such as variables, functions, recursion, and iteration.
+- *Skills* – how to use the tools against a background of concepts to get stuff done.
+- *Practices* – approaching mastery
+
+The course frontloads *tools*, continues to a bolus of *concepts*, and settles into learning *skills* and *practices*.
+
+### Materials
+
+* Our web site is on olin.build.
+* This is built using the same tools you have access to.
+* It will be developed iteratively over the semester, like your projects (after the first one).
+* We will use Slack as a communications channel.
+
+### Experiments
+
+* This course changes because the context (coding and Python technology and community) march on.
+* Previous changes 
+* This semester's changes include allowing Windows; and using Anaconda.
+* A good practice (for making code changes, as well as science experiments) is to change one factor at a time. Otherwise it's difficult to attribute symptoms to their causes.
+* We're not doing that because one change a semester doesn't keep up with the world.
