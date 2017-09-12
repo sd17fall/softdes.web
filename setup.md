@@ -3,6 +3,8 @@ title: Set Up Your Development Environment
 permalink: activities/setup
 ---
 
+{% include toc %}
+
 ## Keep Calm and SoftDes On
 
 Before we can get down to the business, we need to make sure we have the right tools for the job. If you follow these instructions (with help from our amazing NINJA team), your computer will be primed and ready to do some serious computational work.
@@ -99,7 +101,7 @@ $ jupyter notebook reading-journal-1.ipynb
 
 If all goes well, this should bring up a web-browser with the reading questions.
 
-## Install Atom
+## Step 5. Install Atom
 
 1. [Download and install](http://flight-manual.atom.io/getting-started/sections/installing-atom/) the [Atom text editor](https://atom.io) onto your computer.
 2. Follow the [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/) instructions to create a text file and save it.
