@@ -31,9 +31,7 @@ Run `jupyter -h` verify that Jupyter is installed.
 
 When you install Anaconda, you should get Jupyter by default, but if not, run
 
-```
-conda install jupyter
-```
+    conda install jupyter
 
 ## Step 3: Get Started with Git
 
@@ -86,7 +84,7 @@ Since there’s reading due next class, you will need to perform the steps below
 3. Follow the remaining instructions until you get to your repository page. It will looks something like this <https://github.com/sd17fall/ReadingJournal-myname>, except with your GitHub user id instead of `myname`.
 4. ***Clone the repository*** by typing the following into your terminal program. Replace `myname` with your GitHub user id.
 
-```
+```bash
 $ git clone git@github.com:sd17fall/ReadingJournal-myname.git ReadingJournal
 ```
 
@@ -94,7 +92,7 @@ Now you have a copy of the ReadingJournal folder (directory) on your drive. Use 
 
 Next, you can fire up Jupyter notebook and load the reading journal for day X.
 
-```
+```bash
 $ cd ReadingJournal
 $ jupyter notebook reading-journal-1.ipynb
 ```
@@ -113,10 +111,10 @@ On Windows, if you see an error like this:
 
 Then do the following:
 
-1. In a terminal, enter where atom`. This should report a *path* such as  `\Users\MYNAME\AppData\Local\Continuum\Anaconda3\python.exe`, where MYNAME is your Windows login.
+1. In a terminal, enter `where atom`. This should report a *path* such as  `C:\Users\MYNAME\AppData\Local\Continuum\Anaconda3\python.exe`, where MYNAME is your Windows login.
 2. In Atom:
-  - Use <kbd>Cmd+,</kbd> to open the Settings
-  - Click on Packages in the sidebar
-  - Find the python-tools package
-  - Click Settings.
-  - In the PATH setting, paste the path from 1., *without* the final `python.exe`: for example, `\Users\MYNAME\AppData\Local\Continuum\Anaconda3\python.exe`
+  * Use <kbd>Cmd+,</kbd> to open the Settings
+  * Click on Packages in the sidebar
+  * Find the "python-tools" package
+  * Click Settings.
+  * In the “Path to python directory” setting, paste the path from 1., *without* the final `python.exe`: for example, `C:\Users\MYNAME\AppData\Local\Continuum\Anaconda3\python.exe`
