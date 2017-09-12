@@ -166,6 +166,8 @@ This course teaches several levels:
 
 The course frontloads *tools*, continues to a bolus of *concepts*, and settles into learning *skills* and *practices*.
 
+![tools-to-practices](images/notes/day1/tools-to-practices.jpg){: width="500px"}
+
 ### Materials
 
 * Our web site is on olin.build.
@@ -176,7 +178,7 @@ The course frontloads *tools*, continues to a bolus of *concepts*, and settles i
 ### Experiments
 
 * This course changes because the context (coding and Python technology and community) march on.
-* Previous changes 
+* Previous changes
 * This semester's changes include allowing Windows; and using Anaconda.
 * A good practice (for making code changes, as well as science experiments) is to change one factor at a time. Otherwise it's difficult to attribute symptoms to their causes.
 * We're not doing that because one change a semester doesn't keep up with the world.
