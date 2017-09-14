@@ -9,6 +9,13 @@ due: 2017-10-02 09:00:00 -04:00
 
 {% include toc %}
 
+<ul id="compatibility">
+  <li class="compatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> python3.x</li>
+  <li class="compatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Linux</li>
+  <li class="compatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> macOS</li>
+  <li class="incompatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Windows</li>
+</ul>
+
 ## Preliminaries
 
 ## Acknowledgments
