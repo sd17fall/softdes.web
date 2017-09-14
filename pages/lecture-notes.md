@@ -30,7 +30,12 @@ typora-root-url: ..
 
 ### Slices
 
-* `s[0:3]` is the first *three* items of a string (or list), not the first four. (E.g. if `s` is `Facebook`, `s[0:3]` is `Fac`, not `Face`.) It includes `s[0]`,`s[1]`, `s[2]`, but  
+* The **slice** `s[0:3]` is the first *three* items of a string (or list), not the first four. (E.g. if `s` is `Facebook`, `s[0:3]` is `Fac`, not `Face`.) It includes `s[0]`,`s[1]`, `s[2]`, but not `s[3]`.
+* In math, the set of indices is a [half-open interval](https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals): $[0, 3)$
+* Convenient properties of half-open intervals:
+  * The *sum* of two half-open intervals whose ends line up contains only one copy of each element. `s[0:3] + s[3:6] ==  s[0:6]` (`"Fac" + "ebo" == "Facebo"`). More generally, `s[i:j] + s[j:k] == s[i:k]`, for $i <= j <= k$.
+  * The *length* of a slice is simply the difference between the endpoints: `len(s[3:6]) == 6 - 3`.
+  * These properties are also commonlhy used in computation more generally. For example, in computing it is common for a rectangular region (10, 100) – (20, 200), with corners $(10, 100)$, $(20, 100)$, $(10, 200)$, $(20, 200)$, to be considered to include its edges that are contained in $x = 10$ and $y = 100$, but not $x = 100$ and $y = 200$, so that two abutting rectangles (10, 100) – (20, 200) and (20, 100) – (30, 200) to partition the plane into points in the first rectangle, points in the second rectangle, and points not in either rectangle, without any point being in both.
 
 ### Fencepost Error
 
@@ -45,6 +50,10 @@ typora-root-url: ..
 * Admiral Grace Hopper, created FORTRAN (the first programming language), taught at Smith College. Video: [How long is a nanosecond](https://www.youtube.com/watch?v=JEpsKnWZrJ8).
 * John McCarthy, created LISP.
 * Guy Steele, invented Scheme (a dialect of LISP, which inspired JavaScript); wrote *Growing a Language*
+
+### Code
+
+The projected code, plus some elaborations, is [here]({% link files/notes/day-4.html %}).
 
 ## Day 3
 
