@@ -21,14 +21,27 @@ to collect those resources that have already been mentioned into one place.
 * [Python Tutor](http://www.pythontutor.com) interactive visualization
 * [Spring 2014 NINJA tutorial: Python exercises](https://docs.google.com/document/d/1k-JU9cPokJ58ur4ubpbhLAxC26aAx9bCUcianobBLFE/edit)
 
+## Command Line
+
+Bash (Linux / macOS):
+
+* [Linux at Olin](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzZDE1c3ByaW5nfGd4OmMyNzcyOTBjYThlMTM1Mg)
+
+Windows:
+
+* [Introduction to the Windows Command Prompt](https://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)
+* [Windows Command Prompt in 15 Minutes](http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html). (Where it says `java`, think `python` :smile:.)
+* [How to use the Windows command line](https://www.computerhope.com/issues/chusedos.htm)
+* [DOS (Windows command prompt) / Linux equivalents](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/ap-doslinux.html)
+
 ## Git
 
 * [Git Help]({% link pages/git-help.md %}) on this site contains links and information.
 
-## Jupyter
-
-* [How to use Jupyter Notebooks](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook##UseJupyter)
-
 ## Markdown
 
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## Jupyter
+
+* [How to use Jupyter Notebooks](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook##UseJupyter)
