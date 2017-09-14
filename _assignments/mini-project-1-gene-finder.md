@@ -292,10 +292,12 @@ A unit test (make sure you have read the [Unit Testing Instructions](#unit-testi
 
 * `find_all_ORFs`: this function should find all open reading frames in any of the 3 possible frames in a given sequence of DNA and return them as a list of strings. Note that this means that you need to check for ORFs in all three possible frames (i.e. with 0, 1, and 2 offset from the beginning of the sequence). For example, you would want to consider the following codon groupings when looking for all ORFs (groups of +++ or --- indicate that the nucleotides above are considered as a single codon).
 
+<pre>
     ATGTGAAGATTA
     +++---+++---
     -+++---+++--
     --+++---+++-
+</pre>
 
 As in above, don't include ORFs that are nested within other ORFs. Your
 function should heavily utilize `find_all_ORFs_oneframe`.
