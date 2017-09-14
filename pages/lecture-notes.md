@@ -1,9 +1,50 @@
 ---
 permalink: notes/
 title: Lecture Notes
+typora-root-url: ..
 ---
 
 {% include toc %}
+
+## Day 4
+
+### Indices
+
+| 0-based    | 1-based       |
+| ---------- | ------------- |
+| Europe     | North America |
+| Japan      | Russia        |
+| Korea      |               |
+| C/C++      | FORTRAN       |
+| C#         | MATLAB        |
+| Java       | Pascal        |
+| JavaScript |               |
+| LISP       |               |
+| Python     |               |
+| Scheme     |               |
+
+* There's two uses of brackets
+  * *Making* a list `[1, 4, 9]` is the list of three numbers `1`, then `4`, then `9`. The value begins with `[` and ends with `]`.
+  * *Indexing* a list (or string): `s[1]` is the second element of `s`. The `[…]` follows another value.
+  * The use of brackets to *index* a list is called subscripting. Python `s[1]` is equivalent to math $s_1$.
+
+### Slices
+
+* `s[0:3]` is the first *three* items of a string (or list), not the first four. (E.g. if `s` is `Facebook`, `s[0:3]` is `Fac`, not `Face`.) It includes `s[0]`,`s[1]`, `s[2]`, but  
+
+### Fencepost Error
+
+* It takes 101 meter-long fenceposts to build a 100-meter fence
+  * [Unless it's a rectangle or circle!  (Cf. [Kukelé's Dream](https://en.wikipedia.org/wiki/August_Kekulé#Kekul.C3.A9.27s_dream))]
+* There's two floors, not three, between the first and third floor of a building.
+* Getting this wrong is so common it even has a name: “fencepost error”
+* When bugs have names, this is a clue that you're likely to run into them
+
+### People
+
+* Admiral Grace Hopper, created FORTRAN (the first programming language), taught at Smith College. Video: [How long is a nanosecond](https://www.youtube.com/watch?v=JEpsKnWZrJ8).
+* John McCarthy, created LISP.
+* Guy Steele, invented Scheme (a dialect of LISP, which inspired JavaScript); wrote *Growing a Language*
 
 ## Day 3
 
@@ -166,7 +207,7 @@ This course teaches several levels:
 
 The course frontloads *tools*, continues to a bolus of *concepts*, and settles into learning *skills* and *practices*.
 
-![tools-to-practices](images/notes/day1/tools-to-practices.jpg){: width="500px"}
+![tools-to-practices](/images/notes/day1/tools-to-practices.jpg){: width="500px"}
 
 ### Materials
 
