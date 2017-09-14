@@ -23,7 +23,7 @@ to collect those resources that have already been mentioned into one place.
 
 ## Git
 
-* [Git Help]({% link git-help.md %}) on this site contains links and information.
+* [Git Help]({% link pages/git-help.md %}) on this site contains links and information.
 
 ## Jupyter
 

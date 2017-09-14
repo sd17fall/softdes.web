@@ -3,7 +3,7 @@ permalink: activities/
 ---
 
 
-* [Set Up Your Development Environment]({% link setup.md %})
+* [Set Up Your Development Environment]({% link pages/setup.md %})
 
 ## Handouts
 

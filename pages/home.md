@@ -1,3 +1,7 @@
+---
+permalink: /
+---
+
 ## Coming Up
 
 {% assign assignments = site.assignments | sort: due %}
