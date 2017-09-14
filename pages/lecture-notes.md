@@ -1,5 +1,5 @@
 ---
-permalink: /notes
+permalink: notes/
 title: Lecture Notes
 ---
 

@@ -1,5 +1,5 @@
 ---
-permalink: description
+permalink: description/
 title: Course Description
 ---
 
