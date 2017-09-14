@@ -1,36 +1,36 @@
 - title: Resources
   children:
-  - url: /activities/setup
-    title: Set Up
-  - url: http://greenteapress.com/wp/think-python-2e/
-    title: Think Python
-  - url: https://docs.python.org/3.5/
-    title: Python 3.5 Documentation
-  - url: https://docs.python.org/3.5/library/index.html
-    title: Python 3.5 Standard Library
-  - url: http://www.pythontutor.com
-    title: Python Tutor
-  - url: /resources/git/
-    title: Git Help
-  - url: /resources
-    title: Additional Links
+  - title: Set Up
+    url: /activities/setup
+  - title: Think Python
+    url: http://greenteapress.com/wp/think-python-2e/
+  - title: Python 3.5 Documentation
+    url: https://docs.python.org/3.5/
+  - title: Python 3.5 Standard Library
+    url: https://docs.python.org/3.5/library/index.html
+  - title: Python Tutor
+    url: http://www.pythontutor.com
+  - title: Git Help
+    url: /resources/git/
+  - title: Additional Links
+    url: /resources
 
 - title: Course Materials
   children:
-  - url: /reading-journal
-    title: Reading Journal
-  - url: http://sd17fall.slack.com
-    title: Slack
-  - url: /handouts
-    title: Handouts
-  - url: /notes
-    title: Lecture Notes
-  - url: https://olin.tind.io/record/1512034?ln=en
-    title: Library reserves
+  - title: Reading Journal
+    url: /reading-journal
+  - title: Slack
+    url: http://sd17fall.slack.com
+  - title: Handouts
+    url: /handouts
+  - title: Lecture Notes
+    url: /notes
+  - title: Library reserves
+    url: https://olin.tind.io/record/1512034?ln=en
 
 - title: Course Pages
   children:
-  - url: /description
-    title: Course Description
-  - url: /policies
-    title: Course Policies
+  - title: Course Description
+    url: /description
+  - title: Course Policies
+    url: /policies
