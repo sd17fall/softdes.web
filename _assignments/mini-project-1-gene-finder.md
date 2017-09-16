@@ -1,9 +1,10 @@
 ---
 title: 'Mini Project 1: Gene Finder'
-description: 'In this assignment you will be writing a Python program that analyzes
+description: >
+  In this assignment you will be writing a Python program that analyzes
   a DNA sequence and outputs snippets of DNA that are likely to be protein-coding
   genes. You will then use your program to find genes in a sequence of DNA from the
-  bacterium Salmonella Enterica.'
+  bacterium Salmonella Enterica.
 due: 2017-09-18 09:00:00 -04:00
 parts:
 - name: Week 1
