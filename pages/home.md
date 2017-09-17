@@ -23,27 +23,18 @@ permalink: /
 {% endif %}
 {% endfor %}
 
+## Office Hours
+
+| Who           | When                      | Where                       |
+|---------------|---------------------------|-----------------------------|
+| Emily         | Saturday, 4-6pm           | Library                     |
+| Seungin       | Sunday, 4-6pm             | Library                     |
+| Duncan        | Sunday, 6-8pm             | Library                     |
+| Matt          | TBD because scope         | Library                     |
+| Tony          | Wednesday TBD             |                             |
+| Oliver Steele | Drop in or by appointment | MH 365, or Slack to find me |
+
 ## Course Materials
 
 * [Think Python, by Allen Downey](http://greenteapress.com/wp/think-python-2e/) is the course text
 * Optional books are [on reserve in the Olin Library](https://olin.tind.io/record/1512034?ln=en)
-
-## Instructor
-
-Name: Oliver Steele
-
-Office: MH 365
-
-Hours: Drop in or by appointment
-
-## Ninjas
-
-Duncan Hall
-
-Emily Lepert
-
-Hannah Twigg-Smith
-
-Matthew Ruehle
-
-Seungin-Lyu
