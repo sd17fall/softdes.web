@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h2 id="q3.-fruitful-functions">Q3. Fruitful functions</h2>
+<p>Modify <code>is_triangle</code> to <em>return</em> <code>&quot;Yes&quot;</code> and <code>&quot;No&quot;</code>, instead of <em>printing</em> these values.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_triangle_3(a, b, c):
+    <span class="co">&quot;Return &quot;</span>Yes<span class="st">&quot; or &quot;</span>No<span class="st">&quot;, depending on whether the side lengths can form a triangle.&quot;</span>
+    …</code></pre></div>
+<p>For discussion: Where could <code>is_triangle_3</code> be used, that <code>is_triangle_2</code> could not be?</p>
+<h2 id="q4.-boolean-values-versus-strings">Q4. Boolean values versus strings</h2>
+<p>Modify <code>is_triangle</code> to return boolean values <code>True</code> and <code>False</code> instead of string values <code>&quot;Yes&quot;</code> and <code>&quot;No&quot;</code>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> is_triangle_4(a, b, c):
+    <span class="co">&quot;Return True or False, depending on whether the side lengths can form a triangle.&quot;</span>
+    …</code></pre></div>
+<p>For discussion: What (if any) is the advantage of <code>is_triangle_4</code> over <code>is_triangle_3</code> ?</p>
+<h3 id="gb3.-ipython">GB3. <code>ipython</code></h3>
+<p><code>ipython</code> is an alternative to the <code>python</code> <strong>REPL</strong> (Read-Event-Print Loop). Try it</p>
+<h3 id="gb4.-lambda">GB4. <code>lambda</code></h3>
+<p>See if you can figure out what the following is doing. Is there a similar mechanism in other language you know?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> add(a, b):
+    <span class="cf">return</span> a <span class="op">+</span> b
+
+add <span class="op">=</span> <span class="kw">lambda</span> a, b: a <span class="op">+</span> b</code></pre></div>
+</body>
+</html>

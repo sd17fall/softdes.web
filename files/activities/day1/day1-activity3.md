@@ -18,9 +18,9 @@ You can use remaining class time, if any, to begin work on the journal.
 
 Do the reading, and work on the reading journal. When you are done, follow the instructions on the course web site to submit the journal.
 
-**There is more homework for next week than just the reading journal!** You also need to [join Slack](https://join.slack.com/t/sd17fall/shared_invite/MjMzOTgyNjM5OTA5LTE1MDQxMDA3NDktYTQzMzg5OGUyZg https://join.slack.com/t/sd17fall/signup), and [fill out the survey](https://goo.gl/forms/JHSocQE14iEVBnHc2).
+**There is more homework for next week than just the reading journal!** You also need to [join Slack](https://sd17fall.slack.com), and [fill out the survey](https://goo.gl/forms/JHSocQE14iEVBnHc2).
 
-The [course site](http://sd17fall.olin.build) is the ultimate authority on what's due. (And, if it's not clear, ask on Slack.)
+The [course site](http://softdes.olin.build) is the ultimate authority on what's due. (And, if it's not clear, ask on Slack.)
 
 ## Going Beyond: Explore Git
 
