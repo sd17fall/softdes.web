@@ -23,3 +23,12 @@ for md in Dir["files/activities/**/*.md"] do
   multitask :handouts => [pdf, html]
   CLOBBER << pdf << html
 end
+
+for src in Dir["notebooks/**/*.ipynb"] do
+  html = src.sub(%r'^notebooks/', 'files/notes/').sub('.ipynb', '.html')
+  task :notebooks => html
+  CLOBBER << html
+  file html => src do |t|
+    sh "jupyter nbconvert --to html --output-dir #{File.dirname(html)} #{src}"
+  end
+end
