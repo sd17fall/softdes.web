@@ -18,8 +18,10 @@ permalink: /
 
 {% assign assignments = site.assignments | sort: due %}
 {% for assignment in assignments reversed %}
-{% if assignment.due < site.time %}
-[{{ assignment.title }}]({{ assignment.url }}) is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
+{% assign start_s = assignment.due | date: '%s' %}
+{% assign d = site.time | date: '%s' | minus: start_s | divided_by: 86400 %}
+{% if assignment.due < site.time and d < 5 %}
+[{{ assignment.title }}]({{ assignment.url }}) was due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
 {% endif %}
 {% endfor %}
 
