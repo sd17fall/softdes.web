@@ -25,14 +25,15 @@ permalink: /
 
 ## Office Hours
 
-| Who           | When                      | Where                       |
-|---------------|---------------------------|-----------------------------|
-| Emily         | Saturday, 4-6pm           | Library                     |
-| Seungin       | Sunday, 4-6pm             | Library                     |
-| Duncan        | Sunday, 6-8pm             | Library                     |
-| Matt          | TBD because scope         | Library                     |
-| Tony          | Wednesday TBD             |                             |
-| Oliver Steele | Drop in or by appointment | MH 365, or Slack to find me |
+| Who     | When                      | Where                       |
+|---------|---------------------------|-----------------------------|
+| Duncan  | Sunday, 6-8pm             | Library                     |
+| Emily   | Saturday, 4-6pm           | Library                     |
+| Hannah  | Tuesdays 7-9 pm           | Library                     |
+| Matt    | TBD because SCOPE         | Library                     |
+| Seungin | Sunday, 4-6pm             | Library                     |
+| Tony    | Wednesday TBD             |                             |
+| Oliver  | Drop in or by appointment | MH 365, or Slack to find me |
 
 ## Course Materials
 
