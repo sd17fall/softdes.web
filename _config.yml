@@ -16,6 +16,11 @@ defaults:
     values:
       layout: default
   - scope:
+      path: ''
+      type: posts
+    values:
+      permalink: notes/:title
+  - scope:
       path: files
     values:
       layout: handout
