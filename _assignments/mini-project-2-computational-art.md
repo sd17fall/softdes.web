@@ -145,7 +145,7 @@ at Harvey Mudd:
 ## Part 0: Install and test Python Imaging Library
 
 In order to get started on the assignment, you should fork the [base
-repository](https://github.com//{{site.github.owner_name}}/ComputationalArt) for the
+repository](https://github.com/{{site.github.owner_name}}/ComputationalArt) for the
 computational art mini-project. Once you've forked the repository, clone the
 repository on your computer. If you clone the repository in your home
 directory, the starter code will be in `ComputationalArt/recursive_art.py`. In
