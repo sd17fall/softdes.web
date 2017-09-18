@@ -38,7 +38,7 @@ to collect those resources that have already been mentioned into one place.
 * [PEP 8 – Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 * [PEP 257 – Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)
 * [Google Style Guide](https://google.github.io/styleguide/pyguide.html)
-* [GeneFinder in Google Style](https://github.com/sd17fall/GeneFinder/blob/formatted/gene_finder.py) () (see how it compares to master [here](https://github.com/sd17fall/GeneFinder/pull/2/files#diff-3941f5c15920a6b919f1db7864a6d2c7))
+* [GeneFinder in Google Style](https://github.com/sd17fall/GeneFinder/blob/formatted/gene_finder.py) (see how it compares to master [here](https://github.com/sd17fall/GeneFinder/pull/2/files#diff-3941f5c15920a6b919f1db7864a6d2c7))
 
 ## Command Line
 
