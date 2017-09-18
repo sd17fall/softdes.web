@@ -4,15 +4,14 @@ permalink: /
 
 ## Coming Up
 
-{% assign assignments = site.assignments | sort: due %}
+{% assign assignments = site.assignments | sort: "due" %}
 {% for assignment in assignments %}
 {% assign announce = assignment.announce | default: site.time %}
 {% if announce <= site.time and assignment.due >= site.time %}
-[{{ assignment.title }}]({{ assignment.url }})
-{% for part in assignment.parts %}
-{% if part.due > site.time %}
+[{{ assignment.title }}]({{ assignment.url }}) {% if assignment.parts == nil %} is due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }} {% endif %}
+{% assign parts = assignment.parts | where_exp: "part", "part.due > site.time" %}
+{% for part in parts limit: 1 %}
 “{{ part.name }}” is due {{ part.due | date: '%-H:%M %P, %a %-d %b' }}.
-{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}

@@ -4,7 +4,7 @@ date: 2017-01-22 00:00:00 -05:00
 description: >
   In this assignment you will be exploring one particular means of using
   computers to generate images.
-announce: 2017-09-25 09:00:00 -04:00
+announce: 2017-09-14 10:50:00 -04:00
 due: 2017-10-02 09:00:00 -04:00
 ---
 
