@@ -10,7 +10,7 @@ permalink: /
 {% if announce <= site.time and assignment.due >= site.time %}
 [{{ assignment.title }}]({{ assignment.url }})
 {%- if assignment.parts %} ({{ assignment.parts[0].name }}){% endif -%}
-&nbsp;is due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
+&nbsp;is due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }}.
 {% endif %}
 {% endfor %}
 
@@ -21,7 +21,7 @@ permalink: /
 {% assign start_s = assignment.due | date: '%s' %}
 {% assign d = site.time | date: '%s' | minus: start_s | divided_by: 86400 %}
 {% if assignment.due < site.time and d < 5 %}
-[{{ assignment.title }}]({{ assignment.url }}) was due {{ assignment.due | date: '%-H %P, %a %-d %b' }}.
+[{{ assignment.title }}]({{ assignment.url }}) was due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }}.
 {% endif %}
 {% endfor %}
 

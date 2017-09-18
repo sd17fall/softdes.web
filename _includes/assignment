@@ -7,10 +7,10 @@
   </dt>
   <dd>{{ assignment.description }}<ul>
   {% for part in assignment.parts %}
-    <li><a href="{{ assignment.url }}#{{ part.tag }}">{{ part.name }} – due <b>{{ part.due | date: '%-H %P, %a, %b %-d' }}</b></a></li>
+    <li><a href="{{ assignment.url }}#{{ part.tag }}">{{ part.name }} – due <b>{{ part.due | date: '%-H:%M %P, %a, %b %-d' }}</b></a></li>
   {% endfor %}
   </ul></dd>
 {% else %}
-  <dt><a href="{{ assignment.url }}">{{ assignment.title }} – due {{ assignment.due | date: '%-H %P, %A, %B %-d' }}</a></dt>
+  <dt><a href="{{ assignment.url }}">{{ assignment.title }} – due {{ assignment.due | date: '%-H:%M %P, %A, %B %-d' }}</a></dt>
   <dd>{{ assignment.description }}</dd>
 {% endif %}
