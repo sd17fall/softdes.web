@@ -11,7 +11,7 @@ permalink: /
 [{{ assignment.title }}]({{ assignment.url }}) {% if assignment.parts == nil %} is due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }} {% endif %}
 {% assign parts = assignment.parts | where_exp: "part", "part.due > site.time" %}
 {% for part in parts limit: 1 %}
-“{{ part.name }}” is due {{ part.due | date: '%-H:%M %P, %a %-d %b' }}.
+* “{{ part.name }}” is due {{ part.due | date: '%-H:%M %P, %a %-d %b' }}.
 {% endfor %}
 {% endif %}
 {% endfor %}
