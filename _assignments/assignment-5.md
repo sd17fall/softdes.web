@@ -1,7 +1,7 @@
 ---
 title: Assignment 5
-due: 2017-09-22 09:00:00 -04:00
 layout: assignment
+due: 2017-09-21 09:00:00 -04:00
 ---
 
 * Read *Think Python* [Chapter 4](http://www.greenteapress.com/thinkpython2/html/thinkpython2005.html).
