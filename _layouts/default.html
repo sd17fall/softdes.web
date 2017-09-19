@@ -65,11 +65,11 @@
         <aside class="menu column is-fullheight section is-size-7">
           <p class="menu-label">Assignments</p>
           <ul class="menu-list">
-            {% assign assignments = site.assignments | sort: 'due' | reverse %}
-            {% for page in assignments %}
-              {% if page.announce > site.time %}{% continue %}{% endif %}
-              {% if page.due < site.time %}{% continue %}{% endif %}
-              <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% assign assignments = site.assignments | sort: 'due' %}
+            {% for assignment in assignments %}
+              {% if assignment.announce > site.time %}{% continue %}{% endif %}
+              {% if assignment.due < site.time %}{% continue %}{% endif %}
+              <li><a href="{{ assignment.url }}">{{ assignment.title }}</a></li>
             {% endfor %}
           </ul>
           <ul class="menu-list"><a href="{% link pages/assignments.html %}">Past and future…</a></ul>
