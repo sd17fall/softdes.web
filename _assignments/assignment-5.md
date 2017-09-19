@@ -1,6 +1,5 @@
 ---
 title: Assignment 5
-layout: assignment
 due: 2017-09-21 09:00:00 -04:00
 ---
 

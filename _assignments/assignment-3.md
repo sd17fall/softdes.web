@@ -1,7 +1,6 @@
 ---
 title: Assignment 3
 due: 2017-09-14 09:00:00 -04:00
-layout: assignment
 ---
 
 * Read *Think Python* [Chapter 8](http://www.greenteapress.com/thinkpython2/html/thinkpython2009.html) and [Chapter 10.1-10.6](http://www.greenteapress.com/thinkpython2/html/thinkpython2011.html).
