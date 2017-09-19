@@ -10,7 +10,7 @@ due: 2017-09-21 09:00:00 -04:00
 
 1\. The reading journal refers to `rj5.py`; it means `shapes.py`.
 
-2\. Commit your Python files (that end in `.py`) as well as the notebook. Use the following recipe. (The command `git add *.py` has been added.)
+2\. Commit your Python files, that end in `.py`, as well as the notebook. Use the following recipe.
 
 ```bash
 $ cd ReadingJournal
@@ -19,6 +19,8 @@ $ git add *.py
 $ git commit -m "Completed reading journal 5"
 $ git push origin master
 ```
+
+(In the recipe above, the command `git add *.py` has been added to the instructions from the [Reading Journal page]({% link pages/reading-journal.md %}).)
 
 ## Reading Journal 3 (extended deadline)
 
