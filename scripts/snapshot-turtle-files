@@ -1,0 +1,28 @@
+#!/bin/bash -eu
+# Given a directory, screenshot the files ReadingJournal-*/shapes.py and collect
+# the results into build/images/.
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 DIR"
+    exit 1
+fi
+
+DIR=$1
+
+type convert >/dev/null 2>&1 || { echo >&2 "imagemagick's convert command is not installed"; exit 1; }
+
+mkdir -p images
+for pyfile in $DIR/ReadingJournal-*/shapes.py; do
+    repo=$(basename $(dirname $pyfile))
+    login=${repo#ReadingJournal-}
+    python $(dirname $0)/snapshot-turtle-window.py $pyfile $login
+done
+
+# Convert PostScript files -> PNGs
+for psfile in *.ps; do
+   convert $psfile -background white -alpha remove "${psfile%.*}.png"
+done
+
+# Collect all the PNGs into a single GIF
+cd images
+convert -delay 100 -loop 0 *.png shapes.gif
