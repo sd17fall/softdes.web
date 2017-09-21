@@ -1,5 +1,5 @@
 ---
-title: Assignment 6
+title: Assignment 7
 due: 2017-09-28 09:00:00 -04:00
 ---
 
