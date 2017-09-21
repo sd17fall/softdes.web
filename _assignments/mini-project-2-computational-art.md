@@ -154,7 +154,7 @@ fork](https://pillow.readthedocs.org/) of the Python Imaging Library
 ("PIL"). To do so, execute the following command at the Linux terminal:
 
 ```bash
-$ sudo pip3 install Pillow
+$ pip install Pillow
 ```
 
 The starter code includes a function called `test_image` that uses PIL to
@@ -477,8 +477,8 @@ library you will need to install both the **pyalsaaudio** package and some
 libraries that it depends on. Here are the install commands:
 
 ```bash
-$ sudo apt-get install libasound2-dev
-$ sudo pip3 install pyalsaaudio
+$ apt-get install libasound2-dev
+$ pip install pyalsaaudio
 ```
 
 Here is some simple code for getting audio from the mic and displaying the
@@ -505,7 +505,7 @@ checkout the images after you have saved them to a file), I recommend using
 **pygame**.
 
 ```bash
-$ sudo pip3 install pygame
+$ pip install pygame
 ```
 
 We are not including detailed instructions on this, but it shouldn't be too
@@ -513,7 +513,7 @@ hard for you to figure out using Google and the **pygame** documentation. You
 may also have to install some dependencies using `apt-get`:
 
 ```bash
-$ sudo apt-get install mercurial python-dev python-numpy ffmpeg libsdl- image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsmpeg-dev libsdl1.2-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev
+$ apt-get install mercurial python-dev python-numpy ffmpeg libsdl- image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsmpeg-dev libsdl1.2-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev
 ```
 
 One very important thing is that your code will not be fast enough to generate
