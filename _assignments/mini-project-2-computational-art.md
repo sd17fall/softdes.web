@@ -433,7 +433,7 @@ Instead of building random functions of two variables (x, y) build random
 function of three variables (x, y, t) where t represents the frame number in a
 movie rescaled to the interval [-1, +1]. The easiest way to create these movies
 is to output a series of image files (one for each frame of the movie) and
-then use a command line tool like `avconv` to encode them into a movie
+then use a command line tool such as **avconv** to encode them into a movie
 (note: on older version of Ubuntu, such as 12.04, you should use `ffmpeg`
 instead).
 
@@ -448,6 +448,17 @@ $ avconv -i frame%03d.png -vb 20M mymovie.avi
 Use `frame%03d.png` if your files are named _e.g._ `frame001.png`, `frame002.png`,
 `frame003.png`. Use `frame%d.png` if your files are named _e.g._ `frame%03d.png`,
 `frame2.png`, `frame3.png`.
+
+**macOS**: Install **avconv** by installing [home brew](https://brew.sh),
+and then running `brew install libav` in the terminal.
+
+**Windows**: **avconv** doesn't appear to be available for Windows.
+There are three alternatives, none (currently) tested on Windows.
+  * Download and install [ImageMagick], and use the `convert` command
+    (instead of `avconv`) to create a movie from a set of images:
+    `convert -loop 0 *.png mymovie.mov`
+  * Install matplotlib, and follow [these instructions]( https://stackoverflow.com/questions/4092927/generating-movie-from-python-without-saving-individual-frames-to-files)
+  * Install OpenCV, and follow [these instructions](https://stackoverflow.com/questions/44947505/how-to-make-a-movie-out-of-images-in-python)
 
 If you want to do something cleaner, you should investigate some libraries for
 actually creating the movie within Python itself (removing the need for saving
@@ -465,7 +476,7 @@ from 1 to -1):
 <iframe title="YouTube video player" class="youtube-player" type="text/html" src="//www.youtube.com/embed/e-2wziW2T4k?rel=0&amp;wmode=opaque" frameborder="0" allowFullScreen="true" width="480" height="270"></iframe>
 <iframe title="YouTube video player" class="youtube-player" type="text/html" src="//www.youtube.com/embed/yZ47xxH64WE?rel=0&amp;wmode=opaque" frameborder="0" allowFullScreen="true" width="480" height="270"></iframe>
 
-#### Extension 3: Pulsating Music Visualizer!!!!!
+### Extension 3: Pulsating Music Visualizer!!!!!
 
 The idea here will be to have a visualization that responds in real-time to
 loudness changes as picked up by your computer's microphone. This can be used
