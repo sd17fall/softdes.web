@@ -45,6 +45,7 @@ to collect those resources that have already been mentioned into one place.
 ## Atom
 
 * [Atom Flight Manual](http://flight-manual.atom.io)
+* [Atom Keyboard Shortcuts](https://github.com/nwinkler/atom-keyboard-shortcuts)
 
 ### Tips
 
