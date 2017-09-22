@@ -8,3 +8,9 @@
 #compatibility .compatible { color: green }
 #compatibility .incompatible { color: red }
 #compatibility .maybe-compatible { color: orange }
+
+@media(max-width: 767px) { /* <== You can change this break point as per your  needs */
+  #left-nav .menu-list li {
+    display: inline-block;
+  }
+}

@@ -22,7 +22,7 @@
 
     <nav class="navbar">
       <div class="navbar-brand">
-        <a class="navbar-item is-size-1" href="/" style="font-size: 2.5rem">
+        <a class="navbar-item is-size-1" href="/">
           {% if page.title %}
             {{ site.short_title | default: site.title }} &middot; {{ page.title }}
           {% else %}
@@ -51,9 +51,9 @@
       </ul>
     </nav>
 
-    <section class="main-content container columns is-fullheight">
+    <section class="main-content columns container is-fullheight is-widescreen">
 
-        <aside class="menu column is-fullheight section is-size-7">
+        <aside id="left-nav" class="menu column is-3 is-fullheight section is-size-7">
           <p class="menu-label">Assignments</p>
           <ul class="menu-list">
             {% assign assignments = site.assignments | sort: 'due' %}
@@ -62,8 +62,8 @@
               {% if assignment.due < site.time %}{% continue %}{% endif %}
               <li><a href="{{ assignment.url }}">{{ assignment.title }}</a></li>
             {% endfor %}
+            <li class="menu-list"><a href="{% link pages/assignments.html %}">Past and future…</a></li>
           </ul>
-          <ul class="menu-list"><a href="{% link pages/assignments.html %}">Past and future…</a></ul>
 
           {% for section in site.data.sidebar %}
             <p class="menu-label">{{ section.title }}</p>
@@ -82,7 +82,7 @@
         </aside>
 
 
-        <div class="container content column is-8 is-size-7">
+        <div class="content column is-8 is-size-7">
           {% if page.url != '/' %}
             <h1 class="title">
               {{ page.title }}
