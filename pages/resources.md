@@ -70,7 +70,7 @@ to collect those resources that have already been mentioned into one place.
 
 * [Linux at Olin](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzZDE1c3ByaW5nfGd4OmMyNzcyOTBjYThlMTM1Mg)
 
-### Windows
+### Windows Command Prompt
 
 * [Introduction to the Windows Command Prompt](https://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)
 * [Windows Command Prompt in 15 Minutes](http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html). (Where it says `java`, think `python` :smile:.)
@@ -90,3 +90,4 @@ to collect those resources that have already been mentioned into one place.
 * [How to use Jupyter Notebooks](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook##UseJupyter)
 * [Jupyter Keyboard Shortcuts](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/) (compact)
 * [Jupyter Keyboard Shortcuts](https://gist.github.com/kidpixo/f4318f8c8143adee5b40) (longer)
+* [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
