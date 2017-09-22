@@ -1,4 +1,4 @@
-<aside class="is-pulled-right is-size-7 box">
+<aside id="toc" class="is-pulled-right is-size-7 box">
 <nav class="toc" markdown="1">
 <h4>Contents</h4>
 *  Auto generated table of contents
