@@ -522,8 +522,22 @@ this longest match.
 
 #### Tips for speeding up your program
 
-1. Use [PyPy](http://pypy.org) to execute your program (a modified Python interpreter that excels when executing Python programs that depend heavily on loops). To install this run `sudo apt-get install pypy`. I got a 30 fold speedup when using the simple approach to longest common substring described above.
-2. Implement a smarter algorithm for longest common substring (the [dynamic programming solution](https://en.wikipedia.org/wiki/Longest_common_substring_problem#Dynamic_programming) is the next logical one to try).
+1\. Use [PyPy](http://pypy.org) to execute your program (a modified Python interpreter that excels when executing Python programs that depend heavily on loops). I got a 30 fold speedup when using the simple approach to longest common substring described above.
+
+**Linux**: To install this run `sudo apt-get install pypy`.
+
+**macOS**: Install [home brew](https://brew.sh), and then run `brew install pypy`.
+
+**Windows**: As of November 2017, only the Python 2.7 compatible version of PyPy is available for Windows.
+Fortunately, your Gene Finder program will almost certainly work with Windows!
+(It will work unless you've gone way beyond even list comprehensions, to used certain features of Python that aren't
+covered in this course. If you've done this, you will know.)
+Download Python 2.7 compatible PyPy from the [PyPy download page](https://pypy.org/download.html).
+
+**Windows (untested)**: The [PyPy nightly build page](http://buildbot.pypy.org/nightly/trunk/) has a link to [pypy-c-jit-latest-win32.zip](http://buildbot.pypy.org/nightly/trunk/pypy-c-jit-latest-win32.zip).
+The teaching team hasn't gotten around to testing this; please let us know if this works (or doesn't).
+
+2\. Implement a smarter algorithm for longest common substring (the [dynamic programming solution](https://en.wikipedia.org/wiki/Longest_common_substring_problem#Dynamic_programming) is the next logical one to try).
 
 ### Suggestion 2: Building a better gene finder
 
