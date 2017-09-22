@@ -1,1 +1,10 @@
 #toc { max-width: 250px }
+
+#compatibility li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+#compatibility .compatible { color: green }
+#compatibility .incompatible { color: red }
+#compatibility .maybe-compatible { color: orange }
