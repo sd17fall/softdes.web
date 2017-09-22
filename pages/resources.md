@@ -49,7 +49,7 @@ to collect those resources that have already been mentioned into one place.
 
 ### Tips
 
-* **Enable on autosave**, to avoid ever seeing the workflow bug that the code you're running or committing doesn't include your latest change(s):
+* **Enable autosave**, to avoid ever seeing the workflow bug that the code you're running or committing doesn't include your latest change(s):
   1. Select Atom Preferences (<kbd>cmd+,</kbd>)
   2. Click "Packages"
   3. Find the "autosave" package
