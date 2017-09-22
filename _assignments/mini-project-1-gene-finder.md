@@ -547,3 +547,21 @@ all the processor cores on your laptop to examine several snippets at once. Also
 Read more about other approaches to [gene-finding in
 prokaryotes](http://www.researchgate.net/profile/Ljupco_Kocarev/publication/228856410_Computational_Methods_for_Gene_Finding_in_Prokaryotes/links/004635244f8d1c7267000000.pdf).
 If you are really gung-ho, pick one, and implement it!
+
+### Suggestion 3: Visualize the data
+
+2. Visualize the data:
+
+For example, generate a picture that shows where the genes are in the DNA strand. Some libraries to look into are:
+
+* [Matplotlib](http://matplotlib.org). [The image below uses Matplotlib, with a color palette from [Seaborn](http://seaborn.pydata.org).] Matploglib is a good library to learn if you want to use Python for statistical data visualization; add Seaborn if the default Matplotlib settings offend your visual aesthetics.
+* [Pycairo](https://www.cairographics.org/pycairo/) for general 2D graphics.
+* [Kivy](https://kivy.org/#home) for interactive user interfaces.
+* [pygame](http://www.pygame.org/news) for writing games, especially platformer games. We'll be using pygame for the third mini-project.
+
+![](/images/assignments/gene-finder/genes.png)
+
+You can also explore:
+* Draw a histogram that compares the lengths of the genes found to the lengths of the noncoding ORFs from the shuffled sequences.
+* Graph the similarity of different snippets to the nitrogenase sequence in Week 2 Going Beyond
+* Draw the sequence above as a circle, rather than a line.
