@@ -539,6 +539,9 @@ The teaching team hasn't gotten around to testing this; please let us know if th
 
 2\. Implement a smarter algorithm for longest common substring (the [dynamic programming solution](https://en.wikipedia.org/wiki/Longest_common_substring_problem#Dynamic_programming) is the next logical one to try).
 
+3\. Use the Python [multiprocessing](https://docs.python.org/3.5/library/multiprocessing.html) library to use
+all the processor cores on your laptop to examine several snippets at once. Also see [An introduction to parallel programming using Python's multiprocessing module](http://sebastianraschka.com/Articles/2014_multiprocessing.html).
+
 ### Suggestion 2: Building a better gene finder
 
 Read more about other approaches to [gene-finding in
