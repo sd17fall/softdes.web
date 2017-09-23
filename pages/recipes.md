@@ -10,11 +10,15 @@ This page is a companion to the [Resources]({% link pages/resources.md %}) page.
 
 ## Python Recipes
 
-### Fix "NameError: name 'math' is not defined" (or another module)
+### Fix "NameError: name 'math' is not defined"
 
-`import math`
+Fix "NameError: name 'math' is not defined" (or another module):
 
-### Doctest
+```python
+import math
+```
+
+### Using doctest
 
 Run all the doctests in a module (file, script): `doctest.testmod()`
 
@@ -38,7 +42,7 @@ Enable autosave, to avoid ever seeing the workflow bug that the code you're runn
 
 ### Use multiple cursors
 
-Edit several places at once using [multiple cursors and selections](http://flight-manual.atom.io/using-atom/sections/editing-and-deleting-text/#multiple-cursors-and-selections)
+Use [multiple cursors and selections](http://flight-manual.atom.io/using-atom/sections/editing-and-deleting-text/#multiple-cursors-and-selections) to edit several places at once.
 
 ### Make Hydrogen work with Anaconda
 Make the Hydrogen plugin work with Anaconda Python:
