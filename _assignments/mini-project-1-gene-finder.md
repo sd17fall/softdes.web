@@ -357,12 +357,11 @@ A unit test (make sure you have read the [Unit Testing Instructions](#unit-testi
 
 * `longest_ORF_noncoding`: this function takes as input a DNA sequence and an integer indicating how many random trials should be performed. For each random trial, the DNA sequence should be shuffled and the longest ORF should be computed. The output of the function should be **the length** of the longest ORF that was found across all random trials (that is the output of `longest_ORF_noncoding` is an integer). In order to test this code you may find it useful to use the provided Salmonella DNA sequence (see part 4). For example, if you find a longest ORF of 700, 600, and 300 on your three random trials, this function should output 700.
 
-Note 1: In order to randomly shuffle a string you should use the provided
-`shuffle_string` function. If you wanted to implement this function
-yourself, you could take the following approach: First convert the string to a
-list using the `list` function. Once you have a list, you can shuffle the
-list using the built-in python function `list.shuffle`. To reassemble the
-shuffled list back to a string you can use string `join` function.
+Note 1: In order to randomly shuffle a string you should use the provided `shuffle_string` function.
+If you wanted to implement this function yourself, you could take the following approach:
+First convert the string to a list using the `list` function.
+Once you have a list, you can shuffle the list using the built-in python function `random.shuffle`.
+To reassemble the shuffled list back to a string you can use string `join` function.
 
 Note 2: We are not going to create unit tests for this function. Why not? Can
 you think of a different method of unit testing that would be appropriate for
