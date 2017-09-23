@@ -1,6 +1,6 @@
 require 'rake/clean'
 
-task default: %w[handouts]
+task default: %w[notebooks handouts]
 
 SOURCE_MAP = {}
 
@@ -25,10 +25,10 @@ for md in Dir["files/activities/**/*.md"] do
 end
 
 for src in Dir["notebooks/**/*.ipynb"] do
-  html = src.sub(%r'^notebooks/', 'files/notes/').sub('.ipynb', '.html')
-  task :notebooks => html
-  CLOBBER << html
-  file html => src do |t|
-    sh "jupyter nbconvert --to html --output-dir #{File.dirname(html)} #{src}"
+  md = src.sub(%r'^notebooks/', 'notes/').sub('.ipynb', '.md')
+  task :notebooks => md
+  CLOBBER << md
+  file md => src do |t|
+    sh "jupyter nbconvert --to markdown --output-dir #{File.dirname md} #{src}"
   end
 end

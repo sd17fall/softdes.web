@@ -83,7 +83,7 @@
 
 
         <div class="content column is-8 is-size-7">
-          {% if page.url != '/' %}
+          {% if page.url != '/' and page.omit_title != true %}
             <h1 class="title">
               {{ page.title }}
             </h1>

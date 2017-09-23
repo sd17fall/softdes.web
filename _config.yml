@@ -22,6 +22,10 @@ defaults:
     values:
       permalink: notes/:title
   - scope:
+      path: 'notes'
+    values:
+      omit_title: true
+  - scope:
       path: files
     values:
       layout: handout
