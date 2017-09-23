@@ -11,7 +11,7 @@ Python packages that have been mentioned during the course.
 It's not an attempt to list everything related to each of those topics; just
 to collect those resources that have already been mentioned into one place.
 
-It is a companion to the [Recipes]({% link pages/git-help.md %}) page.
+It is a companion to the [Recipes]({% link pages/recipes.md %}) page.
 
 ## General
 
@@ -53,7 +53,7 @@ It is a companion to the [Recipes]({% link pages/git-help.md %}) page.
 
 ### Tips
 
-Moved to [Atom recipes]({% link pages/git-help.md %}#atom).
+Moved to [Atom recipes]({% link pages/recipes.md %}#atom).
 
 ## Command Line
 
@@ -70,7 +70,7 @@ Moved to [Atom recipes]({% link pages/git-help.md %}#atom).
 
 ## Git
 
-Also see [Git recipes]({% link pages/git-help.md %}#git) and [Reading Journal instructions]({% link pages/reading-journal.md %}).
+Also see [Git recipes]({% link pages/recipes.md %}#git) and [Reading Journal instructions]({% link pages/reading-journal.md %}).
 
 ### Reference
 
