@@ -11,6 +11,8 @@ Python packages that have been mentioned during the course.
 It's not an attempt to list everything related to each of those topics; just
 to collect those resources that have already been mentioned into one place.
 
+It is a companion to the [Recipes]({% link pages/git-help.md %}) page.
+
 ## General
 
 [Stack Overflow](http://stackoverflow.com) is a community of programmers, and a knowledge base of programming questions and answers. You can search it directly from its site; it also shows up in Google search.
@@ -35,7 +37,7 @@ to collect those resources that have already been mentioned into one place.
 * [Official Python Tutorial](https://docs.python.org/3/tutorial/index.html)
 * [Spring 2014 NINJA tutorial: Python exercises](https://docs.google.com/document/d/1k-JU9cPokJ58ur4ubpbhLAxC26aAx9bCUcianobBLFE/edit)
 
-### Style
+### Style Guides
 
 * [PEP 8 – Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 * [PEP 257 – Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)
@@ -44,26 +46,14 @@ to collect those resources that have already been mentioned into one place.
 
 ## Atom
 
+### Reference
+
 * [Atom Flight Manual](http://flight-manual.atom.io)
 * [Atom Keyboard Shortcuts](https://github.com/nwinkler/atom-keyboard-shortcuts)
 
 ### Tips
 
-* **Enable autosave**, to avoid ever seeing the workflow bug that the code you're running or committing doesn't include your latest change(s):
-  1. Select Atom Preferences (<kbd>cmd+,</kbd>)
-  2. Click "Packages"
-  3. Find the "autosave" package
-  4. Click "Settings"
-  5. Enable "Enabled"
-* **Edit several places at once** using [multiple cursors and selections](http://flight-manual.atom.io/using-atom/sections/editing-and-deleting-text/#multiple-cursors-and-selections)
-* **Make the Hydrogen plugin work with Anaconda Python**:
-  * The easy way: always launch atom by running `atom` in the Anaconda Command Prompt.
-  * The harder way (Windows): run `where python` in the Anaconda Command Prompt to find the path to your Python.
-    Follow [these instructions](https://stackoverflow.com/questions/17872234/how-to-add-python-to-windows-registry)
-    to add this path to your Windows registry. **Warning**: Neither the NINJAs nor IT will necessarily be able to
-    restore your machine if editing the registry goes awry.
-  * The hardest way: Edit the Hydrogen “Kernel Specs” setting to specify the path to something like this: `{"kernelspecs":{"python3":{"resource_dir":"/Users/osteele/anaconda3/lib/python3.5/site-packages/ipykernel/resources","spec":{"env":{},"argv":["/Users/osteele/anaconda3/lib/python3.5","-m","ipykernel","-f","{connection_file}"],"display_name":"Python 3","language":"python"}}}}`, and restart Atom.
-    **Warning**: I wasn't able to get this to work. It's easy to clear this setting and restart Atom to fix it again, though.
+Moved to [Atom recipes]({% link pages/git-help.md %}#atom).
 
 ## Command Line
 
@@ -80,7 +70,32 @@ to collect those resources that have already been mentioned into one place.
 
 ## Git
 
-* [Git Help]({% link pages/git-help.md %}) on this site contains links and information.
+Also see [Git recipes]({% link pages/git-help.md %}#git) and [Reading Journal instructions]({% link pages/reading-journal.md %}).
+
+### Reference
+
+* [Pro Git](https://git-scm.com/book/en/v2)
+* [Great visualization](http://www.ndpsoftware.com/git-cheatsheet.html#loc=workspace;) of basic Git commands for moving source around
+* [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+
+### Learn
+
+* A [fantastic visual introduction](http://pcottle.github.io/learnGitBranching/) to the high-level concepts around Git and branching. If you are at all interested in using branches, this is one is not to be missed.
+* [Why is Git so hard?](http://merrigrove.blogspot.com/2014/02/why-heck-is-git-so-hard-places-model-ok.html) (it's not just you!)
+* [Try Git](https://try.github.io/)
+* [Learn Git Branching](http://learngitbranching.js.org)
+
+#### Git Tutorials From Past Semesters
+
+* [Spring 2014 NINJA tutorial: GitHub Help](https://docs.google.com/document/d/12mYDk2Bto-8a4LEq3tL9gvNO_8uehsyaV5WMg2-WNj4/edit)
+* [Spring 2014 NINJA tutorial: Introduction to Version Control](https://docs.google.com/presentation/d/15UsxsUBIDA78iplWfKsX0yZAoYIf5ofpEr7PRUE2Y28/edit#slide=id.p)
+* [Spring 2014 NINJA tutorial: Pushing to your GitHub repository](https://docs.google.com/document/d/1faRvcK33bIetPkgBH5Vw3Vlz8vl6jdPFKvtowT6Q1xw/edit)
+
+[Git &amp; GitHub
+presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXBrhTv5DHU4vjQoF99Y/edit?usp=sharing)
+(thanks: Chris)
+
+[One-page cheat sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf) (PDF, thanks: Celine)
 
 ## Markdown
 

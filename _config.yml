@@ -29,6 +29,7 @@ defaults:
 plugins:
   - github-pages
   - jemoji
+  - jekyll-redirect-from
 
 exclude:
   - Gemfile

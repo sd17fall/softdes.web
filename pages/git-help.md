@@ -1,45 +1,53 @@
 ---
-title: Git Help
-date: 2017-02-22 00:00:00 -05:00
-permalink: resources/git/
+title: Recipes
+permalink: resources/recipes/
+redirect_from: resources/git/
 ---
 
-## Reference
+{% include toc %}
 
-* [Pro Git](https://git-scm.com/book/en/v2)
-* [Great visualization](http://www.ndpsoftware.com/git-cheatsheet.html#loc=workspace;) of basic Git commands for moving source around
-* [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+This page is a companion to the [Resources]({% link pages/resources.md %}) page.
 
-## Learn
+## Atom
 
-* A [fantastic visual introduction](http://pcottle.github.io/learnGitBranching/) to the high-level concepts around Git and branching. If you are at all interested in using branches, this is one is not to be missed.
-* [Why is Git so hard?](http://merrigrove.blogspot.com/2014/02/why-heck-is-git-so-hard-places-model-ok.html) (it's not just you!)
-* [Try Git](https://try.github.io/)
-* [Learn Git Branching](http://learngitbranching.js.org)
+### Enable autosave
 
-### Git Tutorials From Past Semesters
+Enable autosave, to avoid ever seeing the workflow bug that the code you're running or committing doesn't include your latest change(s):
 
-* [Spring 2014 NINJA tutorial: GitHub Help](https://docs.google.com/document/d/12mYDk2Bto-8a4LEq3tL9gvNO_8uehsyaV5WMg2-WNj4/edit)
-* [Spring 2014 NINJA tutorial: Introduction to Version Control](https://docs.google.com/presentation/d/15UsxsUBIDA78iplWfKsX0yZAoYIf5ofpEr7PRUE2Y28/edit#slide=id.p)
-* [Spring 2014 NINJA tutorial: Pushing to your GitHub repository](https://docs.google.com/document/d/1faRvcK33bIetPkgBH5Vw3Vlz8vl6jdPFKvtowT6Q1xw/edit)
+1. Select Atom Preferences (<kbd>cmd+,</kbd>)
+2. Click "Packages"
+3. Find the "autosave" package
+4. Click "Settings"
+5. Enable "Enabled"
 
-[Git &amp; GitHub
-presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXBrhTv5DHU4vjQoF99Y/edit?usp=sharing)
-(thanks: Chris)
+### Use multiple cursors
 
-[One-page cheat sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf) (PDF, thanks: Celine)
+Edit several places at once using [multiple cursors and selections](http://flight-manual.atom.io/using-atom/sections/editing-and-deleting-text/#multiple-cursors-and-selections)
 
-## `.gitignore`: Ignoring Files
+### Make Hydrogen work with Anaconda
+Make the Hydrogen plugin work with Anaconda Python:
+
+* The easy way: always launch atom by running `atom` in the Anaconda Command Prompt.
+* The harder way (Windows): run `where python` in the Anaconda Command Prompt to find the path to your Python.
+Follow [these instructions](https://stackoverflow.com/questions/17872234/how-to-add-python-to-windows-registry)
+to add this path to your Windows registry. **Warning**: Neither the NINJAs nor IT will necessarily be able to
+restore your machine if editing the registry goes awry.
+* The hardest way: Edit the Hydrogen “Kernel Specs” setting to specify the path to something like this: `{"kernelspecs":{"python3":{"resource_dir":"/Users/osteele/anaconda3/lib/python3.5/site-packages/ipykernel/resources","spec":{"env":{},"argv":["/Users/osteele/anaconda3/lib/python3.5","-m","ipykernel","-f","{connection_file}"],"display_name":"Python 3","language":"python"}}}}`, and restart Atom.
+**Warning**: I wasn't able to get this to work. It's easy to clear this setting and restart Atom to fix it again, though.
+
+## Git
+
+### Working with Reading Journals
+
+This material is now on the [Reading Journal]({% link pages/reading-journal.md %}) page.
+
+### `.gitignore`: Ignoring Files
 
 * [GitHub documentation](https://help.github.com/articles/ignoring-files/)
 * [Tutorial from Atlassian](https://www.atlassian.com/git/tutorials/gitignore)
 * [`.gitignore` templates](https://www.gitignore.io)
 
-## Working with Reading Journals
-
-This material is now on the [Reading Journal]({% link pages/reading-journal.md %}) page.
-
-## How to get the stuff from my computer to GitHub
+### Get stuff from my computer to GitHub
 
 ```bash
 $ git add <filename>
@@ -56,7 +64,7 @@ in vim, first press “i”, then write your message, then type <kbd>:wq</kbd> f
 quit. Alternatively, if you just want to escape from vim's interface without
 saving a message, just enter “:q” for quit.
 
-## How to pull changes from GitHub
+### Pull changes from GitHub
 
 `$ git pull`
 
@@ -70,7 +78,7 @@ what pulling means is that you're taking the code that others have pushed to
 your repository and matching what you have on your computer with that, so it
 incorporates their changes.
 
-## How to stash (and what is stashing?)
+### How to stash (and what is stashing?)
 
 `$ git stash`
 
@@ -91,7 +99,7 @@ other have made to the repository, and git stash pop puts the changes that you
 made locally that conflict directly in the code. If there's anything to merge,
 do it in the file and then commit and push your changes.
 
-## How to fix a Git detached head
+### Fix a Git detached head
 
 `$ git checkout master`
 
@@ -99,7 +107,7 @@ If this doesn't work, try:
 
 `$ git checkout origin/master`
 
-## What is branching on Git?
+### What is branching on Git?
 
 Branches on Git are very similar to branches on trees. The tree trunk is
 represented as the `master` branch and the branches that come off of the
@@ -116,7 +124,7 @@ And you can tell what branch you're on by doing the command:
 
 `$ git branch`
 
-## How to make a new branch
+### Make a new branch
 
 `$ git fetch origin`
 
@@ -126,11 +134,11 @@ This branch will exist on your computer, in order to push it to git and have
 it be visible by others, you'll have to push your local branch to be a remote
 branch (see below)
 
-## How to push your local branch to be a remote branch
+### Push your local branch to be a remote branch
 
 `$ git push -u origin <your-branch-name>`
 
-## How to checkout a branch
+### Checkout a branch
 
 'Checking out' a branch is when you pull another person's branch (or teleport
 to another branch), you do it by doing:
@@ -140,7 +148,7 @@ $ git fetch origin
 $ git checkout <branch-name>
 ```
 
-## How to merge changes
+### Merge changes
 
 If you get to a point where you are merging changes, you'll see something in
 your code like the following:
@@ -158,7 +166,7 @@ I'll rearrange the code to get the following:
 
     sarah_strohkorb = pick_the_coolest_ninja()
 
-## How to merge one branch into another
+### Merge one branch into another
 
 Let's say that you've been working on a branch called `dev` and you have also
 been modifying the `master` branch. You want to merge your changes in the
