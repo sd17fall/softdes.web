@@ -8,6 +8,22 @@ redirect_from: resources/git/
 
 This page is a companion to the [Resources]({% link pages/resources.md %}) page.
 
+## Python
+
+### Fix "NameError: name 'math' is not defined" (or another module)
+
+`import math`
+
+### Doctest
+
+Run all the doctests in a module (file, script): `doctest.testmod()`
+
+Run the doctests with verbose output: `doctest.testmod(verbose=True)`
+
+Test a single function: `doctest.run_docstring_examples(get_complement, globals())`
+
+Test a single function with verbose output: `doctest.run_docstring_examples(get_complement, globals(), verbose=True)`
+
 ## Atom
 
 ### Enable autosave
