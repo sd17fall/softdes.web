@@ -25,10 +25,10 @@ for md in Dir["files/activities/**/*.md"] do
 end
 
 for src in Dir["notebooks/**/*.ipynb"] do
-  md = src.sub(%r'^notebooks/', 'notes/').sub('.ipynb', '.md')
-  task :notebooks => md
-  CLOBBER << md
-  file md => src do |t|
-    sh "jupyter nbconvert --to markdown --output-dir #{File.dirname md} #{src}"
+  target = src.sub(%r'^notebooks/', 'notes/').sub('.ipynb', '.md')
+  task :notebooks => target
+  CLOBBER << target
+  file target => src do |t|
+    sh "jupyter nbconvert #{t.sources[0]} --to markdown --output-dir #{File.dirname t.name}"
   end
 end
