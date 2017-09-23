@@ -8,7 +8,7 @@ redirect_from: resources/git/
 
 This page is a companion to the [Resources]({% link pages/resources.md %}) page.
 
-## Python
+## Python Recipes
 
 ### Fix "NameError: name 'math' is not defined" (or another module)
 
@@ -24,7 +24,7 @@ Test a single function: `doctest.run_docstring_examples(get_complement, globals(
 
 Test a single function with verbose output: `doctest.run_docstring_examples(get_complement, globals(), verbose=True)`
 
-## Atom
+## Atom Recipes
 
 ### Enable autosave
 
@@ -51,7 +51,7 @@ restore your machine if editing the registry goes awry.
 * The hardest way: Edit the Hydrogen “Kernel Specs” setting to specify the path to something like this: `{"kernelspecs":{"python3":{"resource_dir":"/Users/osteele/anaconda3/lib/python3.5/site-packages/ipykernel/resources","spec":{"env":{},"argv":["/Users/osteele/anaconda3/lib/python3.5","-m","ipykernel","-f","{connection_file}"],"display_name":"Python 3","language":"python"}}}}`, and restart Atom.
 **Warning**: I wasn't able to get this to work. It's easy to clear this setting and restart Atom to fix it again, though.
 
-## Git
+## Git Recipes
 
 ### Working with Reading Journals
 
