@@ -17,3 +17,5 @@
 
 .content pre { padding: 5px }
 pre code { padding: 0 }
+
+div.highlighter-rouge + div.highlighter-rouge pre { background: grey }
