@@ -4,25 +4,20 @@ date: 2017-02-22 00:00:00 -05:00
 permalink: resources/git/
 ---
 
-## Visualizations
+## Reference
 
-* A [fantastic visual introduction](http://pcottle.github.io/learnGitBranching/) to the high-level concepts around Git and branching. If you are at all interested in using branches, this is one is not to be missed.
+* [Pro Git](https://git-scm.com/book/en/v2)
 * [Great visualization](http://www.ndpsoftware.com/git-cheatsheet.html#loc=workspace;) of basic Git commands for moving source around
 * [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+
+## Learn
+
+* A [fantastic visual introduction](http://pcottle.github.io/learnGitBranching/) to the high-level concepts around Git and branching. If you are at all interested in using branches, this is one is not to be missed.
 * [Why is Git so hard?](http://merrigrove.blogspot.com/2014/02/why-heck-is-git-so-hard-places-model-ok.html) (it's not just you!)
-
-## Interactive Tutorials
-
 * [Try Git](https://try.github.io/)
 * [Learn Git Branching](http://learngitbranching.js.org)
 
-# `.gitignore`: Ignoring Files
-
-* [GitHub documentation](https://help.github.com/articles/ignoring-files/)
-* [Tutorial from Atlassian](https://www.atlassian.com/git/tutorials/gitignore)
-* [`.gitignore` templates](https://www.gitignore.io)
-
-## Git Tutorials From Past Semesters
+### Git Tutorials From Past Semesters
 
 * [Spring 2014 NINJA tutorial: GitHub Help](https://docs.google.com/document/d/12mYDk2Bto-8a4LEq3tL9gvNO_8uehsyaV5WMg2-WNj4/edit)
 * [Spring 2014 NINJA tutorial: Introduction to Version Control](https://docs.google.com/presentation/d/15UsxsUBIDA78iplWfKsX0yZAoYIf5ofpEr7PRUE2Y28/edit#slide=id.p)
@@ -34,31 +29,15 @@ presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXB
 
 [One-page cheat sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf) (PDF, thanks: Celine)
 
-## (Online) Book
-* [Pro Git](https://git-scm.com/book/en/v2)
+## `.gitignore`: Ignoring Files
 
-## Reading Journals
+* [GitHub documentation](https://help.github.com/articles/ignoring-files/)
+* [Tutorial from Atlassian](https://www.atlassian.com/git/tutorials/gitignore)
+* [`.gitignore` templates](https://www.gitignore.io)
 
-When the instructors have uploaded new reading assignments, you can pull them into your repository.
+## Working with Reading Journals
 
-**One-time setup**
-
-In a terminal window in your ReadingJournal directory, run the following:
-
-```bash
-$ git remote add upstream https://github.com/sd17fall/ReadingJournal
-```
-
-**Each time a new journal notebook is released**
-
-1. In a terminal window in your ReadingJournal directory, run the following:
-  ```bash
-  $ git pull upstream master
-  ```
-2. Run `jupyter notebook`.
-3. You will see a list of files, that includes the new notebook file. Click on the new notebook file to open and edit it.
-4. When you are done editing the notebook, click the floppy disk icon <i class="fa fa-floppy-o" aria-hidden="true"></i>, or select the “File > Save and Checkpoint” menu item, to save your work to disk.
-5. Follow the instructions in the next section, “How to get the stuff from my computer to GitHub”, to commit your changes to the repo on your computer and then push them to GitHub.
+This material is now on the [Reading Journal]({% link pages/reading-journal.md %}) page.
 
 ## How to get the stuff from my computer to GitHub
 

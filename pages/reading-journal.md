@@ -22,6 +22,8 @@ You will then be prompted to enter your GitHub username and password.  Assuming 
 
 We will continue adding reading notebooks to the original upstream class repository. These will not show up in your forked copy unless you explicitly pull them in.
 
+When the instructors have uploaded new reading assignments, you can pull them into your repository.
+
 ### One Time Setup: Add Upstream Remote
 
 On your laptop, you should have a cloned copy of the ReadingJournal repository from your GitHub account. You can verify this by checking its remote repositories:
@@ -46,13 +48,18 @@ If you run `git remote -v` now, you should see both `origin` and `upstream` list
 
 ### Pull New Notebooks from Upstream
 
-Each time you want to grab the latest assignments, you should first first make sure all your recent work is committed. This is just to form good habits - each new reading journal assignment will be its own `.ipynb` file, so there should not be any conflicts. Next, run:
+Each time you want to grab the latest assignments, you should first first make sure all your recent work is committed. This is just to form good habits - each new reading journal assignment will be its own `.ipynb` file, so there should not be any conflicts.
+Then:
 
-```bash
-$ git pull upstream master
-```
-
-This should pull in the latest assignment notebook, which you can then complete and push to your `origin` repository by following the usual submission instructions above.
+1. In a terminal window in your ReadingJournal directory, run the following:
+  ```bash
+  $ git pull upstream master
+  ```
+  This should pull in the latest assignment notebook, which you can then complete and push to your `origin` repository by following the usual submission instructions above.
+2. Run `jupyter notebook`.
+3. You will see a list of files, that includes the new notebook file. Click on the new notebook file to open and edit it.
+4. When you are done editing the notebook, click the floppy disk icon <i class="fa fa-floppy-o" aria-hidden="true"></i>, or select the “File > Save and Checkpoint” menu item, to save your work to disk.
+5. Follow the instructions in the next section, “How to get the stuff from my computer to GitHub”, to commit your changes to the repo on your computer and then push them to GitHub.
 
 ## Checking that you've submitted your homework
 
