@@ -1,4 +1,8 @@
 
+
+{% include toc %}
+
+
 # Iteration and Design
 
 ## I. Data-Shaped Code

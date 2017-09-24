@@ -1,4 +1,8 @@
 
+
+{% include toc %}
+
+
 # Iteration Basics
 
 > From copy/paste to `for`*

@@ -1,4 +1,8 @@
 
+
+{% include toc %}
+
+
 # Iteration Example
 
 > **Detailed design ~ Control flow ~ `while` and `for` ~ `range` ~ Relating design to implementation ~ Nested loops ~ Functions – an alternative ~ `enumerate`**

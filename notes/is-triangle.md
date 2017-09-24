@@ -1,4 +1,8 @@
 
+
+{% include toc %}
+
+
 # Day 4 Notes
 
 ## `has_triangle`, the hard way
