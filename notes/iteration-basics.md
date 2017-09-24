@@ -5,7 +5,7 @@
 
 # Iteration Basics
 
-> From copy/paste to `for`*
+> From copy/paste to `for`
 
 ## Replacing Repeated Code by `for`
 

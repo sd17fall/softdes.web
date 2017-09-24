@@ -13,7 +13,7 @@ You've learned three *ways* to iterate:
     while i < len(lst):
         // do something with lst[i]
     ```
-2. Using `for` loop with `range`:
+2. Using a `for` loop with `range`:
     ```python
     for i in range(len(lst)):
         // do something with lst[i]
