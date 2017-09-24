@@ -18,4 +18,6 @@
 .content pre { padding: 5px }
 pre code { padding: 0 }
 
-div.highlighter-rouge + div.highlighter-rouge pre { background: grey }
+div.nb-output pre::before { content: "# ⇒" }
+div.nb-output pre { background: grey }
+div.nb-output + div.highlighter-rouge{ padding-top: 10px; }

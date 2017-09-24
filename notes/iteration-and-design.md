@@ -15,10 +15,13 @@ print(text[2])
 print(text[3])
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 ### Changes to the Data
@@ -39,10 +42,13 @@ print(text[2])
 print(text[3])
 ```
 
+{: class="nb-output"}
+
     火
     鳥
     が
     飛
+
 
 
 Oops, what happened? Now we are only seeing the first four characters of the text.
@@ -65,6 +71,8 @@ print(text[5])
 print(text[7])
 ```
 
+{: class="nb-output"}
+
     火
     鳥
     が
@@ -73,6 +81,7 @@ print(text[7])
     で
     で
     る
+
 
 
 Now we've printed eight characters, one for each character of the string.
@@ -111,10 +120,13 @@ print(text[2])
 print(text[3])
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 And here I've modified the code to match the modified specification:
@@ -129,10 +141,13 @@ print('(' + text[2] + ')')
 print('(' + text[3] + ')')
 ```
 
+{: class="nb-output"}
+
     (飛)
     (ぶ)
     (火)
     (鳥)
+
 
 
 So – this *works* (it meets the **functional requirements**), but it's not *robust*, as we've seen above.
@@ -162,10 +177,13 @@ for c in text:
     print(c)
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 
@@ -177,6 +195,8 @@ for c in text:
     print(c)
 ```
 
+{: class="nb-output"}
+
     火
     鳥
     が
@@ -185,6 +205,7 @@ for c in text:
     で
     い
     る
+
 
 
 ### The code matches the specification
@@ -204,10 +225,13 @@ for c in text:
     print(c)
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 This also means that a simple (local) change to the specification requires only a local change to the implementation.
@@ -221,10 +245,13 @@ for c in text:
     print('(' + c + ')')
 ```
 
+{: class="nb-output"}
+
     (飛)
     (ぶ)
     (火)
     (鳥)
+
 
 
 ## Appendix: Trade-Offs

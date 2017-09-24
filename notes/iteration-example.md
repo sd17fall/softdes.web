@@ -29,7 +29,10 @@ while True:
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 Note how many *places* and *ways* the variable `i` is used. I've labelled these with comments below.
@@ -49,7 +52,10 @@ while True:
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 Also note the **control flow** – which parts of the code decide how many times the loop is executed; equivalently in this case, for each line of code, what happens next.
@@ -69,7 +75,10 @@ while True:              # <- loop for ever – but not really, because:
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 This implementation distributes a single idea ("for each word in the list") from the design, across a number of different places in the implementation. It makes it difficult to match the implementation to the specification, and see if they describe the same process.
@@ -93,7 +102,10 @@ while i < len(words):  # <- test and terminate
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 ### `for` and `range`
@@ -114,10 +126,13 @@ print("range(3) behaves as", list(range(3)))
 print("range(len(words)) behaves as", list(range(len(words))))
 ```
 
+{: class="nb-output"}
+
     len(words) = 3
     range(3) = range(0, 3)
     range(3) behaves as [0, 1, 2]
     range(len(words)) behaves as [0, 1, 2]
+
 
 
 `for` introduces a variable (just like `=` does), assigns it the first item in a sequence (just like `i = range(len(words))[0]` would), and runs the body of the loop (just like `while` does). Then it assigns the variable the *next* item in the sequence, and runs the loop again.
@@ -149,7 +164,10 @@ for i in range(len(words)): # <- initialize, increment, test, and terminate
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 Now "For each word" only pops up in two places: in the `for` line where `i` is *assigned* etc., and in `w = words[i]` where we *use* it.
@@ -166,7 +184,10 @@ for w in words: # <- initialize, index, increment, test, and terminate
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 Compare "For each word" from the *specification*, to `for w in words` from the *implementation*. This is a much closer match.
@@ -220,7 +241,10 @@ while i < len(word):
 print(word, "contains", vowel_count, "vowels")
 ```
 
+{: class="nb-output"}
+
     fabulous contains 4 vowels
+
 
 
 We can combine the previous two cells (sum the number of letters in all the word, count the number of vowels in a single word) into a single script:
@@ -266,7 +290,10 @@ while i < len(words):    # <- outer test
 print("these words have", vowel_count, "vowels in all")
 ```
 
+{: class="nb-output"}
+
     these words have 9 vowels in all
+
 
 
 In practice, it's very hard to do this reliably. References to `i` are mixed with references to `j`, and it's easy to slip up.
@@ -303,7 +330,10 @@ for w in words: # <- initialize, index, increment, test, and terminate
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 Here's a vowel counter that also uses `range`:
@@ -319,7 +349,10 @@ for c in word:
 print(word, "contains", vowel_count, "vowels")
 ```
 
+{: class="nb-output"}
+
     fabulous contains 4 vowels
+
 
 
 It's much easier to fuse these two cells. We still need to rename `word` in the vowel counter to `w`, but there's no colliding loop counters such as `i` and `j` the last time we tried this.
@@ -336,7 +369,10 @@ for w in words: # <- outer initialize, index, increment, test, and terminate
 print("these words have", vowel_count, "vowels in all")
 ```
 
+{: class="nb-output"}
+
     these words have 9 vowels in all
+
 
 
 ### Another Approach: Functions
@@ -361,7 +397,10 @@ def count_letters_in_word_list(words):
 print("these words total", count_letters_in_word_list(["fabulous", "flying", "phoenix"]), "letters")
 ```
 
+{: class="nb-output"}
+
     these words total 21 letters
+
 
 
 
@@ -379,7 +418,10 @@ def count_vowels(word):
 print(word, "contains", count_vowels("fabulous"), "vowels")
 ```
 
+{: class="nb-output"}
+
     fabulous contains 4 vowels
+
 
 
 We combine them by changing `count_letters_in_word_list` to call `count_vowels` instead of `len`. (I've also renamed the function `count_letters_in_word_list` to `count_vowels_in_word_list`.)
@@ -400,7 +442,10 @@ def count_vowels_in_word_list(words):  # <- renamed the function
 print("these words have", count_vowels_in_word_list(["fabulous", "flying", "phoenix"]), "vowels in all")
 ```
 
+{: class="nb-output"}
+
     these words have 21 vowels in all
+
 
 
 We could change the implementation of `count_vowels` without changing `count_vowels_in_word_list`.
@@ -423,7 +468,10 @@ def count_vowels(word):
 print(word, "contains", count_vowels("fabulous"), "vowels")
 ```
 
+{: class="nb-output"}
+
     fabulous contains 4 vowels
+
 
 
 
@@ -437,7 +485,10 @@ def count_vowels_in_word_list(words):
 print("these words have", count_vowels_in_word_list(["fabulous", "flying", "phoenix"]), "vowels in all")
 ```
 
+{: class="nb-output"}
+
     these words have 9 vowels in all
+
 
 
 ## `enumerate` provides the index *and* the item
@@ -467,6 +518,8 @@ for w in words:
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
 
     ----------------------------------------------------------------------
 
@@ -481,6 +534,7 @@ print("these words total", letter_count, "letters")
 
 
     NameError: name 'i' is not defined
+
 
 
 Oops! `for w in words` doesn't give us an index variable, just the item itself. This was an advantage because we didn't have to manage the index variable, but it's a disadvantage if we actually want it.
@@ -501,10 +555,13 @@ for w in words:
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     word #1 has 8 letters
     word #2 has 6 letters
     word #3 has 7 letters
     these words total 21 letters
+
 
 
 But now we're using two different mechanisms to traverse the same list at the same pace: the `for` loop with `w`, and our own `i`. Maybe it's better to iterate over the indices instead of the words:
@@ -522,10 +579,13 @@ for i in range(len(words)):
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     word #1 has 8 letters
     word #2 has 6 letters
     word #3 has 7 letters
     these words total 21 letters
+
 
 
 This is acceptable, but it's galling to have to go back to iterating over indices just to get to the words. And this is a very common requirement.
@@ -540,8 +600,11 @@ print("enumerate(words) =", enumerate(words))
 print("enumerate(words) behaves as", list(enumerate(words)))
 ```
 
+{: class="nb-output"}
+
     enumerate(words) = <enumerate object at 0x106a9f948>
     enumerate(words) behaves as [(0, 'fabulous'), (1, 'flying'), (2, 'phoenix')]
+
 
 
 
@@ -558,10 +621,13 @@ for index_and_word in enumerate(words):
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     word #1 has 8 letters
     word #2 has 6 letters
     word #3 has 7 letters
     these words total 21 letters
+
 
 
 This can be simplified using the shortcut `a, b = pair`, which is equivalent to `a = pair[0]; b = pair[1]` if `pair` is a list or tuple with length 2.
@@ -579,10 +645,13 @@ for index_and_word in enumerate(words):
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     word #1 has 8 letters
     word #2 has 6 letters
     word #3 has 7 letters
     these words total 21 letters
+
 
 
 This can further be simplified by replacing `index_and_word` by `i, w`, instead of assigning them from it later.
@@ -599,8 +668,11 @@ for i, w in enumerate(words):
 print("these words total", letter_count, "letters")
 ```
 
+{: class="nb-output"}
+
     word #1 has 8 letters
     word #2 has 6 letters
     word #3 has 7 letters
     these words total 21 letters
+
 

@@ -1,3 +1,4 @@
+require 'shellwords'
 require 'rake/clean'
 
 task default: %w[notebooks handouts]
@@ -29,6 +30,6 @@ for src in Dir["notebooks/**/*.ipynb"] do
   task :notebooks => target
   CLOBBER << target
   file target => src do |t|
-    sh "jupyter nbconvert #{t.sources[0]} --to markdown --output-dir #{File.dirname t.name}"
+    sh "jupyter nbconvert #{Shellwords.escape t.sources[0]} --to markdown --output-dir #{Shellwords.escape File.dirname t.name} --template=config/nb_md.tpl"
   end
 end

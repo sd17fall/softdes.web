@@ -50,6 +50,8 @@ def has_triangles_1(a, b, c, d):
 doctest.run_docstring_examples(has_triangles_1, globals())
 ```
 
+{: class="nb-output"}
+
     **********************************************************************
     File "__main__", line 5, in NoName
     Failed example:
@@ -64,6 +66,7 @@ doctest.run_docstring_examples(has_triangles_1, globals())
     Expected nothing
     Got:
         False
+
 
 
 Oops! The implementation above returns True if *both* (a, b, c), (b, c, d) are triangles,
@@ -153,6 +156,8 @@ def has_triangles_2(a, b, c, d):
 doctest.run_docstring_examples(has_triangles_2, globals())
 ```
 
+{: class="nb-output"}
+
     **********************************************************************
     File "__main__", line 3, in NoName
     Failed example:
@@ -160,6 +165,7 @@ doctest.run_docstring_examples(has_triangles_2, globals())
     Expected:
         True
     Got nothing
+
 
 
 `has_triangles_2` fixes the problem for the computer, but not for the human. It's still difficult to read. It's therefore difficult to match up the implementation against the specification; and it's difficult to test. (There's a lot of different paths the code could take, and it's effortful to construct test cases for them all.)
@@ -237,10 +243,13 @@ def is_triangle(a, b, c):
 is_triangle(3, 4, 5)
 ```
 
+{: class="nb-output"}
+
 
 
 
     True
+
 
 
 
@@ -258,10 +267,13 @@ def has_triangle(a, b, c, d):
 has_triangle(10, 4, 5, 6)
 ```
 
+{: class="nb-output"}
+
 
 
 
     True
+
 
 
 
@@ -277,10 +289,13 @@ def contains_triangle(triples):
 contains_triangle([[1, 1, 3], [3, 4, 5]])
 ```
 
+{: class="nb-output"}
+
 
 
 
     True
+
 
 
 

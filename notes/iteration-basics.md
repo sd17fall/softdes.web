@@ -17,10 +17,13 @@ print(text[2])
 print(text[3])
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 Now let's replace "飛ぶ火鳥" by a longer string:
@@ -35,10 +38,13 @@ print(text[2])
 print(text[3])
 ```
 
+{: class="nb-output"}
+
     火
     鳥
     が
     飛
+
 
 
 This didn't quite work. It only printed the first four characters.
@@ -59,6 +65,8 @@ print(text[6])
 print(text[7])
 ```
 
+{: class="nb-output"}
+
     火
     鳥
     が
@@ -67,6 +75,7 @@ print(text[7])
     で
     い
     る
+
 
 
 This is inconvenient. Each time we change the data, we have to change the code.
@@ -81,10 +90,13 @@ for c in text:
     print(c)
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 
@@ -95,6 +107,8 @@ for c in text:
     print(c)
 ```
 
+{: class="nb-output"}
+
     火
     鳥
     が
@@ -103,6 +117,7 @@ for c in text:
     で
     い
     る
+
 
 
 ## An Equivalence
@@ -123,10 +138,13 @@ c = text[3]
 print(c)
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 except that with the `for` loop, Python figures out, while the program is running, how many times to repeat the
@@ -155,10 +173,13 @@ while i < len(text):
     i = i + 1
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 Replacing `while` by `for`:
@@ -172,10 +193,13 @@ for i in range(len(text)):
     print(c)
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 Iterating directly over the characters, instead of over the indices:
@@ -188,10 +212,13 @@ for c in text:
     print(c)
 ```
 
+{: class="nb-output"}
+
     飛
     ぶ
     火
     鳥
+
 
 
 ## Using `enumerate` to read both the index and the item
@@ -211,10 +238,13 @@ while i < len(text):
     i = i + 1
 ```
 
+{: class="nb-output"}
+
     0 飛
     1 ぶ
     2 火
     3 鳥
+
 
 
 
@@ -226,10 +256,13 @@ for i in range(len(text)):
     print(i, c)
 ```
 
+{: class="nb-output"}
+
     0 飛
     1 ぶ
     2 火
     3 鳥
+
 
 
 
@@ -242,10 +275,13 @@ for i_c in enumerate(text):
     print(i, c)
 ```
 
+{: class="nb-output"}
+
     0 飛
     1 ぶ
     2 火
     3 鳥
+
 
 
 
@@ -257,10 +293,13 @@ for i_c in enumerate(text):
     print(i, c)
 ```
 
+{: class="nb-output"}
+
     0 飛
     1 ぶ
     2 火
     3 鳥
+
 
 
 
@@ -271,8 +310,11 @@ for i, c in enumerate(text):
     print(i, c)
 ```
 
+{: class="nb-output"}
+
     0 飛
     1 ぶ
     2 火
     3 鳥
+
 
