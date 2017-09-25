@@ -9,12 +9,10 @@ collections:
     output: true
     layout: default
     title: Activities
-    # permalink: activities/:path/
   assignments:
     output: true
     layout: default
     title: Assignments
-    permalink: assignments/:path/
 
 defaults:
   - scope:
