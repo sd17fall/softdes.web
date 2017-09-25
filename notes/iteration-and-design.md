@@ -7,7 +7,9 @@
 
 > An exploration of Python iteration constructs, in the context of software design.
 >
-> As far as programming language constructs, this page covers the same ground as [Iteration Basics](iteration-basics), but relates it to concepts of software engineering. Standard terms from software engineering are written in **bold**.
+> This page covers the same programming language constructs as [Iteration Basics](iteration-basics), but adds principles for choosing between them, and relates them to concepts of software engineering.
+>
+> Standard terms from software engineering are written in **bold**.
 
 ## I. Data-Shaped Code
 
@@ -168,9 +170,9 @@ Another small change to the specification (adding "there should be a space betwe
 
 ## II. Specification-Shaped Code
 
-The advantage of the `for` statement, from "Iteration Basics", is that it shapes the *lines* of code to the specification, and the *behavior* of the code to the data. (The versions above shaped the *lines* of code to the data.)
+The advantage of the `for` statement, from [Iteration Basics](iteration-basics), is that it shapes the *lines* of code to the specification, and the *behavior* of the code to the data. (The versions above shaped the *lines* of code to the data.)
 
-### The lines of code do *not* match the data
+### First difference: The lines of code do *not* line up against the data
 
 The behavior of the code comes from the data, but the lines of code themselves do not line up against the lines of data.
 
@@ -216,7 +218,7 @@ for c in text:
 
 
 
-### The code matches the specification
+### Second difference: the implementation *does* match the specification
 
 The lines of code correspond closely to the specification:
 
@@ -272,7 +274,7 @@ It's more *abstract* because the relationship between the data, the implementati
 
 Generality and abstraction aren't all sunshine and roses. ("Engineering is the navigation of trade-offs.")
 
-1. The relation between the *lines of code* and the *output* is more abstract. Which line in the original program (at the top of this page, without the `for` statement) was responsible for printing just the second character of the string? Which line in the final code program this?
+1. The relation between the *lines of code* and the *output* is more abstract. Which line in the original program (at the top of this page, without the `for` statement) was responsible for printing just the second character of the string? Which line in the final code program is?
 
 2. It's more difficult to make exceptions. Consider the following specification. How would you change the original program to do this? How would you change the final program?
 
