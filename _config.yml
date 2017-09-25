@@ -5,6 +5,11 @@ timezone: America/New_York
 calendar_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJGhlctkwfwPHcEQ9H_sIML5rezTEDtDIgsTZyq4dlARZmKvGP-NTWJqu9zN1huDfpKMJQvAcYwmCq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
 
 collections:
+  activities:
+    output: true
+    layout: default
+    title: Activities
+    permalink: activities/:path/
   assignments:
     output: true
     layout: default
