@@ -148,7 +148,7 @@ They are often extremely beautiful, and are [found throughout
 nature](http://www.wired.com/2010/09/fractal-patterns-in-nature/). Fractals
 are also useful across many fields, from antenna engineering to poetry to
 finance. Check out [Yale's Panorama of Fractals and their
-Uses](http://classes.yale.edu/fractals/Panorama/welcome.html) for more
+Uses](http://users.math.yale.edu/public_html/People/frame/Fractals/Panorama/Welcome.html) for more
 examples.
 
 Today, we will teach our turtles to draw fractal shapes using recursion. A
