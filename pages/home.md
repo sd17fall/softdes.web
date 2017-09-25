@@ -2,6 +2,10 @@
 permalink: /
 ---
 
+## In Class Today
+
+* [Recursion Practice]({% link _activities/recursion.md %})
+
 ## Coming Up
 
 {% assign assignments = site.assignments | sort: "due" %}

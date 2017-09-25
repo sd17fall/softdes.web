@@ -6,8 +6,8 @@ omit_title: true
 
 ## Instructions
 
+* [Recursion Practice]({% link _activities/recursion.md %})
 * [Set Up Your Development Environment]({% link _activities/setup.md %})
-* [Recursion]({% link _activities/recursion.md %})
 
 ## Handouts
 
