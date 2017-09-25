@@ -28,7 +28,7 @@ that manipulates language in some interesting way).
 ## How to proceed
 
 In order to get started on the assignment, you should fork the [base
-repository](https://github.com//{{site.github.owner_name}}/TextMining) for the text mining and
+repository](https://github.com/{{site.github.owner_name}}/TextMining) for the text mining and
 analysis mini-project. Once you've forked the repository, clone the repository
 on your computer.
 
@@ -288,7 +288,7 @@ processing the data that will read the pickle file to get the data loaded into
 Python so you can perform some analysis on it.
 
 For more details and practice, check out the [Pickling Project
-Toolbox](https://http://toolboxes.olin.build/pickling/) assignment.
+Toolbox](http://toolboxes.olin.build/pickling/) assignment.
 
 ## Part 2: Analyzing Your Text
 
