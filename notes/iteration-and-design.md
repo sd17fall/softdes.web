@@ -5,6 +5,10 @@
 
 # Iteration and Design
 
+> An exploration of Python iteration constructs, in the context of software design.
+>
+> As far as programming language constructs, this page covers the same ground as [Iteration Basics](iteration-basics), but relates it to concepts of software engineering. Standard terms from software engineering are written in **bold**.
+
 ## I. Data-Shaped Code
 
 Let's print all the characters of a string, one per line:
@@ -32,7 +36,7 @@ print(text[3])
 
 This code runs fine on this exact data (and on any other four-character string, such as "fire" or "burn"), but it's *fragile* – a slight change to the data will break it.
 
-\[Engineering jargon: Fragile is the opposite of **robust**. "Robustness" is one of the **non-functional** properties, or **design considerations**, of a design.\]
+\[Terminology: Fragile is the opposite of **robust**. "Robustness" is one of the **non-functional** properties, or **design considerations**, of a design.\]
 
 To see, this let's replace "飛ぶ火鳥" by a longer string:
 
@@ -96,7 +100,7 @@ You can find it either (1) by inspecting the code, or (2) by comparing the *inpu
 
 It's easy to *make* this kind of mistake – I copied the code, and forgot to change a `5` to a `6`. It's difficult to *spot* it.
 
-\[In engineering speak: it's easy to **inject** this category of **defect**. It's expensive to **detect** it.\]
+\[Terminology: it's easy to **inject** this category of **defect**. It's expensive to **detect** it.\]
 
 ### Changes to the Specification
 
@@ -160,7 +164,7 @@ Also, making a small change to the specification (adding the statement "parenthe
 
 Another small change to the specification (adding "there should be a space between the parentheses and the characters, *e.g.* `( 飛 )`") would require editing every line of the code again.
 
-\[Engineering concept: the code has low **extensibility**.\]
+\[Terminology: the code has low **extensibility**.\]
 
 ## II. Specification-Shaped Code
 
