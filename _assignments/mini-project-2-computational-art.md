@@ -520,12 +520,15 @@ $ pip install pygame
 ```
 
 We are not including detailed instructions on this, but it shouldn't be too
-hard for you to figure out using Google and the **pygame** documentation. You
-may also have to install some dependencies using `apt-get`:
+hard for you to figure out using Google and the **pygame** documentation.
+
+**Linux**: You may also have to install some dependencies using `apt-get`:
 
 ```bash
 $ apt-get install mercurial python-dev python-numpy ffmpeg libsdl- image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsmpeg-dev libsdl1.2-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev
 ```
+
+**macOS**: Install [Home Brew](https://brew.sh), and run `brew install python3 hg sdl sdl_image sdl_mixer sdl_ttf portmidi`.
 
 One very important thing is that your code will not be fast enough to generate
 the appropriate image for a given volume level in real-time. You should
