@@ -29,7 +29,7 @@ TPL = "config/nb_md.tpl"
 
 for src in Dir["notebooks/**/*.ipynb"] do
   target = src.sub(%r'^notebooks/', 'notes/').sub('.ipynb', '.md')
-  task :notebooks => target
+  multitask :notebooks => target
   CLOBBER << target
   file target => [src, TPL] do |t|
     sh "jupyter nbconvert #{Shellwords.escape t.sources[0]} --to markdown --output-dir #{Shellwords.escape File.dirname t.name} --template=#{Shellwords.escape TPL}"
