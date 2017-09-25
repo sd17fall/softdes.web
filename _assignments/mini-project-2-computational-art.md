@@ -535,6 +535,21 @@ the appropriate image for a given volume level in real-time. You should
 generate the images for various volume levels ahead of time, and have them
 loaded and ready to be displayed using **pygame** when appropriate.
 
+## Project Reflection
+
+Please prepare a short document (~1 paragraph to 1-2 pages) that addresses:
+
+From a process point of view, what went well? What could you improve? Other
+possible reflection topics: Was your project appropriately scoped? Did you
+have a good plan for unit testing? How will you use what you learned going
+forward? What do you wish you knew before you started that would have helped
+you succeed?
+
+Add your Reflection to your GitHub repository. This can be in the form of:
+  * a [Markdown](https://guides.github.com/features/mastering-markdown/) file, or
+  * a Jupyter notebook, or
+  * a PDF document, or
+
 ## Turning in your assignment
 
 In order to turn in your assignment, you will need to push your code to GitHub
