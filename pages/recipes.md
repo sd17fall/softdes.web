@@ -18,6 +18,10 @@ Fix "NameError: name 'math' is not defined" (or another module):
 import math
 ```
 
+### Fix "RecursionError: maximum recursion depth exceeded"
+
+Your recursive function is either missing a base case, or is somehow not executing it (for example, it is calling itself with the same arguments that it was called with – TBD illustrated in the Recursion notes).
+
 ### Using doctest
 
 Run all the doctests in a module (file, script): `doctest.testmod()`
