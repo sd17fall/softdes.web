@@ -422,8 +422,8 @@ of candidate genes. We will be interpreting the results of your analysis
 during a scaffolded in-class activity.
 
 Also, if you are interested in comparing the results of your gene finder to a
-state-of-the art one, you can try out one called Glimmer3
-[here](http://www.ncbi.nlm.nih.gov/genomes/MICROBES/glimmer_3.cgi).
+state-of-the art one, you can try out one called Glimmer
+[here](http://www.cs.jhu.edu/~genomics/Glimmer/).
 
 ### Turning in Week 2 Assignment
 
