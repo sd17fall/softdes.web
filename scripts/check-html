@@ -2,7 +2,15 @@
 
 set -e # halt script on error
 
-bundle exec jekyll build
+# bundle exec jekyll build
+
+URL_IGNORE=$(paste -sd "," - <<EOF
+https://github.com/sd17fall/ReadingJournal-myname
+https://en.wikipedia.org/wiki/De_Morgan&#39;s_laws
+https://apps.twitter.com/app/new
+https://github.com/sd17fall/TextMining
+EOF
+)
 
 bundle exec htmlproofer \
   --assume-extension \
@@ -10,7 +18,8 @@ bundle exec htmlproofer \
   --empty-alt-ignore \
   --report-missing-names \
   --report-script-embeds \
-  --url-ignore 'https://github.com/sd17fall/ReadingJournal-myname,https://en.wikipedia.org/wiki/De_Morgan&#39;s_laws' \
+  --timeframe 2w \
+  --url-ignore "$URL_IGNORE" \
   "$@" \
   ./_site
 
