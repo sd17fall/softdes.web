@@ -6,8 +6,12 @@ omit_title: true
 
 ## Instructions
 
-* [Recursion Practice]({% link _activities/recursion.md %})
-* [Set Up Your Development Environment]({% link _activities/setup.md %})
+<ul>
+{% assign activities = site.activities | sort: 'date' %}
+{% for page in activities reversed %}
+<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
 
 ## Handouts
 

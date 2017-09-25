@@ -1,6 +1,7 @@
 ---
 title: Recursion Practice
 description: Recursion, fractals in TurtleWorld
+date: 2017-09-25 9:00:00 -04:00
 ---
 
 {% include toc %}
