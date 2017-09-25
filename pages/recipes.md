@@ -28,6 +28,16 @@ Test a single function: `doctest.run_docstring_examples(get_complement, globals(
 
 Test a single function with verbose output: `doctest.run_docstring_examples(get_complement, globals(), verbose=True)`
 
+### Working with Turtles
+
+```python
+import turtle
+
+t = turtle.Turtle()
+# …
+turtle.mainloop()
+```
+
 ## Atom Recipes
 
 ### Enable autosave
