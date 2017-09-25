@@ -6,7 +6,7 @@ omit_title: true
 
 ## Instructions
 
-* [Set Up Your Development Environment]({% link pages/setup.md %})
+* [Set Up Your Development Environment]({% link _activities/setup.md %})
 * [Recursion]({% link _activities/recursion.md %})
 
 ## Handouts

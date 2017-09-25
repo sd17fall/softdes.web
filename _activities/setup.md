@@ -1,6 +1,5 @@
 ---
 title: Set Up Your Development Environment
-permalink: activities/setup/
 ---
 
 {% include toc %}
