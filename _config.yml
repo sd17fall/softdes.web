@@ -9,7 +9,7 @@ collections:
     output: true
     layout: default
     title: Activities
-    permalink: activities/:path/
+    # permalink: activities/:path/
   assignments:
     output: true
     layout: default
