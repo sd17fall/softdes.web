@@ -3,15 +3,8 @@ title: 'Mini Project 3: Text Mining and Analysis'
 description: >
     In this assignment you will learn how to use computational techniques
     to analyze text.
-announce: 2017-09-25 09:00:00 -04:00
-due: 2017-10-19 10:50:00 -04:00
-parts:
-- name: Code Complete
-  tag: week-1
-  due: 2017-10-12 10:50:00 -04:00
-- name: Revision
-  tag: week-2
-  due: 2017-10-19 10:50:00 -04:00
+announce: 2017-09-25 10:50:00 -04:00
+due: 2017-10-12 10:50:00 -04:00
 ---
 
 {% include toc %}
