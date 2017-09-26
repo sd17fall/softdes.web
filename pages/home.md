@@ -2,9 +2,9 @@
 permalink: /
 ---
 
-## In Class Today
+## In Class Monday
 
-* [Recursion Practice]({% link _activities/recursion.md %})
+* [Class Notes]({% link _posts/2017-09-25-day-7.md %})
 
 ## Coming Up
 
