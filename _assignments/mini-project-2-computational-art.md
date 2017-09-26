@@ -151,7 +151,7 @@ repository on your computer. If you clone the repository in your home
 directory, the starter code will be in `ComputationalArt/recursive_art.py`. In
 addition to fetching the starter code, you should also install the [Pillow
 fork](https://pillow.readthedocs.org/) of the Python Imaging Library
-("PIL"). To do so, execute the following command at the Linux terminal:
+("PIL"). To do so, execute the following command at the Linux terminal or Windows command prompt:
 
 ```bash
 $ pip install Pillow
@@ -452,16 +452,17 @@ Use `frame%03d.png` if your files are named _e.g._ `frame001.png`, `frame002.png
 **macOS**: Install **avconv** by installing [home brew](https://brew.sh),
 and then running `brew install libav` in the terminal.
 
-**Windows**: **avconv** doesn't appear to be available for Windows.
-There are three alternatives, none (currently) tested on Windows.
+**Windows**: **avconv** doesn't appear to be available for Windows. However, there are several other options:
+  * GIFs! Take a look at [the Pillow documentation for GIFs](http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html#gif), and see if you can figure out 
+  how to put together a movie. *Hint: you'll want to look at optional arguments 
+  like `save_all` and `append_images`.*
   * Download and install [ImageMagick], and use the `convert` command
     (instead of `avconv`) to create a movie from a set of images:
     `convert -loop 0 *.png mymovie.mov`
   * Install matplotlib, and follow [these instructions]( https://stackoverflow.com/questions/4092927/generating-movie-from-python-without-saving-individual-frames-to-files)
-  * Install OpenCV, and follow [these instructions](https://stackoverflow.com/questions/44947505/how-to-make-a-movie-out-of-images-in-python)
 
 If you want to do something cleaner, you should investigate some libraries for
-actually creating the movie within Python itself (removing the need for saving
+actually creating the movie within Python itself - e.g., `moviepy` (removing the need for saving
 the frames individually and running **avconv**). You can also use the [Python
 `subprocess` library](https://docs.python.org/3/library/subprocess.html) to call
 **avconv** from within Python, although in this case you still need to save
