@@ -448,7 +448,7 @@ and then running `brew install libav` in the terminal.
   * GIFs! Take a look at [the Pillow documentation for GIFs](http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html#gif), and see if you can figure out
   how to put together a movie. *Hint: you'll want to look at optional arguments
   like `save_all` and `append_images`.*
-  * Download and install [ImageMagick], and use the `convert` command
+  * Download and install [ImageMagick](https://www.imagemagick.org/script/index.php), and use the `convert` command
     (instead of `avconv`) to create a movie from a set of images:
     `convert -loop 0 *.png mymovie.mov`
   * Install matplotlib, and follow [these instructions]( https://stackoverflow.com/questions/4092927/generating-movie-from-python-without-saving-individual-frames-to-files)
