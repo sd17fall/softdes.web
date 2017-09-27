@@ -1,6 +1,5 @@
 ---
 title: 'Mini Project 2: Computational Art'
-date: 2017-01-22 00:00:00 -05:00
 description: >
   In this assignment you will be exploring one particular means of using
   computers to generate images.
@@ -9,13 +8,6 @@ due: 2017-10-02 09:00:00 -04:00
 ---
 
 {% include toc %}
-
-<ul id="compatibility">
-  <li class="compatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> python3.x</li>
-  <li class="compatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Linux</li>
-  <li class="compatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> macOS</li>
-  <li class="incompatible"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Windows</li>
-</ul>
 
 ## Preliminaries
 
@@ -453,8 +445,8 @@ Use `frame%03d.png` if your files are named _e.g._ `frame001.png`, `frame002.png
 and then running `brew install libav` in the terminal.
 
 **Windows**: **avconv** doesn't appear to be available for Windows. However, there are several other options:
-  * GIFs! Take a look at [the Pillow documentation for GIFs](http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html#gif), and see if you can figure out 
-  how to put together a movie. *Hint: you'll want to look at optional arguments 
+  * GIFs! Take a look at [the Pillow documentation for GIFs](http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html#gif), and see if you can figure out
+  how to put together a movie. *Hint: you'll want to look at optional arguments
   like `save_all` and `append_images`.*
   * Download and install [ImageMagick], and use the `convert` command
     (instead of `avconv`) to create a movie from a set of images:
