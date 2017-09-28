@@ -2,10 +2,6 @@
 permalink: /
 ---
 
-## In Class Monday
-
-* [Class Notes]({% link _posts/2017-09-25-day-7.md %})
-
 ## Coming Up
 
 {% assign assignments = site.assignments | sort: "due" %}
