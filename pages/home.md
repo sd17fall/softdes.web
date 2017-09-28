@@ -2,6 +2,15 @@
 permalink: /
 ---
 
+## Recent Notes
+
+* [`is_palindrome` code]({% link notes/palindromes.md %})
+* [recursion notes]({% link notes/recursion.md %})
+
+{% comment %}
+* Notes: [day 7]({% link _posts/2017-09-28-day-8.md %})
+{% endcomment %}
+
 ## Coming Up
 
 {% assign assignments = site.assignments | sort: "due" %}
