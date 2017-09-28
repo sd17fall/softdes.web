@@ -59,8 +59,10 @@ While this function seems initially daunting, it admits a very compact
 recursive solution. You can either work on your own to see the recursive
 solution, or use the recursive solution given in the Wikipedia article.
 
+{% comment %}
 We will be memoizing this function in the next reading journal to make it more
 computationally efficient.
+{% endcomment %}
 
 ## Turtle World
 
