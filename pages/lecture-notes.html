@@ -1,0 +1,25 @@
+---
+permalink: notes/
+title: Lecture Notes
+---
+
+<section class="columns">
+    <section class="column">
+      <ul>
+        {% for p in site.posts %}
+          <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        {% endfor %}
+      <ul>
+    <section>
+
+    {% comment %}
+    <section class="column">
+      <h2>Code Notes</h2>
+      <ul>
+        {% for p in site.posts %}
+          <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        {% endfor %}
+      <ul>
+    <section>
+    {% endcomment %}
+  </section>
