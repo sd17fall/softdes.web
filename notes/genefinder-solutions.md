@@ -8,9 +8,9 @@
 Topics discussed:
 
 * Adding minimal test cases
-* Coding convention for a fruitful function that sometimes returns None
+* Coding convention for fruitful functions that can return `None`
 * Docstring style conventions (*not* used in the code that was given you)
-* Doctesting functions that return None
+* Doctesting functions that return `None`
 * Global variables – when to use, how to name
 * Naming conventions for placeholder variables
 * Validating parameter values
@@ -1151,7 +1151,7 @@ def gene_finder(dna):
     return aas
 ```
 
-## `gene_finder` – list comprehension solution
+### `gene_finder` – list comprehension solution
 
 
 ```python
