@@ -21,6 +21,8 @@ Topics discussed:
   * List comprehensions
   * Regular expressions
   * Using `random.seed` to test functions that call `random`
+ 
+ Also see [GeneFinder – going beyond](/notes/genefinder-going-beyond.md).
 
 ## `get_complement`
 
