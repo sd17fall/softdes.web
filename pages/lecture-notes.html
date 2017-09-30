@@ -1,25 +1,27 @@
 ---
 permalink: notes/
-title: Lecture Notes
+title: Notes
 ---
 
 <section class="columns">
     <section class="column">
+      <h2>Lecture Notes</h2>
       <ul>
-        {% for p in site.posts %}
-          <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}
-      <ul>
-    <section>
-
-    {% comment %}
-    <section class="column">
-      <h2>Code Notes</h2>
-      <ul>
-        {% for p in site.posts %}
-          <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}
-      <ul>
-    <section>
-    {% endcomment %}
+      {% for p in site.posts %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+    </ul>
   </section>
+
+  <section class="column">
+    <h2>Code Notes</h2>
+    <ul>
+      {% for p in site.pages %}
+        {% assign dirs = p.url | split: '/' %}
+        {% if dirs[1] == 'notes' and p.url != page.url %}
+          <li><a href="{{ p.url }}">{{ dirs[-1] | replace: '-', ' ' | replace: '.html', '' | capitalize }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+</section>
