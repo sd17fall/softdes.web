@@ -11,7 +11,7 @@ due: 2017-10-02 09:00:00 -04:00
 
 ## Preliminaries
 
-## Acknowledgments
+### Acknowledgments
 
 This assignment has been adapted from Harvey Mudd Professor Chris Stone's assignment posted at the
 [Stanford Nifty Assignments](http://nifty.stanford.edu/) collection.
