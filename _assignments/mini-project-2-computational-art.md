@@ -54,7 +54,7 @@ is a plot of the function f(x, y) = sin(10pi*xy)
 Things get even more interesting when we use the power of computation to
 generate functions by randomly composing elementary functions with each other.
 Here is a plot of the randomly generated function f(x, y) =
-cos(pi*((cos(pi*sin(pi*(((x+y)/2.0*cos(pi*y))+cos(pi*cos(pi*y)))/2.0))*((((cos(pi*y)+(x*y))/2.0*(cos(pi*y)*sin(pi*x)))+sin(pi*((x+x)/2.0+cos(pi*y))/2.0))/2.0*sin(pi*sin(pi*sin(pi*(y+y)/2.0)))))+sin(pi*(cos(pi*cos(pi*cos(pi*sin(pi*x))))+sin(pi*sin(pi*((x*x)*sin(pi*y)))))/2.0))/2.0)
+cos(pi\*((cos(pi\*sin(pi\*(((x+y)/2\*cos(pi\*y))+cos(pi\*cos(pi\*y)))/2))\*((((cos(pi\*y)+(x\*y))/2\*(cos(pi\*y)\*sin(pi\*x)))+sin(pi\*((x+x)/2+cos(pi\*y))/2))/2\*sin(pi\*sin(pi\*sin(pi\*(y+y)/2)))))+sin(pi\*(cos(pi\*cos(pi\*cos(pi\*sin(pi\*x))))+sin(pi\*sin(pi\*((x\*x)\*sin(pi\*y)))))/2))/2)
 
 ![]({% link images/assignments/computational-art/complex_singlechannel_surface.png %}){:width="320px" height="244px"}
 
@@ -62,7 +62,7 @@ Cool! Next, we bring in the idea of color. Instead of generating one random
 function, we generate three (one for each of the color channels red, green,
 and blue). Here are 3 figures representing randomly generated functions for
 each of the color channels. (Note: in a slight change of notation we are now
-using the function avg(x, y) instead of (x + y) / 2.0)
+using the function avg(x, y) instead of (x + y) / 2.)
 
 ![]({% link images/assignments/computational-art/complex_red_surface.png %}){:width="320px" height="239px"}
 
