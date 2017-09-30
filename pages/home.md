@@ -4,6 +4,7 @@ permalink: /
 
 ## Recent Notes
 
+* [GeneFinder solutions]({% link notes/genefinder-solutions.md %})
 * [`is_palindrome` code]({% link notes/palindromes.md %})
 * [recursion notes]({% link notes/recursion.md %})
 * [Day 7 lecture notes]({% link _posts/2017-09-28-day-8.md %})
