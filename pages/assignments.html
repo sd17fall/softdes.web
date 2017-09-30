@@ -2,7 +2,7 @@
 permalink: assignments/
 ---
 
-<h2>Current</h2>
+<h2>Upcoming</h2>
 <dl>
   {% assign assignments = site.assignments | filter: 'due' | sort: 'due' %}
   {% for assignment in assignments %}
@@ -13,6 +13,7 @@ permalink: assignments/
   {% endfor %}
 </dl>
 
+{% comment %}
 <h2>Future</h2>
 {% assign assignments = site.assignments | filter: 'due' | sort: 'due' %}
 {% for assignment in assignments %}
@@ -20,10 +21,11 @@ permalink: assignments/
     {% include assignment assignment=assignment %}
   {% endif %}
 {% endfor %}
+{% endcomment %}
 
 <h2>Past</h2>
 {% assign assignments = site.assignments | filter: 'due' | sort: 'due' %}
-{% for assignment in assignments %}
+{% for assignment in assignments reversed %}
   {% if assignment.due < site.time %}
     {% include assignment assignment=assignment %}
   {% endif %}
