@@ -43,11 +43,13 @@
           {% assign title = component | capitalize | replace: '-', ' ' | default: 'Home' %}
           {% if forloop.last %}
             {% assign is_active_class = 'is-active' %}
-            {% assign title = page.title | default: title %}
+            {% assign title = page.title | default: title | replace: '.html', '' %}
           {% endif %}
-          <li class="{{ is_active_class }}"><a href="{{ url }}">
-            {{ title }}
-          </a></li>
+          <li class="{{ is_active_class }}">
+            <a href="{{ url }}">
+              {{ title }}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </nav>
