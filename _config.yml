@@ -38,6 +38,9 @@ plugins:
   - jemoji
   - jekyll-redirect-from
 
+kramdown:
+  toc_levels: 2..6
+
 exclude:
   - Gemfile
   - Gemfile.lock
