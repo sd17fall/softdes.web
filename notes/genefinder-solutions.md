@@ -5,7 +5,8 @@
 
 # GeneFinder solutions
 
-Topics illustrated:
+Topics discussed:
+
 * Adding minimal test cases
 * Coding convention for a fruitful function that sometimes returns None
 * Docstring style conventions (*not* used in the code that was given you)
@@ -13,23 +14,19 @@ Topics illustrated:
 * Global variables – when to use, how to name
 * Naming conventions for placeholder variables
 * Validating parameter values
-
-Upcoming material:
-* Dictionaries
-* Exceptions
-
-Advanced and optional topics:
-* List comprehensions
-* Regular expressions
-* Using `random.seed` to test functions that call `random`
+* Upcoming material:
+  * Dictionaries
+  * Exceptions
+* Advanced and optional topics:
+  * List comprehensions
+  * Regular expressions
+  * Using `random.seed` to test functions that call `random`
 
 ## `get_complement`
 
-This section discusses some implementations of `get_complement`, that use different techniques.
+This section discusses some implementations of `get_complement`, that use a variety of different techniques.
 
-I've ommitted part of all of the docstring in the later implementations.
-
-I've also corrected the docstring, which said "complementary nucleotide nucleotide". I've also changed it to conform to the [numpy docstring style guide](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html). You weren't expected to do that, but it was bugging me.
+I've also corrected the *wording* of the docstring, which said "complementary nucleotide nucleotide"; and the *style* – it's been modified to conform to the [numpy docstring style guide](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html). You weren't expected to do that, but it was bugging me.
 
 
 ```python
@@ -71,7 +68,9 @@ def get_complement(nucleotide):
 doctest.run_docstring_examples(get_complement, globals())
 ```
 
-Since each branch of the `if` always `return`s, these could also use `if` instead of `elif`. This is neither better nor worse than the preceding implementation.
+Since each branch of the `if` executes a `return` statement, `elif` could be replaced by `if`. This is neither better nor worse than the preceding implementation.
+
+\[In the following function definitions, parts of the docstring have been omitted.\]
 
 
 ```python
@@ -104,9 +103,13 @@ doctest.run_docstring_examples(get_complement, globals())
 
 What does `get_complement` do when passed an invalid value, say `X`? The specification doesn't say.
 
-The implementations above return `None`. This is fine so far as the implementation of `get_complement` itself goes. It does mean if there's a bug in code that *calls* `get_complement`, you may not discover it until some distance from the point where `get_complement` is called with the invalid value. (I'll discuss this more in class on Monday.)
+The above implementations return `None`.
 
-Here's a technique for detecting the problem within `get_complement`, and stopping immediately with a stack trace. The trick we're using is that `invalid_nucleotide` isn't defined, and it's an error to call an undefined function.
+This satisfies the specification, and the doctests pass.
+
+However, a bug in code that *calls* `get_complement` won't produce a visible error until some distance from the point where `get_complement` is called. (I'll discuss this more in class on Monday.)
+
+Here's a technique for detecting the problem within `get_complement`, and stopping immediately with a stack trace. We'll use a trick: `invalid_nucleotide` isn't defined, and it's an error to call an undefined function.
 
 
 ```python
@@ -152,7 +155,7 @@ get_complement('X')
 
 
 
-Soon you'll read about [exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions). These allow you to say what you mean instead of using a trick. Note the final Exception line in the output.
+Soon you'll read about [exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions). These allow you to say what you mean instead of using a trick. Note the final `Exception` line in the output from the following code:
 
 
 ```python
@@ -198,7 +201,7 @@ get_complement('X')
 
 
 
-If you really want to (create and then) show off your Python expertise, read up on Python's built-in "Concrete" exception types. You'll discover a more specific exception than `Exception`, that's perfect for this purpose:
+If you really want to show off your Python expertise, read up on Python's [built-in exception types](https://docs.python.org/3.4/library/exceptions.html#concrete-exceptions). You'll discover a more specific exception than `Exception`, that's perfect for this purpose:
 
 
 ```python
@@ -246,9 +249,9 @@ get_complement('X')
 
 ### `get_complement` – other approaches
 
-The implementation techniques above used "data-shaped code", where the data is the number of nucleotides (`A`, `C`, `T`, and `G`). They had one `if` or `elif` statement for each nucleotide. If you added another nucleotide, you'd add more code. (It could happen! RNA uses **U**racil instead of **T**hymine.)
+The implementation techniques above used "data-shaped code". One of the pieces of data in this case is the list of nucleotides (`A`, `C`, `T`, and `G`). (The other is the nucleotide we're taking the complement of.) The function contains an `if` or `elif` statement for each nucleotide. If you were to add another nucleotide, you'd have to add aother `if` statement.
 
-The following approaches put the list of nucleotides into values, instead of lists of lines of code.
+The following approaches put the list of nucleotides into values instead of `if` statements.
 
 
 ```python
@@ -298,13 +301,15 @@ def get_complement(nucleotide):
 doctest.run_docstring_examples(get_complement, globals())
 ```
 
+### Global variables
+
 `complements` is used as a **constant**. It's set to the same value each time we run the function, and is never modified.
 
 We might therefore use a **global variable** (at **top level** or **module scope**), instead of a **local variable**, to hold this value. See the implementation below.
 
 Note that I've renamed the variable from `complement` to `nucleotide_complements`. This follows the principle that the further the distance between a variable's **definition** and it's **use**, the more descriptive the name should be. It also keeps us from using up a good short variable name such as `complement`, and having to remember not to use it as a function parameter name or local variable.
 
-Note that Python global variables, [by convention](https://www.python.org/dev/peps/pep-0008/#global-variable-names), use [snakecase](https://en.wikipedia.org/wiki/Snake_case) `complement_table`. The convention for another programming language might use `ComplementTable` or `COMPLEMENT_TABLE` for a global constant.
+Note that Python global variables, [by convention](https://www.python.org/dev/peps/pep-0008/#global-variable-names), are written in [snakecase](https://en.wikipedia.org/wiki/Snake_case) (*e.g.* `complement_table`). Other programming languages write global constant as `ComplementTable` or `COMPLEMENT_TABLE`.
 
 
 ```python
@@ -324,7 +329,7 @@ doctest.run_docstring_examples(get_complement, globals())
 
 ## `get_reverse_complement`
 
-This reverses the sequence `dna[::-1]`, and then takes the complement of each nucleotide:
+This first implementation reverses the sequence (`dna[::-1]`), and then takes the complement of each nucleotide from that reversed sequence:
 
 
 ```python
@@ -356,7 +361,7 @@ def get_reverse_complement(dna):
 doctest.run_docstring_examples(get_reverse_complement, globals())
 ```
 
-We could also complement the nucleotides *first*, and then reverse *that*.
+We could also turn this around: find the nucleotide complements *first*, and then reverse *that*:
 
 
 ```python
@@ -375,7 +380,7 @@ def get_reverse_complement(dna):
 doctest.run_docstring_examples(get_reverse_complement, globals())
 ```
 
-This one-liner uses a list comprehension.
+This one-liner uses a list comprehension:
 
 
 ```python
@@ -393,7 +398,7 @@ doctest.run_docstring_examples(get_reverse_complement, globals())
 
 ## `rest_of_ORF`
 
-I've added some examples that test smaller sequences. If there's a bug that shows up with these simpler tests, it will be easier to debug.
+I've added some examples, that test smaller sequences, to the starter code for `rest_of_ORF`. If there's a bug that shows up with these simpler tests, it will be easier to spot and debug, then looking at the original test.
 
 
 ```python
@@ -432,6 +437,8 @@ def rest_of_ORF(dna):
 doctest.run_docstring_examples(rest_of_ORF, globals())
 ```
 
+### Regular Expressions
+
 The following technique use a [**regular expression**](https://docs.python.org/3/howto/regex.html) to match a repeated (`+?`) count of three-character (`...`) groups (`(...)`), followed by one of (`|`) `TAA`, `TAG`, or `TGA`.
 
 
@@ -455,7 +462,7 @@ doctest.run_docstring_examples(rest_of_ORF, globals())
 
 ## `find_all_ORFs_oneframe`
 
-This first approach doesn't work. The problem is that it picks up nested ORFs, because there's no way to skip over all the codons in an ORF when we find one. The `i += len(orf)` doesn't work, because `for i in range` resets `i` to the next value from `range` each time through the loop.
+This first approach doesn't work:
 
 
 ```python
@@ -514,7 +521,9 @@ doctest.run_docstring_examples(find_all_ORFs_oneframe, globals())
 
 
 
-We can't use a `for in range` loop, because sometimes we need to step the index forwards by three (when we *don't* find a start tag), and sometimes skip forwards by the length of the ORF (when we *do* find a start tag). “Unpack” the `for i in range` to `i = 0; while i < len` to get more access to `i`.
+This implementation includes the nested ORFs in its result. This is because when it finds an ORF, it's not actually skipping to its end before looking for the next start codon. The line `i += len(orf)` changes the value of `i`, but the next time through the loop body, `for i in range` resets `i` to the next value from `range`, so the `i += len(orf)` line doesn't actually have a lasting effect.
+
+We can't use a `for in range` loop, because sometimes we need to step the index forwards by three (when we *don't* find a start tag), and sometimes skip forwards by the length of the ORF (when we *do* find a start tag). “Unpack” the `for i in range` to `i = 0; while i < len` to get more access to `i`:
 
 
 ```python
@@ -600,7 +609,9 @@ def find_all_ORFs_oneframe(dna):
 doctest.run_docstring_examples(find_all_ORFs_oneframe, globals())
 ```
 
-Instead of maintaining two variables `inside_orf` to remember if we're inside an ORF, and `remaining_orf_len` to track how much of the ORF is left, we can use `remaining_orf_len` for both: if this has the value 0, we're not in an ORF, otherwise it tells how many nucleotides of the ORF remain.
+Instead of maintaining *two* variables – `inside_orf` to remember if we're inside an ORF, and `remaining_orf_len` to track how much of the ORF is left – we can use just `remaining_orf_len` to serve both purposes. If this is greater than zero, we're in an ORF. If it's value 0, we're not.
+
+On the one hand, it's simpler to track this through a single variable instead of two. Then we don't have to think so hard to prove that the variables won't get out of sync with each other. On the other, using the variable for two purposes is trickier.
 
 
 ```python
@@ -632,7 +643,7 @@ def find_all_ORFs_oneframe(dna):
 doctest.run_docstring_examples(find_all_ORFs_oneframe, globals())
 ```
 
-We can further simplify the code by defining `remaining_orf_len >= 0` to mean we're in an ORF, and `remaining_orf_len < 0` to mean we're not in an ORF. This lets us *always* decrement `remaining_orf_len`.
+We can further simplify the code by defining `remaining_orf_len >= 0` to mean we're in an ORF, and `remaining_orf_len < 0` to mean we're not. This lets us *always* decrement `remaining_orf_len`.
 
 
 ```python
@@ -697,7 +708,7 @@ doctest.run_docstring_examples(find_all_ORFs, globals())
 
 ## `find_all_ORFs_both_strands`
 
-None of the following definitions is necessarily better than the others.
+Here's a variety of different approaches. This is a matter of taste.
 
 
 ```python
@@ -727,6 +738,19 @@ def find_all_ORFs_both_strands(dna):
 
 doctest.run_docstring_examples(find_all_ORFs_both_strands, globals())
 ```
+
+{: class="nb-output"}
+
+    **********************************************************************
+    File "__main__", line 16, in NoName
+    Failed example:
+        find_all_ORFs_both_strands("ATGCGAATGTAGCATCAAA")
+    Expected:
+        ['ATGCGAATG', 'ATGCTACATTCGCAT']
+    Got:
+        ['ATGCGAATG', 'ATG', 'ATGCTACATTCGCAT']
+
+
 
 
 ```python
@@ -786,7 +810,7 @@ doctest.run_docstring_examples(find_all_ORFs_both_strands, globals())
 
 ## `longest_ORF`
 
-I've added two examples for the case where there's no ORF, to illustrate why you might want to use `print` in this case – because a function that returns None doesn't print anything, which can be confusing to read.
+I've added two different examples to test that the function returns `None` when there's no ORF. (Normally you'd add one or the other.) This is to illustrate why you might want to use `print` when writing the doctest for a function that is expected to return `None`. Evaluating a function that returns `None` in the Python prompt (and therefore within a doctest example) doesn't print anything. This can be confusing to read.
 
 
 ```python
@@ -822,7 +846,7 @@ def longest_ORF(dna):
 doctest.run_docstring_examples(longest_ORF, globals())
 ```
 
-`len(string)` isn't very expensive, so we can also do this with fewer variables:
+`len(string)` isn't very expensive, so we can also do this with one variable (`best`) instead of keeping two variables (`best` and `best_len`) in sync:
 
 
 ```python
@@ -842,9 +866,7 @@ def longest_ORF(dna):
 doctest.run_docstring_examples(longest_ORF, globals())
 ```
 
-More expensive (since sorting is more work than keep track of the longer, and since `sorted` makes a list) but less code.
-
-This code would behave the same if it didn't end with `return None`, since functions that don't execute a `return` implicitly return `None`. It's standard practice to add an explicit return when the function is defined to return a value. This makes it easier to tell by scanning the implementation whether a function is fruitful or fruitless.
+The following two implementations is more expensive, but less code. It's more expensive because sorting is more work than keep track of the longer, and because `sorted` makes a list.
 
 
 ```python
@@ -880,9 +902,13 @@ def longest_ORF(dna):
 doctest.run_docstring_examples(longest_ORF, globals())
 ```
 
+The final line `return None` isn't necessary. A function that don't execute a `return` statement *implicitly* returns `None` anyway.
+
+It is, however, standard practice to add an *explicit* return to a fruitful function, that returns `None` when called with some arguments and other values when called with other arguments. This makes it easier to tell by scanning the implementation whether a function is fruitful or fruitless.
+
 ## `longest_ORF_noncoding`
 
-Use `random.seed` to test functions that use random numbers. It resets the "random" number sequence, so that it produces the same values in the same order each time.
+Use `random.seed` to test functions that use random numbers. This resets the “random” number sequence (which isn't really random), so that it produces the same values in the same order each time.
 
 The variable named `_` (single underscore) is a **placeholder variable**, for a "don't care" value. It's used when the language syntax requires that we use a variable name, but we never read the value of the variable.
 
@@ -924,6 +950,29 @@ def longest_ORF_noncoding(dna, num_trials):
 doctest.run_docstring_examples(longest_ORF_noncoding, globals())
 ```
 
+
+```python
+import random
+
+def shuffle_string(s):
+    return ''.join(random.sample(s, len(s)))
+
+def longest_ORF_noncoding(dna, num_trials):
+    """
+    >>> random.seed(1)
+    >>> longest_ORF_noncoding("ATGCGAATGTAGCATCAAA", 100)
+    19
+    """
+    lens = []
+    for _ in range(num_trials):
+        orf = longest_ORF(shuffle_string(dna))
+        if orf:
+            lens.append(len(orf))
+    return max(lens)
+
+doctest.run_docstring_examples(longest_ORF_noncoding, globals())
+```
+
 ## `coding_strand_to_AA`
 
 
@@ -951,11 +1000,11 @@ def coding_strand_to_AA(dna):
     >>> coding_strand_to_AA("ATGCCCGCTTT")
     'MPA'
     """
-    aa = ''
+    aas = ''
     for i in range(0, len(dna), 3):
         codon = dna[i:i+3]
-        aa = aa + aa_table[codon]
-    return aa
+        aas += aa_table[codon]
+    return aas
 
 doctest.run_docstring_examples(coding_strand_to_AA, globals())
 ```
