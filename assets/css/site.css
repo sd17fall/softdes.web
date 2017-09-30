@@ -9,15 +9,15 @@
 #compatibility .incompatible { color: red }
 #compatibility .maybe-compatible { color: orange }
 
-@media(min-width: 767px) {
+@media(min-width: 769px) {
   #toc { float: right; }
 }
 
-@media(min-width: 1250px) {
+@media(min-width: 1280px) {
   #toc { float: none; position: fixed; right: 5px; top: 150px; }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 769px) {
   #left-nav .menu-list li {
     display: inline-block;
   }
