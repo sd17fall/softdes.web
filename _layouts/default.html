@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% include mathjax %}
-    <link rel="stylesheet" href="/assets/css/site.css">
     <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
   </head>
 
   <body>
@@ -33,7 +33,7 @@
       </div>
     </nav>
 
-    <nav class="breadcrumb" aria-label="breadcrumbs">
+    <nav class="breadcrumb" style="no-print" aria-label="breadcrumbs">
       <ul>
         {% assign components = page.url | split: '/' %}
         {% assign url = components[0] %}
@@ -54,7 +54,7 @@
 
     <section class="main-content columns container is-fullheight is-widescreen">
 
-        <aside id="left-nav" class="menu column is-3 is-fullheight section is-size-7">
+        <aside id="left-nav" class="menu column is-3 is-fullheight section is-size-7 no-print">
           <p class="menu-label">Assignments</p>
           <ul class="menu-list">
             {% assign assignments = site.assignments | sort: 'due' %}

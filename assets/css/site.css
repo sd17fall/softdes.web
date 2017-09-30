@@ -14,12 +14,18 @@
     display: inline-block;
   }
 }
+@media print {
+  nav, .nav, .no-print { display: none }
+  pre code, .highlight {
+    background-color: white;
+  }
+}
 
 .content pre { padding: 5px }
 pre code { padding: 0 }
 
 /* div.nb-output pre::before { content: "# ⇒" } */
-div.highlighter-rouge { border-top: 5px solid lightgray; }
+div.highlighter-rouge { border-top: 5px solid lightgray; background: blue }
 div.highlighter-rouge.nb-output { border-top: 1px solid gray }
 /* div.nb-output pre { border-left: 5px solid gray; margin-left: -5px  } */
 div.nb-output + div.highlighter-rouge{ padding-top: 10px; }
