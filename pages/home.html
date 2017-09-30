@@ -4,72 +4,72 @@ permalink: /
 
 <h2>Notes</h2>
 <section class="columns">
-    <section class="column">
-        <h3>Lecture Notes</h3>
-        <ul>
-            <li><a href="{% link _posts/2017-09-28-day-8.md %}">Day 8 lecture notes</a></li>
-            <li><a href="{% link _posts/2017-09-25-day-7.md %}">Day 7 lecture notes</a></li>
-            <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
-        </ul>
-    </section>
+  <section class="column">
+    <h3>Lecture Notes</h3>
+    <ul>
+      <li><a href="{% link _posts/2017-09-28-day-8.md %}">Day 8 lecture notes</a></li>
+      <li><a href="{% link _posts/2017-09-25-day-7.md %}">Day 7 lecture notes</a></li>
+      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
+    </ul>
+  </section>
 
-    <section class="column">
-        <h3>Code Notes</h3>
-        <ul>
-            <li><a href="{% link notes/genefinder-solutions.md %}">GeneFinder solutions</a></li>
-            <li><a href="{% link notes/palindromes.md %}">`is_palindrome` code</a></li>
-            <li><a href="{% link notes/recursion.md %}">recursion notes</a></li>
-        </ul>
-    </section>
+  <section class="column">
+    <h3>Code Notes</h3>
+    <ul>
+      <li><a href="{% link notes/genefinder-solutions.md %}">GeneFinder solutions</a></li>
+      <li><a href="{% link notes/palindromes.md %}">`is_palindrome` code</a></li>
+      <li><a href="{% link notes/recursion.md %}">recursion notes</a></li>
+    </ul>
+  </section>
 </section>
 
 <h2>Assignments</h2>
 <section class="columns">
 
-    <section class="column">
-        <h3>Upcoming</h3>
-            {% assign assignments = site.assignments | sort: "due" %}
-            {% for assignment in assignments %}
-                {% assign announce = assignment.announce | default: site.time %}
-                {% if announce <= site.time and assignment.due >= site.time %}
-                    <div>
-                        <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }} {% endif %}
-                        {% assign parts = assignment.parts | where_exp: "part", "part.due > site.time" %}
-                        {% for part in parts limit: 1 %}
-                            “{{ part.name }}” is due {{ part.due | date: '%-H:%M %P, %a %-d %b' }}.
-                        {% endfor %}
-                    </div>
-                {% endif %}
+  <section class="column">
+    <h3>Upcoming</h3>
+      {% assign assignments = site.assignments | sort: "due" %}
+      {% for assignment in assignments %}
+        {% assign announce = assignment.announce | default: site.time %}
+        {% if announce <= site.time and assignment.due >= site.time %}
+          <div>
+            <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }} {% endif %}
+            {% assign parts = assignment.parts | where_exp: "part", "part.due > site.time" %}
+            {% for part in parts limit: 1 %}
+              “{{ part.name }}” is due {{ part.due | date: '%-H:%M %P, %a %-d %b' }}.
             {% endfor %}
-    </section>
+          </div>
+        {% endif %}
+      {% endfor %}
+  </section>
 
-    <section class="column">
-        <h3>Recent</h3>
-            {% assign assignments = site.assignments | sort: due %}
-            {% for assignment in assignments reversed %}
-                {% assign start_s = assignment.due | date: '%s' %}
-                {% assign d = site.time | date: '%s' | minus: start_s | divided_by: 86400 %}
-                {% if assignment.due < site.time and d < 5 %}
-                    <div>
-                        <a href="{{ assignment.url }}">{{ assignment.title }}</a> was due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }}.
-                    </div>
-                {% endif %}
-            {% endfor %}
-    </section>
+  <section class="column">
+    <h3>Recent</h3>
+      {% assign assignments = site.assignments | sort: due %}
+      {% for assignment in assignments reversed %}
+        {% assign start_s = assignment.due | date: '%s' %}
+        {% assign d = site.time | date: '%s' | minus: start_s | divided_by: 86400 %}
+        {% if assignment.due < site.time and d < 5 %}
+          <div>
+            <a href="{{ assignment.url }}">{{ assignment.title }}</a> was due {{ assignment.due | date: '%-H:%M %P, %a %-d %b' }}.
+          </div>
+        {% endif %}
+      {% endfor %}
+  </section>
 
 </section>
 
 <h2>Office Hours</h2>
 
 <table>
-    <tr><th>Who</th><th>When</th><th>Where</th></tr>
-    {% for person in site.data.team %}
-    <tr>
-        <td>{{ person.first_name }}</td>
-        <td>{{ person.office_hours }}</td>
-        <td>{{ person.office_location }}</td>
-    </tr>
-    {% endfor %}
+  <tr><th>Who</th><th>When</th><th>Where</th></tr>
+  {% for person in site.data.team %}
+  <tr>
+    <td>{{ person.first_name }}</td>
+    <td>{{ person.office_hours }}</td>
+    <td>{{ person.office_location }}</td>
+  </tr>
+  {% endfor %}
 </table>
 
 <h2>Course Materials</h2>
