@@ -2,29 +2,6 @@
 permalink: /
 ---
 
-<h2 class="title is-2">Notes</h2>
-<section class="columns box">
-  <section class="column">
-    <h3 class="subtitle is-4">Lecture Notes</h3>
-    <ul>
-      <li><a href="{% link _posts/2017-09-28-day-8.md %}">Day 8 lecture notes</a></li>
-      <li><a href="{% link _posts/2017-09-25-day-7.md %}">Day 7 lecture notes</a></li>
-      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
-    </ul>
-  </section>
-
-  <section class="column">
-    <h3 class="subtitle is-4">Code Notes</h3>
-    <ul>
-      <li><a href="{% link notes/genefinder-solutions.md %}">GeneFinder solutions</a></li>
-      <li><a href="{% link notes/genefinder-going-beyond.md %}">GeneFinder – going beyond</a></li>
-      <li><a href="{% link notes/palindromes.md %}">`is_palindrome` code</a></li>
-      <li><a href="{% link notes/recursion.md %}">recursion notes</a></li>
-      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
-    </ul>
-  </section>
-</section>
-
 <h2 class="title is-2">Assignments</h2>
 <section class="columns box">
 
@@ -58,11 +35,33 @@ permalink: /
         {% endif %}
       {% endfor %}
   </section>
-
 </section>
 
-<h2>Office Hours</h2>
+<h2 class="title is-2">Notes</h2>
+<section class="columns box">
+  <section class="column">
+    <h3 class="subtitle is-4">Recent Lecture Notes</h3>
+    <ul>
+      <li><a href="{% link _posts/2017-09-28-day-8.md %}">Day 8 lecture notes</a></li>
+      <li><a href="{% link _posts/2017-09-25-day-7.md %}">Day 7 lecture notes</a></li>
+      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
+    </ul>
+  </section>
 
+  <section class="column">
+    <h3 class="subtitle is-4">Recent Code Notes</h3>
+    <ul>
+      <li><a href="{% link notes/genefinder-solutions.md %}">GeneFinder solutions</a></li>
+      <li><a href="{% link notes/genefinder-going-beyond.md %}">GeneFinder – going beyond</a></li>
+      <li><a href="{% link notes/palindromes.md %}">`is_palindrome` code</a></li>
+      <li><a href="{% link notes/recursion.md %}">recursion notes</a></li>
+      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
+    </ul>
+  </section>
+</section>
+
+
+<h2>Office Hours</h2>
 <table class="table box">
   <tr><th>Who</th><th>When</th><th>Where</th></tr>
   {% for person in site.data.team %}
