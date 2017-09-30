@@ -2,10 +2,10 @@
 permalink: /
 ---
 
-<h2>Notes</h2>
-<section class="columns">
+<h2 class="title is-2">Notes</h2>
+<section class="columns box">
   <section class="column">
-    <h3>Lecture Notes</h3>
+    <h3 class="subtitle is-4">Lecture Notes</h3>
     <ul>
       <li><a href="{% link _posts/2017-09-28-day-8.md %}">Day 8 lecture notes</a></li>
       <li><a href="{% link _posts/2017-09-25-day-7.md %}">Day 7 lecture notes</a></li>
@@ -14,7 +14,7 @@ permalink: /
   </section>
 
   <section class="column">
-    <h3>Code Notes</h3>
+    <h3 class="subtitle is-4">Code Notes</h3>
     <ul>
       <li><a href="{% link notes/genefinder-solutions.md %}">GeneFinder solutions</a></li>
       <li><a href="{% link notes/palindromes.md %}">`is_palindrome` code</a></li>
@@ -24,11 +24,11 @@ permalink: /
   </section>
 </section>
 
-<h2>Assignments</h2>
-<section class="columns">
+<h2 class="title is-2">Assignments</h2>
+<section class="columns box">
 
   <section class="column">
-    <h3>Upcoming</h3>
+    <h3 class="subtitle is-4">Upcoming</h3>
       {% assign assignments = site.assignments | sort: "due" %}
       {% for assignment in assignments %}
         {% assign announce = assignment.announce | default: site.time %}
@@ -45,7 +45,7 @@ permalink: /
   </section>
 
   <section class="column">
-    <h3>Recent</h3>
+    <h3 class="subtitle is-4">Recent</h3>
       {% assign assignments = site.assignments | sort: due %}
       {% for assignment in assignments reversed %}
         {% assign start_s = assignment.due | date: '%s' %}
@@ -62,7 +62,7 @@ permalink: /
 
 <h2>Office Hours</h2>
 
-<table>
+<table class="table box">
   <tr><th>Who</th><th>When</th><th>Where</th></tr>
   {% for person in site.data.team %}
   <tr>
@@ -74,8 +74,9 @@ permalink: /
 </table>
 
 <h2>Course Materials</h2>
-
-<ul>
-<li><a href="http://greenteapress.com/wp/think-python-2e/">Think Python</a>, by Allen Downey, is the course text</li>
-<li>Optional books are <a href="https://olin.tind.io/record/1512034?ln=en">on reserve in the Olin Library</li>
-</ul>
+<section class="box">
+  <ul>
+    <li><a href="http://greenteapress.com/wp/think-python-2e/">Think Python</a>, by Allen Downey, is the course text</li>
+    <li>Optional books are <a href="https://olin.tind.io/record/1512034?ln=en">on reserve in the Olin Library</li>
+  </ul>
+</section>
