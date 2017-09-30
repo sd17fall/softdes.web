@@ -126,7 +126,6 @@ def get_complement(nucleotide):
         return 'C'
     invalid_nucleotide()
 
-doctest.run_docstring_examples(get_complement, globals())
 get_complement('X')
 ```
 
@@ -137,18 +136,18 @@ get_complement('X')
 
     NameError                                 Traceback (most recent call last)
 
-    <ipython-input-35-8c26366a5e20> in <module>()
+    <ipython-input-29-b7752a309d67> in <module>()
+         12     invalid_nucleotide()
          13 
-         14 doctest.run_docstring_examples(get_complement, globals())
-    ---> 15 get_complement('X')
+    ---> 14 get_complement('X')
     
 
-    <ipython-input-35-8c26366a5e20> in get_complement(nucleotide)
+    <ipython-input-29-b7752a309d67> in get_complement(nucleotide)
          10     if nucleotide == 'G':
          11         return 'C'
     ---> 12     invalid_nucleotide()
          13 
-         14 doctest.run_docstring_examples(get_complement, globals())
+         14 get_complement('X')
 
 
     NameError: name 'invalid_nucleotide' is not defined
@@ -172,7 +171,6 @@ def get_complement(nucleotide):
         return 'C'
     raise Exception('Invalid nucleotide: {}'.format(nucleotide))
 
-doctest.run_docstring_examples(get_complement, globals())
 get_complement('X')
 ```
 
@@ -183,18 +181,18 @@ get_complement('X')
 
     Exception                                 Traceback (most recent call last)
 
-    <ipython-input-36-d95d904f7602> in <module>()
+    <ipython-input-28-044bac9e6f3f> in <module>()
+         12     raise Exception('Invalid nucleotide: {}'.format(nucleotide))
          13 
-         14 doctest.run_docstring_examples(get_complement, globals())
-    ---> 15 get_complement('X')
+    ---> 14 get_complement('X')
     
 
-    <ipython-input-36-d95d904f7602> in get_complement(nucleotide)
+    <ipython-input-28-044bac9e6f3f> in get_complement(nucleotide)
          10     if nucleotide == 'G':
          11         return 'C'
     ---> 12     raise Exception('Invalid nucleotide: {}'.format(nucleotide))
          13 
-         14 doctest.run_docstring_examples(get_complement, globals())
+         14 get_complement('X')
 
 
     Exception: Invalid nucleotide: X
@@ -218,7 +216,6 @@ def get_complement(nucleotide):
         return 'C'
     raise ValueError('Invalid nucleotide: {}'.format(nucleotide))
 
-doctest.run_docstring_examples(get_complement, globals())
 get_complement('X')
 ```
 
@@ -229,18 +226,18 @@ get_complement('X')
 
     ValueError                                Traceback (most recent call last)
 
-    <ipython-input-39-e3862a2f6f6b> in <module>()
-         13 
-         14 doctest.run_docstring_examples(get_complement, globals())
-    ---> 15 get_complement('X')
+    <ipython-input-27-0126a11762bc> in <module>()
+         23 
+         24 doctest.run_docstring_examples(get_complement, globals())
+    ---> 25 get_complement('X')
     
 
-    <ipython-input-39-e3862a2f6f6b> in get_complement(nucleotide)
-         10     if nucleotide == 'G':
-         11         return 'C'
-    ---> 12     raise ValueError('Invalid nucleotide: {}'.format(nucleotide))
-         13 
-         14 doctest.run_docstring_examples(get_complement, globals())
+    <ipython-input-27-0126a11762bc> in get_complement(nucleotide)
+         20     if nucleotide == 'G':
+         21         return 'C'
+    ---> 22     raise ValueError('Invalid nucleotide: {}'.format(nucleotide))
+         23 
+         24 doctest.run_docstring_examples(get_complement, globals())
 
 
     ValueError: Invalid nucleotide: X
@@ -380,7 +377,7 @@ def get_reverse_complement(dna):
 doctest.run_docstring_examples(get_reverse_complement, globals())
 ```
 
-This one-liner uses a list comprehension:
+### `get_reverse_complement` – list comprehension solution
 
 
 ```python
@@ -391,9 +388,25 @@ def get_reverse_complement(dna):
     >>> get_reverse_complement("CCGCGTTCA")
     'TGAACGCGG'
     """
-    return ''.join(get_complement(nucleotide) for nucleotide in dna[::-1])
+    return ''.join([get_complement(nucleotide) for nucleotide in dna[::-1]])
 
 doctest.run_docstring_examples(get_reverse_complement, globals())
+```
+
+Since the list is only constructed in order to pass it as argument to `join`, we can instead use a [generator expression](https://nedbatchelder.com/blog/201605/generator_comprehensions.html).
+
+
+```python
+def coding_strand_to_AA(dna):
+    """
+    >>> coding_strand_to_AA("ATGCGA")
+    'MR'
+    >>> coding_strand_to_AA("ATGCCCGCTTT")
+    'MPA'
+    """
+    return ''.join(aa_table[dna[i:i + 3]] for i in range(0, len(dna), 3))
+
+doctest.run_docstring_examples(coding_strand_to_AA, globals())
 ```
 
 ## `rest_of_ORF`
@@ -437,7 +450,7 @@ def rest_of_ORF(dna):
 doctest.run_docstring_examples(rest_of_ORF, globals())
 ```
 
-### Regular Expressions
+### Regular Expression solution
 
 The following technique use a [**regular expression**](https://docs.python.org/3/howto/regex.html) to match a repeated (`+?`) count of three-character (`...`) groups (`(...)`), followed by one of (`|`) `TAA`, `TAG`, or `TGA`.
 
@@ -706,6 +719,37 @@ def find_all_ORFs(dna):
 doctest.run_docstring_examples(find_all_ORFs, globals())
 ```
 
+### `find_all_ORFs` – list comprehension solution
+
+
+```python
+def find_all_ORFs(dna):
+    """Find all non-nested open reading frames in the given DNA sequence in all 3 possible frames.
+    
+    Non-nested means the same thing here that it does in find_all_ORFs_oneframe.
+
+    Arguments
+    ---------
+    dna : string
+        A DNA sequence.
+    
+    Returns
+    -------
+    string
+        A list of non-nested ORFs.
+
+    Examples
+    --------
+    >>> find_all_ORFs("ATGCATGAATGTAG")
+    ['ATGCATGAATGTAG', 'ATGAATGTAG', 'ATG']
+    """
+    return [orf
+            for i in range(3)
+            for orf in find_all_ORFs_oneframe(dna[i:])]
+
+doctest.run_docstring_examples(find_all_ORFs, globals())
+```
+
 ## `find_all_ORFs_both_strands`
 
 Here's a variety of different approaches. This is a matter of taste.
@@ -866,7 +910,7 @@ def longest_ORF(dna):
 doctest.run_docstring_examples(longest_ORF, globals())
 ```
 
-The following two implementations is more expensive, but less code. It's more expensive because sorting is more work than keep track of the longer, and because `sorted` makes a list.
+The following two implementations are more expensive, but less code. It's more expensive because sorting is more work than keep track of the longer, and because `sorted` makes a list.
 
 
 ```python
@@ -906,6 +950,26 @@ The final line `return None` isn't necessary. A function that don't execute a `r
 
 It is, however, standard practice to add an *explicit* return to a fruitful function, that returns `None` when called with some arguments and other values when called with other arguments. This makes it easier to tell by scanning the implementation whether a function is fruitful or fruitless.
 
+Use the `max` function to regain the efficiency of the initial approaches.
+
+
+```python
+def longest_ORF(dna):
+    """
+    >>> print(longest_ORF("CCC"))
+    None
+    >>> longest_ORF("ATGCGAATGTAGCATCAAA")
+    'ATGCTACATTCGCAT'
+    """
+    orfs = find_all_ORFs_both_strands(dna)
+    if orfs:
+        return max(orfs, key=len)
+    else:
+        return None
+
+doctest.run_docstring_examples(longest_ORF, globals())
+```
+
 ## `longest_ORF_noncoding`
 
 Use `random.seed` to test functions that use random numbers. This resets the “random” number sequence (which isn't really random), so that it produces the same values in the same order each time.
@@ -920,7 +984,7 @@ def shuffle_string(s):
     return ''.join(random.sample(s, len(s)))
 
 def longest_ORF_noncoding(dna, num_trials):
-    """Computes the maximum length of the longest ORF over num_trials shuffles of the specified sequence.
+    """Compute the maximum length of the longest ORF over num_trials shuffles of the specified sequence.
     
     Arguments
     ---------
@@ -952,11 +1016,6 @@ doctest.run_docstring_examples(longest_ORF_noncoding, globals())
 
 
 ```python
-import random
-
-def shuffle_string(s):
-    return ''.join(random.sample(s, len(s)))
-
 def longest_ORF_noncoding(dna, num_trials):
     """
     >>> random.seed(1)
@@ -971,6 +1030,22 @@ def longest_ORF_noncoding(dna, num_trials):
     return max(lens)
 
 doctest.run_docstring_examples(longest_ORF_noncoding, globals())
+```
+
+
+```python
+### `longest_ORF_noncoding` using a list comprehension
+```
+
+
+```python
+def longest_ORF_noncoding(dna, num_trials):
+    """
+    >>> random.seed(1)
+    >>> longest_ORF_noncoding("ATGCGAATGTAGCATCAAA", 100)
+    19
+    """
+    return max(len(longest_ORF(shuffle_string(dna)) or '') for _ in xrange(num_trials))
 ```
 
 ## `coding_strand_to_AA`
@@ -1009,12 +1084,44 @@ def coding_strand_to_AA(dna):
 doctest.run_docstring_examples(coding_strand_to_AA, globals())
 ```
 
+### `coding_strand_to_AA` – list comprehension solution
+
+
+```python
+def coding_strand_to_AA(dna):
+    """
+    >>> coding_strand_to_AA("ATGCGA")
+    'MR'
+    >>> coding_strand_to_AA("ATGCCCGCTTT")
+    'MPA'
+    """
+    return ''.join([aa_table[dna[i:i + 3]] for i in range(0, len(dna), 3)])
+
+doctest.run_docstring_examples(coding_strand_to_AA, globals())
+```
+
+Since the list is only constructed in order to pass it as argument to `join`, we can instead use a [generator expression](https://nedbatchelder.com/blog/201605/generator_comprehensions.html).
+
+
+```python
+def coding_strand_to_AA(dna):
+    """
+    >>> coding_strand_to_AA("ATGCGA")
+    'MR'
+    >>> coding_strand_to_AA("ATGCCCGCTTT")
+    'MPA'
+    """
+    return ''.join(aa_table[dna[i:i + 3]] for i in range(0, len(dna), 3))
+
+doctest.run_docstring_examples(coding_strand_to_AA, globals())
+```
+
 ## `gene_finder`
 
 
 ```python
 def gene_finder(dna):
-    """Returns the amino acid sequences that are likely coded by the specified DNA sequence.
+    """Return the amino acid sequences that are likely coded by the specified DNA sequence.
 
     Parameters
     ----------
@@ -1040,4 +1147,22 @@ def gene_finder(dna):
         if len(orf) > threshold:
             aas.append(coding_strand_to_AA(orf))
     return aas
+```
+
+## `gene_finder` – list comprehension solution
+
+
+```python
+def gene_finder(dna):
+    """
+    >>> random.seed(1)
+    >>> gene_finder("ATGTCATTGCGTGTGAGACAGATTGATCGTCGCGAATGGCTATTGGCGCAAACCGCGACAGAATGCCAGCGCCATGGCCGGGAA" \
+                    "GCGACGCTGGAATATCCGACGCGACAGGGAATGTGGGTTCGGTTGAGCGATGCAGAAAAACGGTGGTCGGCCTGGATTAAACCT" \
+                    "GGGGACTGGCTTGAGCATGTCTCTCCCGCTCTGGCTGGGGCGGCGGTTTCTGCTGGCGCTGAGCACCTGGTCGTTCCCTGGCTT")
+    ['MSLRVRQIDRREWLLAQTATECQRHGREATLEYPTRQGMWVRLSDAEKRWSAWIKPGDWLEHVSPALAGAAVSAGAEHLVVPWL']
+    """
+    threshold = longest_ORF_noncoding(dna, 1500)
+    return [coding_strand_to_AA(orf)
+            for orf in find_all_ORFs_both_strands(dna)
+            if len(orf) > threshold]
 ```
