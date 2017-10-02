@@ -11,7 +11,7 @@ How many codons are there? That, is how many nucleotide sequences have length th
 
 ### Analysis
 
-There are three positions. The nucleotide at each position is selected *independently* of the nucleotides at any other position. There's four ways of choosing the first position, and four ways of choosing the second position, and four ways of choosing the third position, so (handwave) there's $4 \times 4 \ times 4 = 64$ ways of filling all three positions.
+There are three positions. The nucleotide at each position is selected *independently* of the nucleotides at any other position. There's four ways of choosing the first position, and four ways of choosing the second position, and four ways of choosing the third position, so (handwave) there's $4 \times 4 \times 4 = 64$ ways of filling all three positions.
 
 More generally, there's $4^n$ ways of filling the $n$ positions in a $n$-nucleotide sequence.
 
