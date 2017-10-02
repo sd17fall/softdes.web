@@ -5,6 +5,7 @@ description: >
   computers to generate images.
 announce: 2017-09-14 10:50:00 -04:00
 due: 2017-10-02 09:00:00 -04:00
+gallery_due: 2017-10-02 10:00:00 -04:00
 ---
 
 {% include toc %}
@@ -581,5 +582,5 @@ A much better and more extensive list of guidance around producing an artist's
 statement can be found
 [here](http://www.saic.edu/media/saic/pdfs/lifesaic/careerco-opcenter/workingartistsseries/Handout_WorkingArtist_WritingYourArtistStatement.pdf).
 
-In order to make it into the exhibition you should have your content there no
-1:00 PM the day that the assignment is due.
+In order to make it into the exhibition you should have your content there no later than
+{{ page.gallery_due | date: '%-H:%M %P' }} the day that the assignment is due.
