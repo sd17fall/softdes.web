@@ -45,11 +45,13 @@ column-width: 9
   <section class="column">
     <h3 class="subtitle is-4">Recent Lecture Notes</h3>
     <ul>
-      <li><a href="{% link _posts/2017-09-28-day-8.md %}">Day 8 lecture notes</a></li>
-      <li><a href="{% link _posts/2017-09-25-day-7.md %}">Day 7 lecture notes</a></li>
+      {% for p in site.posts limit: 3 %}
+        <li><a href="{{ p.url }}">{{ p.title }} lecture notes</a></li>
+      {% endfor %}
       <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
     </ul>
   </section>
+
 
   <section class="column">
     <h3 class="subtitle is-4">Recent Code Notes</h3>
