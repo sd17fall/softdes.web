@@ -1,6 +1,8 @@
-{% extends 'markdown.tpl'%}
-
-{% block header %}
+{% extends 'markdown.tpl' %}
+{% block header -%}
+---
+omit_title: true
+---
 {% raw %}
 {% include toc %}
 {% endraw %}

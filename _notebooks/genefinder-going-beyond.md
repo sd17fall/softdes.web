@@ -1,4 +1,6 @@
-
+---
+omit_title: true
+---
 
 {% include toc %}
 

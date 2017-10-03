@@ -28,7 +28,7 @@ end
 TPL = "config/nb_md.tpl"
 
 for src in Dir["notebooks/**/*.ipynb"] do
-  target = src.sub(%r'^notebooks/', 'notes/').sub('.ipynb', '.md')
+  target = src.sub(%r'^notebooks/', '_notebooks/').sub('.ipynb', '.md')
   multitask :notebooks => target
   CLOBBER << target
   file target => [src, TPL] do |t|

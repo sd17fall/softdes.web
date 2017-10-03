@@ -13,6 +13,10 @@ collections:
     output: true
     layout: default
     title: Assignments
+  notebooks:
+    layout: default
+    output: true
+    permalink: /notes/:path
 
 defaults:
   - scope:
@@ -25,7 +29,7 @@ defaults:
     values:
       permalink: notes/:title
   - scope:
-      path: 'notes'
+      path: notes
     values:
       omit_title: true
   - scope:
