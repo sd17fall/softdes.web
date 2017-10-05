@@ -103,6 +103,11 @@ presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXB
 
 [One-page cheat sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf) (PDF, thanks: Celine)
 
+### Digging Deeper
+
+* [Git from the inside out](https://maryrosecook.com/blog/post/git-from-the-inside-out)
+* [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
+
 ## Markdown
 
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
