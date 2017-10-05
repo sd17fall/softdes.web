@@ -510,3 +510,11 @@ Make sure to include a link to the Project Write-up/Reflection in the `README.md
   *submit* a Python text file.
 
 3\. Create a pull request to the upstream repository
+
+## Project Presentations
+
+If you’d like to share what you discovered/created as part of your text mining project, please add ~1-2 slides to the [class presentation](https://docs.google.com/presentation/d/1FWuoFpGsim8ZzEpKw18JgoXoE2NGGEgXACIkuUi2dgU/edit?usp=sharing).
+
+Professionalism is important in public presentations, so please use the “would I be happy for my parents to read this in the newspaper” test when uploading content. Humor is great; abusive language or disparaging groups of people is firmly not acceptable.
+
+Here's some examples from last semester: [SoftDes Spring 2017 spring 2017 MP3 examples](https://docs.google.com/presentation/d/1fybuwS68fdgCHrhOMcpbDzZOfDhzUJsEiOQ_24pUQHI/edit?usp=sharing)
