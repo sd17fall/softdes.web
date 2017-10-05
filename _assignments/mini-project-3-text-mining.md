@@ -505,9 +505,13 @@ Make sure to include a link to the Project Write-up/Reflection in the `README.md
 
 2\. Push your code to GitHub
 
-  * Your code should submitted as a Python file (or files) that can be executed by running *e.g.* `python text_mining.py`. You may *work* in a Jupyter notebook,
-  in which case you should include the notebook in your repository, but you must
-  *submit* a Python text file.
+  * Your code should submitted as either (a) Python file (or files) that can be executed by running *e.g.* `python text_mining.py`, or (b) a Jupyter notebook.
+  * If you submit a Python file:
+    * The project README must describe how to install any required packages (e.g. `pip install vaderSentiment`) and how to run it (e.g. `python text_mining.py`)
+  * If you submit a Jupyter notebook:
+    * You must test that it behaves correctly when you execute "Run All" from the "Cell" menu.
+    * You must *also* submit a Python text file.
+      Use the File > Download as > Python menu item to download a text file, and `git add` it to your repo.
 
 3\. Create a pull request to the upstream repository
 
