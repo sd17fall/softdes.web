@@ -2,7 +2,7 @@
 
 ## 1. Install Python
 
-Visit the class web site <http://softdes.olin.build>. (Bookmark this while you're there.)
+Visit the class web site <https://softdes.olin.build>. (Bookmark this while you're there.)
 
 Find the “Set Up” page.
 

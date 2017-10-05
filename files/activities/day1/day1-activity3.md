@@ -20,7 +20,7 @@ Do the reading, and work on the reading journal. When you are done, follow the i
 
 **There is more homework for next week than just the reading journal!** You also need to [join Slack](https://sd17fall.slack.com), and [fill out the survey](https://goo.gl/forms/JHSocQE14iEVBnHc2).
 
-The [course site](http://softdes.olin.build) is the ultimate authority on what's due. (And, if it's not clear, ask on Slack.)
+The [course site](https://softdes.olin.build) is the ultimate authority on what's due. (And, if it's not clear, ask on Slack.)
 
 ## Going Beyond: Explore Git
 
