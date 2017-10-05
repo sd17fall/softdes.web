@@ -16,7 +16,7 @@ decides is most readable and most flexible.
 In a surprise move, your manager has asked you to implement two new features
 for your program.
 
-1\. Write a function that draws the following grid
+1\. Write a function that draws the following grid:
 
     + - - - - + - - - - + - - - - + - - - - + - - - - +
     |         |         |         |         |         |
@@ -39,7 +39,7 @@ for your program.
 dimensions of width and height (in characters) of each of the boxes that
 compose the grid. For instance,
 
-`grid(6, 3)` produces
+`grid(5, 3)` produces:
 
     + - - + - - + - - + - - + - - +
     |     |     |     |     |     |
