@@ -37,7 +37,7 @@ You should read this document in a somewhat non-linear/spiral fashion:
 1. Scan through [Part 1](#part-1-harvesting-text-from-the-internet) to get a sense of what data sources are available. Try grabbing text from one of the sources that interests you. You **do not** need to try all the data sources.
 2. Scan through [Part 2](#part-2-analyzing-your-text) to see a bunch of cool examples for what you can do with your text.
 3. Choose (at least) one data source from Part 1 or elsewhere and analyze/manipulate/transform that text using technique(s) from Part 2 or elsewhere.
-4. Write a brief document about what you did ([Part 3](#part-3-project-writeup-and-reflection))
+4. Write a brief document about what you did ([Part 3](#part-3-project-write-up-and-reflection))
 
 ## A Note on Time Management
 
@@ -46,7 +46,7 @@ This project is divided into *three parts*, but they are all do on *the same day
 You are of course encouraged to start early and work often. Beyond that, we
 have some advice that may not be intuitive:
 
-The [Project Writeup and Reflection](#part-3-project-writeup-and-reflection)
+The [Project Write-up and Reflection](#part-3-project-write-up-and-reflection)
 is described after the implementation work. However, you may find it beneficial to
 write the "Project Overview" and take a stab at the "Implementation" and "Results", early in the process. The Implementation may be vague and you will likely need
 to revise it later, and the Results can sketch what you hope to find instead
@@ -85,10 +85,8 @@ Python:
 If Requests is installed correctly, you should see the HTML from Google's front
 page.
 
-{% comment %}
 If you'd like to learn more about what is going on behind the scenes,
-check out the [Web APIs Project Toolbox]({% link _toolboxes/geocoding-and-web-apis.md %}) assignment.
-{% endcomment %}
+check out the [Web APIs Project Toolbox](https://toolboxes.olin.build/geocoding-and-web-apis/) toolbox.
 
 ### Data Source: Project Gutenberg
 
@@ -237,7 +235,9 @@ Much data on the web is in the form of HTML, which is a mixture of human-languag
 and HTML markup such as `<div>` and `<p>`. You can use the Beautiful Soup package to extract
 the text from an HTML page.
 
-`$ pip install beautifulsoup4`
+```bash
+$ pip install beautifulsoup4
+```
 
 ```python
 from bs4 import BeautifulSoup
@@ -251,7 +251,7 @@ Use Python [regular expressions](https://docs.python.org/3/library/re.html) to r
 
 ```python
 import re
-str(re.sub(r'<.+?>', '', str(html.find('p'))))
+re.sub(r'<.+?>', '', str(html.find('p')))
 ```
 
 [This is not a robust way to do this. A robust way involves using a recursive function.]
@@ -326,8 +326,8 @@ This program will print out:
 ```
 
 NLTK provides a number of other really cool features. Some examples of
-this include: part of speech tagging, and full sentence
-parsing. You can also do sentiment analysis within NLTK by training
+this include: part of speech tagging, and full sentence parsing.
+You can also do sentiment analysis within NLTK by training
 a Bayesian classifier ([code](http://www.nltk.org/howto/sentiment.html)).
 
 If you perform some linguistic post processing, you may be able to say
@@ -341,7 +341,8 @@ each tweet that comes by in the stream? There are tons of cool options here!
 
 It is potentially quite useful to be able to compute the similarity of two
 texts. Suppose that we have characterized some texts from Project Gutenberg
-using [word frequency analysis](#characterizing-by-word-frequencies). One way to compute the
+using [word frequency analysis](#characterizing-by-word-frequencies).
+One way to compute the
 similarity of two texts is to test to what extent when one text has a high
 count for a particular word the other text also a high count for a particular
 word. Specifically, we can compute the [cosine
@@ -457,7 +458,7 @@ Python chapter 13](http://greenteapress.com/thinkpython2/html/thinkpython2014.ht
 called "Markov Analysis" has some detail on how to do this. Again, let the
 teaching team know if you go this route and we can provide more guidance.
 
-## Part 3: Project Writeup and Reflection
+## Part 3: Project Write-up and Reflection
 
 Please prepare a short (suggested lengths given below) document with the
 following sections:
@@ -493,15 +494,17 @@ you succeed?
 
 ## Turning in your assignment
 
-1\. Submit your Project Writeup/Reflection. This can be in the form of:
+1\. Submit your Project Write-up/Reflection. This can be in the form of:
+
   * a [Markdown](https://guides.github.com/features/mastering-markdown/) file, committed to your repository, or
   * a Jupyter notebook, committed to your repository, or
   * a PDF document, committed to your repository, or
   * a [project webpage](https://pages.github.com/).
 
-Make sure to include a link to the Project Writeup/Reflection in the `README.md` file in your repository (otherwise, we won't be able to find it).
+Make sure to include a link to the Project Write-up/Reflection in the `README.md` file in your repository (otherwise, we won't be able to find it).
 
 2\. Push your code to GitHub
+
   * Your code should submitted as a Python file (or files) that can be executed by running *e.g.* `python text_mining.py`. You may *work* in a Jupyter notebook,
   in which case you should include the notebook in your repository, but you must
   *submit* a Python text file.
