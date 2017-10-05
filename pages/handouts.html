@@ -1,6 +1,18 @@
 ---
 permalink: handouts/
+title: Activities and Handouts
+omit_title: true
 ---
+
+<h2>Activities</h2>
+
+<ul>
+  {% for p in site.activities %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2>Handouts</h2>
 
 <ul>
   {% for file in site.static_files %}
