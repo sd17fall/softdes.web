@@ -288,7 +288,7 @@ processing the data that will read the pickle file to get the data loaded into
 Python so you can perform some analysis on it.
 
 For more details and practice, check out the [Pickling Project
-Toolbox](http://toolboxes.olin.build/pickling/) assignment.
+Toolbox](https://toolboxes.olin.build/pickling/) assignment.
 
 ## Part 2: Analyzing Your Text
 
@@ -406,7 +406,7 @@ paper).
 ![](http://newsroom.unl.edu/releases/downloadables/photo/20120828macro-american.jpg)
 
 In order to apply MDS to your data, you can use the machine learning toolkit
-`scikit-learn`. (To install it, consult the [machine learning toolbox)](http://toolboxes.olin.build/machine-learning).
+`scikit-learn`. (To install it, consult the [machine learning toolbox)](https://toolboxes.olin.build/machine-learning).
 
 Here is some code that uses the similarity matrix defined in the previous
 section to create a 2-dimensional embedding of the four Charles Dickens and 1

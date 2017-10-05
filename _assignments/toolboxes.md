@@ -13,7 +13,7 @@ parts:
 ---
 
 Software Design and Python are wide worlds, and we'll only explore part of them in class this semester.
-The goal of the [Project Toolbox](http://toolboxes.olin.build) exercises is to
+The goal of the [Project Toolbox](https://toolboxes.olin.build) exercises is to
 gain practice with a variety of interesting topics we won't talk about in
 class.
 By completing them, you will develop a suite of skills that will allow
