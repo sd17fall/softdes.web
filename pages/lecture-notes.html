@@ -16,11 +16,8 @@ title: Notes
   <section class="column">
     <h2>Code Notes</h2>
     <ul>
-      {% for p in site.pages %}
-        {% assign dirs = p.url | split: '/' %}
-        {% if dirs[1] == 'notes' and p.url != page.url %}
-          <li><a href="{{ p.url }}">{{ dirs[-1] | replace: '-', ' ' | replace: '.html', '' | capitalize }}</a></li>
-        {% endif %}
+      {% for p in site.notebooks %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
       {% endfor %}
     </ul>
   </section>
