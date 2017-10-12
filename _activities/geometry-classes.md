@@ -1,6 +1,9 @@
 ---
 date: 2017-10-12 09:00:00 -04:00
+omit_title: true
 ---
+
+{% include toc %}
 
 ## In-Class Exercise: Geometry Classes
 
@@ -43,12 +46,16 @@ Think about:
 2. Line's initialization method takes two _x_ coordinates in either order (x0 &lt; x1, or x1 &lt; x0). Is there work you could do when you initialize the object, that would make it easier to implement the methods.
 3. What are the pros and cons of adding a `Square` class?
 
-[You're encouraged to think about the first two questions before or while you
+You're encouraged to think about the first two questions before or while you
 perform this exercise. Think about the last question afterwards, if you have
-time.]_ If you have time_, you can extend your work in any of the following
+time.
+
+_If you have time_, you can extend your work in any of the following
 directions. Any of these can be done independently of the others.
 
-### Going Beyond 1: Duck Typing Skills emphasized: object-oriented programming (classes); polymorphism (“duck typing”).
+### Going Beyond 1: Duck Typing
+
+_Skills emphasized: object-oriented programming (classes); polymorphism (“duck typing”)._
 
 Save the file
 [`geometry_beyond_1.py`](https://raw.githubusercontent.com/{{ site.github.owner_name }}/{{ site.github.owner_name }}.github.io/master/files/activities/geometry-classes/geometry_beyond_1.py),
@@ -62,7 +69,9 @@ Some things to think about:
 * Are there additional classes that would be simple to implement, that you could apply stochastic_area to?
 * When would you use `stochastic_area` instead of just `area`?
 
-### Going Beyond 2: PyGame – Skill emphasized: computer graphics
+### Going Beyond 2: PyGame
+
+_Skill emphasized: computer graphics._
 
 Save the file
 [`geometry_beyond_2`.py](https://raw.githubusercontent.com/{{ site.github.owner_name }}/{{ site.github.owner_name }}.github.io/master/files/activities/geometry-classes/geometry_beyond_2.py),
