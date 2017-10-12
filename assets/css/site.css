@@ -43,3 +43,5 @@ body.pages-recipes h2 {
   padding-top: 20px;
   border-top: 2px solid lightgray;
 }
+
+a .highlighter-rouge { background: inherit; color: darkblue; text-decoration: underline; }
