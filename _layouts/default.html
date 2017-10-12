@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/assets/css/site.css">
   </head>
 
-  <body>
+  <body class="{{ page.path | split: '.' | first | slugify }}">
 
     <nav class="navbar">
       <div class="navbar-brand">

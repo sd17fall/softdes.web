@@ -37,3 +37,9 @@ div.highlighter-rouge { border-top: 5px solid lightgray; background: blue }
 div.highlighter-rouge.nb-output { border-top: 1px solid gray }
 /* div.nb-output pre { border-left: 5px solid gray; margin-left: -5px  } */
 div.nb-output + div.highlighter-rouge{ padding-top: 10px; }
+
+body.pages-resources h2,
+body.pages-recipes h2 {
+  padding-top: 20px;
+  border-top: 2px solid lightgray;
+}
