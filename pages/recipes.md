@@ -31,6 +31,14 @@ $ pip install pygame
 
 Windows:
 
+First, try this:
+
+```bash
+$ pip install pygame
+```
+The above worked on one test machine.
+If it doesn't work on your laptop, tell us on Slack and try the following:
+
 ```bash
 $ conda install -c cogsci pygame
 ```
