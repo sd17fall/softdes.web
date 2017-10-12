@@ -18,7 +18,10 @@ parts:
   due: 2017-10-22 23:59:00 -04:00
   tag: mid-project-check-in
 - name: Project Write-up and Reflection
-  due: 2017-10-30 09:00:00 -04:00
+  due: 2017-10-30 10:50:00 -04:00
+  tag: project-write-up-and-reflection
+- name: Revision
+  due: 2017-11-06 10:50:00 -04:00
   tag: project-write-up-and-reflection
 ---
 
@@ -85,36 +88,36 @@ will certainly try!).
 
 ### Pygame
 
-For 2D drawing, collision detection, and simple physics in Python, **pygame**
-is a fantastic choice. Perhaps the biggest strength of **pygame** is that it
+For 2D drawing, collision detection, and simple physics in Python, pygame
+is a fantastic choice. Perhaps the biggest strength of pygame is that it
 has many [great tutorials](http://pygame.org/wiki/tutorials) as well as sample
 games to use as starting points (for example [arcade
 games](http://www.pygame.org/tags/arcade), [puzzle
 games](http://pygame.org/tags/puzzle), and [platform
 games](http://pygame.org/tags/platformer)).
 
-Even though it might seem like odd choice, we are recommending **pygame** as
+Even though it might seem like odd choice, we are recommending pygame as
 the default library for those that are doing interactive visualization
 projects. There are fancier libraries out there, however, you can build some
 very nice interactive visualizations on top of the basic 2D drawing and mouse
-and keyboard event handling components in **pygame**. Further, using a fancy
+and keyboard event handling components in pygame. Further, using a fancy
 library reduces the amount of object-oriented code that you have to write, and
 in this assignment we want you to get a lot of practice writing your own
-object-oriented code. Sticking with a simple framework like **pygame** will
+object-oriented code. Sticking with a simple framework like pygame will
 support this learning goal nicely. A final advantage is that we will be doing
-at least one lengthy example in class that uses **pygame**. If you are using
-**pygame** for your data visualization project, you will get a lot more out of
+at least one lengthy example in class that uses pygame. If you are using
+pygame for your data visualization project, you will get a lot more out of
 this in-class activity.
 
-To install **pygame**, follow the instructions from the [recipe page]({% link pages/recipes.md %}#python-recipes).
+To install pygame, follow the instructions from the [recipe page]({% link pages/recipes.md %}#python-recipes).
 
-How to get started with **pygame** (these do not have to be done in this
+How to get started with pygame (these do not have to be done in this
 order):
 
 * [if making a game] Go through the PyMan tutorials ([part 1](http://www.learningpython.com/2006/03/12/creating-a-game-in-python-using-pygame-part-one/), [part 2](http://www.learningpython.com/2006/03/19/creating-a-game-in-python-using-pygame-part-two-creating-a-level/), [part 3](http://www.learningpython.com/2006/04/16/creating-a-game-in-python-using-pygame-part-3-adding-the-bad-guys/)). It is shows how to implement a Pac-Man clone in pygame (don't worry about the prerequisites section, you should already have the prerequisites satisfied). The strength of the tutorial is that there is lots of explanation of each part of the code. Unfortunately, the HTML formatting for parts 2 and 3 seems to be messed up, but hopefully these are still useful (let us know if you find a workaround for this formatting issue).
-* Read through the **pygame** [documentation](http://www.pygame.org/docs/).
-* Read through the other **pygame** [tutorials](http://pygame.org/wiki/tutorials) if you find one that seems more aligned with the project you want to create.
-* [if making a game] Make sure you understand the basics of collision detection in **pygame**. Collision detection is a surprisingly tricky thing to write on your own, so it is recommended to utilize **pygame** 's built-in features for this (see [this](http://www.pygame.org/docs/tut/SpriteIntro.html) page). If you need to do collision detection with something besides rectangles, you may have to either adapt pygame's collision detection or write your own collision detection routines.
+* Read through the pygame [documentation](http://www.pygame.org/docs/).
+* Read through the other pygame [tutorials](http://pygame.org/wiki/tutorials) if you find one that seems more aligned with the project you want to create.
+* [if making a game] Make sure you understand the basics of collision detection in pygame. Collision detection is a surprisingly tricky thing to write on your own, so it is recommended to utilize pygame's built-in features for this (see [this](http://www.pygame.org/docs/tut/SpriteIntro.html) page). If you need to do collision detection with something besides rectangles, you may have to either adapt pygame's collision detection or write your own collision detection routines.
 
 ### OpenCV
 
@@ -261,7 +264,7 @@ your game:
 * `Small pellet`: represents a small pellet in the game (a part of the model)
 * `Large pellet`: represents a large pellet in the game (a part of the model)
 * `Controller`: handles commands from the user and manipulates the model appropriately
-* `PyGameView`: draws the game state encoded by the Model to a **pygame** window
+* `PyGameView`: draws the game state encoded by the Model to a pygame window
 
 There are many ways to implement Model-View-Controller, so this is not the
 only way to operationalize Model-View-Controller in the context of Pac-Man.
