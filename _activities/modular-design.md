@@ -1,6 +1,6 @@
 ---
 title: Exploring modular design
-description: Exploring modular design
+date: 2017-10-05 10:50:00 -05:00
 ---
 
 In small groups, review the [solutions from the class](https://github.com/sd17fall/ReadingJournal-Solutions/blob/master/reading-journal-1-solutions.ipynb##Exercise-3.3) to the Exercise 3.3.
