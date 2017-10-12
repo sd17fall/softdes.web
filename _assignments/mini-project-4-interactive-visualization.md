@@ -106,13 +106,7 @@ at least one lengthy example in class that uses **pygame**. If you are using
 **pygame** for your data visualization project, you will get a lot more out of
 this in-class activity.
 
-To install **pygame**:
-
-```bash
-$ apt-get build-dep python-pygame
-$ apt-get install python-dev
-$ pip install pygame
-```
+To install **pygame**, follow the instructions from the [recipe page]({% link pages/recipes.md %}#python-recipes).
 
 How to get started with **pygame** (these do not have to be done in this
 order):

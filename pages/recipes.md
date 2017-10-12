@@ -10,6 +10,31 @@ This page is a companion to the [Resources]({% link pages/resources.md %}) page.
 
 ## Python Recipes
 
+### Install PyGame
+
+Linux:
+
+```bash
+$ apt-get build-dep python-pygame
+$ apt-get install mercurial python-dev python-numpy ffmpeg libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsmpeg-dev libsdl1.2-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev
+$ pip install pygame
+```
+
+macOS:
+
+Install [Home Brew](https://brew.sh). Then:
+
+```bash
+$ brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
+$ pip install pygame
+```
+
+Windows:
+
+```bash
+$ conda install -c cogsci pygame
+```
+
 ### Fix "NameError: name 'math' is not defined"
 
 Fix "NameError: name 'math' is not defined" (or another module):
