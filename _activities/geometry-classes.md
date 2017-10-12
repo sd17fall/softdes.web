@@ -16,7 +16,7 @@ python geometry.py
 ```
 
 In order to run the doctests for a _single_ method, comment out
-`doctest.testmod` and uncomment `doctest.run_docstringexamples` at the end of
+`doctest.testmod` and un-comment `doctest.run_docstringexamples` at the end of
 the file:
 
 ```python
@@ -33,9 +33,9 @@ doctest.rundocstring_examples(Line._repr_, globals())
 
 You can use the `Point` class from the reading, but you are not required to.
 
-Two of the methods in this file, `Line.intersection` and `Rect.intersection`,
-have their doc tests commented out. (Yes, they're commented out within a
-comment.) You don't need to implement these. They're the subject of the third _Going Beyond_ exercise, below.
+Two of the methods in this file, `Line.intersection` and `Rect.intersection`, have their doc tests commented out.
+(Yes, they're commented out within a comment.)
+You don't need to implement these. They're the subject of the third _Going Beyond_ exercise, below.
 
 Think about:
 
