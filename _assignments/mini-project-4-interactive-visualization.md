@@ -22,7 +22,7 @@ parts:
   tag: project-write-up-and-reflection
 - name: Revision
   due: 2017-11-06 10:50:00 -04:00
-  tag: project-write-up-and-reflection
+  tag: revision
 ---
 
 {% include toc %}
@@ -380,6 +380,14 @@ and how did you address them? What would you do differently next time?
 
 ### Turning in your assignment
 
+* Your code should submitted as either (a) Python file (or files) that can be executed by running *e.g.* `python qbert.py`, or (b) a Jupyter notebook.
+* If you submit a Python file:
+  * The project README must describe how to install any required packages (e.g. `pip install vaderSentiment`) and how to run it (e.g. `python qbert.py`)
+* If you submit a Jupyter notebook:
+  * You must test that it behaves correctly when you execute "Run All" from the "Cell" menu.
+  * You must *also* submit a Python text file.
+    Use the File > Download as > Python menu item to download a text file, and `git add` it to your repo.
+
 1\. Push your completed code to the `master` Git repository (depending on which team member's repository is being used to work on the project).
 
 * Submit your Project Write-up/Reflection (1 per team, not 1 per person). This can be in the form of:
@@ -391,8 +399,6 @@ Make sure to include a link to the Project Write-up/Reflection in the `README.md
 
 2\. Push your code to GitHub
 
-Your code should submitted as a Python file (or files) that can be executed by running *e.g.* `python qbert.py`
-
 3\. Open a pull request to the base `InteractiveProgramming` repo.
 
 Your code must be adequately documented. This includes:
@@ -400,19 +406,39 @@ Your code must be adequately documented. This includes:
 * Appropriate docstrings
 * Comments inline in your functions
 * README file that describes how to get your code to run
-* Automatically generated documentation
 
 One way to ensure you have adequate docstrings is to generate documentation
 from them. You can do this using
 [pydoc](https://docs.python.org/3/library/pydoc.html):
 
-`$ pydoc path/to/my_project.py`
+```bash
+$ pydoc path/to/my_project.py
+```
 
-This will open a help file based on your docstrings (use q to quit). Make sure
-the help file would be useful to someone using your code, and feel free to
+This will open a help file based on your docstrings (use <kdb>q</kbd> to quit).
+Make sure the help file would be useful to someone using your code, and feel free to
 attach it to your write-up as an appendix.
 
 If you want to generate truly beautiful documentation, check out
 [Sphinx](http://sphinx-doc.org/) (the tool used to generate the [Python
-documentation](https://docs.python.org/3/)). Certainly not required, but you
-may want to use it in the future (think: final project)
+documentation](https://docs.python.org/3/)).
+This is certainly not required, but you may want to use it in the future (think: final project)
+
+## Revision
+
+Reflection and revision is an important part of the iterative feedback
+process. In this part, you will revise and re-submit your project.
+
+The basis for the revision comes from several places:
+
+1. Feedback that you received from the NINJAs via Slack and / or GitHub pull requests.
+2. You know much more Python now than when we started.
+3. There may be extensions or alternate directions you wanted to pursue but didn't have time.
+
+In addition to correcting any errors in the original submission, you can
+use the opportunity to make some technical improvement.
+This could take many forms, but examples include:
+
+* Re-writing the project to use an object-oriented style.
+* Finding and improving performance bottlenecks.
+* Adding functionality that you didn't get to the first time.

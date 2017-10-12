@@ -4,7 +4,14 @@ description: >
     In this assignment you will learn how to use computational techniques
     to analyze text.
 announce: 2017-09-28 10:50:00 -04:00
-due: 2017-10-12 10:50:00 -04:00
+due: 2017-10-17 10:50:00 -04:00
+parts:
+- name: Teaming
+  tag: turning-in-your-assignment
+  due: 2017-10-12 10:50:00 -04:00
+- name: Revision
+  due: 2017-10-17 10:50:00 -04:00
+  tag: revision
 ---
 
 {% include toc %}
@@ -494,6 +501,14 @@ you succeed?
 
 ## Turning in your assignment
 
+* Your code should submitted as either (a) Python file (or files) that can be executed by running *e.g.* `python text_mining.py`, or (b) a Jupyter notebook.
+* If you submit a Python file:
+* The project README must describe how to install any required packages (e.g. `pip install vaderSentiment`) and how to run it (e.g. `python text_mining.py`)
+* If you submit a Jupyter notebook:
+* You must test that it behaves correctly when you execute "Run All" from the "Cell" menu.
+* You must *also* submit a Python text file.
+    Use the File > Download as > Python menu item to download a text file, and `git add` it to your repo.
+
 1\. Submit your Project Write-up/Reflection. This can be in the form of:
 
   * a [Markdown](https://guides.github.com/features/mastering-markdown/) file, committed to your repository, or
@@ -505,14 +520,6 @@ Make sure to include a link to the Project Write-up/Reflection in the `README.md
 
 2\. Push your code to GitHub
 
-  * Your code should submitted as either (a) Python file (or files) that can be executed by running *e.g.* `python text_mining.py`, or (b) a Jupyter notebook.
-  * If you submit a Python file:
-    * The project README must describe how to install any required packages (e.g. `pip install vaderSentiment`) and how to run it (e.g. `python text_mining.py`)
-  * If you submit a Jupyter notebook:
-    * You must test that it behaves correctly when you execute "Run All" from the "Cell" menu.
-    * You must *also* submit a Python text file.
-      Use the File > Download as > Python menu item to download a text file, and `git add` it to your repo.
-
 3\. Create a pull request to the upstream repository
 
 ## Project Presentations
@@ -522,3 +529,22 @@ If you’d like to share what you discovered/created as part of your text mining
 Professionalism is important in public presentations, so please use the “would I be happy for my parents to read this in the newspaper” test when uploading content. Humor is great; abusive language or disparaging groups of people is firmly not acceptable.
 
 Here's some examples from last semester: [SoftDes Spring 2017 spring 2017 MP3 examples](https://docs.google.com/presentation/d/1fybuwS68fdgCHrhOMcpbDzZOfDhzUJsEiOQ_24pUQHI/edit?usp=sharing)
+
+## Revision
+
+Reflection and revision is an important part of the iterative feedback
+process. In this part, you will revise and re-submit your project.
+
+The basis for the revision comes from several places:
+
+1. Feedback that you received from the NINJAs via Slack and / or GitHub pull requests.
+2. You know much more Python now than when we started.
+3. There may be extensions or alternate directions you wanted to pursue but didn't have time.
+
+In addition to correcting any errors in the original submission, you can
+use the opportunity to make some technical improvement.
+This could take many forms, but examples include:
+
+* Re-writing the project to use an object-oriented style.
+* Finding and improving performance bottlenecks.
+* Adding functionality that you didn't get to the first time.
