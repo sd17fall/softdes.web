@@ -88,7 +88,7 @@ will certainly try!).
 
 ### Pygame
 
-For 2D drawing, collision detection, and simple physics in Python, pygame
+For 2D drawing, collision detection, and simple physics in Python, **pygame**
 is a fantastic choice. Perhaps the biggest strength of pygame is that it
 has many [great tutorials](http://pygame.org/wiki/tutorials) as well as sample
 games to use as starting points (for example [arcade
@@ -280,7 +280,7 @@ _Due: {{ part.due | date: '%a %b %-d' }}_
 
 You must find a teammate and decide on a project topic. You are required to
 have your teammate selected (and hopefully a rough idea of what you will do
-for the project) by {{ part.due | date: '%H:%M on %a %b %-d' }}.
+for the project) by {{ part.due | date: '%-I:%M %P on %a %b %-d' }}.
 Use [this Google spreadsheet]({{ page.teaming_spreadsheet }}) to indicate who you are
 working with. There is also a section where you can look for a teammate if you
 don't have one already.
