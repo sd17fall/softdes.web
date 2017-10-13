@@ -1,47 +1,93 @@
-#toc { max-width: 250px }
+#toc {
+    max-width: 250px
+}
 
 #compatibility li {
-  display: inline;
-  list-style-type: none;
-  padding-right: 20px;
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
 }
-#compatibility .compatible { color: green }
-#compatibility .incompatible { color: red }
-#compatibility .maybe-compatible { color: orange }
+
+#compatibility .compatible {
+    color: green
+}
+
+#compatibility .incompatible {
+    color: red
+}
+
+#compatibility .maybe-compatible {
+    color: orange
+}
 
 @media(min-width: 769px) {
-  #toc { float: right; }
+    #toc {
+        float: right;
+    }
 }
 
 @media(min-width: 1280px) {
-  #toc { float: none; position: fixed; right: 5px; top: 150px; }
+    #toc {
+        float: none;
+        position: fixed;
+        right: 5px;
+        top: 150px;
+    }
 }
 
 @media(max-width: 769px) {
-  #left-nav .menu-list li {
-    display: inline-block;
-  }
-}
-@media print {
-  nav, .nav, .no-print { display: none }
-  pre code, .highlight {
-    background-color: white;
-  }
+    #left-nav .menu-list li {
+        display: inline-block;
+    }
 }
 
-.content pre { padding: 5px }
-pre code { padding: 0 }
+@media print {
+    nav,
+    .nav,
+    .no-print {
+        display: none
+    }
+    pre code,
+    .highlight {
+        background-color: white;
+    }
+}
+
+.content pre {
+    padding: 5px
+}
+
+pre code {
+    padding: 0
+}
+
 
 /* div.nb-output pre::before { content: "# ⇒" } */
-div.highlighter-rouge { border-top: 5px solid lightgray; background: blue }
-div.highlighter-rouge.nb-output { border-top: 1px solid gray }
+
+div.highlighter-rouge {
+    border-top: 5px solid lightgray;
+    background: blue
+}
+
+div.highlighter-rouge.nb-output {
+    border-top: 1px solid gray
+}
+
+
 /* div.nb-output pre { border-left: 5px solid gray; margin-left: -5px  } */
-div.nb-output + div.highlighter-rouge{ padding-top: 10px; }
+
+div.nb-output+div.highlighter-rouge {
+    padding-top: 10px;
+}
 
 body.pages-resources h2,
 body.pages-recipes h2 {
-  padding-top: 20px;
-  border-top: 2px solid lightgray;
+    padding-top: 20px;
+    border-top: 2px solid lightgray;
 }
 
-a .highlighter-rouge { background: inherit; color: darkblue; text-decoration: underline; }
+a .highlighter-rouge {
+    background: inherit;
+    color: darkblue;
+    text-decoration: underline;
+}
