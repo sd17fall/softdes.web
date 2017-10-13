@@ -249,7 +249,7 @@ scaffolding the use of a very powerful object-oriented design pattern called
 Here is a diagram (from Wikipedia) that shows the various components of Model-
 View-Controller and how they interact:
 
-![](http://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1000px-MVC-Process.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1000px-MVC-Process.svg.png)
 
 To make things concrete, let's think about how we might implement a Pac-Man
 clone. Here are the classes and the functions that you might use to implement
