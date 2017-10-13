@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<em>Due: {{ page.due | date: '%-H:%M %P, %a %-d %b' }}</em>
+<em>Due: {{ page.due | date: site.due_datetime_format }}</em>
 
 {{ content }}

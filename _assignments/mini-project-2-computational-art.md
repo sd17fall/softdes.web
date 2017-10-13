@@ -525,9 +525,10 @@ forward? What do you wish you knew before you started that would have helped
 you succeed?
 
 Add your Reflection to your GitHub repository. This can be in the form of:
-  * a [Markdown](https://guides.github.com/features/mastering-markdown/) file, or
-  * a Jupyter notebook, or
-  * a PDF document, or
+
+* a [Markdown](https://guides.github.com/features/mastering-markdown/) file, or
+* a Jupyter notebook, or
+* a PDF document, or
 
 ## Turning in your assignment
 
@@ -568,4 +569,4 @@ statement can be found
 [here](http://www.saic.edu/media/saic/pdfs/lifesaic/careerco-opcenter/workingartistsseries/Handout_WorkingArtist_WritingYourArtistStatement.pdf).
 
 In order to make it into the exhibition you should have your content there no later than
-{{ page.gallery_due | date: '%-H:%M %P' }} the day that the assignment is due.
+{{ page.gallery_due | date: site.part_due_date_format }} the day that the assignment is due.

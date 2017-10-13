@@ -4,6 +4,11 @@ description: An introduction to software design.
 timezone: America/New_York
 calendar_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJGhlctkwfwPHcEQ9H_sIML5rezTEDtDIgsTZyq4dlARZmKvGP-NTWJqu9zN1huDfpKMJQvAcYwmCq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
 
+date_format: '%A %-m/%-d'
+due_datetime_format: '%-H:%M %P, %a %-d %b'
+due_date_format: '%a %b %-d'
+part_due_date_format: '%a, %b %-d'
+
 collections:
   activities:
     output: true

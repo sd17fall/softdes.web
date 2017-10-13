@@ -3,6 +3,8 @@ title: 'Mini Project 3: Text Mining and Analysis'
 description: >
     In this assignment you will learn how to use computational techniques
     to analyze text.
+class_slides: https://docs.google.com/presentation/d/1FWuoFpGsim8ZzEpKw18JgoXoE2NGGEgXACIkuUi2dgU/edit?usp=sharing
+previous_examples: https://docs.google.com/presentation/d/1fybuwS68fdgCHrhOMcpbDzZOfDhzUJsEiOQ_24pUQHI/edit?usp=sharing
 announce: 2017-09-28 10:50:00 -04:00
 due: 2017-10-17 10:50:00 -04:00
 parts:
@@ -359,7 +361,7 @@ being high-dimensional vectors where the number of dimensions is equal to the
 total number of unique words in your text dataset and the entry in a
 particular element of the vector is the count of how frequently the
 corresponding word appears in a specific document (if this is a bit vague and
-you want to try this approach, send Paul an e-mail).
+you want to try this approach, ask an instructor).
 
 I tried this on some Project Gutenberg texts from two authors: Charles Dickens
 and Charles Darwin. The table below shows the pair-wise similarities between
@@ -501,6 +503,9 @@ you succeed?
 
 ## Turning in your assignment
 
+{% assign part = page.parts[0] %}
+_Due: {{ part.due | date: site.part_due_date_format }}_
+
 * Your code should submitted as either (a) Python file (or files) that can be executed by running *e.g.* `python text_mining.py`, or (b) a Jupyter notebook.
 * If you submit a Python file:
 * The project README must describe how to install any required packages (e.g. `pip install vaderSentiment`) and how to run it (e.g. `python text_mining.py`)
@@ -524,13 +529,16 @@ Make sure to include a link to the Project Write-up/Reflection in the `README.md
 
 ## Project Presentations
 
-If you’d like to share what you discovered/created as part of your text mining project, please add ~1-2 slides to the [class presentation](https://docs.google.com/presentation/d/1FWuoFpGsim8ZzEpKw18JgoXoE2NGGEgXACIkuUi2dgU/edit?usp=sharing).
+If you’d like to share what you discovered/created as part of your text mining project, please add ~1-2 slides to the [class presentation]({{ page.class_slides }}).
 
 Professionalism is important in public presentations, so please use the “would I be happy for my parents to read this in the newspaper” test when uploading content. Humor is great; abusive language or disparaging groups of people is firmly not acceptable.
 
-Here's some examples from last semester: [SoftDes Spring 2017 spring 2017 MP3 examples](https://docs.google.com/presentation/d/1fybuwS68fdgCHrhOMcpbDzZOfDhzUJsEiOQ_24pUQHI/edit?usp=sharing)
+Here's some examples from last semester: [SoftDes Spring 2017 spring 2017 MP3 examples]({{ page.previous_examples }})
 
 ## Revision
+
+{% assign part = page.parts[1] %}
+_Due: {{ part.due | date: site.part_due_date_format }}_
 
 Reflection and revision is an important part of the iterative feedback
 process. In this part, you will revise and re-submit your project.

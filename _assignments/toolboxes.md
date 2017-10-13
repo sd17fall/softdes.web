@@ -40,15 +40,15 @@ them for a lifetime!
 
 ## Three Toolboxes
 
-**Due {{ page.parts[0].due | date: '%a, %b %-d' }}**
+**Due {{ page.parts[0].due | date: site.part_due_date_format }}**
 
-The first three toolboxes are due {{ page.parts[0].due | date: '%a, %b %-d' }}.
+The first three toolboxes are due {{ page.parts[0].due | date: site.part_due_date_format }}.
 
 ## Five Toolboxes
 
-**Due {{ page.parts[0].due | date: '%a, %b %-d' }}**
+**Due {{ page.parts[0].due | date: site.part_due_date_format }}**
 
-The final two toolboxes (for a total of five) are due {{ page.parts[0].due | date: '%a, %b %-d' }}.
+The final two toolboxes (for a total of five) are due {{ page.parts[0].due | date: site.part_due_date_format }}.
 
 If you get through the Project Toolbox exercises and you have a great idea for
 a new one you'd like to create, get in touch with the teaching team!

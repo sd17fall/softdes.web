@@ -276,7 +276,7 @@ but we hope it will be helpful at least as a jumping off point.
 ### Getting Started
 
 {% assign part = page.parts[0] %}
-_Due: {{ part.due | date: '%a %b %-d' }}_
+_Due: {{ part.due | date: site.part_due_date_format }}_
 
 You must find a teammate and decide on a project topic. You are required to
 have your teammate selected (and hopefully a rough idea of what you will do
@@ -299,9 +299,9 @@ There are three deliverables for this project:
 ### Project Proposal
 
 {% assign part = page.parts[1] %}
-_Due: {{ part.due | date: '%a %b %-d' }}_
+_Due: {{ part.due | date: site.part_due_date_format }}_
 
-You can begin working on a project proposal as soon as you select your partner. Part of the {{ part.due | date: '%A %-m/%-d' }} class will be dedicated to approving project proposals. We encourage you to speak with NINJAs before this date during office hours (or an impromptu session arranged via Slack). By classtime on {{ part.due | date: '%A %-m/%-d' }}, you should be able to provide a link to a proposal document (*e.g.*, a Google doc) that describes the main idea of your project.
+You can begin working on a project proposal as soon as you select your partner. Part of the {{ part.due | date: site.date_format }} class will be dedicated to approving project proposals. We encourage you to speak with NINJAs before this date during office hours (or an impromptu session arranged via Slack). By classtime on {{ part.due | date: site.date_format }}, you should be able to provide a link to a proposal document (*e.g.*, a Google doc) that describes the main idea of your project.
 The professors will review the proposals approved by NINJAs.
 
 Your proposal document should address:
@@ -320,10 +320,10 @@ purely to allow us to help shape your project in useful directions - and potenti
 ### Mid-Project Check-in
 
 {% assign part = page.parts[2] %}
-_Due: {{ part.due | date: '%a %b %-d' }}_
+_Due: {{ part.due | date: site.part_due_date_format }}_
 
 We are requiring a mid-project check-in for this project. You must meet with a
-NINJA by end-of-the-day {{ part.due | date: '%a %b %-d' }}.
+NINJA by end-of-the-day {{ part.due | date: site.part_due_date_format }}.
 The grading for this check-in will be 0% if you miss it or blow it off, 50% if
 you have minimal work done before the check-in, and 100% if you have made a
 sincere effort to get your project off the ground. The mid-project check-in
@@ -343,7 +343,7 @@ generic goals for the mid-project check-in:
 #### Project Write-up and Reflection
 
 {% assign part = page.parts[3] %}
-_Due: {{ part.due | date: '%a %b %-d' }}_
+_Due: {{ part.due | date: site.part_due_date_format }}_
 
 Please prepare a short document (~1 page not including figures) with the
 following sections:
@@ -424,7 +424,10 @@ If you want to generate truly beautiful documentation, check out
 documentation](https://docs.python.org/3/)).
 This is certainly not required, but you may want to use it in the future (think: final project)
 
-## Revision
+### Revision
+
+{% assign part = page.parts[3] %}
+_Due: {{ part.due | date: site.part_due_date_format }}_
 
 Reflection and revision is an important part of the iterative feedback
 process. In this part, you will revise and re-submit your project.
