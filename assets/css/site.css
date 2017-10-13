@@ -86,8 +86,12 @@ body.pages-recipes h2 {
     border-top: 2px solid lightgray;
 }
 
+a:hover {
+    color: #4582ec;
+    text-decoration: underline;
+}
+
 a .highlighter-rouge {
     background: inherit;
-    color: darkblue;
-    text-decoration: underline;
+    color: #4582ec;
 }
