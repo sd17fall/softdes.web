@@ -4,17 +4,15 @@ column-width: 9
 ---
 
 {% for p in site.activities %}
-  {% if p.date %}
-    {% assign a_date = p.date | date: '%Y-%m-%d' %}
-    {% assign s_date = site.time | date: '%Y-%m-%d' %}
-    {% if a_date != s_date %}{% continue %}{% endif %}
+  {% assign s_date = site.time | date: '%Y-%m-%d' %}
+  {% assign a_date = p.date | date: '%Y-%m-%d' %}
+  {% if a_date != s_date %}{% continue %}{% endif %}
     <h2 class="title is-2">In-Class Activity</h2>
     <section class="columns box">
-      <div class="is-size-4">
+      <div class="is-size-5">
         <a href="{{ p.url }}">{{ p.title }}</a>.
       </div>
     </section>
-  {% endif %}
 {% endfor %}
 
 <h2 class="title is-2">Assignments</h2>
@@ -94,8 +92,10 @@ column-width: 9
 
 <h2>Course Materials</h2>
 <section class="box">
-  <ul>
-    <li><a href="http://greenteapress.com/wp/think-python-2e/">Think Python</a>, by Allen Downey, is the course text</li>
-    <li>Optional books are <a href="https://olin.tind.io/record/1512034?ln=en">on reserve in the Olin Library</li>
-  </ul>
+  <dl>
+    <dt><a href="http://greenteapress.com/wp/think-python-2e/">Think Python</a>, by Allen Downey</dt>
+    <dd>The course text</dd>
+    <dt><a href="https://olin.tind.io/record/1512034?ln=en">Optional texts</a></dt>
+    <dd>on reserve in the Olin Library</dd>
+  </dl>
 </section>
