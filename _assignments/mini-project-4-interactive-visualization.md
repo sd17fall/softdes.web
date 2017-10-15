@@ -301,8 +301,12 @@ There are three deliverables for this project:
 {% assign part = page.parts[1] %}
 _Due: {{ part.due | date: site.part_due_date_format }}_
 
-You can begin working on a project proposal as soon as you select your partner. Part of the {{ part.due | date: site.date_format }} class will be dedicated to approving project proposals. We encourage you to speak with NINJAs before this date during office hours (or an impromptu session arranged via Slack). By classtime on {{ part.due | date: site.date_format }}, you should be able to provide a link to a proposal document (*e.g.*, a Google doc) that describes the main idea of your project.
-The professors will review the proposals approved by NINJAs.
+You can begin working on a project proposal as soon as you select your partner.
+Part of the {{ part.due | date: site.date_format }} class will be dedicated to approving project proposals.
+We encourage you to speak with NINJAs before this date during office hours (or an impromptu session arranged via Slack).
+By classtime on {{ part.due | date: site.date_format }}, you should be able to provide a link to a proposal document (*e.g.*, a Google doc) that describes the main idea of your project.
+Please come to class with a printout of your project proposal.
+The instructors will review the proposals.
 
 Your proposal document should address:
 
