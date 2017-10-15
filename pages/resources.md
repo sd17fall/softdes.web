@@ -83,6 +83,7 @@ Also see [Git recipes]({% link pages/recipes.md %}#git-recipes) and [Reading Jou
 * [Pro Git](https://git-scm.com/book/en/v2)
 * [Great visualization](http://www.ndpsoftware.com/git-cheatsheet.html#loc=workspace;) of basic Git commands for moving source around
 * [A Visual Git Reference](https://marklodato.github.io/visual-git-guide/index-en.html)
+* GitHub's [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) (PDF)
 
 ### Learn Git
 
@@ -111,6 +112,7 @@ presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXB
 ## Markdown
 
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* GitHub's [Markdown Cheatsheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf) (PDF)
 
 ## Jupyter
 
