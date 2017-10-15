@@ -21,7 +21,7 @@ parts:
   due: 2017-10-30 10:50:00 -04:00
   tag: project-write-up-and-reflection
 - name: Revision
-  due: 2017-11-06 10:50:00 -04:00
+  due: 2017-11-09 10:50:00 -04:00
   tag: revision
 ---
 
@@ -430,7 +430,7 @@ This is certainly not required, but you may want to use it in the future (think:
 
 ### Revision
 
-{% assign part = page.parts[3] %}
+{% assign part = page.parts[4] %}
 _Due: {{ part.due | date: site.part_due_date_format }}_
 
 Reflection and revision is an important part of the iterative feedback
