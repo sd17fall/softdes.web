@@ -12,7 +12,7 @@ parts:
   tag: turning-in-your-assignment
   due: 2017-10-12 10:50:00 -04:00
 - name: Revision
-  due: 2017-10-17 10:50:00 -04:00
+  due: 2017-10-19 22:00:00 -04:00
   tag: revision
 ---
 
