@@ -75,6 +75,14 @@ t = turtle.Turtle()
 turtle.mainloop()
 ```
 
+### Re-run program when file changes
+
+1. [Install nodejs](https://nodejs.org/en/download/)
+2. [`npm install onchange`](npm install onchange)
+3. Run your program e.g. `onchange '*.py' -- python script.py`
+
+Previous semester have also used [entr](http://entrproject.org) and [pytest-watch](https://github.com/joeyespo/pytest-watch) for this. I also tried [when-changed](https://github.com/joh/when-changed). The first looks like a difficult install on Windows. The other two don't work with macOS High Sierra, and I wasn't able to test them on Windows. Your mileage may vary.
+
 ## Pygame recipes
 
 ### Set window position
