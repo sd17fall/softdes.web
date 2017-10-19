@@ -51,26 +51,6 @@ Fix "NameError: name 'math' is not defined" (or another module):
 import math
 ```
 
-### [macOS] Pygame doesn't receive keyboard events
-
-Problem: The Pygame window doesn't get focus.
-Keyboard events go to the last previously focussed windows (e.g. editor window or terminal)
-instead of Pygame.
-
-Once:
-
-    $ source deactivate
-    $ brew install python3
-    $ pip3 install pygame
-    $ python3 [yourscript.py]
-
-Each time you create a terminal window:
-
-    $ source deactivate
-    $ python3 [yourscript.py]
-
-If this doesn't work, repeat these instructions with `/usr/local/bin/python3` for `python3`.
-
 ### Fix "RecursionError: maximum recursion depth exceeded"
 
 Your recursive function is either missing a base case, or is somehow not executing it (for example, it is calling itself with the same arguments that it was called with – TBD illustrated in the Recursion notes).
@@ -94,6 +74,34 @@ t = turtle.Turtle()
 # …
 turtle.mainloop()
 ```
+
+## Pygame recipes
+
+### Set window position
+
+```python
+os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
+```
+
+### [macOS] Pygame doesn't receive keyboard events
+
+Problem: The Pygame window doesn't get focus.
+Keyboard events go to the last previously focussed windows (e.g. editor window or terminal)
+instead of Pygame.
+
+Once:
+
+    $ source deactivate
+    $ brew install python3
+    $ pip3 install pygame
+    $ python3 [yourscript.py]
+
+Each time you create a terminal window:
+
+    $ source deactivate
+    $ python3 [yourscript.py]
+
+If this doesn't work, repeat these instructions with `python3` replaced by `/usr/local/bin/python3`.
 
 ## Atom Recipes
 
