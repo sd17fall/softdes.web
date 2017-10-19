@@ -1,0 +1,42 @@
+---
+equivalences:
+  - name: Variable
+    define: 'x = 10'
+    use: 'x'
+  - name: Function
+    define: 'def fn(a, b):'
+    use: 'fn(1, 2)'
+  - name: Class
+    define: 'class C:'
+    use: 'obj = C()'
+  - name: method
+    define: '  def m(self, a, b):'
+    use: 'obj.m(1, 2)'
+  - name: constructor/initializer
+    define: '  def __init__(self, a, b):'
+    use: 'obj = C(1, 2)'
+  - name: '“dunderscore” methods…'
+    define: '  def __repr__(self):'
+    use: '>>> obj'
+  - name: ''
+    define: '  def __str__(self):'
+    use: 'print(obj)'
+  - name: ''
+    define: '  def __len__(self):'
+    use: 'len(obj)'
+---
+
+<h2>Python Method Cheat Sheet</h2>
+
+<table>
+<tr><th>Construct</th><th>Define</th><th>Use</th></tr>
+{% for row in page.equivalences %}
+  <tr>
+    <th>{{ row.name }}</th>
+    <td>{% highlight python %}{{ row.define }}{% endhighlight %}</td>
+    <td>{% highlight python %}{{ row.use }}{% endhighlight %}</td>
+  </tr>
+{% endfor %}
+</table>
+
+More dunderscore methods can be found in <a href="https://docs.python.org/3/reference/datamodel.html#emulating-container-types">Python Reference 3.3.6–3.3.7</a>.
