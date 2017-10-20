@@ -50,6 +50,8 @@ plugins:
 kramdown:
   toc_levels: 2..6
 
+livereload: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
