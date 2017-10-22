@@ -10,5 +10,6 @@ due: 2017-10-23 09:00:00 -04:00
 * Make at least one additional commit per person. If you are pair programming, both commits may come from the same account.
   * In general, you should make *at least one commit* per day that you're working on the project. See the readings for more guidance. Thinking about what makes for a good commit *message* can guide you towards the amount of change that makes for a good *commit*.
 
-## End of Day Sunday
-* [Mid-project check-in](http://localhost:4000/assignments/mini-project-4-interactive-visualization.html#mid-project-check-in)
+## By 10:30am Monday
+
+* [Mid-project check-in](/assignments/mini-project-4-interactive-visualization.html#mid-project-check-in)

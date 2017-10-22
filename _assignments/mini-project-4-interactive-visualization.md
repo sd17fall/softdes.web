@@ -15,7 +15,7 @@ parts:
   due: 2017-10-16 10:50:00 -04:00
   tag: project-proposal
 - name: Mid-Project Check-in
-  due: 2017-10-22 23:59:00 -04:00
+  due: 2017-10-23 10:30:00 -04:00
   tag: mid-project-check-in
 - name: Project Write-up and Reflection
   due: 2017-10-30 10:50:00 -04:00
