@@ -19,6 +19,9 @@ column-width: 9
 <section class="columns box">
   <section class="column">
     <h3 class="subtitle is-4">Upcoming</h3>
+      <div>
+        Answer the <a href="https://goo.gl/forms/0BVoYzuXPmMCFAqk2">Git GUI survey</a> by 9am Thursday.
+      </div>
       {% assign assignments = site.assignments | sort: "due" %}
       {% for assignment in assignments %}
         {% assign announce = assignment.announce | default: site.time %}
