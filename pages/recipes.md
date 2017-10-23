@@ -169,11 +169,15 @@ saving a message, just enter “:q” for quit.
 
 ### Pull changes from GitHub
 
-`$ git pull`
+```bash
+$ git pull
+```
 
 -or-
 
-`$ git pull origin master`
+```bash
+$ git pull origin master
+```
 
 If you get merging errors telling you that you need to merge or 'stash' before
 you can pull, see the 'stashing' section below. Also, a quick note on pulling,
@@ -183,7 +187,9 @@ incorporates their changes.
 
 ### How to stash (and what is stashing?)
 
-`$ git stash`
+```bash
+$ git stash
+```
 
 Stashing stores the copy of your current version of the repository on your
 computer, so you can keep that copy there before you pull changes that others
@@ -241,7 +247,7 @@ branch (see below)
 
 `$ git push -u origin <your-branch-name>`
 
-### Checkout a branch
+### Check out a branch
 
 'Checking out' a branch is when you pull another person's branch (or teleport
 to another branch), you do it by doing:
@@ -251,23 +257,10 @@ $ git fetch origin
 $ git checkout <branch-name>
 ```
 
-### Merge changes
+### Resolve merge conflicts
 
-If you get to a point where you are merging changes, you'll see something in
-your code like the following:
-
-    <<<<<<<HEAD
-    sarah_strohkorb = pick_the_coolest_ninja(input_1, input_2)
-    =======
-    sarah_strohkorb = pick_the_coolest_ninja()
-    >>>>>>><my-branch-name>
-
-The `sarah_strohkorb = pick_the_coolest_ninja(input_1, input_2)` line is what
-is represented on the `master` branch and `sarah_strohkorb = pick_the_coolest_ninja()` line is what is represented on the '&lt;my-branch-name&gt;' branch. You'll have to pick one of them and then delete the rest of
-the information. So if I want `sarah_strohkorb = pick_the_coolest_ninja()`,
-I'll rearrange the code to get the following:
-
-    sarah_strohkorb = pick_the_coolest_ninja()
+See [Resolving a Merge Conflict Using the Command Line
+](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/) on GitHub.
 
 ### Merge one branch into another
 
