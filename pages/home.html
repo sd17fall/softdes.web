@@ -61,7 +61,12 @@ column-width: 9
     <h3 class="subtitle is-4">Recent Lecture Notes</h3>
     <ul>
       {% for p in site.posts limit: 3 %}
-        <li><a href="{{ p.url }}">{{ p.title }} lecture notes</a></li>
+        <li>
+          <a href="{{ p.url }}">{{ p.title }} lecture notes</a>
+          {% if p.categories.size > 0 %}
+            – {{ p.categories | join: ', ' }}
+          {% endif %}
+        </li>
       {% endfor %}
       <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
     </ul>

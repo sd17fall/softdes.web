@@ -8,7 +8,12 @@ title: Notes
       <h2>Lecture Notes</h2>
       <ul>
       {% for p in site.posts %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        <li>
+          <a href="{{ p.url }}">{{ p.title }}</a>
+          {% if p.categories.size > 0 %}
+            – <span class="is-size-7">{{ p.categories | join: ', ' }}</span>
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </section>
