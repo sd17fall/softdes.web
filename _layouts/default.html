@@ -61,6 +61,7 @@
           <ul class="menu-list">
             {% assign assignments = site.assignments | sort: 'due' %}
             {% for assignment in assignments %}
+              {% if assignment.parent %}{% continue %}{% endif %}
               {% if assignment.announce > site.time %}{% continue %}{% endif %}
               {% if assignment.due < site.time %}{% continue %}{% endif %}
               <li><a href="{{ assignment.url }}">{{ assignment.title }}</a></li>
