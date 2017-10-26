@@ -111,6 +111,15 @@ Each time you create a terminal window:
 
 If this doesn't work, repeat these instructions with `python3` replaced by `/usr/local/bin/python3`.
 
+### [macOS] "ImportError: No module named font"
+
+Problem: Running `pygame.font.init()` raises an exception `ImportError: No module named font`.
+
+Solution:
+1. Install 32-bit Python 3.x (e.g. Python 3.6)
+2. Re-install pygame: `python3 -mpip install pygame`
+3. Use `/usr/local/bin/python3` to run Python.
+
 ## Atom Recipes
 
 ### Enable autosave
