@@ -99,15 +99,20 @@ instead of Pygame.
 
 Once:
 
-    $ source deactivate
-    $ brew install python3
-    $ pip3 install pygame
-    $ python3 [yourscript.py]
+```bash
+$ source deactivate
+$ brew install python3
+$ pip3 install pygame
+$ python3 [yourscript.py]
+```
+(If you get an error `command not found: brew`, you will need to [install Homebrew](https://brew.sh) and try again.)
 
 Each time you create a terminal window:
 
-    $ source deactivate
-    $ python3 [yourscript.py]
+```bash
+$ source deactivate
+$ python3 [yourscript.py]
+```
 
 If this doesn't work, repeat these instructions with `python3` replaced by `/usr/local/bin/python3`.
 
