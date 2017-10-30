@@ -8,7 +8,7 @@ Today in class we will [form teams]({% link _assignments/final-project.md %}#tea
 
 ## Ideation and Teaming
 
-We will do this as a class activity.
+Add your ideas to the [Final Project Ideas sheet](https://docs.google.com/spreadsheets/d/1kYvrMXWHGb_SfdCCC3TVrgLXR4j4L7GO9O9xyi4p9Lc/edit?usp=sharing).
 
 ## Project Proposal
 
