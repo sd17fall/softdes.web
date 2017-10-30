@@ -84,7 +84,7 @@ _Due {{ page.parts[page.proposal_part].due | date: site.part_due_date_format }}_
 
 **The project proposal is worth 10% of the project grade ([rubric]({% link _assignments/final-project/project-proposal-rubric.md %})).**
 
-By the due date above, one member of your team should have submitted a response to the Project Proposal Questionnaire. When you go the link, be prepared to type up responses to the prompts below. More detailed answers give us an ability to give you better feedback to start the project (or revise your proposal). [Project Proposal Questionnaire]({{ page.proposal_survey_url }}).
+Create a document that answers the following questions. More detailed answers give us an ability to give you better feedback to start the project (or revise your proposal).
 
 1. **The Big Idea:** What is the main idea of your project? What topics will you explore and what will you generate? What is your **minimum viable product**? What is a **stretch goal**?
 2. **Learning Goals:** What are your individual learning goals for this project?
@@ -94,7 +94,7 @@ By the due date above, one member of your team should have submitted a response 
 6. **Risks:** What do you view as the biggest risks to the success of this project?
 7. **Additional Course Content:** What are some topics that we might cover in class that you think would be especially helpful for your project?
 
-The teaching team will either approve you to post your proposal to your project's GitHub repo and begin working or ask you to make revisions to your questionnaire response.
+The teaching team will either approve you to post your proposal to your project's GitHub repo and begin working or ask you to make revisions to your document.
 
 ### Architectural Review
 
