@@ -7,6 +7,8 @@ description: |
   Event period for this class,  with EXPO style demo / poster session.
 announce: 2017-10-26 10:30:00 -04:00
 due: 2017-12-13 09:30:00 -05:00
+proposal_survey_url: https://goo.gl/forms/DhHgS73QmsIOejOC3
+spreadsheet_url: https://docs.google.com/spreadsheets/d/1HtPkvLfhCo9cfIQAKojzhBqLgJMWCkaqQx73rdoPrTU/edit?usp=sharing
 parts:
 - name: Project Proposal
   due: 2017-10-30 12:30:00 -04:00
@@ -30,6 +32,13 @@ parts:
   due: 2017-12-13 09:30:00 -05:00
   tag: demo-session-poster
 type: index
+proposal_part: 0
+arch_review_part: 1
+presentation_part: 3
+website_part: 4
+website_revision: 5
+expo_part: 6
+final_deliverables_part: 6
 ---
 
 {% include toc %}
@@ -71,11 +80,11 @@ Final Event period for this class,  with EXPO style demo / poster session.
 
 ### Project Proposal
 
-_Due {{site.data.dates.final_proposal | date: '%A, %B %-d' }}_
+_Due {{ page.parts[page.proposal_part].due | date: site.part_due_date_format }}_
 
 **The project proposal is worth 10% of the project grade ([rubric]({% link _assignments/final-project/project-proposal-rubric.md %})).**
 
-By 11:59 PM on the due date above, one member of your team should have submitted a response to the Project Proposal Questionnaire. When you go the link, be prepared to type up responses to the prompts below. More detailed answers give us an ability to give you better feedback to start the project (or revise your proposal). [Project Proposal Questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSf-q_NToMi2VXNSzsH-NsI47HrFt85BtHZJLm-PYkrRMPc0mA/viewform).
+By the due date above, one member of your team should have submitted a response to the Project Proposal Questionnaire. When you go the link, be prepared to type up responses to the prompts below. More detailed answers give us an ability to give you better feedback to start the project (or revise your proposal). [Project Proposal Questionnaire]({{ page.proposal_survey_url }}).
 
 1. **The Big Idea:** What is the main idea of your project? What topics will you explore and what will you generate? What is your **minimum viable product**? What is a **stretch goal**?
 2. **Learning Goals:** What are your individual learning goals for this project?
@@ -89,13 +98,14 @@ The teaching team will either approve you to post your proposal to your project'
 
 ### Architectural Review
 
-_Date: {{site.data.dates.tr1 | date: '%A, %B %-d' }}_
+_Date: {{ page.parts[page.arch_review_part].due | date: '%A, %B %-d' }}_
 
 **The Architectural review is worth 15% of the project grade ([rubric]({% link _assignments/final-project/architectural-review.md %})).**
 
-We will be holding an architectural review which will entail groups of three or four teams taking turns presenting their plans for
-their project. This review is intended to very interactive, and will focus on
-soliciting useful/actionable feedback rather than being a one-way brain dump.
+We will be holding an architectural review
+{% if false %} which will entail groups of three or four teams taking turns presenting {% else %} for teams to present {% endif %} their plans for
+their project.
+This review is intended to very interactive, and will focus on soliciting useful/actionable feedback rather than being a one-way brain dump.
 In addition to the in-person component of this activity, there will be a
 framing/agenda setting document due before the review and a
 reflection/synthesis document due after.
@@ -104,21 +114,19 @@ See the [Architectural Review]({% link _assignments/final-project/architectural-
 
 ### Project Presentation
 
-_Date: {{site.data.dates.project_presentation | date: '%A, %B %-d' }}_
+_Date: {{ page.parts[page.presentation_part].due | date: '%A, %B %-d' }}_
 
 **The Project Presentation is worth 10% of the project grade** **(see [project presentation rubric]({% link _assignments/final-project/project-presentation-rubric.md %}))**
 
-On {{site.data.dates.project_presentation | date: '%A, %B %-d' }} your team will present the progress with the project to the
-class. This is intended to be a formal / polished presentation. The focus of
-this activity will be around successful and professional communication. There
-will be limited time for feedback in class, but you can communicate your
-feedback using the online form.
+On {{ page.parts[page.presentation_part].due | date: '%A, %B %-d' }} your team will present the progress with the project to the class.
+This is intended to be a formal / polished presentation. The focus of this activity will be around successful and professional communication.
+There will be limited time for feedback in class, but you can communicate your feedback using the online form.
 
 ### Project Website
 
-_Due: end of day {{site.data.dates.final_website | date: '%A, %B %-d' }}_
+_Due: end of day {{ page.parts[page.website_part].due | date: '%A, %B %-d' }}_
 
-_Final revision, that incorporates instructor feedback, due end of day {{site.data.dates.final_website_feedback_addressed | date: '%A, %B %-d' }}_
+_Final revision, that incorporates instructor feedback, due end of day {{ page.parts[page.website_revision].due | date: '%A, %B %-d' }}_
 
 **The final website is worth 15% of the project grade**
 
@@ -186,7 +194,7 @@ will still be around in the future!
 
 ### Demo Session Poster
 
-_Printed before {{ site.data.dates.final_deliverables | date: '%-H:%M %p' }} on {{site.data.dates.final_deliverables | date: '%A, %B %-d' }}_
+_Printed before {{ page.parts[page.expo_part].due | date: '%-H:%M %p' }} on {{ page.parts[3].due | date: '%A, %B %-d' }}_
 
 **The poster is worth 10% of the project grade.**
 
@@ -197,15 +205,15 @@ and selectively edited for a different context:
 * **Poster** - large form factor, tool to support your demo (content need not stand alone without explanation)
 * **Website** - one-way communication, allows for more complete/in-depth coverage
 
-**Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ site.data.dates.final_expo | date: '%b %-d' }} expo.
+**Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ page.parts[4].due | date: '%b %-d' }} expo.
 
 ### Code submission
 
-_Due: {{site.data.dates.final_deliverables | date: '%A, %B %-d' }}_
+_Due: {{ page.parts[page.final_deliverables_part].due | date: '%A, %B %-d' }}_
 
 **Project code is worth 40% of the project grade (see code rubric on the [course policy page]({% link pages/policies.md %}))**
 
-Project code must be submitted via GitHub by {{site.data.dates.final_deliverables | date: '%B %-d' }}. You must include a
+Project code must be submitted via GitHub by {{ page.parts[page.final_deliverables_part].due | date: '%B %-d' }}. You must include a
 README describing how to run your code, including any required dependencies
 (e.g. libraries to install) and any input files ([README rubric]({% link _assignments/final-project/readme-rubric.md %})).
 
@@ -225,11 +233,11 @@ Make sure that your code gives appropriate attribution to external resources
 used, as per the [course policy page]({% link pages/policies.md %}). If you have any questions
 about this, just ask.
 
-**Submission mechanics**: Verify that the link in the [Final Project Team Survey]({{ site.data.course.urls.final_project_team_survey }}) is correct. Check that you have git pushed your final changes to GitHub.
+**Submission mechanics**: Verify that the link in the [Final Project Team Survey]({{ page.spreadsheet_url }}) is correct. Check that you have git pushed your final changes to GitHub.
 
 ### Final Demo / Presentation Session
 
-_Date: {% if site.data.dates.final_expo %}{{ site.data.dates.final_expo | date: '%A, %b %-d, %-H:%M %p' }}–{{ site.data.dates.final_expo_end | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
+_Date: {% if page.parts[page.expo_part].due %}{{ page.parts[page.expo_part].due | date: '%A, %b %-d, %-H:%M %p' }}–{{ page.parts[page.expo_part].due | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
 
 During the Final Event, both sections of SoftDes will meet in AC326
 for an EXPO style poster/demo session of your final projects. This session is
