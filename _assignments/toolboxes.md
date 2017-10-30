@@ -46,7 +46,7 @@ The first three toolboxes are due {{ page.parts[0].due | date: site.part_due_dat
 
 ## Five Toolboxes
 
-**Due {{ page.parts[0].due | date: site.part_due_date_format }}**
+**Due {{ page.parts[1].due | date: site.part_due_date_format }}**
 
 The final two toolboxes (for a total of five) are due {{ page.parts[0].due | date: site.part_due_date_format }}.
 
