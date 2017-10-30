@@ -10,11 +10,7 @@ Today in class we will [form teams]({% link _assignments/final-project.md %}#tea
 
 Add your ideas to the [Final Project Ideas sheet](https://docs.google.com/spreadsheets/d/1kYvrMXWHGb_SfdCCC3TVrgLXR4j4L7GO9O9xyi4p9Lc/edit?usp=sharing).
 
-## Project Proposal
-
-Create a [Final Project]({% link _assignments/final-project.md %}#project-proposal) document.
-
-Once you have done this, sign up for a slot to review your proposal. Due time: 12pm.
+# For Thursday
 
 ## Create a GitHub Repo
 
@@ -30,6 +26,10 @@ Place these files in the repo:
 ## Register your team
 
 Add your team and a link to your repo to the [final project spreadsheet]({{ page.spreadsheet_url }}).
+
+## Project Proposal
+
+Create a [Final Project]({% link _assignments/final-project.md %}#project-proposal) document.
 
 ## Continue Work
 

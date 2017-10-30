@@ -11,7 +11,7 @@ proposal_survey_url: https://goo.gl/forms/DhHgS73QmsIOejOC3
 spreadsheet_url: https://docs.google.com/spreadsheets/d/1HtPkvLfhCo9cfIQAKojzhBqLgJMWCkaqQx73rdoPrTU/edit?usp=sharing
 parts:
 - name: Project Proposal
-  due: 2017-10-30 12:30:00 -04:00
+  due: 2017-11-02 10:50:00 -04:00
   tag: project-proposal
 - name: AR Preparation Document
   due: 2017-11-06 09:00:00 -05:00
