@@ -31,4 +31,4 @@ Add your team, a link to your repo, and a link to your Trello board, to the [fin
 
 ## Project Proposal
 
-Create a [Final Project]({% link _assignments/final-project.md %}#project-proposal) document.
+Create a [Final Project Project]({% link _assignments/final-project.md %}#project-proposal) document.

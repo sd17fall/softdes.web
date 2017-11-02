@@ -24,10 +24,13 @@ column-width: 9
         {% assign announce = assignment.announce | default: site.time %}
         {% if announce <= site.time and assignment.due >= site.time %}
           <div>
-            <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
             {% assign parts = assignment.parts | where_exp: "part", "part.due > site.time" %}
+            {% if parts.size == 0 %}
+              <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
+            {% endif %}
             {% for part in parts limit: 1 %}
-              part “{{ part.name }}” is due {{ part.due | date: site.due_datetime_format }}.
+              <a href="{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
+              is due {{ part.due | date: site.due_datetime_format }}.
             {% endfor %}
           </div>
         {% endif %}
