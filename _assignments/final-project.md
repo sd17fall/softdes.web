@@ -114,7 +114,8 @@ See the [Architectural Review]({% link _assignments/final-project/architectural-
 
 ### Project Presentation
 
-_Date: {{ page.parts[page.presentation_part].due | date: '%A, %B %-d' }}_
+{% assign part = page.parts[page.presentation_part] %}
+_Date: {{ part.due | date: '%A, %B %-d' }}_
 
 **The Project Presentation is worth 10% of the project grade** **(see [project presentation rubric]({% link _assignments/final-project/project-presentation-rubric.md %}))**
 
@@ -124,7 +125,8 @@ There will be limited time for feedback in class, but you can communicate your f
 
 ### Project Website
 
-_Due: end of day {{ page.parts[page.website_part].due | date: '%A, %B %-d' }}_
+{% assign part = page.parts[page.expo_part] %}
+_Due: end of day {{ part.due | date: '%A, %B %-d' }}_
 
 _Final revision, that incorporates instructor feedback, due end of day {{ page.parts[page.website_revision].due | date: '%A, %B %-d' }}_
 
@@ -194,7 +196,8 @@ will still be around in the future!
 
 ### Demo Session Poster
 
-_Printed before {{ page.parts[page.expo_part].due | date: '%-H:%M %p' }} on {{ page.parts[3].due | date: '%A, %B %-d' }}_
+{% assign part = page.parts[page.expo_part] %}
+_Printed before {{ part.due | date: '%-H:%M %p' }} on {{ part.due | date: '%A, %B %-d' }}_
 
 **The poster is worth 10% of the project grade.**
 
@@ -209,11 +212,12 @@ and selectively edited for a different context:
 
 ### Code submission
 
-_Due: {{ page.parts[page.final_deliverables_part].due | date: '%A, %B %-d' }}_
+{% assign part = page.parts[page.expo_part] %}
+_Due: {{ part.due | date: '%A, %B %-d' }}_
 
 **Project code is worth 40% of the project grade (see code rubric on the [course policy page]({% link pages/policies.md %}))**
 
-Project code must be submitted via GitHub by {{ page.parts[page.final_deliverables_part].due | date: '%B %-d' }}. You must include a
+Project code must be submitted via GitHub by {{ part.due | date: '%B %-d' }}. You must include a
 README describing how to run your code, including any required dependencies
 (e.g. libraries to install) and any input files ([README rubric]({% link _assignments/final-project/readme-rubric.md %})).
 
@@ -237,7 +241,8 @@ about this, just ask.
 
 ### Final Demo / Presentation Session
 
-_Date: {% if page.parts[page.expo_part].due %}{{ page.parts[page.expo_part].due | date: '%A, %b %-d, %-H:%M %p' }}–{{ page.parts[page.expo_part].due | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
+{% assign part = page.parts[page.expo_part] %}
+_Date: {% if part.due %}{{ part.due | date: '%A, %b %-d, %-H:%M %p' }}–{{ part.due | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
 
 During the Final Event, both sections of SoftDes will meet in AC326
 for an EXPO style poster/demo session of your final projects. This session is
