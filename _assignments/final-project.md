@@ -23,10 +23,10 @@ parts:
   due: 2017-11-16 10:50:00 -05:00
   tag: project-presentation
 - name: Project Website
-  due: 2017-11-27 09:00:00 -05:00
+  due: 2017-12-04 09:00:00 -05:00
   tag: project-website
 - name: Project Website, feedback addressed
-  due: 2017-11-30 09:00:00 -05:00
+  due: 2017-12-07 09:00:00 -05:00
   tag: project-website
 - name: Final Deliverables
   due: 2017-12-13 09:30:00 -05:00
