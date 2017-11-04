@@ -120,3 +120,66 @@ presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXB
 * [Jupyter Keyboard Shortcuts](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/) (compact)
 * [Jupyter Keyboard Shortcuts](https://gist.github.com/kidpixo/f4318f8c8143adee5b40) (longer)
 * [28 Jupyter Notebook tips, tricks and shortcuts](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
+
+## UML Diagrams
+
+### Diagram Types
+
+There are a number of types of UML diagrams. For this class, the most useful are:
+
+*  A [Class Diagram](https://en.wikipedia.org/wiki/Class_diagram) describes the responsibilities of and relationships between the classes in a system.
+* An [Object Diagram](https://www.tutorialspoint.com/uml/uml_object_diagram.htm) shows the relationship between objects (instances of classes). (The relationship between a class diagram and an object diagram is the “noun” version of the relationship between a static call graph and a dynamic call graph.)
+* A [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram) shows how objects operate with each other. You can use it to show function (including method) calls and returns between two or more objects. You can also use it to show the flow of actions and responses between a user and the system.
+
+Depending on your project, these may also be helpful:
+
+* A [State Diagram](https://en.wikipedia.org/wiki/UML_state_machine) depicts the different states that a system can be in. In this class, it is most useful to describe interactive programs, where a game might be displaying one of several screens. Sometimes it is useful to create state diagrams for individual objects within a program, rather than one diagram for the entire program state.
+* A [Use Case diagram](https://en.wikipedia.org/wiki/Use_case_diagram) represents the relationship between the user and the system. In a complex system that is defined UOCD-style, starting from use cases, this kind of diagram can be helpful in collecting use cases and starting to translate them into system structure and behavior.
+
+### Diagram Type Directories
+
+These online references variously include examples, text descriptions, and discussions of when to use each one.
+
+* [Wikipedia page on UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language#Diagrams)
+* [TutorialsPoint UML Tutorial](https://www.tutorialspoint.com/uml/uml_standard_diagrams.htm)
+* [Lucidchart “What is UML”](https://www.lucidchart.com/pages/what-is-UML-unified-modeling-language )
+* [ConceptDraw Guide](http://www.conceptdraw.com/How-To-Guide/uml-diagrams)
+
+*UML Distilled*, by Martin Fowler, is more involved reference that also has a lot of good material for how to think about programming in general. It's [available at the Olin Library](https://olin.tind.io/record/133644?ln=en).
+
+### Making Diagrams
+
+#### Drawing by Hand
+
+Any of the Olin printer/scanners can mail a scan to you. For a diagram, taking a photo from a recent phone will probably work just as well.
+
+#### Slide Tools
+
+For simple diagrams, you can get by with the draw tools in PowerPoint, Keynote, or Google Slides.
+
+#### Diagramming Software
+
+* On Windows, the standard commercial software diagram project is Visio.
+ * On the Mac, it’s Omnigraffle, with Sketch nipping at the heels. (Sketch is less good at diagrams, but better at graphic design, so many people use it for everything. In this way it’s similar to Illustrator – but I practically never see software developers use Illustrator for diagrams.)
+ * Gliffy and LucidChart are cloud-based collaborative diagram editors. Gliffy is free for students. (I don’t know whether the collaborative features are free.)
+ * There’s a variety of free / open source draw programs, and also UML-specific drawing programs, mostly written in Java and portable among Linux/macOS/Windows; I’m not familiar with that world.
+
+#### Text-based diagram tools.
+
+[PlantUML](http://plantuml.com) produces an image from a text description. It can create a variety of different kinds of diagrams, shown on its home page.
+
+[Mermaid](https://mermaidjs.github.io) is (IMO) easier to install and use, and produces several useful diagram types, but *not* class diagrams.
+
+There are Atom plugins for PlantUML and Mermaid, that display the image in one pane while you edit the text in another. I’ve used the Mermaid plugin.
+
+[GraphViz](http://graphviz.org) is a general-purpose text-to-graph program. It’s not specific to, and doesn’t know about, class diagrams or UML, but can be used for this. It’s a useful tool to have in your toolbox.
+
+#### “Reverse-Engineering” Tools
+
+These are tools that create UML diagrams from Python sources.
+
+The [PyCharm](http://jetbrains.com/pycharm) Python IDE (Integrated Development Environment) has this feature. I’ve heard that quite a few students in the Olin community use PyCharm; I don’t know that any use this feature.
+
+Standalone tools include [Epydoc](http://epydoc.sourceforge.net), [Pyreverse](https://www.logilab.org/blogentry/6883), and Allen's own [Lumpy](http://www.greenteapress.com/thinkpython/swampy/lumpy.html). A longer list is [here](https://modeling-languages.com/uml-tools/#UML_tools_for_Python).
+
+These appealing, but I’ve found it more helpfully for understanding a pile of code that has been left, without adequate docs, or your doorstep, than for designing of documenting your own code. Done properly, a diagram is expressive and reflects intent: how you position elements, what you leave out, focus on and emphasize different elements in your design. Just as writing prose documentation for your code can lead you to realize how you *should* have written it (and cause you to go back and revise it, if you’ve got time), the process of creating a diagrams can help you design your system. Tools that run on code that’s already written, and make diagrams mechanically, don’t come out as well, and deprive you of those benefits.
