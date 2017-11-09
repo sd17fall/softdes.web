@@ -20,9 +20,6 @@ parts:
 - name: Project Write-up and Reflection
   due: 2017-10-30 10:50:00 -04:00
   tag: project-write-up-and-reflection
-- name: Revision
-  due: 2017-11-09 10:50:00 -04:00
-  tag: revision
 ---
 
 {% include toc %}
@@ -428,6 +425,7 @@ If you want to generate truly beautiful documentation, check out
 documentation](https://docs.python.org/3/)).
 This is certainly not required, but you may want to use it in the future (think: final project)
 
+{% if false %}
 ### Revision
 
 {% assign part = page.parts[4] %}
@@ -449,3 +447,4 @@ This could take many forms, but examples include:
 * Re-writing the project to use an object-oriented style.
 * Finding and improving performance bottlenecks.
 * Adding functionality that you didn't get to the first time.
+{% endif %}
