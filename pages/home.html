@@ -29,7 +29,7 @@ column-width: 9
               <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
             {% endif %}
             {% for part in parts limit: 1 %}
-              <a href="{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
+              <a href="{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} – {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
               is due {{ part.due | date: site.due_datetime_format }}.
             {% endfor %}
           </div>
