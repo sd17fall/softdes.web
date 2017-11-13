@@ -36,6 +36,11 @@ defaults:
     values:
       permalink: notes/:title
   - scope:
+      path: ''
+      type: assignments
+    values:
+      layout: assignment
+  - scope:
       path: notes
     values:
       omit_title: true

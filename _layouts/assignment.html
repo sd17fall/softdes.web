@@ -2,6 +2,13 @@
 layout: default
 ---
 
-<em>Due: {{ page.due | date: site.due_datetime_format }}</em>
+{% for part in page.parts %}
+  {% if part.due >= site.time %}
+    <em><a href="#{{ part.tag }}">{{ part.name }}</a> due: {{ part.due | date: site.due_datetime_format }}</em><br/>
+  {% endif %}
+{% endfor %}
+{% if page.parts == nil or page.due < site.time %}
+    <em>Due: {{ page.due | date: site.due_datetime_format }}</em>
+{% endif %}
 
 {{ content }}
