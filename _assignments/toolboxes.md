@@ -1,8 +1,7 @@
 ---
 title: Project Toolboxes
 permalink: toolboxes
-due: 2017-11-02 09:00:00 -04:00
-announce: 2017-09-13 09:00:00 -04:00
+due: 2017-11-27 09:00:00 -04:00
 parts:
 - name: Three Toolboxes
   tag: three-toolboxes
