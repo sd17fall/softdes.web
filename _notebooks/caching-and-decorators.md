@@ -1,5 +1,5 @@
 ---
-date: 2017-11-13T17:57:20-05:00
+date: 2017-11-13T17:59:30-05:00
 omit_title: true
 ---
 
@@ -10,7 +10,7 @@ omit_title: true
 
 ## Instrumentation
 
-Consider the lowly Fibonacci function.
+Consider the lowly Fibonacci function:
 
 
 ```python
@@ -33,7 +33,7 @@ fib(10)
 
 
 
-This is a straightforward translation of
+This function is a straightforward translation of
 
 $$F(n)=\left\{
                 \begin{array}{ll}
@@ -42,9 +42,9 @@ $$F(n)=\left\{
                 \end{array}
               \right.$$
 
-It's a recursive function, so a single (external) call to `fib` can result in lots of internal calls.
+`fib` is a recursive function, so a single *external* call to `fib` can result in lots of *recursive* calls, where it calls itself.
 
-Let's **instrument** `fib`, to report how many times a single external call results in.
+Let's **instrument** `fib`, to report how many calls result from a single external call:
 
 
 ```python
@@ -67,7 +67,7 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-The number of calls increases (exponentially) as a function of the argument. 
+The number of calls increases (exponentially) as a function of the argument.:
 
 
 ```python
@@ -99,7 +99,7 @@ for i in [1, 2, 3, 4, 5, 10, 20, 30]:
 
 
 
-This has a direct impact on performance. Note the microseconds (µs) and milliseconds (ms) per loop, for each of the following argument values. 500 ms is half a second, so it's getting pretty slow.
+This large number of calls has a direct affect on performance:
 
 
 ```python
@@ -116,7 +116,9 @@ This has a direct impact on performance. Note the microseconds (µs) and millise
 
 
 
-Let's **instrument** the function to print each call, so we can see more about what's going on.
+Note the microseconds (µs) and milliseconds (ms) per loop. 500 ms is half a second, so it's getting pretty slow.
+
+Let's **instrument** the function to print each time it's called, so that we can see more about what's going on:
 
 
 ```python
@@ -157,9 +159,9 @@ fib(6)
 
 
 
-This shows that `fib` is called multiple times with the same arguments. `fib(4)` is called a couple times. `fib(3)` is being called three times. `fib(2)` is called *five* times.
+This output shows that `fib` is called multiple times with the same arguments. `fib(4)` is called a couple times. `fib(3)` is being called three times. `fib(2)` is called *five* times.
 
-Here's modified instrumentation (and a chance to learn about [defaultdict](https://docs.python.org/3/library/collections.html#collections.defaultdict)), to report how many times `fib` is applied to each argument value. 
+Here's modified instrumentation (and a chance to learn about [defaultdict](https://docs.python.org/3/library/collections.html#collections.defaultdict)), to report how many times `fib` is applied to each argument value:
 
 
 ```python
@@ -190,7 +192,7 @@ for n, count in sorted(counts.items()):
 
 
 
-(A digression: you might notice an interesting pattern in the sequence of call counts. Let's see if it holds up:
+(A digression: you might notice an interesting pattern in the sequence of call counts. Let's see if it holds up:)
 
 
 ```python
@@ -217,13 +219,11 @@ for n, count in sorted(counts.items()):
 
 
 
-(Yep. Back to the instrumentation and caching now.)
-
 ## Caching
 
-Instead of *instrumenting* the code, to simply record how many times the function was called, we can modify it to *cache* the computation, and use this cached value instead of re-computing it.
+Instead of *instrumenting* the code, to simply record how many times the function was called, we can modify it to *cache* the computation, and use this cached value.
 
-This is exactly the same technique as caching web requests, for Text Mining. Here it saves repeated *computation*, instead of repeated *network activity*. Putting this together with the reading, it also reduces the *computational complexity*.
+This is exactly the same technique as caching web requests, for Text Mining. Here it saves repeated *computation*. (There it avoided repeated *network requests*.) This reduces the function's **computational complexity**.
 
 
 ```python
@@ -287,7 +287,9 @@ For reference, the un-cached timings looked like this:
 
 The code above takes a step *forwards* in terms of performance, but *backwards* in legibility. Half of it is concerned with doing the math, and half of it is concerned with caching. It violated **separation of concerns**.
 
-Let's separate the first instrumented `fib`, that counts how often it's been called, into two functions. `fib_` (the Python spelling of $\textrm{fib}'$) does the computation. `fib` *wraps* `fib_`, to add the instrumentation.
+Let's separate the first instrumented `fib`, that counts how often it's been called, into two functions. `fib_` does the computation. `fib` *wraps* `fib_`, to add the instrumentation.
+
+(The underscore in `fib_` is used in Python the same way a prime $'$ is used in math. `fib_` corresponds to $\textrm{fib}'$ or $F'$.)
 
 
 ```python
@@ -313,7 +315,7 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-We can change the wrapper to add different instrumentation, without changing the underlying function.
+We can change the wrapper to add different instrumentation, without changing the underlying function:
 
 
 ```python
@@ -351,7 +353,7 @@ for n, count in sorted(counts.items()):
 
 
 
-Now let's define a wrapper that adds caching (and keeps the initial instrumentation, so we can see that the cache is working).
+Now let's define a wrapper that adds caching. (We'll also keep some instrumentation, so we can see that the cache is working.)
 
 
 ```python
@@ -384,9 +386,9 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 ## Higher-Order Programming
 
-The various wrapper `fib`s, above, didn't really have anything to do with `fib_` specifically. They did wrapped a function that happened to be called `fib_`; they could have wrapped any other (unary) function instead.
+The various wrapper `fib`s above didn't need to know anything about `fib_` specifically. They were written to know the name `fib_`, but they could have wrapped any other (unary) function instead.
 
-Let's give them a parameter, which is the function to wrap.
+Let's give these wrapper functions a parameter, which is the function to wrap:
 
 
 ```python
@@ -416,7 +418,11 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-We can actually *replace* `fib` by the new function. This relieves us from have to come up with a separate name (`fib_`) for the unwrapped `fib`. It also eliminates the inelegance where `fib_` had to know to call `fib` (that hasn't been defined yet), so that you needed to know that it was going to be wrapped before you could recognize that it was actually recursive.
+Instead of defining `fib_` via `def`, and then defining `fib` via `fib = …`, we can define the function `def fib` and then replace its value.
+
+This relieves us from have to come up with a separate name (`fib_`) for the unwrapped `fib`.
+
+It also eliminates the inelegance where `fib_` had to know to call `fib` (that hasn't been defined yet), so that you needed to know that it was going to be wrapped before you could recognize that it was actually recursive.
 
 
 ```python
@@ -446,7 +452,7 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-We can wrap a function multiple times. The `fib` below has been wrapped by the counting instrumentation, and then wrapped in a cache, so that it both collects its call count *and* is cached.
+We can wrap a function multiple times. `fib` below has been wrapped by the counting instrumentation, and then wrapped in a cache, so that it both collects its call count *and* is cached.
 
 
 ```python
