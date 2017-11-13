@@ -76,10 +76,10 @@ column-width: 9
   <section class="column">
     <h3 class="subtitle is-4">Recent Code Notes</h3>
     <ul>
-      <li><a href="{% link _notebooks/storing-api-keys.md %}">Storing API keys</a></li>
-      <li><a href="{% link _notebooks/caching.md %}">Caching</a></li>
-      <li><a href="{% link _notebooks/genefinder-solutions.md %}">GeneFinder solutions</a></li>
-      <li><a href="{% link _notebooks/genefinder-going-beyond.md %}">GeneFinder – going beyond</a></li>
+      {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
+      {% for p in notebooks limit: 5 %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
       <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
     </ul>
   </section>

@@ -1,6 +1,7 @@
 {% extends 'markdown.tpl' %}
 {% block header -%}
 ---
+date: %MODTIME%
 omit_title: true
 ---
 {% raw %}
