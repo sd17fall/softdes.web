@@ -42,7 +42,7 @@ $$F(n)=\left\{
                 \end{array}
               \right.$$
 
-`fib` is a recursive function, so a single *external* call to `fib` can result in lots of *recursive* calls, where it calls itself.
+`fib` is a *recursive* function. A single *external* call to `fib` can result in lots of *recursive* calls, where it calls itself.
 
 Let's **instrument** `fib`, to report how many calls result from a single external call:
 
@@ -67,7 +67,7 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-The number of calls increases (exponentially) as a function of the argument.:
+The number of calls increases (exponentially) as a function of the argument:
 
 
 ```python
@@ -99,7 +99,7 @@ for i in [1, 2, 3, 4, 5, 10, 20, 30]:
 
 
 
-This large number of calls has a direct affect on performance:
+The fact that it calls itself so many times has a direct affect on performance:
 
 
 ```python
@@ -118,7 +118,7 @@ This large number of calls has a direct affect on performance:
 
 Note the microseconds (µs) and milliseconds (ms) per loop. 500 ms is half a second, so it's getting pretty slow.
 
-Let's **instrument** the function to print each time it's called, so that we can see more about what's going on:
+Let's instrument the function to print each time it's called. This way we that we can see more about what's going on.
 
 
 ```python
@@ -159,9 +159,9 @@ fib(6)
 
 
 
-This output shows that `fib` is called multiple times with the same arguments. `fib(4)` is called a couple times. `fib(3)` is being called three times. `fib(2)` is called *five* times.
+This output shows that `fib` is called multiple times with the same arguments. For example, `fib(4)` is called a couple times. `fib(3)` is being called three times. `fib(2)` is called *five* times.
 
-Here's modified instrumentation (and a chance to learn about [defaultdict](https://docs.python.org/3/library/collections.html#collections.defaultdict)), to report how many times `fib` is applied to each argument value:
+The modified instrumentation below report how many times `fib` is applied to each argument value. (This is also a chance to learn about [defaultdict](https://docs.python.org/3/library/collections.html#collections.defaultdict).)
 
 
 ```python
@@ -192,7 +192,11 @@ for n, count in sorted(counts.items()):
 
 
 
-(A digression: you might notice an interesting pattern in the sequence of call counts. Let's see if it holds up:)
+### A Digression
+
+You might notice an interesting pattern in the sequence of call counts, above. Reading from the bottom (`fib(6)`), and skipping `fib(1)`, the number of times `fib` is called with each argument value from $6$ down to $2$ is $1, 1, 2, 3, 5$.
+
+Let's see if this holds up:
 
 
 ```python
@@ -219,11 +223,13 @@ for n, count in sorted(counts.items()):
 
 
 
+Note the sequence: `fib` applied to $12, 11, 10, \ldots, 4, 3, 2$ is $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89$. What does this sequence remind you of? Harder: why does it happen?
+
 ## Caching
 
 Instead of *instrumenting* the code, to simply record how many times the function was called, we can modify it to *cache* the computation, and use this cached value.
 
-This is exactly the same technique as caching web requests, for Text Mining. Here it saves repeated *computation*. (There it avoided repeated *network requests*.) This reduces the function's **computational complexity**.
+This is the same technique that we used to cache web requests, in the Text Mining project. There it avoided repeated *network requests*. Here it saves repeated *computation*. This reduces the function's **computational complexity**.
 
 
 ```python
@@ -287,7 +293,7 @@ For reference, the un-cached timings looked like this:
 
 The code above takes a step *forwards* in terms of performance, but *backwards* in legibility. Half of it is concerned with doing the math, and half of it is concerned with caching. It violated **separation of concerns**.
 
-Let's separate the first instrumented `fib`, that counts how often it's been called, into two functions. `fib_` does the computation. `fib` *wraps* `fib_`, to add the instrumentation.
+Let's separate the first instrumented `fib`, that counts how often it's been called, into two functions. The *inner* function, `fib_`, does the computation. The *outer* function, `fib`, *wraps* `fib_`. It adds the instrumentation.
 
 (The underscore in `fib_` is used in Python the same way a prime $'$ is used in math. `fib_` corresponds to $\textrm{fib}'$ or $F'$.)
 
@@ -315,18 +321,12 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-We can change the wrapper to add different instrumentation, without changing the underlying function:
+We can change the outer function to add different instrumentation. We don't need to touch the inner function.
 
 
 ```python
 from collections import defaultdict
 counts = defaultdict(lambda: 0)
-
-def fib_(n):
-    if n <= 2:
-        return 1
-    else:
-        return fib(n-2) + fib(n-1)
 
 def fib(n):
     global count
@@ -353,18 +353,12 @@ for n, count in sorted(counts.items()):
 
 
 
-Now let's define a wrapper that adds caching. (We'll also keep some instrumentation, so we can see that the cache is working.)
+Now let's define a different outer function, that adds caching. (We'll also keep some instrumentation, so we can see that the cache is working.) It can use the same inner function.
 
 
 ```python
 count = 0
 fib_cache = {}
-
-def fib_(n):
-    if n <= 2:
-        return 1
-    else:
-        return fib(n-2) + fib(n-1)
 
 def fib(n):
     if n in fib_cache:
@@ -386,9 +380,9 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 ## Higher-Order Programming
 
-The various wrapper `fib`s above didn't need to know anything about `fib_` specifically. They were written to know the name `fib_`, but they could have wrapped any other (unary) function instead.
+The various out functions above – all named `fib` – didn't need to know anything about `fib_` specifically. The *name* `fib_` was included in their definitions, but they otherwise could have wrapped any other (unary) function instead.
 
-Let's give these wrapper functions a parameter, which is the function to wrap:
+Let's extract `fib_` from the function definition, and instead supply it as a *parameter*:
 
 
 ```python
@@ -418,11 +412,9 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-Instead of defining `fib_` via `def`, and then defining `fib` via `fib = …`, we can define the function `def fib` and then replace its value.
+Above, `def fib_` defined `fib`, `counting(fib)` used that value, and `fib = …` (on the same line) defined `fib`.
 
-This relieves us from have to come up with a separate name (`fib_`) for the unwrapped `fib`.
-
-It also eliminates the inelegance where `fib_` had to know to call `fib` (that hasn't been defined yet), so that you needed to know that it was going to be wrapped before you could recognize that it was actually recursive.
+We don't need the value of `fib_` after we've used it as an argument to `counting`. We can therefore `def fib` instead of `def fib_`:
 
 
 ```python
@@ -441,7 +433,7 @@ def counting(fn):
         return fn(n)
     return wrapper
 
-fib = counting(fib_)
+fib = counting(fib)
 
 print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 ```
@@ -452,18 +444,19 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 
 
-We can wrap a function multiple times. `fib` below has been wrapped by the counting instrumentation, and then wrapped in a cache, so that it both collects its call count *and* is cached.
+This relieves us from have to come up separate names for `fib_` and `fib`.
+
+It also eliminates the inelegance where `fib_` had to know to call `fib` (that hasn't been defined yet).
+
+Previously, in order to recognize that `fib_` was actually recursive, we needed to know that `fib_` was going to be wrapped up and that the wrapped function would be called `fib`.
+
+Now, you can read the functionality of `fib` straight from its definition. As a bonus, if we comment out the `fib = counting(fib)` line, `fib` still works – it just isn't instrumented.
+
+We can wrap a function multiple times. `fib` below has been wrapped by a function (`counting`) that adds counting instrumentation ,and then wrapped in a function (`cached`) that adds caching. The final value of `fib` is a function that both records how many times it's been called, *and* is cached.
 
 
 ```python
 count = 0
-
-def counting(fn):
-    def wrapper(n):
-        global count
-        count += 1
-        return fn(n)
-    return wrapper
 
 def cached(fn):
     cache = {}
@@ -473,6 +466,13 @@ def cached(fn):
         result = fn(n)
         cache[n] = result
         return result
+    return wrapper
+
+def counting(fn):
+    def wrapper(n):
+        global count
+        count += 1
+        return fn(n)
     return wrapper
 
 def fib(n):
@@ -492,6 +492,146 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
     fib(10) = 55; fib was called 10 times
 
 
+
+Let's write one more wrapping function, for even more instrumentation:
+
+
+```python
+count = 0
+
+def cached(fn):
+    cache = {}
+    def wrapper(n):
+        if n in cache:
+            return cache[n]
+        result = fn(n)
+        cache[n] = result
+        return result
+    return wrapper
+
+def counting(fn):
+    def wrapper(n):
+        global count
+        count += 1
+        return fn(n)
+    return wrapper
+
+def traced(fn):
+    def wrapper(n):
+        print('called {}({})'.format(fn.__name__, n))
+        return fn(n)
+    return wrapper
+
+def fib(n):
+    if n <= 2:
+        return 1
+    else:
+        return fib(n-2) + fib(n-1)
+
+fib = traced(fib)
+fib = counting(fib)
+fib = cached(fib)
+
+print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
+```
+
+{: class="nb-output"}
+
+    called fib(10)
+    called fib(8)
+    called fib(6)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(5)
+    called fib(7)
+    called fib(9)
+    fib(10) = 55; fib was called 10 times
+
+
+
+Order matters! Above, the tracing wrapper is inside the wrapped the caching wrapper. Below, the tracing happens *outside* the cache.
+
+
+```python
+def fib(n):
+    if n <= 2:
+        return 1
+    else:
+        return fib(n-2) + fib(n-1)
+
+fib = cached(fib)
+fib = counting(fib)
+fib = traced(fib)
+
+count = 0
+print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
+```
+
+{: class="nb-output"}
+
+    called wrapper(10)
+    called wrapper(8)
+    called wrapper(6)
+    called wrapper(4)
+    called wrapper(2)
+    called wrapper(3)
+    called wrapper(1)
+    called wrapper(2)
+    called wrapper(5)
+    called wrapper(3)
+    called wrapper(4)
+    called wrapper(7)
+    called wrapper(5)
+    called wrapper(6)
+    called wrapper(9)
+    called wrapper(7)
+    called wrapper(8)
+    fib(10) = 55; fib was called 17 times
+
+
+
+The functions that do the wrapping can be applied to any (unary) function. Here, we'll apply it to a version of the exponentiation function that's been modified to take a single argumen: a tuple of $(\textrm{base}, \textrm{exp})$: `pow((b, e))` $= b^e$.
+
+(The forthcoming Appendix will show how to modify these wrappers for use on functions that take different numbers of arguments.)
+
+
+```python
+def pow(base_and_exp):
+    base, exp = base_and_exp
+    if exp == 0:
+        return 1
+    if exp == 1:
+        return base
+    half = exp // 2
+    return pow((base, half)) * pow((base, exp - half))
+
+pow = traced(pow)
+pow = cached(pow)
+print('exp({}, {}) = {}'.format(2, 15, pow((2, 15))))
+```
+
+{: class="nb-output"}
+
+    called pow((2, 15))
+    called pow((2, 7))
+    called pow((2, 3))
+    called pow((2, 1))
+    called pow((2, 2))
+    called pow((2, 4))
+    called pow((2, 8))
+    exp(2, 15) = 32768
+
+
+
+### Terminology
+
+A function that takes a function as an argument and returns a function as a value, is called a [**higher-order function**, **functor**, or **functional**](https://en.wikipedia.org/wiki/Higher-order_function).
+
+Programming with higher-order functions is [**higher-order programming**](https://en.wikipedia.org/wiki/Higher-order_programming).
+
+"Functor" and "functional" are also used in math, for meanings that aren't that different. For example, the (indefinite) integral $\int$ takes an function $x \rightarrow x^2 dx$ as an argument and returns another function $x \rightarrow 3/2 x^3$ as a value: $\int x^2 dx = 3/2 x^3$.
 
 ## Decorator Syntax
 
@@ -530,13 +670,6 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 ```python
 count = 0
 
-def counting(fn):
-    def wrapper(n):
-        global count
-        count += 1
-        return fn(n)
-    return wrapper
-
 def cached(fn):
     cache = {}
     def wrapper(n):
@@ -545,6 +678,13 @@ def cached(fn):
         result = fn(n)
         cache[n] = result
         return result
+    return wrapper
+
+def counting(fn):
+    def wrapper(n):
+        global count
+        count += 1
+        return fn(n)
     return wrapper
 
 @cached
@@ -560,6 +700,61 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 {: class="nb-output"}
 
+    fib(10) = 55; fib was called 10 times
+
+
+
+
+```python
+count = 0
+
+def cached(fn):
+    cache = {}
+    def wrapper(n):
+        if n in cache:
+            return cache[n]
+        result = fn(n)
+        cache[n] = result
+        return result
+    return wrapper
+
+def counting(fn):
+    def wrapper(n):
+        global count
+        count += 1
+        return fn(n)
+    return wrapper
+
+def traced(fn):
+    def wrapper(n):
+        print('called {}({})'.format(fn.__name__, n))
+        return fn(n)
+    return wrapper
+
+@cached
+@counting
+@traced
+def fib(n):
+    if n <= 2:
+        return 1
+    else:
+        return fib(n-2) + fib(n-1)
+
+print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
+```
+
+{: class="nb-output"}
+
+    called fib(10)
+    called fib(8)
+    called fib(6)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(5)
+    called fib(7)
+    called fib(9)
     fib(10) = 55; fib was called 10 times
 
 
