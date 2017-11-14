@@ -74,7 +74,7 @@ column-width: 9
 
 
   <section class="column">
-    <h3 class="subtitle is-4">Recent Code Notes</h3>
+    <h3 class="subtitle is-4">Recent Notebooks</h3>
     <ul>
       {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
       {% for p in notebooks limit: 5 %}
