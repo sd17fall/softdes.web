@@ -761,8 +761,287 @@ print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
 
 ## Additional Reading
 
-* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+Glossary:
+
 * [Python decorators](https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators)
+* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+* [Functional programming](https://en.wikipedia.org/wiki/Functional_programming)
+* [Higher-order function](https://en.wikipedia.org/wiki/Higher-order_function)
+* [Higher-order programming](https://en.wikipedia.org/wiki/Higher-order_programming)
+
+Tutorials:
+
 * [Primer on Python decorators](https://realpython.com/blog/python/primer-on-python-decorators/), _Real Python_.
 * [A guide to Python's function decorators](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/), _The Code Ship_, Ayman Farhat.
 * [Decorators](http://python-3-patterns-idioms-test.readthedocs.io/en/latest/PythonDecorators.html), _Python 3 Patterns, Recipes and Idioms_.
+
+## Appendix: Variadic Decorators
+
+The following higher-order functions apply to functions that take any number of arguments.
+
+
+```python
+count = 0
+
+def cached(fn):
+    cache = {}
+    def wrapper(*args):
+        if n in cache:
+            return cache[args]
+        result = fn(*args)
+        cache[args] = result
+        return result
+    return wrapper
+
+def counting(fn):
+    def wrapper(*args):
+        global count
+        count += 1
+        return fn(*args)
+    return wrapper
+
+def traced(fn):
+    def wrapper(*args):
+        print('called {}({})'.format(fn.__name__, ', '.join(map(str, args))))
+        return fn(*args)
+    return wrapper
+```
+
+They can be used on `fib`, which has a single parameter:
+
+
+```python
+def fib(n):
+    if n <= 2:
+        return 1
+    else:
+        return fib(n-2) + fib(n-1)
+
+fib = traced(fib)
+fib = counting(fib)
+fib = cached(fib)
+
+print("fib({}) = {}; fib was called {:,} times".format(10, fib(10), count))
+```
+
+{: class="nb-output"}
+
+    called fib(10)
+    called fib(8)
+    called fib(6)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(7)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(6)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(9)
+    called fib(7)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(6)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(8)
+    called fib(6)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(7)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(6)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(5)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    called fib(4)
+    called fib(2)
+    called fib(3)
+    called fib(1)
+    called fib(2)
+    fib(10) = 55; fib was called 218 times
+
+
+
+But unlike the original higher-order functions, they can also be used with a more natural definition of `pow`, that has *two* parameters:
+
+
+```python
+def pow(base, exp):
+    if exp == 0:
+        return 1
+    if exp == 1:
+        return base
+    half = exp // 2
+    return pow(base, half) * pow(base, exp - half)
+
+pow = traced(pow)
+pow = counting(pow)
+pow = cached(pow)
+
+print('exp({}, {}) = {}'.format(2, 15, pow(2, 15)))
+```
+
+{: class="nb-output"}
+
+    called pow(2, 15)
+    called pow(2, 7)
+    called pow(2, 3)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 4)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 8)
+    called pow(2, 4)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 4)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    exp(2, 15) = 32768
+
+
+
+And like the original higher-order functions, these new functionals can also be used as decorators:
+
+
+```python
+@cached
+@counting
+@traced
+def pow(base, exp):
+    if exp == 0:
+        return 1
+    if exp == 1:
+        return base
+    half = exp // 2
+    return pow(base, half) * pow(base, exp - half)
+
+print('exp({}, {}) = {}'.format(2, 15, pow(2, 15)))
+```
+
+{: class="nb-output"}
+
+    called pow(2, 15)
+    called pow(2, 7)
+    called pow(2, 3)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 4)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 8)
+    called pow(2, 4)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 4)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    called pow(2, 2)
+    called pow(2, 1)
+    called pow(2, 1)
+    exp(2, 15) = 32768
+
+
