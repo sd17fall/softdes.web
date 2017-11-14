@@ -22,8 +22,8 @@ title: Notes
     <h2>Code Notes</h2>
     <ul>
       {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
-      {% for p in site.notebooks %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+      {% for p in notebooks %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a> <small>({{ p.date | date: '%Y-%m-%d' }})</small></li>
       {% endfor %}
     </ul>
   </section>
