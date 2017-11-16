@@ -1,6 +1,7 @@
 ---
 title: Project Presentation Rubric
 parent: final-project
+survey_url: https://goo.gl/forms/DVvmWqpIUdCUV86F2
 ---
 
 ## Presentation Guidelines
@@ -30,9 +31,13 @@ keep in mind:
 * Be energetic and excited. This is your time to get the class excited about your project.
 
 As an audience member, your job is to be engaged and provide presentation
-feedback. You will be able to communicate feedback to the presenters using a
-Google form (link to be posted). So, make sure to have your laptop charged and
-ready to go.
+feedback. You will be able to communicate feedback to the presenters using
+{% if page.survey_url -%}
+[this Google form]({{ page.survey_url }}).
+{%- else -%}
+a Google form (link to be posted).
+{%- endif %}
+So, make sure to have your laptop charged and ready to go.
 
 {% if site.large_class %}
 
