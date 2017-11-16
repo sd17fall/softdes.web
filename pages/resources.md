@@ -61,6 +61,10 @@ It is a companion to the [Recipes]({% link pages/recipes.md %}) page.
 
 These have moved to [Atom recipes]({% link pages/recipes.md %}#atom-recipes).
 
+### Atom Packages
+
+[https://teletype.atom.io](Teletype) is like Google Docs for Atom. It enables real-time collaborative editing of a single Python file from two or more computers.
+
 ## Command Line
 
 ### Bash (Linux / macOS)
@@ -98,8 +102,7 @@ Also see [Git recipes]({% link pages/recipes.md %}#git-recipes) and [Reading Jou
 * [Spring 2014 NINJA tutorial: Introduction to Version Control](https://docs.google.com/presentation/d/15UsxsUBIDA78iplWfKsX0yZAoYIf5ofpEr7PRUE2Y28/edit#slide=id.p)
 * [Spring 2014 NINJA tutorial: Pushing to your GitHub repository](https://docs.google.com/document/d/1faRvcK33bIetPkgBH5Vw3Vlz8vl6jdPFKvtowT6Q1xw/edit)
 
-[Git &amp; GitHub
-presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXBrhTv5DHU4vjQoF99Y/edit?usp=sharing)
+[Git &amp; GitHub presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXBrhTv5DHU4vjQoF99Y/edit?usp=sharing)
 (thanks: Chris)
 
 [One-page cheat sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf) (PDF, thanks: Celine)
@@ -128,8 +131,8 @@ presentation](https://docs.google.com/presentation/d/1NpeHiQKs-y2PKp_XrUgzhSSXXB
 There are a number of types of UML diagrams. For this class, the most useful are:
 
 *  A [Class Diagram](https://en.wikipedia.org/wiki/Class_diagram) describes the responsibilities of and relationships between the classes in a system.
-* An [Object Diagram](https://www.tutorialspoint.com/uml/uml_object_diagram.htm) shows the relationship between objects (instances of classes). (The relationship between a class diagram and an object diagram is the “noun” version of the relationship between a static call graph and a dynamic call graph.)
-* A [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram) shows how objects operate with each other. You can use it to show function (including method) calls and returns between two or more objects. You can also use it to show the flow of actions and responses between a user and the system.
+*  An [Object Diagram](https://www.tutorialspoint.com/uml/uml_object_diagram.htm) shows the relationship between objects (instances of classes). (The relationship between a class diagram and an object diagram is the “noun” version of the relationship between a static call graph and a dynamic call graph.)
+*  A [Sequence Diagram](https://en.wikipedia.org/wiki/Sequence_diagram) shows how objects operate with each other. You can use it to show function (including method) calls and returns between two or more objects. You can also use it to show the flow of actions and responses between a user and the system.
 
 Depending on your project, these may also be helpful:
 
