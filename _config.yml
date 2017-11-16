@@ -41,8 +41,10 @@ defaults:
     values:
       layout: assignment
   - scope:
-      path: notes
+      path: ''
+      type: notebooks
     values:
+      layout: notebook
       omit_title: true
   - scope:
       path: files
