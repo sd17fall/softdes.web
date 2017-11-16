@@ -35,15 +35,17 @@ for src in Dir["notebooks/**/*.ipynb"] do
     # use git of file.mtime to find date
     # convert to stdout and capture this
     # add a date:
-    # sh "jupyter nbconvert #{Shellwords.escape t.sources[0]} --to markdown --output-dir #{Shellwords.escape File.dirname t.name} --template=#{Shellwords.escape TPL}"
-    file_mtime = `git log --diff-filter=A --follow --format=%aI --date=iso -- #{Shellwords.escape t.sources[0]} | tail -1`.chomp
+    # sh "jupyter nbconvert #{Shellwords.escape source} --to markdown --output-dir #{Shellwords.escape File.dirname t.name} --template=#{Shellwords.escape TPL}"
+    source = t.sources[0]
+    file_mtime = `git log --diff-filter=A --follow --format=%aI --date=iso -- #{Shellwords.escape source} | tail -1`.chomp
     if file_mtime.empty?
-      file_mtime = File.mtime(t.sources[0]).iso8601
+      file_mtime = File.mtime(source).iso8601
     end
-    # p file_mtime
-    out =`jupyter nbconvert #{Shellwords.escape t.sources[0]} --to markdown --template=#{Shellwords.escape NOTEBOOK_TEMPLATE} --stdout`
+    content =`jupyter nbconvert #{Shellwords.escape source} --to markdown --template=#{Shellwords.escape NOTEBOOK_TEMPLATE} --stdout`
+    content = content.sub('%MODTIME%', file_mtime)
+    content = content.sub('%SOURCE%', source)
     open(t.name, 'w') do |fd|
-      fd.write out.sub('%MODTIME%', file_mtime)
+      fd.write content
     end
   end
 end

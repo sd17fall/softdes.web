@@ -2,7 +2,7 @@
 {% block header -%}
 ---
 date: %MODTIME%
-omit_title: true
+source: %SOURCE%
 ---
 {% raw %}
 {% include toc %}

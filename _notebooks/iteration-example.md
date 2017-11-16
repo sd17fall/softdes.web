@@ -1,6 +1,6 @@
 ---
 date: 2017-09-23T16:25:00-04:00
-omit_title: true
+source: notebooks/iteration-example.ipynb
 ---
 
 {% include toc %}

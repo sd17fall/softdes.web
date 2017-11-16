@@ -1,6 +1,6 @@
 ---
 date: 2017-09-26T14:10:32-04:00
-omit_title: true
+source: notebooks/recursion.ipynb
 ---
 
 {% include toc %}

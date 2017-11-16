@@ -1,6 +1,6 @@
 ---
 date: 2017-11-13T17:59:30-05:00
-omit_title: true
+source: notebooks/caching-and-decorators.ipynb
 ---
 
 {% include toc %}

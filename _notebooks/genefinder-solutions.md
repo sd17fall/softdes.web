@@ -1,6 +1,6 @@
 ---
 date: 2017-09-29T20:49:07-04:00
-omit_title: true
+source: notebooks/genefinder-solutions.ipynb
 ---
 
 {% include toc %}

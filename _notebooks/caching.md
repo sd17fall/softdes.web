@@ -1,6 +1,6 @@
 ---
 date: 2017-10-02T15:08:22-04:00
-omit_title: true
+source: notebooks/caching.ipynb
 ---
 
 {% include toc %}

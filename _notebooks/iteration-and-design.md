@@ -1,6 +1,6 @@
 ---
 date: 2017-09-24T13:11:14-04:00
-omit_title: true
+source: notebooks/iteration-and-design.ipynb
 ---
 
 {% include toc %}

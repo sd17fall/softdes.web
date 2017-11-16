@@ -1,6 +1,6 @@
 ---
 date: 2017-09-28T18:11:27-04:00
-omit_title: true
+source: notebooks/palindromes.ipynb
 ---
 
 {% include toc %}

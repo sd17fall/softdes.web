@@ -1,6 +1,6 @@
 ---
 date: 2017-09-30T10:39:35-04:00
-omit_title: true
+source: notebooks/genefinder-going-beyond.ipynb
 ---
 
 {% include toc %}

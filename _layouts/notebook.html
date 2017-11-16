@@ -4,4 +4,8 @@ layout: default
 
 {{ content }}
 
-<a href="{{site.github.repository_url}}{{ page.path | replace: '_notebooks/', '/blob/master/notebooks/' | replace: '.md', '.ipynb' }}">Source</a>
+{% if page.source %}
+  <footer>
+    <a href="{{site.github.repository_url}}/blob/master/{{ page.source }}">Source</a>
+  </footer>
+{% endif %}
