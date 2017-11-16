@@ -8,7 +8,9 @@ layout: default
   {% endif %}
 {% endfor %}
 {% if page.parts == nil or page.due < site.time %}
+  {% if page.due %}
     <em>Due: {{ page.due | date: site.due_datetime_format }}</em>
+  {% endif %}
 {% endif %}
 
 {{ content }}
