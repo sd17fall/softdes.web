@@ -12,3 +12,6 @@ due: 2017-11-30 09:00:00 -05:00
   * [Python Exception Handling - Try, Except and Finally](https://www.programiz.com/python-programming/exception-handling), Python by Programiz
   * [Python Custom Exceptions](https://www.programiz.com/python-programming/user-defined-exception), Python by Programiz
 * Complete Reading Journal 12 [will be released Monday afternoon].
+
+## By the end of class on Thursday
+* Complete the [Final Event survey](https://goo.gl/forms/IGfqZvK7RFw8Oj0K2).
