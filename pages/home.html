@@ -19,6 +19,7 @@ column-width: 9
 <section class="columns box">
   <section class="column">
     <h3 class="subtitle is-4">Upcoming</h3>
+      <div><em>Warning: these aren't in order!</em></div>
       {% assign assignments = site.assignments | sort: "due" %}
       {% for assignment in assignments %}
         {% assign announce = assignment.announce | default: site.time %}
@@ -28,7 +29,8 @@ column-width: 9
             {% if parts.size == nil %}
               <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
             {% endif %}
-            {% for part in parts limit: 1 %}
+            {% for part in parts limit: 10 %}
+              {% if forloop.index0 > 0 %}</div><div>{% endif %}
               <a href="{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} – {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
               is due {{ part.due | date: site.due_datetime_format }}.
             {% endfor %}
