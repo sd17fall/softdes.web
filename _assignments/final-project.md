@@ -23,7 +23,7 @@ parts:
   due: 2017-11-16 10:50:00 -05:00
   tag: project-presentation
 - name: Project Website
-  due: 2017-12-04 09:00:00 -05:00
+  due: 2017-12-04 17:00:00 -05:00
   tag: project-website
 - name: Project Website, feedback addressed
   due: 2017-12-07 09:00:00 -05:00
@@ -125,10 +125,10 @@ There will be limited time for feedback in class, but you can communicate your f
 
 ### Project Website
 
-{% assign part = page.parts[page.expo_part] %}
-_Due: end of day {{ part.due | date: '%A, %B %-d' }}_
+{% assign part = page.parts[page.website_part] %}
+_Due: {{ part.due | date: '%-I:%M %p %A, %B %-d' }}._
 
-_Final revision, that incorporates instructor feedback, due end of day {{ page.parts[page.website_revision].due | date: '%A, %B %-d' }}_
+_Final revision, that incorporates instructor feedback, due {{ page.parts[page.website_revision].due | date: '%-I:%M %p %A, %B %-d' }}._
 
 **The final website is worth 15% of the project grade**
 
