@@ -4,15 +4,25 @@ column-width: 9
 ---
 
 {% for p in site.activities %}
-  {% assign s_date = site.time | date: '%Y-%m-%d' %}
-  {% assign a_date = p.date | date: '%Y-%m-%d' %}
-  {% if a_date != s_date %}{% continue %}{% endif %}
-    <h2 class="title is-2">In-Class Activity</h2>
-    <section class="columns box">
-      <div class="is-size-5">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </div>
-    </section>
+  {% assign cur_date = site.time | date: '%Y-%m-%d' %}
+  {% assign start_date = p.date | date: '%Y-%m-%d' %}
+  {% assign end_date = p.end_date | default: p.date | date: '%Y-%m-%d' %}
+  {% if start_date <= cur_date and cur_date <= end_date %}
+    {% if p.inline %}
+      <h2 class="title is-2">{{ p.title }}</h2>
+      <section class="columns box">
+        <div class="is-size-6">
+          {{ p.content }}
+        </div>
+      </section>
+    {% else %}
+      <h2 class="title is-2">In-Class Activity</h2>
+      <section class="columns box">
+        <div class="is-size-5">
+          <a href="{{ p.url }}">{{ p.title }}</a>
+      </section>
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
 <h2 class="title is-2">Assignments</h2>
