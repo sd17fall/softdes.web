@@ -341,7 +341,7 @@ generic goals for the mid-project check-in:
 * If you are planning to use a library that you read about, you should have verified that you can install it and that it can be used for the purpose that you want.
 * You should have a good start on implementing some of the classes for your project.
 
-#### Project Write-up and Reflection
+### Project Write-up and Reflection
 
 {% assign part = page.parts[3] %}
 _Due: {{ part.due | date: site.part_due_date_format }}_
