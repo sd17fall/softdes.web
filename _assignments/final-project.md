@@ -208,7 +208,7 @@ and selectively edited for a different context:
 * **Poster** - large form factor, tool to support your demo (content need not stand alone without explanation)
 * **Website** - one-way communication, allows for more complete/in-depth coverage
 
-**Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ page.parts[4].due | date: '%b %-d' }} expo.
+**Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ part.due | date: '%b %-d' }} final event.
 
 ### Code submission
 
