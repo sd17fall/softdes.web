@@ -143,7 +143,7 @@ The project website can serve many audiences, including:
 * Current and future SoftDes students and faculty
 * Potential users of your software and those with a domain-specific interest in your topic
 * Future employers
-* Expo audience, broader Olin community, family
+* Final event audience, broader Olin community, family
 
 There are many successful formats for a project website, but you should
 consider including:
@@ -207,6 +207,10 @@ and selectively edited for a different context:
 
 * **Poster** - large form factor, tool to support your demo (content need not stand alone without explanation)
 * **Website** - one-way communication, allows for more complete/in-depth coverage
+
+Posters are generally 24 x 36 inches.
+You may use a larger size if you want.
+You can print your poster in the Olin computer lab.
 
 **Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ part.due | date: '%b %-d' }} final event.
 
