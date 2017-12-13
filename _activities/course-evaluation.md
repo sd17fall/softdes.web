@@ -8,8 +8,8 @@ inline: true
 ## Olin Students / Cross-Registered Students with Olin logins
 
 1. Sign into <https://my.olin.edu>.
-2. Click on the "Academic & Student Life" tab.
-3. Click on "Course Evaluations."
+2. Click on the ["Academic & Student Life"](https://my.olin.edu/ICS/Academic__Student_Life/) tab.
+3. Click on ["Course Evaluations"](https://my.olin.edu/ICS/Academic__Student_Life/Course_Evaluations.jnz).
 
 ## If you don't know your Olin login information
 
