@@ -248,7 +248,8 @@ about this, just ask.
 {% assign part = page.parts[page.expo_part] %}
 _Date: {% if part.due %}{{ part.due | date: '%A, %b %-d, %-H:%M %p' }}–{{ part.due | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
 
-During the Final Event, both sections of SoftDes will meet in AC326
+During the Final Event, {% if site.sections > 1 %} both sections of {% endif %}
+SoftDes will meet in {{ site.room_number }}
 for an EXPO style poster/demo session of your final projects. This session is
 for everyone to share what they've created, and will not be evaluated. We will
 be inviting other members of the Olin community to check out your fantastic
