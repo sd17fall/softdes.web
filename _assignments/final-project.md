@@ -212,6 +212,16 @@ Posters are generally 24 x 36 inches.
 You may use a larger size if you want.
 You can print your poster in the Olin computer lab.
 
+Your poster should have the same sections as your website (but leave out installation instructions). It serves two purposes:
+* We will put these on the wall during the final event, to display our work to each other and to visitors
+* It is practice for a research poster, which is a standard format for presenting work at an academic conference, or in the halls of an academic institution. You may have seem posters during Olin EXPOs, or on some of the AC halls at other times. [Thinking and explaining clearly and laying out your work in this format is not bad practice for industry presentations too.]
+
+Examples and guides:
+* <https://guides.nyu.edu/posters>
+* <https://ugs.utexas.edu/our/poster/samples>
+* <https://nau.edu/undergraduate-research/poster-presentation-tips/>
+* <http://justinlmatthews.com/posterhelp/posterguide/>
+
 **Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ part.due | date: '%b %-d' }} final event.
 
 ### Code submission
