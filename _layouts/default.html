@@ -79,7 +79,11 @@
                   <li>found = {{ p.path }}, {{ p.url }}</li>
                   <li>keys = {% for k in p %}{{k[0]}}.{% endfor %}</li>
                 {% endif %}
-                <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+                {% if p.url contains 'http' %}
+                  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+                {% else %}
+                  <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+                {% endif %}
               {% endfor %}
             </ul>
           {% endfor %}
