@@ -47,7 +47,7 @@
             {% assign title = page.title | default: title | replace: '.html', '' %}
           {% endif %}
           <li class="{{ is_active_class }}">
-            <a href="{{ url }}">
+            <a href="{{ site.baseurl }}{{ url }}">
               {{ title }}
             </a>
           </li>
@@ -64,9 +64,9 @@
               {% if assignment.parent %}{% continue %}{% endif %}
               {% if assignment.announce > site.time %}{% continue %}{% endif %}
               {% if assignment.due < site.time %}{% continue %}{% endif %}
-              <li><a href="{{ assignment.url }}">{{ assignment.title }}</a></li>
+              <li><a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a></li>
             {% endfor %}
-            <li class="menu-list"><a href="{% link pages/assignments.html %}">Past and future…</a></li>
+            <li class="menu-list"><a href="{{ site.baseurl }}{% link pages/assignments.html %}">Past and future…</a></li>
           </ul>
 
           {% for section in site.data.sidebar %}

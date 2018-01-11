@@ -37,11 +37,11 @@ column-width: 9
         <div>
             {% assign parts = assignment.parts | where_exp: "part", "part.due > site.time" %}
             {% if parts.size == nil %}
-              <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
+              <a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
             {% endif %}
             {% for part in parts limit: 10 %}
               {% if forloop.index0 > 0 %}</div><div>{% endif %}
-              <a href="{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} – {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
+              <a href="{{ site.baseurl }}{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} – {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
               is due {{ part.due | date: site.due_datetime_format }}.
             {% endfor %}
           </div>
@@ -57,12 +57,12 @@ column-width: 9
         {% assign d = site.time | date: '%s' | minus: start_s | divided_by: 86400 %}
         {% if assignment.due < site.time and d < 5 %}
           <div>
-            <a href="{{ assignment.url }}">{{ assignment.title }}</a> was due {{ assignment.due | date: site.due_datetime_format }}.
+            <a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a> was due {{ assignment.due | date: site.due_datetime_format }}.
           </div>
         {% endif %}
       {% endfor %}
       <div>
-        <a href="{% link pages/assignments.html %}">more…</a>
+        <a href="{{ site.baseurl }}{% link pages/assignments.html %}">more…</a>
       </div>
   </section>
 </section>
@@ -74,13 +74,13 @@ column-width: 9
     <ul>
       {% for p in site.posts limit: 3 %}
         <li>
-          <a href="{{ p.url }}">{{ p.title }} lecture notes</a>
+          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }} lecture notes</a>
           {% if p.categories.size > 0 %}
             – {{ p.categories | join: ', ' }}
           {% endif %}
         </li>
       {% endfor %}
-      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
+      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
     </ul>
   </section>
 
@@ -90,9 +90,9 @@ column-width: 9
     <ul>
       {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
       {% for p in notebooks limit: 5 %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
       {% endfor %}
-      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
+      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
     </ul>
   </section>
 </section>
