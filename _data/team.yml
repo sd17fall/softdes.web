@@ -1,21 +1,3 @@
-- first_name: Duncan
-  office_hours: Sunday, 6-8pm
-  office_location: Library
-- first_name: Emily
-  office_hours: Saturday, 4-6pm
-  office_location: Library
-- first_name: Hannah
-  office_hours: Tuesdays 7-9 pm
-  office_location: Library
-- first_name: Matt
-  office_hours: TBD because SCOPE
-  office_location: Library
-- first_name: Seungin
-  office_hours: Sunday, 4-6pm
-  office_location: Library
-- first_name: Tony
-  office_hours: Wednesday TBD
-  office_location:
-- first_name: Oliver
-  office_hours: Drop in or by appointment
-  office_location: MH 365, or Slack to find me
+- first_name: Paul
+  office_hours: TBD
+  office_location: AC112
