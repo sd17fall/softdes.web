@@ -3,7 +3,7 @@ short_title: Software Design
 description: An introduction to software design.
 timezone: America/New_York
 calendar_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJGhlctkwfwPHcEQ9H_sIML5rezTEDtDIgsTZyq4dlARZmKvGP-NTWJqu9zN1huDfpKMJQvAcYwmCq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
-
+future: true
 baseurl: /softdes.web
 
 sections: 3
