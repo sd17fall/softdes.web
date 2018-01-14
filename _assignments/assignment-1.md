@@ -18,7 +18,7 @@ Due 9am Thursday 7 September.
   * Answer a question that someone has asked.
   * Post a computing-related link or news item.
   * Say "Hi" or "Present".
-* Complete Reading Journal 1. Follow [these instructions]({% link pages/reading-journal.md %}) to submit it.
+* Complete Reading Journal 1. Follow [these instructions]({{site.baseurl}}{% link pages/reading-journal.md %}) to submit it.
 
 ## Optional (fun) reading
 
