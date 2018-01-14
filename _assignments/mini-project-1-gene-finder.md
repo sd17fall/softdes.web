@@ -122,7 +122,7 @@ The podcast discusses a number of topics, but the first segment of the podcast
 is about Typhoid Mary (although, you really should listen to the whole thing;
 you will not be disappointed).
 
-![]({% link images/assignments/gene-finder/mary-nyamerican.jpg %})
+![]({{ site.baseurl }}{% link images/assignments/gene-finder/mary-nyamerican.jpg %})
 
 Image source: <http://en.wikipedia.org/wiki/Typhoid_Mary>
 
@@ -194,7 +194,7 @@ start).
 Now that you have a good sense of the functions you will be filling out, take
 a look at this function diagram.
 
-![]({% link images/assignments/gene-finder/FunctionDiagram.png %})
+![]({{ site.baseurl }}{% link images/assignments/gene-finder/FunctionDiagram.png %})
 
 This diagram shows all of the functions in the program, and uses a directed
 arrow to indicate that the function on the "from" side of the arrow calls the
@@ -558,7 +558,7 @@ For example, generate a picture that shows where the genes are in the DNA strand
 * [Kivy](https://kivy.org/#home) for interactive user interfaces.
 * [pygame](http://www.pygame.org/news) for writing games, especially platformer games. We'll be using pygame for the third mini-project.
 
-![](/images/assignments/gene-finder/genes.png)
+![]({{ site.baseurl }}/images/assignments/gene-finder/genes.png)
 
 You can also explore:
 * Draw a histogram that compares the lengths of the genes found to the lengths of the noncoding ORFs from the shuffled sequences.
