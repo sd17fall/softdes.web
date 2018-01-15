@@ -6,10 +6,10 @@
     url: /resources/recipes/
   - title: Think Python
     url: http://greenteapress.com/wp/think-python-2e/
-  - title: Python 3.5 Documentation
-    url: https://docs.python.org/3.5/
-  - title: Python 3.5 Standard Library
-    url: https://docs.python.org/3.5/library/index.html
+  - title: Python 3.6 Documentation
+    url: https://docs.python.org/3.6/
+  - title: Python 3.6 Standard Library
+    url: https://docs.python.org/3.6/library/index.html
   - title: Python Tutor
     url: http://www.pythontutor.com
   - title: Git Help
