@@ -5,8 +5,6 @@ date: 2018-01-23 15:10:00 -04:00
 
 {% include toc %}
 
-## Keep Calm and SoftDes On
-
 Before we can get down to the business, we need to make sure we have the right tools for the job. If you follow these instructions (with help from our amazing NINJA team), your computer will be primed and ready to do some serious computational work.
 
 Initially, the amount of new stuff here may seem intimidating. Please do not let this discourage you! We (NINJAs and faculty) will provide lots of help and guidance along the way to help you setup, and then gain comfort with your new toolset. The process will start at the end of the first class, and will continue with additional NINJA / faculty office hours to help you complete the process successfully. Additionally, you will gain familiarity and comfort with this toolset as the semester progresses. In other words, you should think of learning the toolset as a process and not something that you need to do all at once.
@@ -15,7 +13,11 @@ Initially, the amount of new stuff here may seem intimidating. Please do not let
 
 The instructions below will allow you to setup the “officially supported” environment for SoftDes. Some deviations from the setup below are okay while others are not (when in doubt please ask). That being said, it will likely be more difficult for us to help you debug problems with your setup if you have a nonstandard environment.
 
-## Step 1: Install Python
+## Step 1: Install Ubuntu
+
+TODO
+
+## Step 2: Install Python
 
 [Adapted from _Modeling and Simulation in Python_, by Allen Downey.]
 
@@ -27,17 +29,17 @@ Anaconda is available for Linux, macOS, and Windows. By default, it puts all fil
 
 To install Anaconda, visit the [Anaconda install page](http://docs.continuum.io/anaconda/install.html).
 
-## Step 2: Verify Jupyter
+## Step 3: Verify Jupyter
 
-Run `jupyter -h` verify that Jupyter is installed.
+Run `jupyter -h` to check if Jupyter is installed.
 
-When you install Anaconda, you should get Jupyter by default, but if not, run
+If Jupyter was not installed automatically with Anaconda, you should run
 
     conda install jupyter
 
-## Step 3: Get Started with Git
+## Step 4: Get Started with Git
 
-We will make heavy use of Git (and GitHub in this class). Haven’t heard of Git? That’s totally fine (and totally expected)! Before we do some course specific Git stuff, take some time to read [Chapter 1](https://github.com/AllenDowney/amgit/blob/master/en/01-introduction/01-chapter1.markdown) of Allen’s excellent online book called AmGit.
+We will make heavy use of Git (and GitHub in this class). Haven’t heard of Git? That’s totally fine (and totally expected). Before we do some course-specific Git stuff, take some time to read [Chapter 1](https://github.com/AllenDowney/amgit/blob/master/en/01-introduction/01-chapter1.markdown) of Allen’s excellent online book called AmGit.
 
 ### Install Git
 
@@ -45,7 +47,9 @@ Git may already be installed on your system. Enter `git --version` into a termin
 
 Otherwise, download and install git from the [git download page](https://git-scm.com/download/).
 
+{::comment}
 If you are a macOS user and you are using [homebrew](https://brew.sh), you can run `brew install git` instead of download  git from the download page. If you don't know what this means, use the download page.
+{:/comment}
 
 ### Create a GitHub Account
 
@@ -71,7 +75,7 @@ Now that you have the basic idea of what version control is and what it is good 
 >
 > It is probably a good idea to think of everything you do on GitHub as part of your public professional reputation.
 
-### Step 4. Get the Reading Journal
+### Step 5. Get the Reading Journal
 
 We will be using GitHub for a number of use cases in the class.
 
@@ -90,7 +94,7 @@ Since there’s reading due next class, you will need to perform the steps below
 $ git clone git@github.com:sd17fall/ReadingJournal-myname.git ReadingJournal
 ```
 
-Now you have a copy of the ReadingJournal folder (directory) on your drive. Use the terminal, macOS Finder, Windows Explorer, or Ubuntu File Manager to verify that it is present.
+Now you have a copy of the ReadingJournal folder (directory) on your drive. Use the terminal{::comment}, macOS Finder, Windows Explorer,{:/comment} or Ubuntu File Manager to verify that it is present.
 
 Next, you can fire up Jupyter notebook and load the reading journal for day X.
 
@@ -101,12 +105,13 @@ $ jupyter notebook reading-journal-1.ipynb
 
 If all goes well, this should bring up a web-browser with the reading questions.
 
-## Step 5. Install Atom
+## Step 6. Install Atom
 
 1. [Download and install](http://flight-manual.atom.io/getting-started/sections/installing-atom/) the [Atom text editor](https://atom.io) onto your computer.
 2. Follow the [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/) instructions to create a text file and save it.
 3. Follow the [Atom Packages](http://flight-manual.atom.io/using-atom/sections/atom-packages/) instructions to find and install the following packages: `python-tools`, `trailing-spaces`, `Hydrogen`.
 
+{::comment}
 On Windows, if you see an error like this:
 
 ![](/images/setup/error_python-tools_480.jpg)
@@ -120,3 +125,4 @@ Then do the following:
   * Find the "python-tools" package
   * Click Settings.
   * In the “Path to python directory” setting, paste the path from 1., *without* the final `python.exe`: for example, `C:\Users\MYNAME\AppData\Local\Continuum\Anaconda3\python.exe`
+{:/comment}

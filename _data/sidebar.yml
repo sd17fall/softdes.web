@@ -30,7 +30,5 @@
   children:
   - title: Calendar
     url: /calendar/
-  - title: Course Description
-    url: /description/
   - title: Course Policies
     url: /policies/

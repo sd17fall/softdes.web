@@ -8,4 +8,4 @@ To build and deploy locally
 bundle exec jekyll serve
 ```
 
-To access the server, go to [http://127.0.0.1:4000/softdes.web/](http://127.0.0.1:4000/softdes.web/)
+To access the server, go to [http://127.0.0.1:4000](http://127.0.0.1:4000)
