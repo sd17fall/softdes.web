@@ -15,7 +15,17 @@ The instructions below will allow you to setup the “officially supported” en
 
 ## Step 1: Install Ubuntu
 
-TODO
+Paul's note: this was copied with minimal modification from the SoftDes Spring 2016 website.
+
+Our officially supported OS is Ubuntu 16.04.3 64-bit ([link to ISO](http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso)).  The preferred method for installation is to use one of the provided SoftDes thumb drives.  These thumb drives have been pre-loaded with a bootable installer for Ubuntu 16.04.3.  In order to go forward with the installation you need to insert the thumb drive, reboot your computer, and hold the F12 key before your computer starts to load Windows.  You will now be at your computer's BIOS menu.  Use the arrow keys to select book from "USB Storage Device".  If everything has gone properly, the Ubuntu installer will start.  You may find [IT's instructions](http://wikis.olin.edu/linux/doku.php) useful for completing the installation steps (warning: these are somewhat out of date).
+
+First-year laptops seem to have enough free space on the hard drive to install Linux, so you can just follow the default "Install Linux alongside Windows" instructions. If you have an older laptop or otherwise don't have room for the Linux install, you will need to adjust your hard drive partition sizes to make room. Use this link for some [detailed instructions on how to complete the partitioning process](https://askubuntu.com/questions/343268/how-to-use-manual-partitioning-during-installation/343370#343370).  When in doubt ask for help as this part is a bit tricky.
+
+Another option is to use a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine).  In this variant you will run Ubuntu inside of a window inside of the Windows operating system (or Mac OSX if that is what you have).  We will also have thumb drives on hand that can be used to install Ubuntu as a virtual machine.  We recommend the freely available program [Virtual Box](https://www.virtualbox.org/) if you are running a VM.  Here are some guidlines to follow if you wind up using a VM.
+
+1.  Make sure to allocate at least 2 CPUs (preferably 4) and at least 2 GB (preferably 4GB) of RAM to your Ubuntu VM.
+2.  If you are using VirtualBox, make sure to install the VirtualBox Guest Additions once your Ubuntu is up and running.
+3.  If you are using VirtualBox and are experiencing sluggish performance, [consider checking the "Use Host I/O Cache" box](https://www.electricmonk.nl/log/2016/03/14/terrible-virtualbox-disk-performance/) in the settings.
 
 ## Step 2: Install Python
 
@@ -43,9 +53,12 @@ We will make heavy use of Git (and GitHub in this class). Haven’t heard of Git
 
 ### Install Git
 
-Git may already be installed on your system. Enter `git --version` into a terminal window to test. If this prints something like `git version 2.14.1`, you are good to go. (The exact number doesn't matter, so long as it's 2.something.)
+If you just installed Ubuntu, you will need to install Git using the instructions below.  If you had an existing Ubuntu installation, Git may already be installed on your system. Enter `git --version` into a terminal window to test. If this prints something like `git version 2.14.1`, you are good to go. (The exact number doesn't matter, so long as it's 2.something.)
 
-Otherwise, download and install git from the [git download page](https://git-scm.com/download/).
+Otherwise, you can install it from the terminal by running the command
+```bash
+$ sudo apt-get install git
+```
 
 {::comment}
 If you are a macOS user and you are using [homebrew](https://brew.sh), you can run `brew install git` instead of download  git from the download page. If you don't know what this means, use the download page.
@@ -75,7 +88,7 @@ Now that you have the basic idea of what version control is and what it is good 
 >
 > It is probably a good idea to think of everything you do on GitHub as part of your public professional reputation.
 
-### Step 5. Get the Reading Journal
+### Get the Reading Journal
 
 We will be using GitHub for a number of use cases in the class.
 
@@ -105,7 +118,7 @@ $ jupyter notebook reading-journal-1.ipynb
 
 If all goes well, this should bring up a web-browser with the reading questions.
 
-## Step 6. Install Atom
+## Step 5. Install Atom
 
 1. [Download and install](http://flight-manual.atom.io/getting-started/sections/installing-atom/) the [Atom text editor](https://atom.io) onto your computer.
 2. Follow the [Atom Basics](http://flight-manual.atom.io/getting-started/sections/atom-basics/) instructions to create a text file and save it.
