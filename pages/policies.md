@@ -53,7 +53,6 @@ Reading journals must be submitted by pushing to GitHub before 9am on the day of
 
 There will be four mini-projects over the course of the semester. The first two will be completed individually, and you may work in teams on the second two. Combined, these four mini-projects will account for 40% of your final grade.
 
-Later in the semester, you will have an opportunity to close the feedback loop by revisiting one of your earlier mini-project assignments. Using what you learned in the intervening time, you will reflect upon, make corrections, and extend your previous work. This revision exercise accounts for 5% of your final grade.
 
 ### Late Submissions
 
