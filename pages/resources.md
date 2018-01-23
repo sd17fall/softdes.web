@@ -22,8 +22,8 @@ It is a companion to the [Recipes]({% link pages/recipes.md %}) page.
 ### Python References
 
 * [Think Python, by Allen Downey](http://greenteapress.com/wp/think-python-2e/) – the class text
-* [Python 3.5 Documentation](https://docs.python.org/3.5/)
-* [Python 3.5 Standard Library](https://docs.python.org/3.5/library/index.html)
+* [Python 3.6 Documentation](https://docs.python.org/3.6/)
+* [Python 3.6 Standard Library](https://docs.python.org/3.6/library/index.html)
 * [The Hitchhiker’s Guide to Python](http://docs.python-guide.org/), especially [Writing Great Python Code](http://docs.python-guide.org/en/latest/#writing-great-python-code)
 * [Python Tutor](http://www.pythontutor.com) interactive visualization
 
@@ -67,16 +67,9 @@ These have moved to [Atom recipes]({% link pages/recipes.md %}#atom-recipes).
 
 ## Command Line
 
-### Bash (Linux / macOS)
+### Bash
 
 * [Linux at Olin](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxzZDE1c3ByaW5nfGd4OmMyNzcyOTBjYThlMTM1Mg)
-
-### Windows Command Prompt
-
-* [Introduction to the Windows Command Prompt](https://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)
-* [Windows Command Prompt in 15 Minutes](http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html). (Where it says `java`, think `python` :smile:.)
-* [How to use the Windows command line](https://www.computerhope.com/issues/chusedos.htm)
-* [DOS (Windows command prompt) / Linux equivalents](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/ap-doslinux.html)
 
 ## Git
 
@@ -162,10 +155,8 @@ For simple diagrams, you can get by with the draw tools in PowerPoint, Keynote, 
 
 #### Diagramming Software
 
-* On Windows, the standard commercial software diagram project is Visio.
- * On the Mac, it’s Omnigraffle, with Sketch nipping at the heels. (Sketch is less good at diagrams, but better at graphic design, so many people use it for everything. In this way it’s similar to Illustrator – but I practically never see software developers use Illustrator for diagrams.)
  * Gliffy and LucidChart are cloud-based collaborative diagram editors. Gliffy is free for students. (I don’t know whether the collaborative features are free.)
- * There’s a variety of free / open source draw programs, and also UML-specific drawing programs, mostly written in Java and portable among Linux/macOS/Windows; I’m not familiar with that world.
+ * There’s a variety of free / open source draw programs, and also UML-specific drawing programs, mostly written in Java; I’m not familiar with that world.
 
 #### Text-based diagram tools.
 
