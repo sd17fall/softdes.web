@@ -15,7 +15,7 @@ The instructions below will allow you to setup the “officially supported” en
 
 ## Step 1: Install Ubuntu
 
-Our officially supported OS is Ubuntu 16.04.3 64-bit ([link to ISO](http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso)).  There are two ways configure Ubuntu on your computer: dual boot and virtual machine.
+Our officially supported OS is Ubuntu 16.04.3 64-bit ([link to ISO](http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso) - huge file).  There are two ways configure Ubuntu on your computer: dual boot and virtual machine.
 
 ### Dual Boot (preferred)
 
@@ -25,7 +25,7 @@ The preferred method for installing Ubuntu is to use what's known as a dual boot
 
 In order to install Ubuntu on your computer, you will need to create a partition on your disk drive.  Luckily, Ubuntu's installer can do most of this for you, however, this will only work if you have unpartitioned space on your drive.  The easiest way to create unpartitioned space on your drive is to shrink the size of your Windows partition.  In this way, unused drive space that is currently allocated to Windows will now be allocated to Ubuntu.
 
-To shrink your Windows volume, you need to open up the Windows "Disk Management" utility.  The easiest way to do this is to click the Windows button in the lower lefthand corner of the screen and enter "diskmgmt.msc" into the box and press enter.  Once you are in the Disk Management utility, check to see if you have any unallocated (or unpartitioned space).  If you do (about 50 GB is a good number), there is no need to do anything.  If you don't (which is the likely case), click on the largest partition and then click the "Shrink Volume" button.  This button will prompt you to enter how much you'd like to shrink your volume by.  We recommend choosing a number at least 50GB (you will enter 50,000 into the utility since it uses MB as its default units).  Once you have shrunk your volume, you will now have space to use for installation of Ubuntu.
+To shrink your Windows volume, you need to open up the Windows "Disk Management" utility.  The easiest way to do this is to click the Windows button in the lower lefthand corner of the screen and enter "diskmgmt.msc" into the box and press enter.  Once you are in the Disk Management utility, check to see if you have any unallocated (or unpartitioned space).  If you do (about 50 GB is a good number), there is no need to do anything.  If you don't (which is the likely case), click on the largest partition and then click the "Shrink Volume" button.  This button will prompt you to enter how much you'd like to shrink your volume by.  We recommend choosing at least 50GB (you will enter 50,000 into the utility since it uses MB as its default units).  Once you have shrunk your volume, you will now have space to use for installation of Ubuntu.
 
 Before beginning the Ubuntu install, you should restart your computer to make sure that Windows has a chance to scan the new partition and update its boot loader.
 
@@ -142,13 +142,13 @@ We will be using GitHub for a number of use cases in the class.
 
 Since there’s reading due next class, you will need to perform the steps below to setup your personal `ReadingJournal` repository.
 
-1. Click on the invitation link <https://classroom.github.com/a/wVVupiFP>
+1. Click on the invitation link <{{ site.data.github.reading_journal_invite }}>
 2. Click the green button “Accept this assignment”.
-3. Follow the remaining instructions until you get to your repository page. It will looks something like this <https://github.com/sd18spring/ReadingJournal-myname>, except with your GitHub user id instead of `myname`.
-4. ***Clone the repository*** by typing the following into your terminal program. Replace `myname` with your GitHub user id.
+3. Follow the remaining instructions until you get to your repository page. It will looks something like <https://github.com/{{ site.data.github.organization }}/ReadingJournal-myname>, except with your GitHub user id instead of `myname`.
+4. Clone the repository to your computer by typing the following into your terminal program. Replace `myname` with your GitHub user id.
 
 ```bash
-$ git clone git@github.com:sd18spring/ReadingJournal-myname.git ReadingJournal
+$ git clone git@github.com:{{ site.data.github.organization }}/ReadingJournal-myname.git ReadingJournal
 ```
 
 Now you have a copy of the ReadingJournal folder (directory) on your drive. Use the terminal{::comment}, macOS Finder, Windows Explorer,{:/comment} or Ubuntu File Manager to verify that it is present.
@@ -157,7 +157,7 @@ Next, you can fire up Jupyter notebook and load the reading journal for day X.
 
 ```bash
 $ cd ReadingJournal
-$ jupyter notebook reading-journal-1.ipynb
+$ jupyter notebook reading-journal-01.ipynb
 ```
 
 If all goes well, this should bring up a web-browser with the reading questions.

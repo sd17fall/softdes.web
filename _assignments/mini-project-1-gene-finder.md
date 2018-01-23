@@ -133,33 +133,21 @@ you will be using, check out this MIT OpenCourseWare video.
 
 ## Getting Set
 
-The first step to getting started on this assignment is to fork the
-[{{site.github.owner_name}}/GeneFinder](https://github.com//{{site.github.owner_name}}/GeneFinder) repository.
-The steps to do this are the same as the ones you went through to create your
+The first step to getting started on this assignment is get a copy of the starter files on your computer.
+The process is the same as the one you went through to create your
 reading journal. For your reference, here are the steps again:
 
-1. Open up a new browser window, and navigate to <https://github.com>
-2. If you are not already logged in, login to your GitHub account by clicking the "sign in" button at the top left of the page
-3. Copy and paste the following URL into the URL bar of the window that you used to login to GitHub [https://github.com//{{site.github.owner_name}}/GeneFinder](https://github.com//{{site.github.owner_name}}/GeneFinder)
-4. Fork the `GeneFinder` repository by clicking on the "Fork" button in the upper right of the window. If prompted for where you should fork the repository, select `@yourgithubusername`.
-5. You should now be at the page that shows your fork of the SoftDes repository. Copy the URL in the box labeled "HTTPS Clone URL".
-6. Open up a terminal and execute the following commands (note: these commands will clone your `GeneFinder` repository in your home directory, please modify the first line to cd to a different directory if you'd rather clone somewhere else).
-
-Linux and macOS:
+1. Click on the invitation link at <{{ site.data.github.genefinder_invite }}>
+2. Click the green button “Accept this assignment”.
+3. Follow the remaining instructions until you get to your repository page. It will looks something like <https://github.com/{{ site.data.github.organization }}/GeneFinder-myname>, except with your GitHub user id instead of `myname`.
+4. Clone the repository to your computer by typing the following into your terminal program. Replace `myname` with your GitHub user id.
+(note: these commands will clone your GeneFinder repository in your home directory, please modify the first line to cd to a different directory if you’d rather clone somewhere else).
 
 ```bash
 $ cd ~
-$ git clone https://github.com/yourgithubusernamehere/GeneFinder.git # the https URL will be the URL copied in step 5)
+$ git clone https://github.com/{{ site.data.github.organization }}/GeneFinder-myname.git GeneFinder
 $ cd GeneFinder
 $ ls *
-```
-
-Windows:
-
-```
-$ git clone https://github.com/yourgithubusernamehere/GeneFinder.git # the https URL will be the URL copied in step 5)
-$ cd GeneFinder
-$ dir
 ```
 
 The last command will show you all of the files in the `GeneFinder` repository.
