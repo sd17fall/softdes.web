@@ -17,8 +17,7 @@ Note the times you start and stop reading (please do this for all the readings).
 * Think Python [chapter 5](http://greenteapress.com/thinkpython2/html/thinkpython2006.html): sections 5.2-5.7 and section 5.11.
 
 ## Do
-
-* Finish [setting up your environment](/activities/setup).
+* Make sure to finish up any activities that you didn't get to from the [Day 1 materials](/notes/day-1).
 * Complete the [course entrance survey](https://goo.gl/forms/5AEwQVWbFzQSHWB43) before class on Friday. This counts towards your participation grade.
 * Complete Reading Journal 1. Follow [these instructions]({{site.baseurl}}{% link pages/reading-journal.md %}) to submit it.
 * Use [this link](https://join.slack.com/t/softdes/signup?x=x-303627938934-302893055029) to join the <http://softdes.slack.com> Slack team.
