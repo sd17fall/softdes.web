@@ -70,11 +70,11 @@ column-width: 9
 <h2 class="title is-2">Notes</h2>
 <section class="columns box">
   <section class="column">
-    <h3 class="subtitle is-4">Recent Lecture Notes</h3>
+    <h3 class="subtitle is-4">Recent Notes and Activities</h3>
     <ul>
       {% for p in site.posts limit: 3 %}
         <li>
-          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }} lecture notes</a>
+          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }} notes</a>
           {% if p.categories.size > 0 %}
             – {{ p.categories | join: ', ' }}
           {% endif %}
