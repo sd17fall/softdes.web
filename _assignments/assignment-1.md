@@ -5,7 +5,7 @@ due: 2018-01-26 13:30:00 -04:00
 
 
 {::comment}
-Removed: 
+Removed:
 * Read [Holding a Program in One's Head](http://paulgraham.com/head.html), Paul Graham.
 MASH joke: [**But first**](https://www.youtube.com/watch?v=UcaWQZlPXgQ)
 {:/comment}
@@ -18,6 +18,7 @@ Note the times you start and stop reading (please do this for all the readings).
 
 ## Do
 
+* Finish [setting up your environment](/activities/setup).
 * Complete the [course entrance survey](https://goo.gl/forms/5AEwQVWbFzQSHWB43) before class on Friday. This counts towards your participation grade.
 * Complete Reading Journal 1. Follow [these instructions]({{site.baseurl}}{% link pages/reading-journal.md %}) to submit it.
 * Use [this link](https://join.slack.com/t/softdes/signup?x=x-303627938934-302893055029) to join the <http://softdes.slack.com> Slack team.
