@@ -3,7 +3,6 @@ title: Assignment 1
 due: 2018-01-26 13:30:00 -04:00
 ---
 
-## Required
 
 {::comment}
 Removed: 
@@ -11,17 +10,22 @@ Removed:
 MASH joke: [**But first**](https://www.youtube.com/watch?v=UcaWQZlPXgQ)
 {:/comment}
 
-* Complete the [course entrance survey](https://goo.gl/forms/5AEwQVWbFzQSHWB43) before class on Friday. This counts towards your participation grade.
-* Use [this link](https://join.slack.com/t/softdes/signup?x=x-303627938934-302893055029) to join the <http://softdes.slack.com> Slack team.
+## Read
 * Familiarize yourself with the [Course Policies]({% link pages/policies.md %}).
-* Read [_Think Python_](http://greenteapress.com/wp/think-python-2e/) chapters 1-3. Note what time you started reading, and what time you stopped. (Please do this for all the readings.) You will use this to avoid working longer than required by the course policy. Also, the reading journal notebook asks how long you spent on the readings and notebook questions – we will use this to calibrate the course work.
-* Read Think Python [chapter 5](http://greenteapress.com/thinkpython2/html/thinkpython2006.html): sections 5.2-5.7 and section 5.11.
+* [_Think Python_](http://greenteapress.com/wp/think-python-2e/) chapters 1-3. Don't just sit back and read passively, get your hands on the keyboard using your Reading Journal (see below)!
+Note the times you start and stop reading (please do this for all the readings). You will use this to avoid working longer than required by the course policy. Also, the reading journal notebook asks how long you spent on the readings and notebook questions – we will use this to calibrate the course work.
+* Think Python [chapter 5](http://greenteapress.com/thinkpython2/html/thinkpython2006.html): sections 5.2-5.7 and section 5.11.
+
+## Do
+
+* Complete the [course entrance survey](https://goo.gl/forms/5AEwQVWbFzQSHWB43) before class on Friday. This counts towards your participation grade.
+* Complete Reading Journal 1. Follow [these instructions]({{site.baseurl}}{% link pages/reading-journal.md %}) to submit it.
+* Use [this link](https://join.slack.com/t/softdes/signup?x=x-303627938934-302893055029) to join the <http://softdes.slack.com> Slack team.
 * Send a message to the `#general` channel of the [Slack](http://sd17fall.slack.com) team. This counts towards your participation grade. You can do any of the following:
   * Ask a question.
   * Answer a question that someone has asked.
   * Post a computing-related link or news item.
   * Say "Hi" or "Present".
-* Complete Reading Journal 1. Follow [these instructions]({{site.baseurl}}{% link pages/reading-journal.md %}) to submit it.
 
 ## Optional (fun) reading
 
