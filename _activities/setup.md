@@ -102,6 +102,8 @@ Otherwise, you can install it from the terminal by running the command
 $ sudo apt-get install git
 ```
 
+Set up your Git identity by following the instructions in [Chapter 1](https://github.com/AllenDowney/amgit/blob/master/en/01-introduction/01-chapter1.markdown#first-time-git-setup).
+
 {::comment}
 If you are a macOS user and you are using [homebrew](https://brew.sh), you can run `brew install git` instead of download  git from the download page. If you don't know what this means, use the download page.
 {:/comment}
@@ -140,13 +142,13 @@ We will be using GitHub for a number of use cases in the class.
 
 Since there’s reading due next class, you will need to perform the steps below to setup your personal `ReadingJournal` repository.
 
-1. Click on the invitation link <https://classroom.github.com/a/XrWDBCx2>
+1. Click on the invitation link <https://classroom.github.com/a/wVVupiFP>
 2. Click the green button “Accept this assignment”.
-3. Follow the remaining instructions until you get to your repository page. It will looks something like this <https://github.com/sd17fall/ReadingJournal-myname>, except with your GitHub user id instead of `myname`.
+3. Follow the remaining instructions until you get to your repository page. It will looks something like this <https://github.com/sd18spring/ReadingJournal-myname>, except with your GitHub user id instead of `myname`.
 4. ***Clone the repository*** by typing the following into your terminal program. Replace `myname` with your GitHub user id.
 
 ```bash
-$ git clone git@github.com:sd17fall/ReadingJournal-myname.git ReadingJournal
+$ git clone git@github.com:sd18spring/ReadingJournal-myname.git ReadingJournal
 ```
 
 Now you have a copy of the ReadingJournal folder (directory) on your drive. Use the terminal{::comment}, macOS Finder, Windows Explorer,{:/comment} or Ubuntu File Manager to verify that it is present.
