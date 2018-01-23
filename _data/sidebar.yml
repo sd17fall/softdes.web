@@ -21,10 +21,8 @@
   children:
   - title: Reading Journal
     url: /reading-journal/
-  - title: Lecture Notes
+  - title: Class Notes and Activities
     url: /notes
-  - title: Handouts and Activities
-    url: /handouts/
   - title: Library Reserves
     url: https://olin.tind.io/record/1512034?ln=en
 
