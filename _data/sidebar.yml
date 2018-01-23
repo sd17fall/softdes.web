@@ -1,3 +1,19 @@
+- title: Course Materials
+  children:
+  - title: Reading Journal
+    url: /reading-journal/
+  - title: Class Notes and Activities
+    url: /notes
+  - title: Library Reserves
+    url: https://olin.tind.io/record/1512034?ln=en
+
+- title: Course Pages
+  children:
+  - title: Calendar
+    url: /calendar/
+  - title: Course Policies
+    url: /policies/
+
 - title: Resources
   children:
   - title: Setup Your Environment
@@ -17,18 +33,4 @@
   - title: Git Help
     url: /resources/#git
 
-- title: Course Materials
-  children:
-  - title: Reading Journal
-    url: /reading-journal/
-  - title: Class Notes and Activities
-    url: /notes
-  - title: Library Reserves
-    url: https://olin.tind.io/record/1512034?ln=en
 
-- title: Course Pages
-  children:
-  - title: Calendar
-    url: /calendar/
-  - title: Course Policies
-    url: /policies/
