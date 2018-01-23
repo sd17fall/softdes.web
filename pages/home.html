@@ -2,7 +2,7 @@
 permalink: /
 column-width: 9
 ---
-
+<!--
 {% for p in site.activities %}
   {% assign cur_date = site.time | date: '%Y-%m-%d' %}
   {% assign start_date = p.date | date: '%Y-%m-%d' %}
@@ -24,6 +24,36 @@ column-width: 9
     {% endif %}
   {% endif %}
 {% endfor %}
+-->
+
+<h2 class="title is-2">Notes</h2>
+<section class="columns box">
+  <section class="column">
+    <h3 class="subtitle is-4">Recent Notes and Activities</h3>
+    <ul>
+      {% for p in site.posts limit: 3 %}
+        <li>
+          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }} notes</a>
+          {% if p.categories.size > 0 %}
+            – {{ p.categories | join: ', ' }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
+    </ul>
+  </section>
+
+  <section class="column">
+    <h3 class="subtitle is-4">Recent Notebooks</h3>
+    <ul>
+      {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
+      {% for p in notebooks limit: 5 %}
+        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
+    </ul>
+  </section>
+</section>
 
 <h2 class="title is-2">Assignments</h2>
 <section class="columns box">
@@ -66,37 +96,6 @@ column-width: 9
       </div>
   </section>
 </section>
-
-<h2 class="title is-2">Notes</h2>
-<section class="columns box">
-  <section class="column">
-    <h3 class="subtitle is-4">Recent Notes and Activities</h3>
-    <ul>
-      {% for p in site.posts limit: 3 %}
-        <li>
-          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }} notes</a>
-          {% if p.categories.size > 0 %}
-            – {{ p.categories | join: ', ' }}
-          {% endif %}
-        </li>
-      {% endfor %}
-      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
-    </ul>
-  </section>
-
-
-  <section class="column">
-    <h3 class="subtitle is-4">Recent Notebooks</h3>
-    <ul>
-      {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
-      {% for p in notebooks limit: 5 %}
-        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
-      {% endfor %}
-      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
-    </ul>
-  </section>
-</section>
-
 
 <h2>Office Hours</h2>
 <table class="table box">
