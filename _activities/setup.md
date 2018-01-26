@@ -148,7 +148,7 @@ Since there’s reading due next class, you will need to perform the steps below
 4. Clone the repository to your computer by typing the following into your terminal program. Replace `myname` with your GitHub user id.
 
 ```bash
-$ git clone git@github.com:{{ site.data.github.organization }}/ReadingJournal-myname.git ReadingJournal
+$ git clone https://github.com/{{ site.data.github.organization }}/ReadingJournal-myname.git ReadingJournal
 ```
 
 Now you have a copy of the ReadingJournal folder (directory) on your drive. Use the terminal{::comment}, macOS Finder, Windows Explorer,{:/comment} or Ubuntu File Manager to verify that it is present.
