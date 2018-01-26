@@ -1,5 +1,5 @@
 ---
-date: 2018-01-25T16:32:51-05:00
+date: 2018-01-25T16:37:43-05:00
 source: notebooks/ThinkPython Ch3 Ex5 PartA Sample Solutions.ipynb
 ---
 
@@ -26,13 +26,20 @@ This exercise can be done using only the statements and other features we have l
 |         |         |
 + - - - - + - - - - +
 ```
-**Hint:** to print more than one value on a line, you can print a comma-separated sequence:
-print '+', '-'
-If the sequence ends with a comma, Python leaves the line unfinished, so the value printed next appears on the same line.
-print '+', 
-print '-'
-The output of these statements is '+ -'.
-A print statement all by itself ends the current line and goes to the next line.
+To print more than one value on a line, you can print a comma-separated sequence of values:
+
+```
+print('+', '-')
+```
+
+By default, `print` advances to the next line, but you can override that behavior and put a space at the end, like this:
+
+```
+print('+', end=' ')
+print('-')
+```
+
+The output of these statements is '+ -'.  The output from the next print statement would begin on the next line.
 
 
 ```python
