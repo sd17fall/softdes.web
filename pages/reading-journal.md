@@ -55,11 +55,11 @@ Then:
   ```bash
   $ git pull upstream master
   ```
-  This should pull in the latest assignment notebook, which you can then complete and push to your `origin` repository by following the usual submission instructions above.
+  This should pull in the latest assignment notebook. It may trigger a merge process between the work you've previously done and the new notebook from the upstream repo. This will launch an editor with a merge message; save it to continue.
 2. Run `jupyter notebook`.
-3. You will see a list of files, that includes the new notebook file. Click on the new notebook file to open and edit it.
+3. You will see a list of files that includes the new notebook file. Click on the new notebook file to open and edit it.
 4. When you are done editing the notebook, click the floppy disk icon <i class="fa fa-floppy-o" aria-hidden="true"></i>, or select the “File > Save and Checkpoint” menu item, to save your work to disk.
-5. Follow the instructions in the next section, “How to get the stuff from my computer to GitHub”, to commit your changes to the repo on your computer and then push them to GitHub.
+5. Follow the usual instructions to submit your work (add, commit, push to your `origin` repository).
 
 ## Checking that you've submitted your homework
 
