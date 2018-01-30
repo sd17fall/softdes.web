@@ -318,13 +318,13 @@ how come?
 
 ### Turning in Week 1 Assignment
 
-You will not be turning in your code for this assignment. However, you are required to check in with a NINJA before the class when the week 1 assignment is due. This check in can either be done in person or via a Slack message. If you are very confident with the material, the online version is probably fine (send a link to your pushed code). If you are having difficulty, an in-person check in is certainly the way to go. The check in is not designed to be big and scary; it is primarily an opportunity for you to get help from your NINJA. All that being said, the check ins will not be productive if you haven't done the necessary preparation before the check in. We hope that adding a bit of a formal assessment component to the check in will help ensure that people put in the appropriate time. The check in grading rubric will be as follows:
+You be turning in your week 1 assignment by pushing your code to Github (this will use the same process you are using for turning in the reading journals).  If you are struggling with the mini-project, we strongly advise you to meet with one of the NINJAs (either for some guidance, or just to look over your program). This week 1 work will be graded using the following rubric:
 
-* The check in never happens, or the assignment has not been started before the check in occurs: 0%
-* Only a minimal attempt has been made to complete the check in materials: 50% (note that minimal results does not imply minimal attempt. It is okay that you are struggling as long as you are trying).
-* All code is written and works or a sincere effort has been made to complete the check in materials: 100%
+* No work has been turned in: 0%
+* Only a minimal attempt has been made to complete the first part of the mini-project: 50%
+* All code is written and works, or a sincere effort has been made to complete the work: 100%
 
-The check in will be worth 20% of the final grade for this assignment.
+The intermediate checkpoint will be worth 20% of the final grade for this assignment.
 
 ## Week 2
 
