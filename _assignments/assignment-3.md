@@ -11,4 +11,4 @@ due: 2018-02-02 13:30:00 -04:00
 
 ## Do
 * Complete Reading Journal 3.
-* Complete [Mini-project 1, part 1](/assignments/mini-project-1-gene-finder/#week-1)
+* Complete [Mini-project 1, part 1](/assignments/mini-project-1-gene-finder.html#week-1)
