@@ -261,6 +261,8 @@ print(added_ten([10, 20, 30, 40]))
 
 We will only work with implementations that create a new list. See [this Stack Overflow question](https://stackoverflow.com/questions/10665591/how-to-remove-list-elements-in-a-for-loop-in-python) for a discussion of some of the pitfalls with trying to delete items from a list from inside a `for` loop.
 
+Note: you will need to implement your own `is_even` function that returns `True` or `False`
+
 
 ```python
 def evens(ns):
@@ -314,7 +316,7 @@ Compare:
 
 ```python
 def evens(ns):
-    return [n for n in [2, 4, 6] if is_even(n)]
+    return [n for n in ns if is_even(n)]
 
 evens([1, 2, 3, 4])
 ```
