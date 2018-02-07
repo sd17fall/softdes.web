@@ -343,7 +343,7 @@ A unit test (make sure you have read the [Unit Testing Instructions](#unit-testi
 'ATGCTACATTCGCAT'
 ```
 
-* `longest_ORF_noncoding`: this function takes as input a DNA sequence and an integer indicating how many random trials should be performed. For each random trial, the DNA sequence should be shuffled and the longest ORF should be computed. The output of the function should be **the length** of the longest ORF that was found across all random trials (that is the output of `longest_ORF_noncoding` is an integer). In order to test this code you may find it useful to use the provided Salmonella DNA sequence (see part 4). For example, if you find a longest ORF of 700, 600, and 300 on your three random trials, this function should output 700.
+* `longest_ORF_noncoding`: this function takes as input a DNA sequence and an integer indicating how many random trials should be performed. For each random trial, the DNA sequence should be shuffled and the longest ORF should be computed. The output of the function should be **the length** of the longest ORF that was found across all random trials (that is the output of `longest_ORF_noncoding` is an integer). In order to test this code you may find it useful to use the provided Salmonella DNA sequence. For example, if you find a longest ORF of 700, 600, and 300 on your three random trials, this function should output 700.
 
 Note 1: In order to randomly shuffle a string you should use the provided `shuffle_string` function.
 If you wanted to implement this function yourself, you could take the following approach:
@@ -415,21 +415,7 @@ state-of-the art one, you can try out one called Glimmer
 
 ### Turning in Week 2 Assignment
 
-Submitting your assignment is a two step process:
-
-1. Complete the work and push it to your GitHub repository
-2. Do at least one of:
-  * Submit a pull request to the upstream {{ site.github.owner_name }} repository that you originally forked from
-  * Visit a NINJA in person to check off week 2 of your assignment
-
-Pull requests are typically used to contribute code to someone else's project
-in the open source world. They let you send changes you've made, which the
-original author can then choose to pull in and accept. We actually like our
-assignment without solutions thank you very much, so we won't be accepting
-your pull requests. Instead, we use them as:
-
-1. Your way to tell us when you're done and we should look at your assignment, and
-2. A mechanism for us to provide written feedback on your code
+In order to turn in your assignment make sure that your work is pushed to your GitHub repository.
 
 For the main assignment, all your code will be in `gene_finder.py`. If you
 choose to do the **Going Beyond** portion, it is up to you how you structure
