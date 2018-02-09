@@ -142,7 +142,7 @@ repository on your computer. For example, if you clone the repository the folder
 ("PIL"). To do so, execute the following command at the Linux terminal:
 
 ```bash
-$ pip install Pillow
+$ conda install Pillow
 ```
 
 The starter code includes a function called `test_image` that uses PIL to
@@ -150,7 +150,7 @@ generate an image where each pixel has a random color value. When you run the
 starter code, you should see several unit test failures from functions you
 will implement later, and it should save an image file named `noise.png` in
 your run directory. You can view `noise.png` using the built-in tool
-`image_viewer`.
+Image Viewer (`eog` on the command line).
 
 [![Random pixel noise]({% link images/assignments/computational-art/noise.png %}){:width="320px" height="320px"}]({% link images/assignments/computational-art/noise.png %})
 
@@ -544,5 +544,4 @@ A much better and more extensive list of guidance around producing an artist's
 statement can be found
 [here](http://www.saic.edu/media/saic/pdfs/lifesaic/careerco-opcenter/workingartistsseries/Handout_WorkingArtist_WritingYourArtistStatement.pdf).
 
-In order to make it into the exhibition you should have your content there no later than
-{{ page.gallery_due | date: site.part_due_date_format }} the day that the assignment is due.
+In order to make it into the exhibition you should have your content there no later than the morning of the day the assignment is due: {{ page.gallery_due | date: site.part_due_date_format }}.
