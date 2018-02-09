@@ -8,7 +8,7 @@ omit_title: true
 
 <ul>
   {% for p in site.activities %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
   {% endfor %}
 </ul>
 
@@ -22,7 +22,7 @@ omit_title: true
     {% if file.path == added and ext == 'pdf' %}
       {% assign day = trimmed | split: '/' | first | replace: 'day', '' %}
       {% assign hand = trimmed | split: '/' | last | split: '.' | first | split: 'activity' | last %}
-      <li><a href="{{ file.path }}">Day {{ day }} Handout {{ hand }}</a></li>
+      <li><a href="{{ site.baseurl }}{{ file.path }}">Day {{ day }} Handout {{ hand }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>

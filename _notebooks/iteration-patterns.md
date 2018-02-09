@@ -8,7 +8,7 @@ source: notebooks/iteration-patterns.ipynb
 
 # Iteration Patterns – map, filter, and reduce
 
-You've learned three *ways* to iterate:
+You've learned three **ways** to iterate:
 
 1. Using a `while` loop:
     ```python
@@ -27,7 +27,7 @@ You've learned three *ways* to iterate:
         // do something with item
     ```
 
-This page discusses three *uses* for iteration:
+This page discusses three **uses** for iteration:
 
 **Mapping**
 
@@ -61,7 +61,7 @@ There's two ways to do this:
 1. modify the original list
 2. return a new list.
 
-These correspond to `chop` and `middle` from the first reading journal.
+These correspond to `chop` and `middle` from first reading journal.
 
 ### A map that modifies its argument
 
@@ -214,7 +214,7 @@ print('added_ten returns', added_ten(lst))  # `add_one` returns a new list
 
 #### `for` and `map`: a connection
 
-In "Iteration Basics", we learned that the `for` statement replaces a number of different statements: that initialize, test, use, and increment the *loop variable*. With `for`, Python handles this for us automatically.
+The `for` statement replaces a number of different statements: that initialize, test, use, and increment the *loop variable*. With `for`, Python handles this for us automatically.
 
 Similarly, the `map` function replaces a number of different statements: that initialize, modify, and return the *accumulator variable*.
 
@@ -227,7 +227,7 @@ $$\{n + 10 : n \in \{2, 4, 6\}\}$$
 
 These are two different ways of writing: the set of numbers $\{n + 10\}$, for $n$ from $\{2, 4, 6\}$. (This set is equal to $\{12, 14, 16\}$.)
 
-Python provides **set comprehensions**. The following set comprehension is equal to the Python set `{12, 14, 16}`: 
+Python provides **set comprehensions** (we'll learn about Python sets later). The following set comprehension is equal to the Python set `{12, 14, 16}`: 
 
 ```python
 {n + 10 for n in {2, 4, 6}}
@@ -260,6 +260,8 @@ print(added_ten([10, 20, 30, 40]))
 *Filtering* returns a list that contains only some items from the original list.
 
 We will only work with implementations that create a new list. See [this Stack Overflow question](https://stackoverflow.com/questions/10665591/how-to-remove-list-elements-in-a-for-loop-in-python) for a discussion of some of the pitfalls with trying to delete items from a list from inside a `for` loop.
+
+Note: you will need to implement your own `is_even` function that returns `True` or `False`
 
 
 ```python
@@ -314,7 +316,7 @@ Compare:
 
 ```python
 def evens(ns):
-    return [n for n in [2, 4, 6] if is_even(n)]
+    return [n for n in ns if is_even(n)]
 
 evens([1, 2, 3, 4])
 ```
@@ -330,6 +332,8 @@ evens([1, 2, 3, 4])
 
 
 ## Reduce
+
+The _reduce_ pattern combines the items in a list into a single value.
 
 
 ```python
@@ -381,7 +385,7 @@ my_sum([2, 4, 6])
 
 
 
-Instead of writing our implementation of `add`, we can use the [operator module](https://docs.python.org/3.5/library/operator.html) to get a Python *function* that acts like the `+` *operator*.
+Instead of writing our implementation of `add`, we could use the [operator module](https://docs.python.org/3.5/library/operator.html) to get a Python *function* that acts like the `+` *operator*.
 
 
 ```python

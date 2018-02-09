@@ -11,7 +11,7 @@ Once you have completed your reading journal (not just the reading exercises, bu
 
 ```bash
 $ cd ReadingJournal
-$ git add reading-journal-*.ipynb
+$ git add reading-journal-01.ipynb
 $ git commit -m "Completed reading journal 1"
 $ git push origin master
 ```
@@ -32,16 +32,16 @@ On your laptop, you should have a cloned copy of the ReadingJournal repository f
 $ cd ReadingJournal
 $ git remote -v
 
-origin	git@github.com://sd17fall/ReadingJournal-myname.git (fetch)
-origin	git@github.com://sd17fall/ReadingJournal-myname.git (push)
+origin	git@github.com://{{ site.data.github.organization }}/ReadingJournal-myname.git (fetch)
+origin	git@github.com://{{ site.data.github.organization }}/ReadingJournal-myname.git (push)
 ```
 
-(Depending on how you set up your reading journal, you may see `https://github.com/sd17fall/ReadingJournal-myname.git` instead of `git@github.com://sd17fall/ReadingJournal-myname.git`. Either is acceptable.)
+(Depending on how you set up your reading journal, you may see `https://github.com/{{ site.data.github.organization }}/ReadingJournal-myname.git` instead of `git@github.com://{{ site.data.github.organization }}/ReadingJournal-myname.git`. Either is acceptable.)
 
 We want to keep `origin` (the cloned copy in your GitHub account) for you to push completed work to, but we also want to add the original upstream class master repository for you to pull new assignments from. We can add this additional remote by running:
 
 ```bash
-$ git remote add upstream https://github.com/sd17fall/ReadingJournal.git
+$ git remote add upstream https://github.com/{{ site.data.github.organization }}/ReadingJournal.git
 ```
 
 If you run `git remote -v` now, you should see both `origin` and `upstream` listed.
@@ -55,19 +55,19 @@ Then:
   ```bash
   $ git pull upstream master
   ```
-  This should pull in the latest assignment notebook, which you can then complete and push to your `origin` repository by following the usual submission instructions above.
+  This should pull in the latest assignment notebook. It may trigger a merge process between the work you've previously done and the new notebook from the upstream repo. This will launch an editor with a merge message; save it to continue.
 2. Run `jupyter notebook`.
-3. You will see a list of files, that includes the new notebook file. Click on the new notebook file to open and edit it.
+3. You will see a list of files that includes the new notebook file. Click on the new notebook file to open and edit it.
 4. When you are done editing the notebook, click the floppy disk icon <i class="fa fa-floppy-o" aria-hidden="true"></i>, or select the “File > Save and Checkpoint” menu item, to save your work to disk.
-5. Follow the instructions in the next section, “How to get the stuff from my computer to GitHub”, to commit your changes to the repo on your computer and then push them to GitHub.
+5. Follow the usual instructions to submit your work (add, commit, push to your `origin` repository).
 
 ## Checking that you've submitted your homework
 
 Here’s how you can check your that you've submitted your Reading Journal:
 
-* In a terminal in the `ReadingJournal` directory, type `git remote -v`. This reports the URL of your repository; for example: `https://github.com/sd17fall/ReadingJournal-myname`.
+* In a terminal in the `ReadingJournal` directory, type `git remote -v`. This reports the URL of your repository; for example: `https://github.com/{{ site.data.github.organization }}/ReadingJournal-myname`.
 
-* Open `https://github.com/sd17fall/ReadingJournal-myname` in a browser. Now there’s several places you can verify that you’ve uploaded your work:
+* Open `https://github.com/{{ site.data.github.organization }}/ReadingJournal-myname` in a browser. Now there’s several places you can verify that you’ve uploaded your work:
   * Right above the list of files, it says “{your name} Completed reading journal 1” and “Latest commit f080636 7 hours ago”
   * Next to `reading-journal-1.ipynb`, it says “7 hours ago”.
   * Click on `reading-journal-1.ipynb`, and you will see a (non-interactive) display of the notebook itself. This is verifies both that `git push` works, and that the file you pushed has the content you intended.
