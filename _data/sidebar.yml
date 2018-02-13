@@ -1,9 +1,11 @@
 - title: Course Materials
   children:
-  - title: Reading Journal
-    url: /reading-journal/
   - title: Class Notes and Activities
     url: /notes
+  - title: Project Toolboxes
+    url: /toolboxes/
+  - title: Reading Journal
+    url: /reading-journal/
   - title: Library Reserves
     url: https://olin.tind.io/record/1512034?ln=en
 
