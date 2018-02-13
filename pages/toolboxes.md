@@ -28,17 +28,22 @@ There are also lots of opportunities to take things further – many of the topi
 
 ## Toolboxes
 
-[List of toolbox exercises](https://toolboxes.olin.build/)
-
-Note: This is growing into a collection of exercises across many Olin classes. You should complete your toolboxes from the Python set called "Toolboxes" rather than "Web Development" or "Security" (which you are free to pursue on your own time).
+{% if false %}
+{% assign toolboxes = site.toolboxes | where_exp: 'item', 'item.category==null' | sort: 'title' %}
+{% endif %}
+{% assign toolboxes = site.toolboxes | sort: 'title' %}
+{% for toolbox in toolboxes %}
+* [{{ toolbox.title }}]({{ toolbox.url }}
+){% endfor %}
 
 
 ## Submitting exercises
 
+Get the starter code for each Project Toolbox exercise by accepting the GitHub Classroom invite in the "Get Set" section of its instruction page above.
 Each Project Toolbox exercise has a description of the minimum required deliverable.
-To submit your assignment, just push your code to GitHub and submit a pull request to get checked off.
+To submit your assignment, push your code to GitHub.
 For several of the exercises, you may want to schedule a brief demo with a NINJA.
 
 You will complete at least 5 Toolbox exercises of your choice over the course of the semester. Due dates for each are listed on the [course calendar](/calendar/).
 
-If you get through the Project Toolbox exercises and you have a great idea for a new one you'd like to create, get in touch with the teaching team!
+If you complete your Project Toolbox exercises and you have a great idea for a new one you'd like to create, get in touch with the teaching team!

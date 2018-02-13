@@ -28,6 +28,10 @@ collections:
     layout: default
     output: true
     permalink: /notes/:path
+  toolboxes:
+    layout: default
+    output: true
+    permalink: /toolboxes/:path
 
 defaults:
   - scope:
