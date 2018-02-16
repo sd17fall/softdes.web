@@ -40,7 +40,7 @@ You should read this document in a somewhat non-linear/spiral fashion:
 
 ## A Note on Time Management
 
-This project is divided into *three parts*, but they are all do on *the same day*.
+This project is divided into *three parts*, but they are all due on *the same day*.
 
 You are of course encouraged to start early and work often. Beyond that, we
 have some advice that may not be intuitive:
@@ -81,6 +81,10 @@ page.
 
 If you'd like to learn more about what is going on behind the scenes,
 check out the [Web APIs Project Toolbox](https://toolboxes.olin.build/geocoding-and-web-apis/) toolbox.
+
+### A Note About API Keys
+
+For some of these data sources you will be generating some sort of secret authentication key.  The tempting thing to do is to insert this secret right into your code, and then check it into GitHub.  The problem with this is that in cases where your repository is public, someone might actually find your API key and use it themselves.  While we are not requiring you to follow best practices in this assignment with your API keys (after all your repository is private), if you want to start practicing good habits, we have [a notebook that walks you through ways to handle private keys with version controlled code](/notes/storing-api-keys).
 
 ### Data Source: Project Gutenberg
 
@@ -506,9 +510,6 @@ forward? What do you wish you knew before you started that would have helped
 you succeed?
 
 ## Turning in your assignment
-
-{% assign part = page.parts[0] %}
-_Due: {{ part.due | date: site.part_due_date_format }}_
 
 * Your code should submitted as either (a) Python file (or files) that can be executed by running *e.g.* `python text_mining.py`, or (b) a Jupyter notebook.
 * If you submit a Python file:
