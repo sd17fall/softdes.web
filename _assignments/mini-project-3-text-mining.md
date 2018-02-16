@@ -248,7 +248,7 @@ re.sub(r'<.+?>', '', str(html.find('p')))
 
 ### Additional Possible Data Sources
 
-In addition to the sources described above, which have all are all tested, we have some additional suggestions that are more in the exploratory stage.  If you have success using these sources, please share it with us!
+In addition to the sources described above, which have been tested, we have some additional suggestions that are more in the exploratory stage.  If you have success using these sources, please share it with us!
 
 #### Google Search
 
@@ -264,7 +264,10 @@ for result in googlesearch.search(query='Computer Science'):
     print(result)
 ```
 
-This is a somewhat janky way to access Google search results, if you want to use something more current, you can use Google's [official Python package](https://developers.google.com/api-client-library/python/).  Unfortunately, using the official package is much more involved than using the library above.
+This is a method of accessing Google search results based on the idea of webscraping.  In this approach, you are basically downloading the human readable HTML page from Google, and then attempting to extract a structured description of the page.  If you want to use Google's API (which will give you structured results directly), you can use Google's [official Python package](https://developers.google.com/api-client-library/python/).  Unfortunately, using the official package is much more involved than using the library above.
+
+#### Boston Historical Texts
+Todo
 
 
 ### Pickling Data
@@ -411,7 +414,7 @@ paper).
 ![](http://newsroom.unl.edu/releases/downloadables/photo/20120828macro-american.jpg)
 
 In order to apply MDS to your data, you can use the machine learning toolkit
-`scikit-learn`.  `scikit-learn` should have been installed by default when you installed Anaconda.  However, if you get an error trying to import the `sklearn` module, let us know.
+`scikit-learn`.  `scikit-learn` should have been installed by default when you installed Anaconda.  However, if you get an error trying to import the `sklearn` module, let us know.  As a side note we also have a [project toolbox on machine learning](https://toolboxes.olin.build/machine-learning/).
 
 Here is some code that uses the similarity matrix defined in the previous
 section to create a 2-dimensional embedding of the four Charles Dickens and 1
@@ -460,6 +463,12 @@ texts. One possibility in this space would be to create literary mashups automat
 Python chapter 13](http://greenteapress.com/thinkpython2/html/thinkpython2014.html) section 8
 called "Markov Analysis" has some detail on how to do this. Again, let the
 teaching team know if you go this route and we can provide more guidance.
+
+### Text Classification
+
+Using machine learning libraries like scikit-learn (which we talked about earlier in this writeup) you can create models that are able to automatically textual objects (e.g., words, paragraphs, sentences) into particular categories.  These categories could be anything: positive versus negative product reviews, abusive versus non abusive language, etc.
+
+We have put together [a notebook](/notes/Frankenstein and Dracula Text Analysis) that uses this approach to determine whether a sentence, taken completely out of context, comes from Mary Shelley's Frankenstein or Bram Stoker's Dracula.  By examining the way that the machine learning algorithm solves the task, we can learn a little bit about the underlying narrative structure of each work.
 
 ## Part 3: Project Write-up and Reflection
 
