@@ -246,6 +246,27 @@ re.sub(r'<.+?>', '', str(html.find('p')))
 
 [This is not a robust way to do this. A robust way involves using a recursive function.]
 
+### Additional Possible Data Sources
+
+In addition to the sources described above, which have all are all tested, we have some additional suggestions that are more in the exploratory stage.  If you have success using these sources, please share it with us!
+
+#### Google Search
+
+```bash
+$ pip install google
+```
+Then to perform a search, you can use the following.
+
+```python
+import googlesearch
+
+for result in googlesearch.search(query='Computer Science'):
+    print(result)
+```
+
+This is a somewhat janky way to access Google search results, if you want to use something more current, you can use Google's [official Python package](https://developers.google.com/api-client-library/python/).  Unfortunately, using the official package is much more involved than using the library above.
+
+
 ### Pickling Data
 
 For several of these data sources you might find that the API calls take a
