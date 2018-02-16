@@ -266,8 +266,9 @@ for result in googlesearch.search(query='Computer Science'):
 
 This is a method of accessing Google search results based on the idea of webscraping.  In this approach, you are basically downloading the human readable HTML page from Google, and then attempting to extract a structured description of the page.  If you want to use Google's API (which will give you structured results directly), you can use Google's [official Python package](https://developers.google.com/api-client-library/python/).  Unfortunately, using the official package is much more involved than using the library above.
 
-#### Boston Historical Texts
-Todo
+#### Additional Corpora
+
+There's a fantastic list of text corpora available on [this](https://en.wikipedia.org/wiki/List_of_text_corpora) Wikipedia page.  Some of the corpora are American English, some are British English, and some are specialized to a particular topic (e.g., US laws).
 
 
 ### Pickling Data
