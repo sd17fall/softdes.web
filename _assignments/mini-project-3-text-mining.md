@@ -3,7 +3,7 @@ title: 'Mini Project 3: Text Mining and Analysis'
 description: >
     In this assignment you will learn how to use computational techniques
     to analyze text.
-class_slides: TODO
+class_slides: https://docs.google.com/presentation/d/1dRYZskFKM5zbMYOoCEtzrDjY9pzSfe0omhXNN9dbbDE/edit?usp=sharing
 previous_examples: https://docs.google.com/presentation/d/1fybuwS68fdgCHrhOMcpbDzZOfDhzUJsEiOQ_24pUQHI/edit?usp=sharing
 announce: 2018-02-15 13:30:00 -05:00
 due: 2018-03-02 13:30:00 -05:00
@@ -532,7 +532,7 @@ Make sure to include a link to the Project Write-up/Reflection in the `README.md
 
 ## Project Presentations
 
-If you’d like to share what you discovered/created as part of your text mining project, you can add it to a class-wide Google slides presentation (link will be posted soon).
+If you’d like to share what you discovered/created as part of your text mining project, you can add it to a [class-wide Google slides presentation]({{ page.class_slides }}).
 
 Professionalism is important in public presentations, so please use the “would I be happy for my parents to read this in the newspaper” test when uploading content. Humor is great; abusive language or disparaging groups of people is firmly not acceptable.
 
