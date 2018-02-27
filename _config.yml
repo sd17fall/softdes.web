@@ -1,11 +1,12 @@
-title: Software Design | Fall 2017
+title: Software Design | Spring 2018
 short_title: Software Design
 description: An introduction to software design.
 timezone: America/New_York
-calendar_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRJGhlctkwfwPHcEQ9H_sIML5rezTEDtDIgsTZyq4dlARZmKvGP-NTWJqu9zN1huDfpKMJQvAcYwmCq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+calendar_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vStsUF4I-z-UiqDIxUz1vc5ucGPjHkZHKpojMURmEk70KojwJhaaMP8lbu0HCjiVVKC3CBgr53Lpi3N/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+future: true
 
-sections: 1
-room_number: AC128
+sections: 3
+room_number: AC304, AC326, AC328
 
 yandex_key: 0270fddbef1d3809
 
@@ -27,6 +28,10 @@ collections:
     layout: default
     output: true
     permalink: /notes/:path
+  toolboxes:
+    layout: default
+    output: true
+    permalink: /toolboxes/:path
 
 defaults:
   - scope:

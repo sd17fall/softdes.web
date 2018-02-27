@@ -2,7 +2,7 @@
 permalink: /
 column-width: 9
 ---
-
+<!--
 {% for p in site.activities %}
   {% assign cur_date = site.time | date: '%Y-%m-%d' %}
   {% assign start_date = p.date | date: '%Y-%m-%d' %}
@@ -24,6 +24,36 @@ column-width: 9
     {% endif %}
   {% endif %}
 {% endfor %}
+-->
+
+<h2 class="title is-2">Notes</h2>
+<section class="columns box">
+  <section class="column">
+    <h3 class="subtitle is-4">Recent Notes and Activities</h3>
+    <ul>
+      {% for p in site.posts limit: 3 %}
+        <li>
+          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }} notes</a>
+          {% if p.categories.size > 0 %}
+            – {{ p.categories | join: ', ' }}
+          {% endif %}
+        </li>
+      {% endfor %}
+      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
+    </ul>
+  </section>
+
+  <section class="column">
+    <h3 class="subtitle is-4">Recent Notebooks</h3>
+    <ul>
+      {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
+      {% for p in notebooks limit: 5 %}
+        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+      {% endfor %}
+      <li><a href="{{ site.baseurl }}{% link pages/lecture-notes.html %}">more…</a></li>
+    </ul>
+  </section>
+</section>
 
 <h2 class="title is-2">Assignments</h2>
 <section class="columns box">
@@ -37,11 +67,11 @@ column-width: 9
         <div>
             {% assign parts = assignment.parts | where_exp: "part", "part.due > site.time" %}
             {% if parts.size == nil %}
-              <a href="{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
+              <a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
             {% endif %}
             {% for part in parts limit: 10 %}
               {% if forloop.index0 > 0 %}</div><div>{% endif %}
-              <a href="{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} – {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
+              <a href="{{ site.baseurl }}{{ assignment.url }}#{{ part.tag }}">{{ assignment.title }} – {{ part.name }}</a> {% if assignment.parts == nil %} is due {{ assignment.due | date: site.due_datetime_format }}. {% endif %}
               is due {{ part.due | date: site.due_datetime_format }}.
             {% endfor %}
           </div>
@@ -57,50 +87,22 @@ column-width: 9
         {% assign d = site.time | date: '%s' | minus: start_s | divided_by: 86400 %}
         {% if assignment.due < site.time and d < 5 %}
           <div>
-            <a href="{{ assignment.url }}">{{ assignment.title }}</a> was due {{ assignment.due | date: site.due_datetime_format }}.
+            <a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a> was due {{ assignment.due | date: site.due_datetime_format }}.
           </div>
         {% endif %}
       {% endfor %}
       <div>
-        <a href="{% link pages/assignments.html %}">more…</a>
+        <a href="{{ site.baseurl }}{% link pages/assignments.html %}">more…</a>
       </div>
   </section>
 </section>
 
-<h2 class="title is-2">Notes</h2>
-<section class="columns box">
-  <section class="column">
-    <h3 class="subtitle is-4">Recent Lecture Notes</h3>
-    <ul>
-      {% for p in site.posts limit: 3 %}
-        <li>
-          <a href="{{ p.url }}">{{ p.title }} lecture notes</a>
-          {% if p.categories.size > 0 %}
-            – {{ p.categories | join: ', ' }}
-          {% endif %}
-        </li>
-      {% endfor %}
-      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
-    </ul>
-  </section>
-
-
-  <section class="column">
-    <h3 class="subtitle is-4">Recent Notebooks</h3>
-    <ul>
-      {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
-      {% for p in notebooks limit: 5 %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-      {% endfor %}
-      <li><a href="{% link pages/lecture-notes.html %}">more…</a></li>
-    </ul>
-  </section>
-</section>
-
-
 <h2>Office Hours</h2>
-<table class="table box">
-  <tr><th>Who</th><th>When</th><th>Where</th></tr>
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_K6eHmiKnADBt3OmZJd-Y-fmftkS-KTVXj0LmIl5qEk_BxGkUIPImB9_t8hDjw7WLA1sQWxcmlNDg/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="width: 700px; height: 200px;"></iframe>
+
+<table class="table box">      
+	<tr><th>Who</th><th>When</th><th>Where</th></tr>
   {% for person in site.data.team %}
   <tr>
     <td>{{ person.first_name }}</td>
@@ -109,6 +111,7 @@ column-width: 9
   </tr>
   {% endfor %}
 </table>
+
 
 <h2>Course Materials</h2>
 <section class="box">

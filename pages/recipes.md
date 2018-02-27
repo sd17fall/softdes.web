@@ -20,29 +20,6 @@ $ apt-get install mercurial python-dev python-numpy ffmpeg libsdl-image1.2-dev l
 $ pip install pygame
 ```
 
-macOS:
-
-Install [Home Brew](https://brew.sh). Then:
-
-```bash
-$ brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
-$ pip install pygame
-```
-
-Windows:
-
-First, try this:
-
-```bash
-$ pip install pygame
-```
-The above worked on one test machine.
-If it doesn't work on your laptop, tell us on Slack and try the following:
-
-```bash
-$ conda install -c cogsci pygame
-```
-
 ### Fix "NameError: name 'math' is not defined"
 
 Fix "NameError: name 'math' is not defined" (or another module):
@@ -81,7 +58,7 @@ turtle.mainloop()
 2. [`npm install onchange`](npm install onchange)
 3. Run your program e.g. `onchange '*.py' -- python script.py`
 
-Previous semester have also used [entr](http://entrproject.org) and [pytest-watch](https://github.com/joeyespo/pytest-watch) for this. I also tried [when-changed](https://github.com/joh/when-changed). The first looks like a difficult install on Windows. The other two don't work with macOS High Sierra, and I wasn't able to test them on Windows. Your mileage may vary.
+Previous semester have also used [entr](http://entrproject.org) and [pytest-watch](https://github.com/joeyespo/pytest-watch) for this. I also tried [when-changed](https://github.com/joh/when-changed).
 
 ## Pygame recipes
 
@@ -90,40 +67,6 @@ Previous semester have also used [entr](http://entrproject.org) and [pytest-watc
 ```python
 os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
 ```
-
-### [macOS] Pygame doesn't receive keyboard events
-
-Problem: The Pygame window doesn't get focus.
-Keyboard events go to the last previously focussed windows (e.g. editor window or terminal)
-instead of Pygame.
-
-Once:
-
-```bash
-$ source deactivate
-$ brew install python3
-$ pip3 install pygame
-$ python3 [yourscript.py]
-```
-(If you get an error `command not found: brew`, you will need to [install Homebrew](https://brew.sh) and try again.)
-
-Each time you create a terminal window:
-
-```bash
-$ source deactivate
-$ python3 [yourscript.py]
-```
-
-If this doesn't work, repeat these instructions with `python3` replaced by `/usr/local/bin/python3`.
-
-### [macOS] "ImportError: No module named font"
-
-Problem: Running `pygame.font.init()` raises an exception `ImportError: No module named font`.
-
-Solution:
-1. Install 32-bit Python 3.x (e.g. Python 3.6)
-2. Re-install pygame: `python3 -mpip install pygame`
-3. Use `/usr/local/bin/python3` to run Python.
 
 ## Atom Recipes
 
@@ -145,12 +88,6 @@ Use [multiple cursors and selections](http://flight-manual.atom.io/using-atom/se
 Make the Hydrogen plugin work with Anaconda Python:
 
 * The easy way: always launch atom by running `atom` in the Anaconda Command Prompt.
-* The harder way (Windows): run `where python` in the Anaconda Command Prompt to find the path to your Python.
-Follow [these instructions](https://stackoverflow.com/questions/17872234/how-to-add-python-to-windows-registry)
-to add this path to your Windows registry. **Warning**: Neither the NINJAs nor IT will necessarily be able to
-restore your machine if editing the registry goes awry.
-* The hardest way: Edit the Hydrogen “Kernel Specs” setting to specify the path to something like this: `{"kernelspecs":{"python3":{"resource_dir":"/Users/osteele/anaconda3/lib/python3.5/site-packages/ipykernel/resources","spec":{"env":{},"argv":["/Users/osteele/anaconda3/lib/python3.5","-m","ipykernel","-f","{connection_file}"],"display_name":"Python 3","language":"python"}}}}`, and restart Atom.
-**Warning**: I wasn't able to get this to work. It's easy to clear this setting and restart Atom to fix it again, though.
 
 ## Git Recipes
 

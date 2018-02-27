@@ -1,15 +1,16 @@
 ---
 permalink: notes/
 title: Notes
+omit_title: true
 ---
 
 <section class="columns">
     <section class="column">
-      <h2>Lecture Notes</h2>
+      <h2>Class Notes and Activities</h2>
       <ul>
       {% for p in site.posts %}
         <li>
-          <a href="{{ p.url }}">{{ p.title }}</a>
+          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
           {% if p.categories.size > 0 %}
             – <span class="is-size-7">{{ p.categories | join: ', ' }}</span>
           {% endif %}
@@ -23,7 +24,7 @@ title: Notes
     <ul>
       {% assign notebooks = site.notebooks | sort_by: 'date' | reverse %}
       {% for p in notebooks %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a> <small>({{ p.date | date: '%Y-%m-%d' }})</small></li>
+        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a> <small>({{ p.date | date: '%Y-%m-%d' }})</small></li>
       {% endfor %}
     </ul>
   </section>

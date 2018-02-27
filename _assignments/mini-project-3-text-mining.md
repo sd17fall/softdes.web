@@ -3,17 +3,10 @@ title: 'Mini Project 3: Text Mining and Analysis'
 description: >
     In this assignment you will learn how to use computational techniques
     to analyze text.
-class_slides: https://docs.google.com/presentation/d/1FWuoFpGsim8ZzEpKw18JgoXoE2NGGEgXACIkuUi2dgU/edit?usp=sharing
+class_slides: TODO
 previous_examples: https://docs.google.com/presentation/d/1fybuwS68fdgCHrhOMcpbDzZOfDhzUJsEiOQ_24pUQHI/edit?usp=sharing
-announce: 2017-09-28 10:50:00 -04:00
-due: 2017-10-17 10:50:00 -04:00
-parts:
-- name: Teaming
-  tag: turning-in-your-assignment
-  due: 2017-10-12 10:50:00 -04:00
-- name: Revision
-  due: 2017-10-19 22:00:00 -04:00
-  tag: revision
+announce: 2018-02-15 13:30:00 -05:00
+due: 2018-03-02 13:30:00 -05:00
 ---
 
 {% include toc %}
@@ -22,7 +15,7 @@ parts:
 
 In this assignment you will learn how to use computational techniques to
 analyze text. Specifically, you will access text from the web and social media
-(such as Twitter and Facebook), run some sort of computational analysis on it,
+(such as Twitter), run some sort of computational analysis on it,
 and create some sort of deliverable (either some interesting results from a
 text analysis, a visualization of some kind, or perhaps a computer program
 that manipulates language in some interesting way).
@@ -36,10 +29,7 @@ that manipulates language in some interesting way).
 
 ## How to proceed
 
-In order to get started on the assignment, you should fork the [base
-repository](https://github.com/{{site.github.owner_name}}/TextMining) for the text mining and
-analysis mini-project. Once you've forked the repository, clone the repository
-on your computer.
+In order to get started on the assignment, you should accept the assignment in Github classroom by clicking [this link](https://classroom.github.com/a/JBenA3gq).  Once you've accepted the assignment, clone the repository on your computer.
 
 You should read this document in a somewhat non-linear/spiral fashion:
 
@@ -50,7 +40,7 @@ You should read this document in a somewhat non-linear/spiral fashion:
 
 ## A Note on Time Management
 
-This project is divided into *three parts*, but they are all do on *the same day*.
+This project is divided into *three parts*, but they are all due on *the same day*.
 
 You are of course encouraged to start early and work often. Beyond that, we
 have some advice that may not be intuitive:
@@ -66,7 +56,7 @@ guide your implementation work.
 
 The goal for Part 1 is for you to get some text from the Internet with the aim
 of doing something interesting with it down the line. As you approach the
-assignment, I recommend that you get a feel for the types of text that you can
+assignment, we recommend that you get a feel for the types of text that you can
 grab, below. However, before spending too much time going down a
 particular path on the text acquisition component, you should look ahead to
 Part 2 to understand some of the things you can do with text you are
@@ -76,16 +66,11 @@ text with an appropriate technique for language analysis (see Part 2).
 ### Preliminaries
 
 You are not required to use any particular Python package to complete this
-assignment. However, I recommend the [Requests](http://docs.python-requests.org/en/master/)
+assignment. However, we recommend the [Requests](http://docs.python-requests.org/en/master/)
 package to retrieve HTML pages from the web, and the [NLTK](http://www.nltk.org) package
-to analyze text, and the [Vader sentiment analysis package](https://github.com/cjhutto/vaderSentiment)
-for sentiment analysis:
+to analyze text, and the Vader sentiment analysis algorithm (included with NLTK).
 
-```bash
-$ pip install nltk requests vaderSentiment
-```
-
-To make sure that Requests is installed correctly, try these commands in
+To make sure that Requests is working properly, try these commands in
 Python:
 
     >>> import requests
@@ -96,6 +81,10 @@ page.
 
 If you'd like to learn more about what is going on behind the scenes,
 check out the [Web APIs Project Toolbox](https://toolboxes.olin.build/geocoding-and-web-apis/) toolbox.
+
+### A Note About API Keys
+
+For some of these data sources you will be generating some sort of secret authentication key.  The tempting thing to do is to insert this secret right into your code, and then check it into GitHub.  The problem with this is that in cases where your repository is public, someone might actually find your API key and use it themselves.  While we are not requiring you to follow best practices in this assignment with your API keys (after all your repository is private), if you want to start practicing good habits, we have [a notebook that walks you through ways to handle private keys with version controlled code](/notes/storing-api-keys).
 
 ### Data Source: Project Gutenberg
 
@@ -109,12 +98,12 @@ computational processing to process in Python.
 
 In order to download a book from Project Gutenberg you should first use their
 search engine to find a link to a book that you are interested in analyzing.
-For instance, if I decide that I want to analyze _Oliver Twist_ I would click
+For instance, if you decide that you want to analyze _Oliver Twist_ you would click
 on this [link](http://www.gutenberg.org/ebooks/730) from the Gutenberg search
-engine. Next, I would copy the link from the portion of the page that says
+engine. Next, you would copy the link from the portion of the page that says
 "Plain Text UTF-8". It turns out that the link to the text of _Oliver Twist_
 is `http://www.gutenberg.org/ebooks/730.txt.utf-8`. To download the text
-inside Python, I would use the following code:
+inside Python, you would use the following code:
 
 ```python
 import requests
@@ -138,7 +127,7 @@ if you want to get around the download restriction.
 
 ### Data Source: Wikipedia
 
-I recommend the [`wikipedia` package](https://pypi.python.org/pypi/wikipedia/):
+We recommend the [`wikipedia` package](https://pypi.python.org/pypi/wikipedia/):
 
     $ pip install wikipedia
 
@@ -176,8 +165,8 @@ the documentation follow:
 
 Create a Twitter application [here](https://apps.twitter.com/app/new).
 
-Use your GitHub repository URL as the Website. For example, I would use
-`https://github.com/osteele/TextMining`. Leave the Callback URL blank.
+Use can use your GitHub profile as the website if you wish. It doesn't actually matter all that much what you put here.  For example,
+`https://github.com/yourusernamehere`. Leave the Callback URL blank.
 
 Copy the Consumer Key (API Key) and Consumer Secret (API Secret).
 You will need these below.
@@ -185,7 +174,7 @@ Click on "manage keys and access tokens" to see the Consumer Secret.
 On that page, click "Generate Access Token", and copy the
 Access Token and Access Token Secret too.
 
-I recommend the [python-twitter](https://github.com/bear/python-twitter) package.
+We recommend the [python-twitter](https://github.com/bear/python-twitter) package.
 The documentation is [here](https://github.com/bear/python-twitter/wiki).
 
     $ pip install python-twitter
@@ -244,10 +233,6 @@ Much data on the web is in the form of HTML, which is a mixture of human-languag
 and HTML markup such as `<div>` and `<p>`. You can use the Beautiful Soup package to extract
 the text from an HTML page.
 
-```bash
-$ pip install beautifulsoup4
-```
-
 ```python
 from bs4 import BeautifulSoup
 import requests
@@ -264,6 +249,31 @@ re.sub(r'<.+?>', '', str(html.find('p')))
 ```
 
 [This is not a robust way to do this. A robust way involves using a recursive function.]
+
+### Additional Possible Data Sources
+
+In addition to the sources described above, which have been tested, we have some additional suggestions that are more in the exploratory stage.  If you have success using these sources, please share it with us!
+
+#### Google Search
+
+```bash
+$ pip install google
+```
+Then to perform a search, you can use the following.
+
+```python
+import googlesearch
+
+for result in googlesearch.search(query='Computer Science'):
+    print(result)
+```
+
+This is a method of accessing Google search results based on the idea of webscraping.  In this approach, you are basically downloading the human readable HTML page from Google, and then attempting to extract a structured description of the page.  If you want to use Google's API (which will give you structured results directly), you can use Google's [official Python package](https://developers.google.com/api-client-library/python/).  Unfortunately, using the official package is much more involved than using the library above.
+
+#### Additional Corpora
+
+There's a fantastic list of text corpora available on [this](https://en.wikipedia.org/wiki/List_of_text_corpora) Wikipedia page.  Some of the corpora are American English, some are British English, and some are specialized to a particular topic (e.g., US laws).
+
 
 ### Pickling Data
 
@@ -303,10 +313,7 @@ Toolbox](https://toolboxes.olin.build/pickling/) assignment.
 
 ### Characterizing by Word Frequencies
 
-One way to begin to process your text is to take each unit of text (for
-instance a book from Project Gutenberg, or perhaps a collection of Facebook
-posts by one of your friends) and summarize it by counting the number of times
-a particular word appears in the text. A natural way to approach this in
+One way to begin to process your text is to take each unit of text (for instance a book from Project Gutenberg, or perhaps some Tweets regarding a topic of interest) and summarize it by counting the number of times a particular word appears in the text. A natural way to approach this in
 Python would be to use a dictionary where the keys are words that appear and
 the values are frequencies of words in the text (if you want to do something
 fancier look into using [TF-IDF features](http://en.wikipedia.org/wiki/Tf%E2%80%93idf)).
@@ -320,10 +327,10 @@ in other texts? For some other ideas see [Chapter 13 of Think Python](http://gre
 
 #### Doing Linguistic Post-processing
 
-Vader
+Vader (note: before doing this you'll need to download the NLTK corpora by running the command  `$ python -m nltk.downloader all`)
 
 ```python
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer()
 analyzer.polarity_scores('Software Design is my favorite class!')
 ```
@@ -340,9 +347,7 @@ You can also do sentiment analysis within NLTK by training
 a Bayesian classifier ([code](http://www.nltk.org/howto/sentiment.html)).
 
 If you perform some linguistic post processing, you may be able to say
-something interesting about the text you harvested from the web. For instance,
-which of your friends on Facebook is the most negative? Which is the most
-subjective? If you listen to a particular Twitter hashtag on a political
+something interesting about the text you harvested from the web.  For example, if you listen to a particular Twitter hashtag on a political
 topic, can you gauge the mood of the country by looking at the sentiment of
 each tweet that comes by in the stream? There are tons of cool options here!
 
@@ -363,7 +368,7 @@ particular element of the vector is the count of how frequently the
 corresponding word appears in a specific document (if this is a bit vague and
 you want to try this approach, ask an instructor).
 
-I tried this on some Project Gutenberg texts from two authors: Charles Dickens
+We tried this on some Project Gutenberg texts from two authors: Charles Dickens
 and Charles Darwin. The table below shows the pair-wise similarities between
 the Charles Dickens texts (note that 1 is perfect similarity):
 
@@ -374,8 +379,7 @@ the Charles Dickens texts (note that 1 is perfect similarity):
  [0.97905034 0.95030073 0.98230284 1.]]
 ```
 
-The pairwise similarities between Dickens and Darwin (I just used one Darwin
-text) are:
+The pairwise similarities between Dickens and Darwin (we just used one Darwin text) are:
 
 ```python
 [[0.78340575]
@@ -407,8 +411,7 @@ If you can generate pairwise similarities (say using the technique above), you
 can Metric Multi-dimensional Scaling
 ([MDS](http://en.wikipedia.org/wiki/Multidimensional_scaling)) to visualize
 the texts in a two dimensional space. This can help identify clusters of
-similar texts (for instance, which of your friends on Facebook are most
-similar to each other). Here is a particularly inspiring example by Matthew
+similar texts. Here is a particularly inspiring example by Matthew
 Jockers (check out the University of Nebraska's [press
 release](http://newsroom.unl.edu/releases/2012/08/28/By+text-mining+the+classics,+UNL+professor+unearths+new+literary+insights) on the
 paper).
@@ -416,7 +419,7 @@ paper).
 ![](http://newsroom.unl.edu/releases/downloadables/photo/20120828macro-american.jpg)
 
 In order to apply MDS to your data, you can use the machine learning toolkit
-`scikit-learn`. (To install it, consult the [machine learning toolbox)](https://toolboxes.olin.build/machine-learning).
+`scikit-learn`.  `scikit-learn` should have been installed by default when you installed Anaconda.  However, if you get an error trying to import the `sklearn` module, let us know.  As a side note we also have a [project toolbox on machine learning](https://toolboxes.olin.build/machine-learning/).
 
 Here is some code that uses the similarity matrix defined in the previous
 section to create a 2-dimensional embedding of the four Charles Dickens and 1
@@ -461,11 +464,16 @@ labeled 4 is the work by Charles Darwin.
 You can use [Markov](http://en.wikipedia.org/wiki/Markov_chain) analysis to
 learn a generative model of the text that you collect from the web and use it
 to generate new texts. You can even use it to create mashups of multiple
-texts. Two possibilities in this space would be to imitate Facebook posts by
-each of your friends, or to create literary mashups automatically. [Think
+texts. One possibility in this space would be to create literary mashups automatically. [Think
 Python chapter 13](http://greenteapress.com/thinkpython2/html/thinkpython2014.html) section 8
 called "Markov Analysis" has some detail on how to do this. Again, let the
 teaching team know if you go this route and we can provide more guidance.
+
+### Text Classification
+
+Using machine learning libraries like scikit-learn (which we talked about earlier in this writeup) you can create models that are able to automatically textual objects (e.g., words, paragraphs, sentences) into particular categories.  These categories could be anything: positive versus negative product reviews, abusive versus non abusive language, etc.
+
+We have put together [a notebook](/notes/Frankenstein and Dracula Text Analysis) that uses this approach to determine whether a sentence, taken completely out of context, comes from Mary Shelley's Frankenstein or Bram Stoker's Dracula.  By examining the way that the machine learning algorithm solves the task, we can learn a little bit about the underlying narrative structure of each work.
 
 ## Part 3: Project Write-up and Reflection
 
@@ -503,12 +511,9 @@ you succeed?
 
 ## Turning in your assignment
 
-{% assign part = page.parts[0] %}
-_Due: {{ part.due | date: site.part_due_date_format }}_
-
 * Your code should submitted as either (a) Python file (or files) that can be executed by running *e.g.* `python text_mining.py`, or (b) a Jupyter notebook.
 * If you submit a Python file:
-* The project README must describe how to install any required packages (e.g. `pip install vaderSentiment`) and how to run it (e.g. `python text_mining.py`)
+* The project README must describe how to install any required packages and how to run it (e.g. `python text_mining.py`)
 * If you submit a Jupyter notebook:
 * You must test that it behaves correctly when you execute "Run All" from the "Cell" menu.
 * You must *also* submit a Python text file.
@@ -525,17 +530,15 @@ Make sure to include a link to the Project Write-up/Reflection in the `README.md
 
 2\. Push your code to GitHub
 
-3\. Create a pull request to the upstream repository
-
 ## Project Presentations
 
-If you’d like to share what you discovered/created as part of your text mining project, please add ~1-2 slides to the [class presentation]({{ page.class_slides }}).
+If you’d like to share what you discovered/created as part of your text mining project, you can add it to a class-wide Google slides presentation (link will be posted soon).
 
 Professionalism is important in public presentations, so please use the “would I be happy for my parents to read this in the newspaper” test when uploading content. Humor is great; abusive language or disparaging groups of people is firmly not acceptable.
 
-Here's some examples from last semester: [SoftDes Spring 2017 spring 2017 MP3 examples]({{ page.previous_examples }})
+Here's some examples from a previous semester: [SoftDes Spring 2017 spring 2017 MP3 examples]({{ page.previous_examples }})
 
-## Revision
+<!-- ## Revision
 
 {% assign part = page.parts[1] %}
 _Due: {{ part.due | date: site.part_due_date_format }}_
@@ -555,4 +558,4 @@ This could take many forms, but examples include:
 
 * Re-writing the project to use an object-oriented style.
 * Finding and improving performance bottlenecks.
-* Adding functionality that you didn't get to the first time.
+* Adding functionality that you didn't get to the first time. -->

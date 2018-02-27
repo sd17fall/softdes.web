@@ -1,13 +1,14 @@
 ---
 title: Assignment 3
-due: 2017-09-14 09:00:00 -04:00
+due: 2018-02-02 13:30:00 -04:00
 ---
 
-* Read *Think Python* [Chapter 8](http://www.greenteapress.com/thinkpython2/html/thinkpython2009.html) and [Chapter 10.1-10.6](http://www.greenteapress.com/thinkpython2/html/thinkpython2011.html).
-* Complete *Reading Journal 3*.
-* Read [Growing a Language](https://www.cs.virginia.edu/~evans/cs655/readings/steele.pdf), Guy Steele (no relation), pp. 1-4.
-  * This lecture is also available [as a video](https://www.youtube.com/watch?v=_ahvzDzKdB0).
-* Start working on Mini Project 1 Gene Finder.
 
-Optional:
-* [In The Beginning Was the Command Line](http://ace.gearnine.com/temp/command.pdf)
+## Read
+* Think Python [chapter 8](http://greenteapress.com/thinkpython2/html/thinkpython2009.html)
+* Think Python [chapter 10.1-10.6](http://greenteapress.com/thinkpython2/html/thinkpython2011.html)
+* [Holding a Program in One's Head](http://paulgraham.com/head.html), Paul Graham. _Note: This 2007 piece has useful insights about programming but refers to the programmer throughout as "he" - please mentally replace with "they" or your favorite gender-nonspecific pronoun._
+
+## Do
+* Complete Reading Journal 3.
+* Complete [Mini-project 1, part 1](/assignments/mini-project-1-gene-finder.html#week-1)
