@@ -4,21 +4,21 @@ description: >
   The big idea of this project will be to move from static programs (ones
   that are run, do some computations, and spit out a result) to interactive programs
   (ones that allow the user to perform actions that change the state of the program).
-announce: 2018-03-02 13:30:00 -04:00
-due: 2018-03-16 13:00:00 -04:00
+announce: 2018-03-02 13:30:00 -05:00
+due: 2018-03-16 13:00:00 -05:00
 mp4-idea-form: https://docs.google.com/
 parts:
 - name: Getting Started
   tag: getting-started
-  due: 2018-03-02 13:30:00 -04:00
+  due: 2018-03-02 13:30:00 -05:00
 - name: Project Proposal
-  due: 2018-03-06 13:30:00 -04:00
+  due: 2018-03-06 13:30:00 -05:00
   tag: project-proposal
 - name: Mid-Project Check-in
-  due: 2018-03-09 13:30:00 -04:00
+  due: 2018-03-09 13:30:00 -05:00
   tag: mid-project-check-in
 - name: Project Write-up and Reflection
-  due: 2018-03-16 13:30:00 -04:00
+  due: 2018-03-16 13:30:00 -05:00
   tag: project-write-up-and-reflection
 ---
 
@@ -244,7 +244,7 @@ scaffolding the use of a very powerful object-oriented design pattern called
 Here is a diagram (from Wikipedia) that shows the various components of Model-
 View-Controller and how they interact:
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1000px-MVC-Process.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1000px-MVC-Process.svg.png){:width="250px"}
 
 To make things concrete, let's think about how we might implement a Pac-Man
 clone. Here are the classes and the functions that you might use to implement
