@@ -6,7 +6,7 @@ description: >
   (ones that allow the user to perform actions that change the state of the program).
 announce: 2018-03-02 13:30:00 -05:00
 due: 2018-03-16 13:00:00 -05:00
-mp4-idea-form: https://docs.google.com/
+mp4-idea-form: https://goo.gl/forms/kf0pxplMfDeGlhHM2
 parts:
 - name: Getting Started
   tag: getting-started
