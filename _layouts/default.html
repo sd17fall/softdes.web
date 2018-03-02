@@ -16,15 +16,15 @@
     <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/litera/bulmaswatch.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% include mathjax %}
-    <link rel="stylesheet" href="/assets/css/syntax.css">
-    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css">
   </head>
 
   <body class="{{ page.path | split: '.' | first | slugify }}">
 
     <nav class="navbar">
       <div class="navbar-brand">
-        <a class="navbar-item is-size-1" href="/">
+        <a class="navbar-item is-size-1" href="{{ site.baseurl }}/">
           {% if page.title %}
             <span class="is-hidden-touch">{{ site.short_title | default: site.title }} &middot;&nbsp;</span>{{ page.title }}
           {% else %}
@@ -47,7 +47,7 @@
             {% assign title = page.title | default: title | replace: '.html', '' %}
           {% endif %}
           <li class="{{ is_active_class }}">
-            <a href="{{ url }}">
+            <a href="{{ site.baseurl }}{{ url }}">
               {{ title }}
             </a>
           </li>
@@ -64,9 +64,9 @@
               {% if assignment.parent %}{% continue %}{% endif %}
               {% if assignment.announce > site.time %}{% continue %}{% endif %}
               {% if assignment.due < site.time %}{% continue %}{% endif %}
-              <li><a href="{{ assignment.url }}">{{ assignment.title }}</a></li>
+              <li><a href="{{ site.baseurl }}{{ assignment.url }}">{{ assignment.title }}</a></li>
             {% endfor %}
-            <li class="menu-list"><a href="{% link pages/assignments.html %}">Past and future…</a></li>
+            <li class="menu-list"><a href="{{ site.baseurl }}{% link pages/assignments.html %}">Past and future…</a></li>
           </ul>
 
           {% for section in site.data.sidebar %}
@@ -79,7 +79,11 @@
                   <li>found = {{ p.path }}, {{ p.url }}</li>
                   <li>keys = {% for k in p %}{{k[0]}}.{% endfor %}</li>
                 {% endif %}
-                <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+                {% if p.url contains 'http' %}
+                  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+                {% else %}
+                  <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+                {% endif %}
               {% endfor %}
             </ul>
           {% endfor %}

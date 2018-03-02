@@ -4,21 +4,21 @@ description: >
   The big idea of this project will be to move from static programs (ones
   that are run, do some computations, and spit out a result) to interactive programs
   (ones that allow the user to perform actions that change the state of the program).
-announce: 2017-10-12 09:00:00 -04:00
-due: 2017-10-30 10:50:00 -04:00
-teaming_spreadsheet: https://docs.google.com/spreadsheets/d/1pykAoJBFgz-e2yGLKbuBznSJ0mt0LGpgUFRxckxxcQg/edit?usp=sharing
+announce: 2018-03-02 13:30:00 -05:00
+due: 2018-03-16 13:00:00 -05:00
+mp4-idea-form: https://goo.gl/forms/kf0pxplMfDeGlhHM2
 parts:
-- name: Teaming
+- name: Getting Started
   tag: getting-started
-  due: 2017-10-13 20:00:00 -04:00
+  due: 2018-03-02 13:30:00 -05:00
 - name: Project Proposal
-  due: 2017-10-16 10:50:00 -04:00
+  due: 2018-03-06 13:30:00 -05:00
   tag: project-proposal
 - name: Mid-Project Check-in
-  due: 2017-10-23 10:30:00 -04:00
+  due: 2018-03-09 13:30:00 -05:00
   tag: mid-project-check-in
 - name: Project Write-up and Reflection
-  due: 2017-10-30 10:50:00 -04:00
+  due: 2018-03-16 13:30:00 -05:00
   tag: project-write-up-and-reflection
 ---
 
@@ -45,9 +45,9 @@ write some very powerful software. Here are some ideas:
 
 ### Deltas from Previous Projects
 
-1. You will be working with a partner on this project (a single team of 3 will be permitted if a section has an odd number of students).
-2. This project is more open-ended than previous projects. In the last mini-project you could choose the data and analysis tool that you wanted to explore. Here, not only do you have these choices, but you can also choose to make a very different thing (e.g. a video game versus an interactive data visualization).
-3. You have more time to work on this project (2 weeks, versus 1 week for the last project).
+1. You will be working with a partner on this project (assigned to you at MP4 kick-off).
+2. This project is more open-ended than previous projects. In the last mini-project, you could choose the data and analysis tool that you wanted to explore. Here, not only do you have these choices, but you can also choose to make a very different thing (e.g. a video game versus an interactive data visualization).
+3. You will submit to gihub.com, which can be seen by anyone on the Web, instead of the private github classroom site for this class. We explain the reason for this change during kick-off.
 
 ### Computational Skills Emphasized
 
@@ -63,23 +63,22 @@ write some very powerful software. Here are some ideas:
 
 Teaming Logistics:
 
-* You must work in a team of exactly two students (if we end up with an odd number of total students, we may have one team of three).
-* Only one of you should fork the base repo for this assignment. The one that forks the repo should then add the other team member as a collaborator on GitHub for that repo.
+* Only one of you should fork the base repo for this assignment. The one who forks the repo should then add the other team member as a collaborator on GitHub for that repo.
 
 Teaming Guidance:
 
-* Do not default to working with your friend. Think hard about what you want out of the project and how you'll work to get it, then explore whether your best buddy as a partner makes the most sense.
-* Make sure you and your potential partner are on the same page in terms of project topic.
-* You should partner with someone that has roughly the same commitment level to the project. For instance, someone that is excited to clear most of their schedule to complete the most amazing SoftDes project ever should not partner with someone that is just looking to do the minimum.
-* You should be mindful of differences in level of programming experience when selecting your partner. Teams that are very closely matched in terms of programming experience should be no problem. Teams that are not closely matched on this axis can also be quite effective. However, if you and your partner are not closely matched, you will want to make sure that you are both vigilant about avoiding some common pitfalls that occur with this type of team. The two most common pitfalls are: the person with more experience gets frustrated with the other team member and does all the work, and the person with more experience writes all the code while the person with less experiences watches them.
+* Make sure that you and your potential partner are on the same page in terms of project topic.
+* Revisit preferred working styles with your assigned partner.
+* Discuss your expected commitment level to this project.
+* We attempted to match students according to preferences provided via teaming surveys, but we may end up with partners who have different levels of programming experience. If you and your partner are not closely matched in terms of experience and comfort with programming in Python, you will want to make sure that you are both vigilant about avoiding some common pitfalls that occur with this type of team. The two most common pitfalls are: the person with more experience gets frustrated with the other team member and does all the work, and the person with more experience writes all the code while the person with less experiences watches them.
 
 ## Recommended Libraries
 
 You are welcome to use whatever library you'd like for this project, however,
 there is a lot of benefit to sticking to the ones that we recommend. The best
-reason for doing so are to ensure that we, the teaching team, can provide you
-with as good support as possible as you use the library to complete the
-project. If you pick a nonstandard library that none of us have used before,
+reason for doing so is to ensure that we, the teaching team, can provide you
+with as much support as possible as you use the library to complete the
+project. If you pick a non-standard library that none of us have used before,
 we will have a tough time helping you if you run into problems (although we
 will certainly try!).
 
@@ -122,7 +121,7 @@ If you want to use an input modality other than keyboard and mouse, you may
 find the computer vision library OpenCV useful. The idea here would be to
 capture images from a camera (probably the webcam on your laptop) and use
 those to control some aspect of your program. To get started check out the
-SoftDes [project toolbox exercise on OpenCV](https://toolboxes.olin.build/image-processing).
+SoftDes Image processing toolbox.
 Next, read through the [OpenCV Python
 tutorials](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html)
 and [API reference](http://docs.opencv.org/2.4.9/modules/refman.html)).
@@ -134,7 +133,7 @@ and coding the functionality yourself. Here are some pros and cons:
 
 * **Pro:** using a library is faster and can let you do things in a short time that would be infeasible if you coded it yourself.
 * **Pro:** you can mashup different libraries to do amazing things.
-* **Con:** if you are shaky on your basic understand of Python you may not learn the basics if you are relying too heavily on others libraries.
+* **Con:** if you are shaky on your basic understand of Python, you may not learn the basics if you are relying too heavily on others libraries.
 * **Con:** if you get too far down the path of using a library and it doesn't do something important that you need, you are in a tough spot.
 
 It's up to you how heavily you want to utilize others libraries. All we ask is
@@ -154,13 +153,13 @@ sources:
 4. A [very comprehensive](https://github.com/caesar0301/awesome-public-datasets) listing of sources for open data.
 5. IBM's [Big Data for Social Good Challenge](http://ibmhadoop.challengepost.com/details/data)
 6. Make your own dataset using text mining (you should know how to do this from the last project).
-7. ??? (the possibilities are endless, e-mail us if you find an awesome trove of data that you think the class should know about post it to Piazza).
+7. ??? (the possibilities are endless, e-mail us if you find an awesome trove of data that you think the class should know about post it to Slack).
 
-Once you have the data you'll want to think about how you might using
+Once you have the data you'll want to think about how you might use
 visualization and user input to explore the data. To get your creative juices
-flowing here are some cool examples of data visualization:
+flowing, here are some cool examples of data visualization:
 
-We will show a bunch of these examples below, but check out [the full
+Check out [the full
 listing](http://www.nytimes.com/newsgraphics/2013/12/30/year-in-interactive-storytelling/#dataviz) from the New York Times Year in Interactive
 Storytelling. This link is for 2013, but other years are available.
 
@@ -222,15 +221,14 @@ and Pixel.
 <iframe title="YouTube video player" class="youtube-player" type="text/html" src="//www.youtube.com/embed/karPYs22ACc?rel=0&amp;wmode=opaque" frameborder="0" allowFullScreen="true" width="480" height="270"></iframe>
 
 Pogo Joe ([Wikipedia](https://en.wikipedia.org/wiki/Pogo_Joe)).
-A Q*Bert “derivative”; written by someone you know.
+A Q*Bert “derivative”; written by Oliver Steele, who some of you may know from Olin.
 
 <iframe title="YouTube video player" class="youtube-player" type="text/html" src="//www.youtube.com/embed/XpNBGqwPXuo?rel=0&amp;wmode=opaque" frameborder="0" allowFullScreen="true" width="480" height="270"></iframe>
 
 #### Interactive Art
 
-There is a big universe out there. The pulsating music visualizer from the
-last assignment was one example. Hooking up simple color tracking using OpenCV
-to sound synthesis is also a nice one (*e.g.* a musical instrument
+There is a big universe out there. Hooking up simple color tracking using OpenCV
+to sound synthesis is a nice one (*e.g.* a musical instrument
 controlled by movements). Check out the [Wikipedia
 page](http://en.wikipedia.org/wiki/Interactive_art) for more ideas.
 
@@ -246,7 +244,7 @@ scaffolding the use of a very powerful object-oriented design pattern called
 Here is a diagram (from Wikipedia) that shows the various components of Model-
 View-Controller and how they interact:
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1000px-MVC-Process.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1000px-MVC-Process.svg.png){:width="250px"}
 
 To make things concrete, let's think about how we might implement a Pac-Man
 clone. Here are the classes and the functions that you might use to implement
@@ -275,21 +273,12 @@ but we hope it will be helpful at least as a jumping off point.
 {% assign part = page.parts[0] %}
 _Due: {{ part.due | date: site.part_due_date_format }}_
 
-You must find a teammate and decide on a project topic. You are required to
-have your teammate selected (and hopefully a rough idea of what you will do
+You and your partner must decide upon a project topic. You are required to have a a rough idea of what you will do
 for the project) by {{ part.due | date: '%-I:%M %P on %a %b %-d' }}.
-Use [this Google spreadsheet]({{ page.teaming_spreadsheet }}) to indicate who you are
-working with. There is also a section where you can look for a teammate if you
-don't have one already.
+Use [this Google form to let us know your initial ideas]({{ page.mp4-idea-form }}) to indicate your initial ideas.
 
-Feel free to try out a partner-picking process that we have used in class before (and are likely to again, if needed). Gather people, pens, and post-it notes. Have everyone sit down and write down (on post-its) their name and ideas for project topics (a classic arcade game, something that uses video input, a computer-controlled bad-guy that evolves and gets harder to beat... etc). Take the post-its to a wall. Have people explain their ideas. Cluster together ideas that sound like they're similar or can be combined.
-Choose a partner who described something similar to what you want to do *or* someone who excited you by their description.
-
-As part of filling out this spreadsheet, and starting the project, you should
-fork and clone the [base repo](https://github.com/{{ site.github.owner_name }}/InteractiveProgramming) for this project.
-Remember, that you will want to have only one of your teammates fork the repo,
-and then the other member should be added as a collaborator on GitHub for that
-repo. Be sure to add a link to your repo to the shared Google spreadsheet.
+One of you needs to fork and clone the [base repo](https://github.com/{{ site.github.owner_name }}/InteractiveProgramming) for this project, then add the other member as a collaborator on GitHub for that
+forked repo.
 
 There are three deliverables for this project:
 
@@ -298,12 +287,11 @@ There are three deliverables for this project:
 {% assign part = page.parts[1] %}
 _Due: {{ part.due | date: site.part_due_date_format }}_
 
-You can begin working on a project proposal as soon as you select your partner.
 Part of the {{ part.due | date: site.date_format }} class will be dedicated to approving project proposals.
 We encourage you to speak with NINJAs before this date during office hours (or an impromptu session arranged via Slack).
-By classtime on {{ part.due | date: site.date_format }}, you should be able to provide a link to a proposal document (*e.g.*, a Google doc) that describes the main idea of your project.
+By classtime on {{ part.due | date: site.date_format }}, your MP4 repo should have a proposal document (preferably in markdown, but a PDF can suffice) that describes the main idea of your project.
 Please come to class with a printout of your project proposal.
-The instructors will review the proposals.
+The instructors will review the proposals during studio time and discuss with each team.
 
 Your proposal document should address:
 
@@ -424,27 +412,3 @@ If you want to generate truly beautiful documentation, check out
 [Sphinx](http://sphinx-doc.org/) (the tool used to generate the [Python
 documentation](https://docs.python.org/3/)).
 This is certainly not required, but you may want to use it in the future (think: final project)
-
-{% if false %}
-### Revision
-
-{% assign part = page.parts[4] %}
-_Due: {{ part.due | date: site.part_due_date_format }}_
-
-Reflection and revision is an important part of the iterative feedback
-process. In this part, you will revise and re-submit your project.
-
-The basis for the revision comes from several places:
-
-1. Feedback that you received from the NINJAs via Slack and / or GitHub pull requests.
-2. You know much more Python now than when we started.
-3. There may be extensions or alternate directions you wanted to pursue but didn't have time.
-
-In addition to correcting any errors in the original submission, you can
-use the opportunity to make some technical improvement.
-This could take many forms, but examples include:
-
-* Re-writing the project to use an object-oriented style.
-* Finding and improving performance bottlenecks.
-* Adding functionality that you didn't get to the first time.
-{% endif %}
