@@ -289,9 +289,9 @@ _Due: {{ part.due | date: site.part_due_date_format }}_
 
 Part of the {{ part.due | date: site.date_format }} class will be dedicated to approving project proposals.
 We encourage you to speak with NINJAs before this date during office hours (or an impromptu session arranged via Slack).
-By classtime on {{ part.due | date: site.date_format }}, you should be able to provide a link to a proposal document (*e.g.*, a Google doc) that describes the main idea of your project.
+By classtime on {{ part.due | date: site.date_format }}, your MP4 repo should have a proposal document (preferably in markdown, but a PDF can suffice) that describes the main idea of your project.
 Please come to class with a printout of your project proposal.
-The instructors will review the proposals and collect them via a Google form.
+The instructors will review the proposals during studio time and discuss with each team.
 
 Your proposal document should address:
 
