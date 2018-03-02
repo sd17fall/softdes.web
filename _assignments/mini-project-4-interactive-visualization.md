@@ -4,7 +4,7 @@ description: >
   The big idea of this project will be to move from static programs (ones
   that are run, do some computations, and spit out a result) to interactive programs
   (ones that allow the user to perform actions that change the state of the program).
-announce: 2018-03-02 13:30:00 -05:00
+announce: 2018-03-01 13:30:00 -05:00
 due: 2018-03-16 13:00:00 -05:00
 mp4-idea-form: https://goo.gl/forms/kf0pxplMfDeGlhHM2
 parts:
