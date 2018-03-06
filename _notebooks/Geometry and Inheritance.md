@@ -130,6 +130,15 @@ doctest.testmod()
 
 1.  Simplify the code above using inheritance.  You can either cut-and-paste the code  and modify it in the cell below, or modify the original code.
 
+Hint 1: you will want to modify the `__init__` methods to invoke the `__init__` methods of the super class.  To do so, you can use the following code in your `__init__` method.
+
+```python
+# argument1 and argument2 would be passed to the super class __init__ method
+super().__init__(argument1, argument2)   
+```
+
+Hint 2: think about the `get_area` function for each of the classes, can they be simplified using inheritance?
+
 <ol start="2">
 <li>Create a right triangle class (make sure to use inheritance!)</li>
 </ol>
