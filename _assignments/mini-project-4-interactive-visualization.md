@@ -311,6 +311,10 @@ purely to allow us to help shape your project in useful directions - and potenti
 {% assign part = page.parts[2] %}
 _Due: {{ part.due | date: site.part_due_date_format }}_
 
+update 3/8/2018: For this semester's SoftDes, the largest we have offered, we are tweaking the MP4 check-in process from what was originally posted below. We are doing first-pass check-ins via the github repos that student pairs are using to work on and submit MP4. NINJAs will be on-hand during the Friday 3/9 class period to ensure that each partner on each project has pushed something (.py files, design docs, image or sound assets, UML drawings etc) to the appropriate github repo. NINJAs and instructors will be looking at these repos to determine whether an in-person check in will be requested (to be held before the 3/13 class period ends). In cases where the repo is considered to demonstrate sufficient project progress, no in-person check-in will be requested and each partner will receive 100% credit for the check-in. In-person check-ins will be governed by the guidelines below.
+
+original text of this post:
+
 We are requiring a mid-project check-in for this project. You must meet with a
 NINJA by end-of-the-day {{ part.due | date: site.part_due_date_format }}.
 The grading for this check-in will be 0% if you miss it or blow it off, 50% if
