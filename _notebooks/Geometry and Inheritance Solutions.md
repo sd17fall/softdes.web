@@ -1,5 +1,5 @@
 ---
-date: 2018-03-08T20:42:13-05:00
+date: 2018-03-05T23:47:27-05:00
 source: notebooks/Geometry and Inheritance Solutions.ipynb
 ---
 
@@ -8,7 +8,7 @@ source: notebooks/Geometry and Inheritance Solutions.ipynb
 
 # Inheritance Example: 2D Geometry (Solutions)
 
-The classes below represent simple 2D shapes.  Currently the only supported functionality is `get_area`, but more could be added.
+The classes below represent simple 2D shapes.
 
 1.  Simplify the code using inheritance.  You can either cut-and-paste the code  and modify it in the cell below, or modify the original code.
 
@@ -23,7 +23,7 @@ class Polygon(object):
             vertex is represented as an (x, y) tuple.
             
             vertices: the vertices of the polygone (note: vertices
-                      are assumed to be in counterclockwise order """
+                      are assumed to be in counterclockwise order) """
         self.vertices = vertices
     
     def get_area(self):
@@ -129,11 +129,6 @@ doctest.testmod()
 
 
 ```python
-from scipy.spatial.distance import euclidean
-
-# the euclidean distance calculates the distance between two points.
-# this gives us a way to calculate side lengths given the two end points.
-
 class RightTriangle(Triangle):
     """
     Represents a right triangle in 2D
