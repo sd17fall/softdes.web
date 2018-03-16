@@ -7,6 +7,7 @@ future: true
 
 sections: 3
 room_number: AC304, AC326, AC328
+final_room_number: AC326, AC328
 
 yandex_key: 0270fddbef1d3809
 

@@ -17,17 +17,17 @@ parts:
   due: 2018-04-03 13:30:00 -04:00
   tag: architectural-review
 - name: AR Reflection Document
-  due: 2018-04-10 09:00:00 -04:00
+  due: 2018-04-10 13:30:00 -04:00
   tag: architectural-review
 - name: Project Presentation
   due: 2018-04-24 13:30:00 -04:00
   tag: project-presentation
-- name: Project Website
-  due: 2018-04-20 13:30:00 -04:00
-  tag: project-website
-- name: Project Website, feedback addressed
+- name: Project Website MVP
   due: 2018-04-24 13:30:00 -04:00
-  tag: project-website
+  tag: project-website-mvp
+- name: Project Website, feedback addressed
+  due: 2018-05-01 13:30:00 -04:00
+  tag: project-website-final
 - name: Final Deliverables
   due: 2018-05-08 12:00:00 -04:00
   tag: demo-session-poster
@@ -47,7 +47,7 @@ final_deliverables_part: 6
 
 From now until the end of the semester you will be working with a team of
 students on a group software project. The project will culminate during the
-Final Event period for this class, with an EXPO style demo / poster session.
+Final Event period for this class, with an EXPO style demo / video / poster session.
 
 ## Project Topic
 
@@ -194,12 +194,12 @@ will still be around in the future!
 
 **Submission mechanics**: Your project's GitHub repo page should link to your web site. This means either the README, or the Website that is optionally displayed in the upper right corner of your GitHub repo page, should contain this link.
 
-### Demo Session Poster
+### Demo Session Poster and Video
 
 {% assign part = page.parts[page.expo_part] %}
 _Printed before {{ part.due | date: '%-H:%M %p' }} on {{ part.due | date: '%A, %B %-d' }}_
 
-**The poster is worth 10% of the project grade.**
+**The poster and video are worth 10% of the project grade.**
 
 Each team will create a poster to accompany the final demonstration session.
 Your poster will contain similar information to your website, but reformatted
@@ -222,7 +222,14 @@ Examples and guides:
 * <https://nau.edu/undergraduate-research/poster-presentation-tips/>
 * <http://justinlmatthews.com/posterhelp/posterguide/>
 
-**Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ part.due | date: '%b %-d' }} final event.
+**demo video**
+
+Your website will have a video of your team demoing your project and giving a 1-minute or less pitch about it. Include the project's goal, what the software does, how to use it, why your team made it, and what you would do if you had more time.
+
+The teaching team will offer suggestions and give feedback on draft videos related to production quality and content.
+
+
+**Submission mechanics**: (1) Your project README or project web site must link to your poster file and video. (2) Your poster must also be printed in time for the {{ part.due | date: '%b %-d' }} final event.
 
 ### Code submission
 
@@ -258,8 +265,8 @@ about this, just ask.
 {% assign part = page.parts[page.expo_part] %}
 _Date: {% if part.due %}{{ part.due | date: '%A, %b %-d, %-H:%M %p' }}–{{ part.due | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
 
-During the Final Event, {% if site.sections > 1 %} both sections of {% endif %}
-SoftDes will meet in {{ site.room_number }}
+During the Final Event, {% if site.sections > 1 %} all studios of {% endif %}
+SoftDes will meet in {{ site.final_room_number }}
 for an EXPO style poster/demo session of your final projects. This session is
 for everyone to share what they've created, and will not be evaluated. We will
 be inviting other members of the Olin community to check out your fantastic
