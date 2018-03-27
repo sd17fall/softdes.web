@@ -11,7 +11,7 @@ proposal_survey_url: https://about:blank
 spreadsheet_url: https://about:blank
 parts:
 - name: Project Proposal
-  due: 2018-03-27 13:30:00 -04:00
+  due: 2018-03-29 13:30:00 -04:00
   tag: project-proposal
 - name: AR Preparation Document
   due: 2018-04-03 13:30:00 -04:00
