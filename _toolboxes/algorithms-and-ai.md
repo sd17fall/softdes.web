@@ -34,7 +34,7 @@ $ pip install pygame
 
 ## Learn about A star search
 
-Read up on A star [here](http://web.mit.edu/eranki/www/tutorials/search/) and
+Read up on A star [here](http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html) or
 [here](http://www.raywenderlich.com/4946/introduction-to-a-pathfinding). Do
 your best to understand what the pseudocode in the links mean. What are the
 advantages that A star has over breadth-first search? What advantages does A
