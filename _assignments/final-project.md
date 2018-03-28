@@ -10,8 +10,11 @@ due: 2018-05-08 12:00:00 -05:00
 proposal_survey_url: https://about:blank
 spreadsheet_url: https://about:blank
 parts:
+- name: Team Registration Survey
+  due: 2018-03-29 13:30:00 -04:00
+  tag: team-registration-survey
 - name: Project Proposal
-  due: 2018-03-28 13:30:00 -04:00
+  due: 2018-03-29 13:30:00 -04:00
   tag: project-proposal
 - name: AR Preparation Document
   due: 2018-04-03 13:30:00 -04:00
@@ -32,13 +35,14 @@ parts:
   due: 2018-05-08 12:00:00 -04:00
   tag: demo-session-poster
 type: index
-proposal_part: 0
-arch_review_part: 1
-presentation_part: 3
-website_part: 4
-website_revision: 5
-expo_part: 6
-final_deliverables_part: 6
+team_registration_survey_part: 0
+proposal_part: 1
+arch_review_part: 2
+presentation_part: 4
+website_part: 5
+website_revision: 6
+expo_part: 7
+final_deliverables_part: 7
 ---
 
 {% include toc %}
@@ -79,6 +83,13 @@ Final Event period for this class, with an EXPO style demo / video / poster sess
 Refer back to the answers you provided during the reflection and teaming surveys and share your thoughts with potential teammates.
 
 ## Project Activities / Deliverables
+
+### Team Registration Survey
+_Due {{ page.parts[page.team_registration_survey_part].due | date: site.part_due_date_format }}_
+
+Once you know who is on your team, you should create a GitHub repository for your final project.  Note: that there is no GitHub classroom assignment to accept and there is no base repository to fork (instead you will be [creating your repository from scratch](https://help.github.com/articles/create-a-repo/)).  Whoever creates the repository should add the other team members as collaborators.  You will be using this repository to turn in all of the project deliverables listed below.
+
+Once your team's GitHub repository is set, you are ready to fill out the [team registration survey](https://docs.google.com/forms/d/e/1FAIpQLSdlqZgPCi8dIfyREs8MTb4cWpo3o3hmpFoGvhEmmxJhkwL27w/viewform).  We will need you to fill out this survey in order to know where to look for your other project deliverables, so please complete it as soon as you can.
 
 ### Project Proposal
 
