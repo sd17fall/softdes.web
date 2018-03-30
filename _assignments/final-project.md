@@ -113,10 +113,10 @@ The teaching team will either approve your page, or provide suggestions and requ
 
 _Date: {{ page.parts[page.arch_review_part].due | date: '%A, %B %-d' }}_
 
-**The Architectural review is worth 15% of the project grade ([rubric]({% link _assignments/final-project/architectural-review.md %})).**
+**The Architectural review(s) is worth 15% of the project grade ([rubric]({% link _assignments/final-project/architectural-review.md %})).**
 
 Each team will complete one (or more) architectural reviews, which will entail teams presenting plans for their project to other teams, NINJAs, and instructors.
-This review is intended to very interactive, and will focus on soliciting useful/actionable feedback rather than being a one-way brain dump.
+This review is intended to be interactive, and will focus on soliciting useful/actionable feedback rather than being a one-way brain dump.
 In addition to the in-person component of this activity, there will be a
 framing/agenda setting document due before the review and a
 reflection/synthesis document due after.
