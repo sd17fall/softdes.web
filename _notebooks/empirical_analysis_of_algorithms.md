@@ -1,6 +1,6 @@
 ---
-date: 2018-04-06T11:57:44-04:00
-source: notebooks/analysis_of_algorithms.ipynb
+date: 2018-04-06T12:18:57-04:00
+source: notebooks/empirical_analysis_of_algorithms.ipynb
 ---
 
 {% include toc %}
@@ -75,16 +75,6 @@ def append_list(n):
 time_func(append_list, 1000000)
 ```
 
-{: class="nb-output"}
-
-
-
-
-    0.14000000000000012
-
-
-
-
 `run_timing_test` takes a function, runs it with a range of problem sizes, and returns two lists: problem sizes and times.
 
 
@@ -117,26 +107,6 @@ Here's an example with `append_list`
 ```python
 ns, ts = run_timing_test(append_list)
 ```
-
-{: class="nb-output"}
-
-    1024 0.0
-    2048 0.0
-    4096 0.0
-    8192 0.0
-    16384 0.0
-    32768 0.0
-    65536 0.010000000000000231
-    131072 0.020000000000000018
-    262144 0.029999999999999805
-    524288 0.06999999999999984
-    1048576 0.11000000000000032
-    2097152 0.2999999999999998
-    4194304 0.54
-    8388608 0.9400000000000004
-    16777216 1.92
-
-
 
 `fit` takes the lists of ns and ts and fits it with a curve of the form `a * n**exp`, where `exp` is a given exponent and `a` is chosen so that the line goes through a particular point in the sequence, usually the last. 
 
@@ -198,16 +168,6 @@ Here are the results from `append_list`.  When we plot `ts` versus `ns` on a log
 plot_timing_test(ns, ts, 'append_list', exp=1)
 ```
 
-{: class="nb-output"}
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_17_0.png)
-
-
-
-
 For small values of `n`, the runtime is so short that we're probably not getting an accurate measurement of just the operation we're interested in.  But as `n` increases, runtime seems to converge to a line with slope 1.  
 
 That suggests that performing append `n` times is linear, which suggests that a single append is constant time.  
@@ -230,42 +190,12 @@ ns, ts = run_timing_test(pop_left_list)
 plot_timing_test(ns, ts, 'pop_left_list', exp=1)
 ```
 
-{: class="nb-output"}
-
-    1024 0.0
-    2048 0.0
-    4096 0.0
-    8192 0.009999999999999787
-    16384 0.04999999999999982
-    32768 0.16999999999999993
-    65536 0.8900000000000015
-    131072 3.889999999999999
-
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_20_1.png)
-
-
-
-
 That doesn't look very good.  The runtimes increase more steeply than the line with slope 1.  Let's try slope 2.
 
 
 ```python
 plot_timing_test(ns, ts, 'pop_left_list', exp=2)
 ```
-
-{: class="nb-output"}
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_22_0.png)
-
-
-
 
 The last few points converge on the line with slope 2, which suggests that `pop(0)` is quadratic.
 
@@ -293,32 +223,6 @@ ns, ts = run_timing_test(sort_list)
 plot_timing_test(ns, ts, 'sort_list', exp=1)
 ```
 
-{: class="nb-output"}
-
-    1024 0.0
-    2048 0.0
-    4096 0.0
-    8192 0.0
-    16384 0.009999999999999787
-    32768 0.0
-    65536 0.009999999999999787
-    131072 0.009999999999999787
-    262144 0.030000000000001137
-    524288 0.049999999999998934
-    1048576 0.120000000000001
-    2097152 0.240000000000002
-    4194304 0.5499999999999989
-    8388608 1.0900000000000016
-
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_27_1.png)
-
-
-
-
 It sure looks like sorting is linear, so that's surprising.  But remember that `log n` changes much more slowly than `n`.  Over a wide range of values, `n log n` can be hard to distinguish from an algorithm with linear growth.  As `n` gets bigger, we would expect this curve to be steeper than slope 1.  But often, for practical problem sizes, `n log n` is as good as linear.
 
 ### Bisection search
@@ -343,37 +247,12 @@ ns, ts = run_timing_test(search_sorted_list, max_time=0.2)
 plot_timing_test(ns, ts, 'search_sorted_list', exp=1)
 ```
 
-{: class="nb-output"}
-
-    1024 0.1999999999999993
-    2048 0.1999999999999993
-    4096 0.25
-
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_30_1.png)
-
-
-
-
 It looks like the runtime increases slowly as `n` increases, but it's definitely not linear.  To see if it's constant time, we can compare it to the line with slope 0.
 
 
 ```python
 plot_timing_test(ns, ts, 'search_sorted_list', exp=0)
 ```
-
-{: class="nb-output"}
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_32_0.png)
-
-
-
 
 Nope, looks like it's not constant time, either.  We can't really conclude that it's `log n` based on this curve alone, but the results are certainly consistent with that theory.
 
@@ -437,37 +316,6 @@ m = LinearMap()
 test_map(m)
 ```
 
-{: class="nb-output"}
-
-    0 a
-    1 b
-    2 c
-    3 d
-    4 e
-    5 f
-    6 g
-    7 h
-    8 i
-    9 j
-    10 k
-    11 l
-    12 m
-    13 n
-    14 o
-    15 p
-    16 q
-    17 r
-    18 s
-    19 t
-    20 u
-    21 v
-    22 w
-    23 x
-    24 y
-    25 z
-
-
-
 Now let's see how long it takes to add `n` elements.
 
 
@@ -481,31 +329,6 @@ def add_linear_map(n):
 ns, ts = run_timing_test(add_linear_map)
 plot_timing_test(ns, ts, 'add_linear_map', exp=1)
 ```
-
-{: class="nb-output"}
-
-    1024 0.00999999999999801
-    2048 0.0
-    4096 0.0
-    8192 0.0
-    16384 0.010000000000001563
-    32768 0.010000000000001563
-    65536 0.019999999999999574
-    131072 0.05999999999999872
-    262144 0.10000000000000497
-    524288 0.20999999999999375
-    1048576 0.4000000000000057
-    2097152 0.7899999999999991
-    4194304 1.5899999999999963
-
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_42_1.png)
-
-
-
 
 Adding `n` elements is linear, so each add is constant time.  How about lookup?
 
@@ -523,22 +346,6 @@ def lookup_linear_map(n):
 ns, ts = run_timing_test(lookup_linear_map)
 plot_timing_test(ns, ts, 'lookup_linear_map', exp=2)
 ```
-
-{: class="nb-output"}
-
-    1024 0.020000000000003126
-    2048 0.0899999999999963
-    4096 0.4000000000000057
-    8192 1.519999999999996
-
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_44_1.png)
-
-
-
 
 Looking up `n` elements is $O(n^2)$ (notice that `exp=2`).  So each lookup is linear.
 
@@ -580,37 +387,6 @@ m = BetterMap()
 test_map(m)
 ```
 
-{: class="nb-output"}
-
-    0 a
-    1 b
-    2 c
-    3 d
-    4 e
-    5 f
-    6 g
-    7 h
-    8 i
-    9 j
-    10 k
-    11 l
-    12 m
-    13 n
-    14 o
-    15 p
-    16 q
-    17 r
-    18 s
-    19 t
-    20 u
-    21 v
-    22 w
-    23 x
-    24 y
-    25 z
-
-
-
 The run time is better (we get to a larger value of `n` before we run out of time). 
 
 
@@ -628,44 +404,12 @@ ns, ts = run_timing_test(lookup_better_map)
 plot_timing_test(ns, ts, 'lookup_better_map', exp=1)
 ```
 
-{: class="nb-output"}
-
-    1024 0.0
-    2048 0.009999999999990905
-    4096 0.020000000000003126
-    8192 0.060000000000002274
-    16384 0.1599999999999966
-    32768 0.6700000000000017
-    65536 2.4399999999999977
-    131072 11.29
-    262144 51.620000000000005
-    524288 200.82000000000002
-
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_49_1.png)
-
-
-
-
 The order of growth is hard to characterize.  It looks steeper than the line with slope 1.  Let's try slope 2.
 
 
 ```python
 plot_timing_test(ns, ts, 'lookup_better_map', exp=2)
 ```
-
-{: class="nb-output"}
-
-
-
-
-![png](analysis_of_algorithms_files/analysis_of_algorithms_51_0.png)
-
-
-
 
 It might be converging to the line with slope 2, but it's hard to say anything conclusive without running larger problem sizes.
 
@@ -717,37 +461,6 @@ class HashMap(object):
 m = HashMap()
 test_map(m)
 ```
-
-{: class="nb-output"}
-
-    0 a
-    1 b
-    2 c
-    3 d
-    4 e
-    5 f
-    6 g
-    7 h
-    8 i
-    9 j
-    10 k
-    11 l
-    12 m
-    13 n
-    14 o
-    15 p
-    16 q
-    17 r
-    18 s
-    19 t
-    20 u
-    21 v
-    22 w
-    23 x
-    24 y
-    25 z
-
-
 
 **Exercise:** Write a function called `lookup_hash_map`, based on `lookup_better_map`, and characterize its run time.
 
