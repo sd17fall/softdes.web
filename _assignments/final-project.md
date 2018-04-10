@@ -23,7 +23,7 @@ parts:
   due: 2018-04-10 13:30:00 -04:00
   tag: architectural-review
 - name: Project Presentation
-  due: 2018-04-24 13:30:00 -04:00
+  due: 2018-05-08 12:00:00 -04:00
   tag: project-presentation
 - name: Project Website MVP
   due: 2018-04-24 13:30:00 -04:00
@@ -128,11 +128,11 @@ See the [Architectural Review]({% link _assignments/final-project/architectural-
 {% assign part = page.parts[page.presentation_part] %}
 _Date: {{ part.due | date: '%A, %B %-d' }}_
 
-**The Project Presentation is worth 10% of the project grade** **(see [project presentation rubric]({% link _assignments/final-project/project-presentation-rubric.md %}))**
+**The Project Presentation is worth 10% of the project grade** **(see [project presentation rubric and guidelines]({% link _assignments/final-project/project-presentation-rubric.md %}))**
 
-On {{ page.parts[page.presentation_part].due | date: '%A, %B %-d' }}, your team will present the progress with the project to the studio.
+On {{ page.parts[page.presentation_part].due | date: '%A, %B %-d' }} (this is the final event period), your team will present your project to the entire SoftDes class.
 This is intended to be a formal / polished presentation. The focus of this activity will be around successful and professional communication.
-There will be limited time for feedback in class, but you can communicate your feedback using the online form.
+There will be no time for oral feedback from the class (although there will be an opportunity to collect electronic feedback).  You will be engage more deeply with your audience during the final poster / demo session, which will immediately follow the project presentations.
 
 ### Project Website
 
