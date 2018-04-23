@@ -26,7 +26,7 @@ parts:
   due: 2018-05-08 12:00:00 -04:00
   tag: project-presentation
 - name: Project Website MVP
-  due: 2018-04-24 13:30:00 -04:00
+  due: 2018-04-24 23:59:00 -04:00
   tag: project-website-mvp
 - name: Project Website, feedback addressed
   due: 2018-05-01 13:30:00 -04:00
@@ -274,7 +274,7 @@ about this, just ask.
 ### Final Demo / Presentation Session
 
 {% assign part = page.parts[page.expo_part] %}
-_Date: {% if part.due %}{{ part.due | date: '%A, %b %-d, %-H:%M %p' }}–{{ part.due | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
+_Date: {% if part.due %}{{ part.due | date: '%A, %b %-d, %-H:%M %p' }}{% else %}TBD{% endif %}_
 
 During the Final Event, {% if site.sections > 1 %} all studios of {% endif %}
 SoftDes will meet in {{ site.final_room_number }}
