@@ -1,5 +1,5 @@
 ---
-date: 2017-11-27T16:14:33-05:00
+date: 2018-04-10T12:30:00-05:00
 source: notebooks/exceptions.ipynb
 ---
 
@@ -73,7 +73,7 @@ complement_seq('CAXT')
 
     <ipython-input-46-cef160c3921b> in <module>()
     ----> 1 complement_seq('CAXT')
-    
+
 
     <ipython-input-45-1a6d8e3928b2> in complement_seq(dna_seq)
           3     for b in dna_seq[::-1]:
@@ -157,15 +157,15 @@ complement('X')
 
     <ipython-input-47-6c045add2467> in <module>()
          10     raise Exception('invalid nucleobase')
-         11 
+         11
     ---> 12 complement('X')
-    
+
 
     <ipython-input-47-6c045add2467> in complement(c)
           8     if c == 'G':
           9         return 'C'
     ---> 10     raise Exception('invalid nucleobase')
-         11 
+         11
          12 complement('X')
 
 
@@ -196,9 +196,9 @@ complement_seq('CAXT')
 
     <ipython-input-49-2d23b82ff07b> in <module>()
           6     return result
-          7 
+          7
     ----> 8 complement_seq('CAXT')
-    
+
 
     <ipython-input-49-2d23b82ff07b> in complement_seq(dna_seq)
           2     result = ''
@@ -212,7 +212,7 @@ complement_seq('CAXT')
           8     if c == 'G':
           9         return 'C'
     ---> 10     raise Exception('invalid nucleobase')
-         11 
+         11
          12 complement('X')
 
 
@@ -247,15 +247,15 @@ pay_me_a_complement()
 
     <ipython-input-50-0f7ab1192a67> in <module>()
           3     print('complement is', complement_seq(seq))
-          4 
+          4
     ----> 5 pay_me_a_complement()
-    
+
 
     <ipython-input-50-0f7ab1192a67> in pay_me_a_complement()
           1 def pay_me_a_complement():
           2     seq = input()
     ----> 3     print('complement is', complement_seq(seq))
-          4 
+          4
           5 pay_me_a_complement()
 
 
@@ -271,7 +271,7 @@ pay_me_a_complement()
           8     if c == 'G':
           9         return 'C'
     ---> 10     raise Exception('invalid nucleobase')
-         11 
+         11
          12 complement('X')
 
 
@@ -308,7 +308,7 @@ pay_me_a_complement()
 
 ## User-Defined Exception Class
 
-The previous implementation indiscrimately turns all program errors into an "Invalid DNA sequence" message.
+The previous implementation indiscriminately turns all program errors into an "Invalid DNA sequence" message.
 
 It's equivalent to the following function. `except Exception` means catch any exception that is an instance of the class `Exception` – but this is all exceptions.
 
@@ -360,5 +360,3 @@ pay_me_a_complement()
 
     CAXT
     Invalid DNA sequence: CAXT
-
-

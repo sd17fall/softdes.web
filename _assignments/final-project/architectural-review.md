@@ -8,7 +8,7 @@ parent: final-project
 ## Overview
 
 During the course of the final project, your team will complete an Architectural
-Peer Review. This review will focus on high-level design decisions, and will give your team
+Peer Review. This review will focus on high-level design decisions, and will give your team an
 opportunity to present ideas of how the architecture of the code will be.
 
 **What it is**
@@ -22,9 +22,9 @@ opportunity to present ideas of how the architecture of the code will be.
 * Highly polished final presentation of your work (that comes later)
 * One-way presentation
 
-For more tips and guidelines, check out the [information on SCOPE Technical
+For more tips and guidelines, check out one version of the [information on SCOPE Technical
 Reviews]({% link files/final-project/Technical_Review_Deliverable_and_Rubric.pdf %})
-given to students at the beginning of the year.
+given to SCOPE students in recent years.
 
 ## Before the Architectural Review
 
@@ -38,14 +38,12 @@ and make sure you structure your review to elicit the information that you are
 looking for. Your technical review should **always** start with a discussion
 of what you hope to get out of it.
 
-There are many potential structures you can use for a review, and you should
-feel free to choose whichever structure makes the most sense for your team and
-where you are in the project. Some examples:
+There are many potential structures you can use for a review, and the structure you choose should be appropriate to where we are in our project cycle. Below is a list of examples, some of which are appropriate for an early stage architectural review and some of which are more appropriate for late stage architectural reviews:
 
-* **Collaborative ideation**: get some post-its and Sharpies and do an ideation activity with the other teams (note: if you need supplies for your technical review, it is your responsibility to let us know in advance so that we can help you get what you need.)
-* **Technical discussion**: bring some particularly difficult technical problem to the technical review (_e.g._ choosing the right algorithm to solve some problem). Discuss potential solutions and pros and cons. Ask the other teams which solution sounds best and if there are other potential solutions that you should consider.
-* **Prototype feedback**: have the other teams use a prototype of your software (make sure to bring a few laptops with the software ready to go) and give you feedback on your interface and features.
-* **Software architecture discussion**: discuss some aspect of your software architecture (_e.g._ how you are structuring the various classes that make up your program). Present a particularly difficult aspect of your software architecture, and ask the other teams if they have any advice/feedback.
+* **Risk identification and mitigation** (appropriate for early stage): early in the project we did an activity where you had to identify the biggest outstanding questions / risks / unknowns that you had regarding your final project.  Doing this early in your project cycle is invaluable for helping you to appropriately scope your project, determine your system architecture, and assign tasks to individual team members.  A very efficient use of an early stage architectural review is to pose these questions / risks to your audience to make sure that you have both identified the right ones and to make sure that you collect as many good ideas for how to address these questions as possible.  As stated in class, for the first AR, we want everyone to structure their review towards getting input in this area.
+* **Software architecture discussion** (appropriate for early stage): discuss some aspect of your software architecture (_e.g._ how you are structuring the various classes that make up your program). Present a particularly difficult aspect of your software architecture, and ask the other teams if they have any advice/feedback.
+* **Technical discussion** (appropriate for later stage): bring some particularly difficult technical problem to the technical review (_e.g._ choosing the right algorithm to solve some problem). Discuss potential solutions and pros and cons. Ask the other teams which solution sounds best and if there are other potential solutions that you should consider.
+* **Prototype feedback** (appropriate for later stage): have the other teams use a prototype of your software (make sure to bring a few laptops with the software ready to go) and give you feedback on your interface and features.
 * Combination of the above, or something else entirely
 
 Your Preparation and Framing document should have (at least) the following
@@ -54,25 +52,20 @@ sections:
 1. **Background and context** What information about your project does the audience need to participate fully in the technical review? You should share enough to make sure your audience understands the questions you are asking, but without going into unnecessary detail.
 2. **Key questions** What do you want to learn from the review? What are the most important decisions your team is currently contemplating? Where might an outside perspective be most helpful? As you select key questions to ask during the review, bear in mind both the time limitations and background of your audience.
 3. **Agenda for technical review session** Be specific about how you plan to use your allotted time. What strategies will you use to communicate with your audience?
+4. **Feedback form** Create a Google form that folks in the review will use to provide you with feedback or answers to various questions you pose to your audience.  Since, at least for the first review, the time you have to present will be very short you should expect most of the feedback you get to come from this form rather than thoughts expressed orally during your session.  Please [submit a link to your Google form](https://docs.google.com/forms/d/e/1FAIpQLSdDb4Q3wtGMyax6DCJGRD3zbzuo9uQNjGTNSEKS-97H9nIy_Q/viewform) using this other Google form!  (you must have this submitted no less than 2 hours before class so we have time to post a link on the course website).
 
 It is often useful to provide some background material to your audience before
-the review so they're not coming into the discussion "cold". You may assign
-the peer teams in your group a reasonable amount of "homework" (~10-20 minutes
+the review so they're not coming into the discussion "cold". You may (optionally) assign
+the peer teams in your group a reasonable amount of "homework" (~5-10 minutes
 of reading) by emailing them at least 24 hours before your technical review.
 
 The Preparation and Framing document must be posted as
 [Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) to your team GitHub repository before the review takes
-place. You should also post any additional materials (e.g. slides, handouts)
-that you use during the technical review.
+place. You should also post any additional materials (e.g. slides, handouts, Google form) that you use during the technical review.
 
 ## Day of the Architectural Review
 
-Teams are organized into groups of three or four (see groupings below). These
-groups will stay together for both technical reviews, and the other teams in
-your group may be a valuable resource for sharing information as you work on
-the project.
-
-The day of the review will be divided into 25-minute blocks, with teams taking
+Teams are organized into groups and announced at the start of class. The day of the review will be divided into time blocks, within which teams take
 turns as presenting team and audience. Both roles are equally important and
 you are expected to contribute fully to each.
 

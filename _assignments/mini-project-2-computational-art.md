@@ -3,9 +3,9 @@ title: 'Mini Project 2: Computational Art'
 description: >
   In this assignment you will be exploring one particular means of using
   computers to generate images.
-announce: 2017-09-14 10:50:00 -04:00
-due: 2017-10-02 09:00:00 -04:00
-gallery_due: 2017-10-02 10:00:00 -04:00
+announce: 2018-02-08 13:30:00 -05:00
+due: 2018-02-16 13:30:00 -05:00
+gallery_due: 2018-02-16 11:30:00 -05:00
 ---
 
 {% include toc %}
@@ -137,17 +137,12 @@ at Harvey Mudd:
 
 ## Part 0: Install and test Python Imaging Library
 
-In order to get started on the assignment, you should fork the [base
-repository](https://github.com/{{site.github.owner_name}}/ComputationalArt) for the
-computational art mini-project. Once you've forked the repository, clone the
-repository on your computer. If you clone the repository in your home
-directory, the starter code will be in `ComputationalArt/recursive_art.py`. In
-addition to fetching the starter code, you should also install the [Pillow
-fork](https://pillow.readthedocs.org/) of the Python Imaging Library
-("PIL"). To do so, execute the following command at the Linux terminal or Windows command prompt:
+In order to get started on the assignment, you should accept the assignment in Github classroom by clicking on this link [https://classroom.github.com/a/nEURCP6l](https://classroom.github.com/a/nEURCP6l). Once you've accepted the assignment, clone the
+repository on your computer. For example, if you clone the repository the folder `ComputationalArt` in your home directory, the starter code will be in `~/ComputationalArt/recursive_art.py`. In addition to fetching the starter code, you should also install the [Pillow fork](https://pillow.readthedocs.org/) of the Python Imaging Library
+("PIL"). To do so, execute the following command at the Linux terminal:
 
 ```bash
-$ pip install Pillow
+$ conda install Pillow
 ```
 
 The starter code includes a function called `test_image` that uses PIL to
@@ -155,14 +150,13 @@ generate an image where each pixel has a random color value. When you run the
 starter code, you should see several unit test failures from functions you
 will implement later, and it should save an image file named `noise.png` in
 your run directory. You can view `noise.png` using the built-in tool
-`image_viewer`.
+Image Viewer (`eog` on the command line).
 
 [![Random pixel noise]({% link images/assignments/computational-art/noise.png %}){:width="320px" height="320px"}]({% link images/assignments/computational-art/noise.png %})
 
 While this looks pretty cool (and it might be fun to convince your gullible
 friends it is a Magic Eye picture), I wouldn't call it _art_. In the rest of
-the assignment, you will combine randomness with structure to produce more
-compelling images.
+the assignment, you will combine randomness with structure to produce more compelling images.
 
 Once you've verified that PIL is working correctly, comment out the line that
 calls `test_image` and un-comment the line that calls `generate_art`. If you
@@ -424,11 +418,7 @@ green_channel_pixel_for_x_y = green(x, y)
 
 Instead of building random functions of two variables (x, y) build random
 function of three variables (x, y, t) where t represents the frame number in a
-movie rescaled to the interval [-1, +1]. The easiest way to create these movies
-is to output a series of image files (one for each frame of the movie) and
-then use a command line tool such as **avconv** to encode them into a movie
-(note: on older version of Ubuntu, such as 12.04, you should use `ffmpeg`
-instead).
+movie rescaled to the interval [-1, +1]. The easiest way to create these movies is to output a series of image files (one for each frame of the movie) and then use a command line tool such as **avconv** to encode them into a movie.
 
 For instance, if you created images `frame001.png`, `frame002.png`, ...,
 `frame100.png` you could encode these images into a movie using the following
@@ -441,18 +431,6 @@ $ avconv -i frame%03d.png -vb 20M mymovie.avi
 Use `frame%03d.png` if your files are named _e.g._ `frame001.png`, `frame002.png`,
 `frame003.png`. Use `frame%d.png` if your files are named _e.g._ `frame%03d.png`,
 `frame2.png`, `frame3.png`.
-
-**macOS**: Install **avconv** by installing [home brew](https://brew.sh),
-and then running `brew install libav` in the terminal.
-
-**Windows**: **avconv** doesn't appear to be available for Windows. However, there are several other options:
-  * GIFs! Take a look at [the Pillow documentation for GIFs](http://pillow.readthedocs.io/en/3.4.x/handbook/image-file-formats.html#gif), and see if you can figure out
-  how to put together a movie. *Hint: you'll want to look at optional arguments
-  like `save_all` and `append_images`.*
-  * Download and install [ImageMagick](https://www.imagemagick.org/script/index.php), and use the `convert` command
-    (instead of `avconv`) to create a movie from a set of images:
-    `convert -loop 0 *.png mymovie.mov`
-  * Install matplotlib, and follow [these instructions]( https://stackoverflow.com/questions/4092927/generating-movie-from-python-without-saving-individual-frames-to-files)
 
 If you want to do something cleaner, you should investigate some libraries for
 actually creating the movie within Python itself - e.g., `moviepy` (removing the need for saving
@@ -538,9 +516,7 @@ choose to do the going beyond portion, it is up to you how you structure your
 code for that portion). You should also push at least two images generated by
 your program using the file names `example1.png` and `example2.png` (if
 you don't want to use PNG, feel free to use a different standard image
-format). **The final step in submitting your mini-project is to issue a pull
-request from your `ComputationalArt` repo to the `{{site.github.owner_name}}/ComputationalArt`
-repo.**
+format).
 
 ### Optional in-class Gallery Show
 
@@ -568,5 +544,4 @@ A much better and more extensive list of guidance around producing an artist's
 statement can be found
 [here](http://www.saic.edu/media/saic/pdfs/lifesaic/careerco-opcenter/workingartistsseries/Handout_WorkingArtist_WritingYourArtistStatement.pdf).
 
-In order to make it into the exhibition you should have your content there no later than
-{{ page.gallery_due | date: site.part_due_date_format }} the day that the assignment is due.
+In order to make it into the exhibition you should have your content there no later than the morning of the day the assignment is due: {{ page.gallery_due | date: site.part_due_date_format }}.
