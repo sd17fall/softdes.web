@@ -1,32 +1,26 @@
 ---
 title: Project Presentation Rubric
 parent: final-project
-survey_url: https://goo.gl/forms/DVvmWqpIUdCUV86F2
+survey_url: https://about:blank
+presentation_folder: https://drive.google.com/drive/folders/1KEipFo5f_aNXpjbbkZE6Wkj3WPCaen28?usp=sharing
 ---
 
 ## Presentation Guidelines
 
-Project presentations are very different than the technical reviews. Technical
+Project presentations are very different than the architectural reviews. Architectural
 reviews are about communicating specific design or code issues so that the
 audience would have enough information to help you with these decisions.
-Project presentations will largely be a one-way street. You will be crafting
+The project presentations are a one-way street. You will be crafting
 your presentation to tell the audience about the current state of your project
 in a smooth, engaging, and professional manner. Here are some bullet points to
 keep in mind:
 
-{% if site.large_class %}
-* You will have ~7 minutes to present and ~1.5 minutes to answer a quick question or two per presentation.
-{% else %}
-* You will have 7-10 minutes to present, followed by questions.
-{% endif %}
-{% if site.large_class %}
-* Everyone will be presenting from one laptop (one set up in AC326, and one set up in AC328) the same laptop. You should upload your slides to the [shared Google Drive folder]({{ site.data.course.urls.final_project_shared_folder }}) beforehand. Acceptable formats are PowerPoint, PDF, and Google presentation.
+* You will have ~5 minutes to present (there will be no time for questions).
+* Everyone will be presenting from one laptop. You should upload your slides to the [shared Google Drive folder]({{ page.presentation_folder }}) beforehand. Acceptable formats are PowerPoint, PDF, and Google presentation.
 * As a consequence of the previous point, no live demos! As an alternative, we suggest using a screen capture program (such as [this](http://www.maartenbaert.be/simplescreenrecorder/) one) to highlight what your software can do so far. You should then upload your screen capture to YouTube so that it can be shown during your presentation.
-{% endif %}
-* Not everyone knows {% unless site.large_class %} everything {% endunless %} about your project! Your presentation should provide motivation and context for your project.
-* If you are using algorithms, libraries, or technologies that were not explicitly taught as part of the class, make sure to properly explain them. Given the duration of the presentation, you might have to gloss over some details (this is okay!). Be strategic about how deeply you explain various aspects of your system.
-* A brief overview of your code architecture is always welcome. Just don't get too bogged down into unimportant details.
-* Include some information about what you plan to do by the Software Design Expo.
+* Not everyone knows everything about your project! Your presentation should provide motivation and context for your project.
+* If you are using algorithms, libraries, or technologies that were not explicitly taught as part of the class, make sure to properly explain them. Given the duration of the presentation, you will have to gloss over many of the details (this is okay!). Be strategic about how you explain various aspects of your system.
+* A brief overview of your code architecture is potentially useful, but keep in mind that you will be able to provide more details on what you did when people come to visit your poster / demo station later in the final event period.
 * Be professional.
 * Be energetic and excited. This is your time to get the class excited about your project.
 
@@ -39,13 +33,14 @@ a Google form (link to be posted).
 {%- endif %}
 So, make sure to have your laptop charged and ready to go.
 
-{% if site.large_class %}
 
 ## Schedule
 
-[Found here]({{ site.data.course.urls.final_project_schedule }})
+Project presentations will take place during the first half of the final event period (12:00pm on May 8th).
 
-{% endif %}
+## Presentation Rehearsal
+
+Before the final event you are required to do a rehearsal of your presentation.  The NINJAs will be posting times when they are available to listen to your presentation and provide you with feedback.
 
 ## Rubric
 
@@ -67,7 +62,7 @@ Communicate the status of your project including:
 
 * what you have done so far (possibly including screenshots or a video demo)
 * current work
-* future work /reach goals
+* future work /reach goals (if you were to do this after the semester)
 
 **Professionalism** (25%)
 

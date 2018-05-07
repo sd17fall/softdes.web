@@ -51,17 +51,16 @@ Reading journals must be submitted by pushing to GitHub before 9am on the day of
 
 ### Mini-Projects
 
-There will be four mini-projects over the course of the semester. The first two will be completed individually, and you may work in teams on the second two. Combined, these four mini-projects will account for 35% of your final grade.
+There will be four mini-projects over the course of the semester. The first two will be completed individually, and you may work in teams on the second two. Combined, these four mini-projects will account for 40% of your final grade.
 
-Later in the semester, you will have an opportunity to close the feedback loop by revisiting one of your earlier mini-project assignments. Using what you learned in the intervening time, you will reflect upon, make corrections, and extend your previous work. This revision exercise accounts for 5% of your final grade.
 
 ### Late Submissions
 
-The late penalty is 20% per day. However, if you find you are struggling to keep up, the worst thing you can do is to suffer in silence. Please come talk to an instructor or a NINJA. Also, see the bottom of this document for the grading rubric. At the end of the semester we will eliminate the largest late penalty that you have incurred on any mini-project (note that this doesn't apply to things that need to be prepared specifically for a particular class such as project proposals). The one exception to this rule is that if you are 5 days late with an assignment (so you would receive a 0% without late penalty forgiveness), you will still receive a 0% on that assignment.
+The late penalty is 10% per day. However, if you find you are struggling to keep up, the worst thing you can do is to suffer in silence. Please come talk to an instructor or a NINJA. Also, see the bottom of this document for the grading rubric. At the end of the semester we will eliminate the largest late penalty that you have incurred on any mini-project (note that this doesn't apply to things that need to be prepared specifically for a particular class such as project proposals). The one exception to this rule is that if you are 10 days late with an assignment (so you would receive a 0% without late penalty forgiveness), you will still receive a 0% on that assignment.
 
-_Example 1:_ All mini-projects are on time except mini-project 1 which was 2 days late and mini-project 2 which was 3 days late. When we calculate your final grade the fact that you were 3 days late on mini-project 2 will be disregarded.
+_Example 1:_ All mini-projects are on time except mini-project 1 which was 2 days late and mini-project 2 which was 3 days late. When we calculate your final grade, the fact that you were 3 days late on mini-project 2 will be disregarded.
 
-_Example 2:_ All mini-projects are on time except mini-project 4 which is 7 days late. You will receive a 0% for mini-project 4. You do not benefit from late penalty forgiveness.
+_Example 2:_ All mini-projects are on time except mini-project 4 which is 10 days late. You will receive a 0% for mini-project 4. You do not benefit from late penalty forgiveness.
 
 Every file you turn in must have a top-level comment identifying you as the author and listing anyone who made a substantial contribution. This comment is your assertion that the mini-project represents your own work.
 
@@ -71,7 +70,7 @@ The purpose of the Project Toolbox exercises is to introduce you to a range of s
 
 These exercises will be completed independently at your own pace, and you will be able to select from a range of options to match your interests. They will be assessed on a completion basis.
 
-You will complete at least five Project Toolbox exercises. At least three must be done before Thanksgiving Break, and the remaining exercises can be completed during the first week of the final project.
+You will complete at least five Project Toolbox exercises by the posted deadline. 
 
 ### Final Project
 
@@ -81,11 +80,11 @@ During the second half of the semester you will work will a small team on a proj
 
 We will do lots of fun and useful things during class time. You should plan to be there!
 
-As students, you have some responsibility for creating and maintaining a classroom atmosphere that is conducive to everyone's learning and enjoyment. I hope you will think about how your participation contributes to the learning environment.
+As students, you have some responsibility for creating and maintaining a classroom atmosphere that is conducive to everyone's learning and enjoyment. We hope you will think about how your participation contributes to the learning environment.
 
 Some things you can do to help:
 
-1. Come to class on time! I will do my best to use class time effectively. Late arrivals are disruptive.
+1. Come to class on time! We will do our best to use class time effectively. Late arrivals are disruptive.
 2. Come to class prepared. Make sure you have always completed your reading journal.
 3. Try not to fall behind. If we are all working on the same stuff at the same time, everything works better.
 4. Be active on Slack discussions, both asking and answering questions.

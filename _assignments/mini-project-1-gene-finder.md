@@ -5,14 +5,14 @@ description: >
   a DNA sequence and outputs snippets of DNA that are likely to be protein-coding
   genes. You will then use your program to find genes in a sequence of DNA from the
   bacterium Salmonella Enterica.
-due: 2017-09-25 10:50:00 -04:00
+due: 2018-02-09 13:30:00 -04:00
 parts:
 - name: Week 1
   tag: week-1
-  due: 2017-09-18 10:50:00 -04:00
+  due: 2018-02-02 13:30:00 -04:00
 - name: Week 2
   tag: week-2
-  due: 2017-09-25 10:50:00 -04:00
+  due: 2018-02-09 13:30:00 -04:00
 ---
 
 {% include toc %}
@@ -122,7 +122,7 @@ The podcast discusses a number of topics, but the first segment of the podcast
 is about Typhoid Mary (although, you really should listen to the whole thing;
 you will not be disappointed).
 
-![]({% link images/assignments/gene-finder/mary-nyamerican.jpg %})
+![]({{ site.baseurl }}{% link images/assignments/gene-finder/mary-nyamerican.jpg %})
 
 Image source: <http://en.wikipedia.org/wiki/Typhoid_Mary>
 
@@ -133,33 +133,21 @@ you will be using, check out this MIT OpenCourseWare video.
 
 ## Getting Set
 
-The first step to getting started on this assignment is to fork the
-[{{site.github.owner_name}}/GeneFinder](https://github.com//{{site.github.owner_name}}/GeneFinder) repository.
-The steps to do this are the same as the ones you went through to create your
+The first step to getting started on this assignment is get a copy of the starter files on your computer.
+The process is the same as the one you went through to create your
 reading journal. For your reference, here are the steps again:
 
-1. Open up a new browser window, and navigate to <https://github.com>
-2. If you are not already logged in, login to your GitHub account by clicking the "sign in" button at the top left of the page
-3. Copy and paste the following URL into the URL bar of the window that you used to login to GitHub [https://github.com//{{site.github.owner_name}}/GeneFinder](https://github.com//{{site.github.owner_name}}/GeneFinder)
-4. Fork the `GeneFinder` repository by clicking on the "Fork" button in the upper right of the window. If prompted for where you should fork the repository, select `@yourgithubusername`.
-5. You should now be at the page that shows your fork of the SoftDes repository. Copy the URL in the box labeled "HTTPS Clone URL".
-6. Open up a terminal and execute the following commands (note: these commands will clone your `GeneFinder` repository in your home directory, please modify the first line to cd to a different directory if you'd rather clone somewhere else).
-
-Linux and macOS:
+1. Click on the invitation link at <{{ site.data.github.genefinder_invite }}>
+2. Click the green button “Accept this assignment”.
+3. Follow the remaining instructions until you get to your repository page. It will looks something like <https://github.com/{{ site.data.github.organization }}/GeneFinder-myname>, except with your GitHub user id instead of `myname`.
+4. Clone the repository to your computer by typing the following into your terminal program. Replace `myname` with your GitHub user id.
+(note: these commands will clone your GeneFinder repository in your home directory, please modify the first line to cd to a different directory if you’d rather clone somewhere else).
 
 ```bash
 $ cd ~
-$ git clone https://github.com/yourgithubusernamehere/GeneFinder.git # the https URL will be the URL copied in step 5)
+$ git clone https://github.com/{{ site.data.github.organization }}/GeneFinder-myname.git GeneFinder
 $ cd GeneFinder
 $ ls *
-```
-
-Windows:
-
-```
-$ git clone https://github.com/yourgithubusernamehere/GeneFinder.git # the https URL will be the URL copied in step 5)
-$ cd GeneFinder
-$ dir
 ```
 
 The last command will show you all of the files in the `GeneFinder` repository.
@@ -194,7 +182,7 @@ start).
 Now that you have a good sense of the functions you will be filling out, take
 a look at this function diagram.
 
-![]({% link images/assignments/gene-finder/FunctionDiagram.png %})
+![]({{ site.baseurl }}{% link images/assignments/gene-finder/FunctionDiagram.png %})
 
 This diagram shows all of the functions in the program, and uses a directed
 arrow to indicate that the function on the "from" side of the arrow calls the
@@ -330,13 +318,13 @@ how come?
 
 ### Turning in Week 1 Assignment
 
-You will not be turning in your code for this assignment. However, you are required to check in with a NINJA before the class when the week 1 assignment is due. This check in can either be done in person or via a Slack message. If you are very confident with the material, the online version is probably fine (send a link to your pushed code). If you are having difficulty, an in-person check in is certainly the way to go. The check in is not designed to be big and scary; it is primarily an opportunity for you to get help from your NINJA. All that being said, the check ins will not be productive if you haven't done the necessary preparation before the check in. We hope that adding a bit of a formal assessment component to the check in will help ensure that people put in the appropriate time. The check in grading rubric will be as follows:
+You be turning in your week 1 assignment by pushing your code to Github (this will use the same process you are using for turning in the reading journals).  If you are struggling with the mini-project, we strongly advise you to meet with one of the NINJAs (either for some guidance, or just to look over your program). This week 1 work will be graded using the following rubric:
 
-* The check in never happens, or the assignment has not been started before the check in occurs: 0%
-* Only a minimal attempt has been made to complete the check in materials: 50% (note that minimal results does not imply minimal attempt. It is okay that you are struggling as long as you are trying).
-* All code is written and works or a sincere effort has been made to complete the check in materials: 100%
+* No work has been turned in: 0%
+* Only a minimal attempt has been made to complete the first part of the mini-project: 50%
+* All code is written and works, or a sincere effort has been made to complete the work: 100%
 
-The check in will be worth 20% of the final grade for this assignment.
+The intermediate checkpoint will be worth 20% of the final grade for this assignment.
 
 ## Week 2
 
@@ -355,7 +343,7 @@ A unit test (make sure you have read the [Unit Testing Instructions](#unit-testi
 'ATGCTACATTCGCAT'
 ```
 
-* `longest_ORF_noncoding`: this function takes as input a DNA sequence and an integer indicating how many random trials should be performed. For each random trial, the DNA sequence should be shuffled and the longest ORF should be computed. The output of the function should be **the length** of the longest ORF that was found across all random trials (that is the output of `longest_ORF_noncoding` is an integer). In order to test this code you may find it useful to use the provided Salmonella DNA sequence (see part 4). For example, if you find a longest ORF of 700, 600, and 300 on your three random trials, this function should output 700.
+* `longest_ORF_noncoding`: this function takes as input a DNA sequence and an integer indicating how many random trials should be performed. For each random trial, the DNA sequence should be shuffled and the longest ORF should be computed. The output of the function should be **the length** of the longest ORF that was found across all random trials (that is the output of `longest_ORF_noncoding` is an integer). In order to test this code you may find it useful to use the provided Salmonella DNA sequence. For example, if you find a longest ORF of 700, 600, and 300 on your three random trials, this function should output 700.
 
 Note 1: In order to randomly shuffle a string you should use the provided `shuffle_string` function.
 If you wanted to implement this function yourself, you could take the following approach:
@@ -427,21 +415,7 @@ state-of-the art one, you can try out one called Glimmer
 
 ### Turning in Week 2 Assignment
 
-Submitting your assignment is a two step process:
-
-1. Complete the work and push it to your GitHub repository
-2. Do at least one of:
-  * Submit a pull request to the upstream {{ site.github.owner_name }} repository that you originally forked from
-  * Visit a NINJA in person to check off week 2 of your assignment
-
-Pull requests are typically used to contribute code to someone else's project
-in the open source world. They let you send changes you've made, which the
-original author can then choose to pull in and accept. We actually like our
-assignment without solutions thank you very much, so we won't be accepting
-your pull requests. Instead, we use them as:
-
-1. Your way to tell us when you're done and we should look at your assignment, and
-2. A mechanism for us to provide written feedback on your code
+In order to turn in your assignment make sure that your work is pushed to your GitHub repository.
 
 For the main assignment, all your code will be in `gene_finder.py`. If you
 choose to do the **Going Beyond** portion, it is up to you how you structure
@@ -558,7 +532,7 @@ For example, generate a picture that shows where the genes are in the DNA strand
 * [Kivy](https://kivy.org/#home) for interactive user interfaces.
 * [pygame](http://www.pygame.org/news) for writing games, especially platformer games. We'll be using pygame for the third mini-project.
 
-![](/images/assignments/gene-finder/genes.png)
+![]({{ site.baseurl }}/images/assignments/gene-finder/genes.png)
 
 You can also explore:
 * Draw a histogram that compares the lengths of the genes found to the lengths of the noncoding ORFs from the shuffled sequences.

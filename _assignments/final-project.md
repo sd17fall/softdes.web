@@ -1,44 +1,48 @@
 ---
 title: Final Project
-date: 2017-05-04 9:16:00 -04:00
+date: 2018-03-16 0:00:00 -04:00
 description: |
   From now until the end of the semester you will be working with a team
   of students on a group software project. The project will culminate during the Final
-  Event period for this class,  with EXPO style demo / poster session.
-announce: 2017-10-26 10:30:00 -04:00
-due: 2017-12-13 09:30:00 -05:00
-proposal_survey_url: https://goo.gl/forms/DhHgS73QmsIOejOC3
-spreadsheet_url: https://docs.google.com/spreadsheets/d/1HtPkvLfhCo9cfIQAKojzhBqLgJMWCkaqQx73rdoPrTU/edit?usp=sharing
+  Event period for this class,  with an EXPO style demo / poster session.
+announce: 2018-03-16 13:30:00 -04:00
+due: 2018-05-08 12:00:00 -05:00
+proposal_survey_url: https://about:blank
+spreadsheet_url: https://about:blank
 parts:
+- name: Team Registration Survey
+  due: 2018-03-29 13:30:00 -04:00
+  tag: team-registration-survey
 - name: Project Proposal
-  due: 2017-11-02 10:50:00 -04:00
+  due: 2018-03-29 13:30:00 -04:00
   tag: project-proposal
 - name: AR Preparation Document
-  due: 2017-11-06 09:00:00 -05:00
+  due: 2018-04-03 13:30:00 -04:00
   tag: architectural-review
 - name: AR Reflection Document
-  due: 2017-11-09 09:00:00 -05:00
+  due: 2018-04-10 13:30:00 -04:00
   tag: architectural-review
 - name: Project Presentation
-  due: 2017-11-16 10:50:00 -05:00
+  due: 2018-05-08 12:00:00 -04:00
   tag: project-presentation
-- name: Project Website
-  due: 2017-12-04 17:00:00 -05:00
-  tag: project-website
+- name: Project Website MVP
+  due: 2018-04-24 23:59:00 -04:00
+  tag: project-website-mvp
 - name: Project Website, feedback addressed
-  due: 2017-12-07 17:00:00 -05:00
-  tag: project-website
+  due: 2018-05-01 13:30:00 -04:00
+  tag: project-website-final
 - name: Final Deliverables
-  due: 2017-12-13 09:30:00 -05:00
+  due: 2018-05-08 12:00:00 -04:00
   tag: demo-session-poster
 type: index
-proposal_part: 0
-arch_review_part: 1
-presentation_part: 3
-website_part: 4
-website_revision: 5
-expo_part: 6
-final_deliverables_part: 6
+team_registration_survey_part: 0
+proposal_part: 1
+arch_review_part: 2
+presentation_part: 4
+website_part: 5
+website_revision: 6
+expo_part: 7
+final_deliverables_part: 7
 ---
 
 {% include toc %}
@@ -47,20 +51,20 @@ final_deliverables_part: 6
 
 From now until the end of the semester you will be working with a team of
 students on a group software project. The project will culminate during the
-Final Event period for this class,  with EXPO style demo / poster session.
+Final Event period for this class, with an EXPO style demo / video / poster session.
 
 ## Project Topic
 
 ### Requirements
 
-* As this class is called "Software Design", your project should have a substantial software design component (interfacing with mechanical or electrical systems is great, but the software should be the major component).
+* As this class is called "Software Design", your project should have a substantial software design component (interfacing with mechanical or electrical systems is considered on a case by case basis, but the software should be the major component).
 * Most of the your final project should be written in Python. It is okay if some amount is written in another language, but the bulk of the project should be implemented in Python. Part of the reason for this requirement is to facilitate peer design reviews.
 
 ### Suggestions for Project Topics
 
-* Since the theme of this course is "computation as applied to interesting problems in science, engineering, and beyond" you may want to use this project as an opportunity to explore how computation can be applied to a discipline / problem you care deeply about. Choosing an interdisciplinary project may also allow your software design project to overlap with work you are doing in other courses (we are fine with this, but we would have to check with the other instructors to make sure this is okay). If you choose to be interdisciplinary, perhaps we can recruit an appropriate faculty angel adviser for your project.
-* If you want to have some experience doing a project "for" a client, talk to faculty and staff on campus. Talk to parents and relatives with real jobs. Perhaps, they have a need that you can help with.
-* Make a positive difference in the world. See broken things and fix them.
+* Because the theme of this course is "computation as applied to interesting problems in science, engineering, and beyond" you may want to use this project as an opportunity to explore how computation can be applied to a discipline / problem you care deeply about. Choosing an interdisciplinary project may also allow your software design project to overlap with work you are doing in other courses (we are fine with this, but we would have to check with the other instructors to make sure this is okay). If you choose to be interdisciplinary, perhaps we can recruit an appropriate faculty angel adviser for your project.
+* If you want to have some experience doing a project "for" a client, talk to faculty and staff on campus. Talk to parents and relatives with real jobs. Perhaps, they have a need that your team can help with.
+* Make a positive difference in the world. See broken things and try to fix them.
 * A good project is one that meets your learning goals. For instance, if it is really important to you to learn how to create a program with a GUI, you should make sure that your project topic aligns with this learning goal.
 * A good project is one that has a realistic and well-defined minimum deliverable as well as many opportunities for going beyond the minimum deliverable (depending on the pace and enthusiasm of the team).
 
@@ -68,15 +72,24 @@ Final Event period for this class,  with EXPO style demo / poster session.
 
 ### Requirements
 
-* You are required to work on a team of 4-5 students. A limited number of 3-student teams may be permitted, upon instructor approval.
+* You are required to work on a team of 2-4 students. Instructors will help facilitate teaming (and approve final teams)
 
 ### Team Formation Advice
 
-* Try to **work with people because you share a common interest** rather than simply working with your friends (we will do a structured activity to help with this aspect of team formation).
-* **Work with people that want to devote similar amounts of time to the project.** For instance, if you want to devote your life to making the best most awesomest SoftDes project EVAR, you should probably work with other people that share your ambition!
+* Try to **work with people because you share a common interest** rather than simply working with your friends (we will offer guidance during the final project kick-off).
+* **Work with people that want to devote similar amounts of time to the project.** For instance, if you want to devote your life to making the best most awesomest SoftDes project ever, you should probably work with other people who share that desire!
 * **Work with people that envision a similar style of work on the project.** For instance, if you really want to pair-program the entire project, but your teammates prefer to divvy up the work and work independently, that is probably not a good situation.
 
+Refer back to the answers you provided during the reflection and teaming surveys and share your thoughts with potential teammates.
+
 ## Project Activities / Deliverables
+
+### Team Registration Survey
+_Due {{ page.parts[page.team_registration_survey_part].due | date: site.part_due_date_format }}_
+
+Once you know who is on your team, you should create a GitHub repository for your final project.  Note: that there is no GitHub classroom assignment to accept and there is no base repository to fork (instead you will be [creating your repository from scratch](https://help.github.com/articles/create-a-repo/)).  Whoever creates the repository should add the other team members as collaborators.  You will be using this repository to turn in all of the project deliverables listed below.
+
+Once your team's GitHub repository is set, you are ready to fill out the [team registration survey](https://docs.google.com/forms/d/e/1FAIpQLSdlqZgPCi8dIfyREs8MTb4cWpo3o3hmpFoGvhEmmxJhkwL27w/viewform).  We will need you to fill out this survey in order to know where to look for your other project deliverables, so please complete it as soon as you can.
 
 ### Project Proposal
 
@@ -84,7 +97,7 @@ _Due {{ page.parts[page.proposal_part].due | date: site.part_due_date_format }}_
 
 **The project proposal is worth 10% of the project grade ([rubric]({% link _assignments/final-project/project-proposal-rubric.md %})).**
 
-Create a document that answers the following questions. More detailed answers give us an ability to give you better feedback to start the project (or revise your proposal).
+Create a document on your team's final project repo that answers the following questions. More detailed answers give us an ability to give you better feedback to start the project (or revise your proposal).
 
 1. **The Big Idea:** What is the main idea of your project? What topics will you explore and what will you generate? What is your **minimum viable product**? What is a **stretch goal**?
 2. **Learning Goals:** What are your individual learning goals for this project?
@@ -94,34 +107,28 @@ Create a document that answers the following questions. More detailed answers gi
 6. **Risks:** What do you view as the biggest risks to the success of this project?
 7. **Additional Course Content:** What are some topics that we might cover in class that you think would be especially helpful for your project?
 
-The teaching team will either approve you to post your proposal to your project's GitHub repo and begin working or ask you to make revisions to your document.
+The teaching team will either approve your page, or provide suggestions and request revisions.
 
 ### Architectural Review
 
 _Date: {{ page.parts[page.arch_review_part].due | date: '%A, %B %-d' }}_
 
-**The Architectural review is worth 15% of the project grade ([rubric]({% link _assignments/final-project/architectural-review.md %})).**
+**The Architectural review(s) is worth 15% of the project grade ([rubric]({% link _assignments/final-project/architectural-review.md %})).**
 
-We will be holding an architectural review
-{% if false %} which will entail groups of three or four teams taking turns presenting {% else %} for teams to present {% endif %} their plans for
-their project.
-This review is intended to very interactive, and will focus on soliciting useful/actionable feedback rather than being a one-way brain dump.
+Each team will complete one (or more) architectural reviews, which will entail teams presenting plans for their project to other teams, NINJAs, and instructors.
+This review is intended to be interactive, and will focus on soliciting useful/actionable feedback rather than being a one-way brain dump.
 In addition to the in-person component of this activity, there will be a
 framing/agenda setting document due before the review and a
 reflection/synthesis document due after.
 
 See the [Architectural Review]({% link _assignments/final-project/architectural-review.md %}) page for full details about the assignment.
 
-### Project Presentation
+### Project Presentation (removed)
 
-{% assign part = page.parts[page.presentation_part] %}
-_Date: {{ part.due | date: '%A, %B %-d' }}_
 
-**The Project Presentation is worth 10% of the project grade** **(see [project presentation rubric]({% link _assignments/final-project/project-presentation-rubric.md %}))**
+**The Project Presentation has been removed as a part of the Spring 2018 Final Project** **(see [project presentation rubric and guidelines]({% link _assignments/final-project/project-presentation-rubric.md %}))**
 
-On {{ page.parts[page.presentation_part].due | date: '%A, %B %-d' }} your team will present the progress with the project to the class.
-This is intended to be a formal / polished presentation. The focus of this activity will be around successful and professional communication.
-There will be limited time for feedback in class, but you can communicate your feedback using the online form.
+The addition of the visual / video representation of the project replaced the requirement for a project presentation this semester.
 
 ### Project Website
 
@@ -130,7 +137,7 @@ _Due: {{ part.due | date: '%-I:%M %p %A, %B %-d' }}._
 
 _Final revision, that incorporates instructor feedback, due {{ page.parts[page.website_revision].due | date: '%-I:%M %p %A, %B %-d' }}._
 
-**The final website is worth 15% of the project grade**
+**The final website is worth 25% of the project grade**
 
 Your project website is the lasting record of what you have accomplished over
 the course of this project, and hopefully a valuable contribution to your
@@ -184,7 +191,7 @@ like. You can continue to use [GitHub pages](https://pages.github.com/),
 possibly along with [Jekyll](http://jekyllrb.com/docs/github-pages/), or you
 can switch to an easier option like [Google Sites](https://sites.google.com/).
 If you'd like to make a GitHub site with multiple pages using Markdown,
-Patrick and Franton have written a [helpful
+former SoftDes NINJAs Patrick and Franton have written a [helpful
 guide](http://phuston.github.io/patrickandfrantonarethebestninjas/howto).
 
 Whatever implementation option you choose, you **must** include a link to your
@@ -194,12 +201,12 @@ will still be around in the future!
 
 **Submission mechanics**: Your project's GitHub repo page should link to your web site. This means either the README, or the Website that is optionally displayed in the upper right corner of your GitHub repo page, should contain this link.
 
-### Demo Session Poster
+### Demo Session Poster and Video
 
 {% assign part = page.parts[page.expo_part] %}
 _Printed before {{ part.due | date: '%-H:%M %p' }} on {{ part.due | date: '%A, %B %-d' }}_
 
-**The poster is worth 10% of the project grade.**
+**The poster and video are worth 10% of the project grade.**
 
 Each team will create a poster to accompany the final demonstration session.
 Your poster will contain similar information to your website, but reformatted
@@ -222,7 +229,14 @@ Examples and guides:
 * <https://nau.edu/undergraduate-research/poster-presentation-tips/>
 * <http://justinlmatthews.com/posterhelp/posterguide/>
 
-**Submission mechanics**: (1) Your project README or project web site must link to your poster file. (2) Your poster must also be printed in time for the {{ part.due | date: '%b %-d' }} final event.
+**demo video**
+
+Your website will have a video of your team demoing your project and giving a 1-minute or less pitch about it. Include the project's goal, what the software does, how to use it, why your team made it, and what you would do if you had more time.
+
+The teaching team will offer suggestions and give feedback on draft videos related to production quality and content.
+
+
+**Submission mechanics**: (1) Your project README or project web site must link to your poster file and video. (2) Your poster must also be printed in time for the {{ part.due | date: '%b %-d' }} final event.
 
 ### Code submission
 
@@ -256,11 +270,26 @@ about this, just ask.
 ### Final Demo / Presentation Session
 
 {% assign part = page.parts[page.expo_part] %}
-_Date: {% if part.due %}{{ part.due | date: '%A, %b %-d, %-H:%M %p' }}–{{ part.due | date: '%-H:%M %p' }}{% else %}TBD{% endif %}_
+_Date: {% if part.due %}{{ part.due | date: '%A, %b %-d, %-H:%M %p' }}{% else %}TBD{% endif %}_
 
-During the Final Event, {% if site.sections > 1 %} both sections of {% endif %}
-SoftDes will meet in {{ site.room_number }}
+During the Final Event, {% if site.sections > 1 %} all studios of {% endif %}
+SoftDes will meet in {{ site.final_room_number }}
 for an EXPO style poster/demo session of your final projects. This session is
 for everyone to share what they've created, and will not be evaluated. We will
 be inviting other members of the Olin community to check out your fantastic
 work.
+
+
+* 12:00
+  * all students arrive in AC326 and AC328.
+  * we will watch a playlist of <2 minute videos created by each SoftDes team while we set up demo stations.
+  * each team will be given a place on a whiteboard to hang the project poster and a table to set up a demo.
+  * the teaching team will thank the students and have closing remarks.
+  * we jam into one studio and take a class photo.
+* 12:30
+  * guests arrive.
+  * at least one team member will remain at demo stations while other team members enjoy the open house.
+  * light snacks are available.
+* 2:30
+  * teams begin to clean up when guests leave.
+  * time is available to complete course evaluations.

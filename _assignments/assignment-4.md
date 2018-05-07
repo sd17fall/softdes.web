@@ -1,12 +1,12 @@
 ---
 title: Assignment 4
-due: 2017-09-18 09:00:00 -04:00
+due: 2018-02-06 09:00:00 -04:00
 ---
 
-* Finish *Think Python* [Chapter 10](http://www.greenteapress.com/thinkpython2/html/thinkpython2011.html).
-* Complete *Reading Journal 4* (released Thursday evening).
-* Complete Mini Project 1 Gene Finder. Check this off with a NINJA before class on Monday.
 
-*Due 8 pm, Tue 19 Sep*
+## Read
+* Finish Think Python [chapter 10](http://greenteapress.com/thinkpython2/html/thinkpython2011.html)
+* [Linux at Olin](/files/notes/linux.pdf) by Allen Downey, through 2.10. The first chapter should be largely review from our Day 1 exercises.
 
-* Complete *Reading Journal 3*, if you didn't already.
+## Do
+* Complete Reading Journal 4.
