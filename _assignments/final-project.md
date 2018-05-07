@@ -23,7 +23,7 @@ parts:
   due: 2018-04-10 13:30:00 -04:00
   tag: architectural-review
 - name: Project Presentation
-  due: 0000-00-00 00:00:00 -00:00
+  due: 2018-05-08 12:00:00 -04:00
   tag: project-presentation
 - name: Project Website MVP
   due: 2018-04-24 23:59:00 -04:00
@@ -278,3 +278,18 @@ for an EXPO style poster/demo session of your final projects. This session is
 for everyone to share what they've created, and will not be evaluated. We will
 be inviting other members of the Olin community to check out your fantastic
 work.
+
+
+* 12:00
+  * all students arrive in AC326 and AC328.
+  * we will watch a playlist of <2 minute videos created by each SoftDes team while we set up demo stations.
+  * each team will be given a place on a whiteboard to hang the project poster and a table to set up a demo.
+  * the teaching team will thank the students and have closing remarks.
+  * we jam into one studio and take a class photo.
+* 12:30
+  * guests arrive.
+  * at least one team member will remain at demo stations while other team members enjoy the open house.
+  * light snacks are available.
+* 2:30
+  * teams begin to clean up when guests leave.
+  * time is available to complete course evaluations.
