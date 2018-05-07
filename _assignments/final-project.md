@@ -23,7 +23,7 @@ parts:
   due: 2018-04-10 13:30:00 -04:00
   tag: architectural-review
 - name: Project Presentation
-  due: 2018-05-08 12:00:00 -04:00
+  due: 0000-00-00 00:00:00 -00:00
   tag: project-presentation
 - name: Project Website MVP
   due: 2018-04-24 23:59:00 -04:00
@@ -123,16 +123,12 @@ reflection/synthesis document due after.
 
 See the [Architectural Review]({% link _assignments/final-project/architectural-review.md %}) page for full details about the assignment.
 
-### Project Presentation
+### Project Presentation (removed)
 
-{% assign part = page.parts[page.presentation_part] %}
-_Date: {{ part.due | date: '%A, %B %-d' }}_
 
-**The Project Presentation is worth 10% of the project grade** **(see [project presentation rubric and guidelines]({% link _assignments/final-project/project-presentation-rubric.md %}))**
+**The Project Presentation has been removed as a part of the Spring 2018 Final Project** **(see [project presentation rubric and guidelines]({% link _assignments/final-project/project-presentation-rubric.md %}))**
 
-On {{ page.parts[page.presentation_part].due | date: '%A, %B %-d' }} (this is the final event period), your team will present your project to the entire SoftDes class.
-This is intended to be a formal / polished presentation. The focus of this activity will be around successful and professional communication.
-There will be no time for oral feedback from the class (although there will be an opportunity to collect electronic feedback).  You will be engage more deeply with your audience during the final poster / demo session, which will immediately follow the project presentations.
+The addition of the visual / video representation of the project replaced the requirement for a project presentation this semester.
 
 ### Project Website
 
@@ -141,7 +137,7 @@ _Due: {{ part.due | date: '%-I:%M %p %A, %B %-d' }}._
 
 _Final revision, that incorporates instructor feedback, due {{ page.parts[page.website_revision].due | date: '%-I:%M %p %A, %B %-d' }}._
 
-**The final website is worth 15% of the project grade**
+**The final website is worth 25% of the project grade**
 
 Your project website is the lasting record of what you have accomplished over
 the course of this project, and hopefully a valuable contribution to your
